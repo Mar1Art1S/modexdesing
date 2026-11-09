@@ -39,6 +39,8 @@
   ],
   "env": {
     "APP_ENV": "production",
+    "APP_URL": "https://modexdesing.vercel.app",
+    "ASSET_URL": "https://modexdesing.vercel.app",
     "APP_DEBUG": "false",
     "APP_KEY": "base64:Qkza+NmkeWp/PGlPJ9VYf/qnoFuml8j7ZwoHSrnlyA0=",
     "APP_CONFIG_CACHE": "/tmp/config.php",
