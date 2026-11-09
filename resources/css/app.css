@@ -1,0 +1,163 @@
+@import 'tailwindcss';
+@import '../../vendor/livewire/flux/dist/flux.css';
+
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../vendor/livewire/flux-pro/stubs/**/*.blade.php';
+@source '../../vendor/livewire/flux/stubs/**/*.blade.php';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans: 'Inter', 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-heading: 'Unbounded', ui-sans-serif, system-ui, sans-serif;
+
+    --color-modex-navy: #0e2133;
+    --color-modex-dark: #0f172a;
+    --color-modex-cyan: #0ea5e9;
+    --color-modex-glow: #38bdf8;
+
+    --color-zinc-50: #fafafa;
+    --color-zinc-100: #f5f5f5;
+    --color-zinc-200: #e5e5e5;
+    --color-zinc-300: #d4d4d4;
+    --color-zinc-400: #a3a3a3;
+    --color-zinc-500: #737373;
+    --color-zinc-600: #525252;
+    --color-zinc-700: #404040;
+    --color-zinc-800: #262626;
+    --color-zinc-900: #171717;
+    --color-zinc-950: #0a0a0a;
+
+    --color-accent: var(--color-neutral-800);
+    --color-accent-content: var(--color-neutral-800);
+    --color-accent-foreground: var(--color-white);
+}
+
+@utility blueprint-grid {
+    background-image: 
+        radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.08) 0%, transparent 65%),
+        linear-gradient(to right, rgba(14, 165, 233, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(14, 165, 233, 0.06) 1px, transparent 1px);
+    background-size: 100% 100%, 32px 32px, 32px 32px;
+}
+
+/* CAD Technical Blueprint Drafting Substrates & Straight Lines */
+.cad-blueprint-substrate {
+    background-color: #f8fafc;
+    background-image: 
+        linear-gradient(to right, rgba(14, 165, 233, 0.09) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(14, 165, 233, 0.09) 1px, transparent 1px),
+        linear-gradient(to right, rgba(14, 165, 233, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(14, 165, 233, 0.03) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+}
+
+.cad-cross-hatch {
+    background-image: repeating-linear-gradient(45deg, rgba(14, 165, 233, 0.03) 0, rgba(14, 165, 233, 0.03) 1px, transparent 0, transparent 12px);
+}
+
+.cad-corner-cross {
+    position: relative;
+}
+.cad-corner-cross::before,
+.cad-corner-cross::after {
+    content: '+';
+    position: absolute;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 13px;
+    font-weight: 700;
+    color: #0284c7;
+    line-height: 1;
+    pointer-events: none;
+    z-index: 20;
+}
+.cad-corner-cross::before {
+    top: 4px;
+    left: 6px;
+}
+.cad-corner-cross::after {
+    bottom: 4px;
+    right: 6px;
+}
+
+.cad-dimension-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 11px;
+    color: #64748b;
+    user-select: none;
+}
+.cad-dimension-line::before,
+.cad-dimension-line::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: #cbd5e1;
+    position: relative;
+}
+
+.cad-stamp-border {
+    border: 1.5px solid #0f172a;
+    background: #ffffff;
+}
+.cad-stamp-border th,
+.cad-stamp-border td {
+    border: 1px solid #0f172a;
+    padding: 3px 6px;
+}
+
+@utility cyan-glow-sm {
+    box-shadow: 0 0 14px rgba(14, 165, 233, 0.35);
+}
+
+@utility cyan-glow-md {
+    box-shadow: 0 0 22px rgba(14, 165, 233, 0.45);
+}
+
+@utility cyan-glow-lg {
+    box-shadow: 0 0 32px rgba(14, 165, 233, 0.6);
+}
+
+@layer theme {
+    .dark {
+        --color-accent: var(--color-white);
+        --color-accent-content: var(--color-white);
+        --color-accent-foreground: var(--color-neutral-800);
+    }
+}
+
+@layer base {
+
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+[data-flux-field]:not(ui-radio, ui-checkbox) {
+    @apply grid gap-2;
+}
+
+[data-flux-label] {
+    @apply  !mb-0 !leading-tight;
+}
+
+input:focus[data-flux-control],
+textarea:focus[data-flux-control],
+select:focus[data-flux-control] {
+    @apply outline-hidden ring-2 ring-accent ring-offset-2 ring-offset-accent-foreground;
+}
+
+/* \[:where(&)\]:size-4 {
+    @apply size-4;
+} */
