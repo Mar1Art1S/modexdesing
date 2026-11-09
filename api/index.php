@@ -16,3 +16,4 @@ foreach ($tmpDirs as $dir) {
 
 // Forward the request to public/index.php
 require __DIR__ . '/../public/index.php';
+
