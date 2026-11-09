@@ -3,7 +3,8 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build": "vp build",
+        "build": "echo 'Assets already pre-built in public/build'",
+        "build:assets": "vp build",
         "dev": "vp dev"
     },
     "dependencies": {
