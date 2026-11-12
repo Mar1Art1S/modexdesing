@@ -1,52 +1,34 @@
 {
   "version": 2,
-  "framework": null,
-  "functions": {
-    "api/index.php": {
-      "runtime": "vercel-php@0.9.0"
-    }
-  },
+  "cleanUrls": true,
   "routes": [
     {
       "src": "/build/(.*)",
-      "dest": "/public/build/$1"
+      "dest": "/build/$1"
     },
     {
       "src": "/images/(.*)",
-      "dest": "/public/images/$1"
+      "dest": "/images/$1"
     },
     {
       "src": "/vendor/(.*)",
-      "dest": "/public/vendor/$1"
+      "dest": "/vendor/$1"
     },
     {
       "src": "/favicon.ico",
-      "dest": "/public/favicon.ico"
+      "dest": "/favicon.ico"
     },
     {
       "src": "/favicon.svg",
-      "dest": "/public/favicon.svg"
+      "dest": "/favicon.svg"
     },
     {
       "src": "/robots.txt",
-      "dest": "/public/robots.txt"
+      "dest": "/robots.txt"
     },
     {
       "src": "/(.*)",
-      "dest": "/api/index.php"
+      "dest": "/index.html"
     }
-  ],
-  "env": {
-    "APP_ENV": "production",
-    "APP_URL": "https://modexdesing.vercel.app",
-    "ASSET_URL": "https://modexdesing.vercel.app",
-    "APP_DEBUG": "false",
-    "APP_KEY": "base64:Qkza+NmkeWp/PGlPJ9VYf/qnoFuml8j7ZwoHSrnlyA0=",
-    "VIEW_COMPILED_PATH": "/tmp",
-    "CACHE_STORE": "array",
-    "SESSION_DRIVER": "cookie",
-    "LOG_CHANNEL": "stderr",
-    "DB_CONNECTION": "sqlite",
-    "DB_DATABASE": ":memory:"
-  }
+  ]
 }

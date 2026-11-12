@@ -3,7 +3,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build": "echo 'Assets already pre-built in public/build'",
+        "build": "node -e \"const fs = require('fs'); fs.cpSync('public', 'dist', { recursive: true }); console.log('Build output generated in dist');\"",
         "build:assets": "vp build",
         "dev": "vp dev"
     },
