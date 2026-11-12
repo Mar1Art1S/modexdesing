@@ -858,111 +858,73 @@
 
             <!-- INDIVIDUAL PRICING & CUSTOM EVALUATION BANNER -->
             <div class="bg-white rounded-2xl border-2 border-slate-900 p-8 sm:p-10 shadow-xl cad-corner-cross">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    
-                    <!-- Left: Why pricing is individual -->
-                    <div class="lg:col-span-8">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-sky-100 text-sky-900 font-mono text-xs font-bold uppercase tracking-wider mb-3">
-                            <span class="w-2 h-2 rounded-full bg-sky-600"></span>
-                            <span x-show="lang === 'ua'">ІНДИВІДУАЛЬНИЙ РОЗРАХУНОК // ВАРТІСТЬ ЗАЛЕЖИТЬ ВІД ЗАВДАННЯ</span>
-                            <span x-show="lang === 'en'">CUSTOM PRICING // QUOTED PER PROJECT SPECIFICATION</span>
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-sky-100 text-sky-900 font-mono text-xs font-bold uppercase tracking-wider mb-3">
+                        <span class="w-2 h-2 rounded-full bg-sky-600"></span>
+                        <span x-show="lang === 'ua'">ІНДИВІДУАЛЬНИЙ РОЗРАХУНОК // ВАРТІСТЬ ЗАЛЕЖИТЬ ВІД ЗАВДАННЯ</span>
+                        <span x-show="lang === 'en'">CUSTOM PRICING // QUOTED PER PROJECT SPECIFICATION</span>
+                    </div>
+                    <h3 class="font-heading text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+                        <span x-show="lang === 'ua'">Ціни на 3D-Друк Прототипів Обговорюються Індивідуально</span>
+                        <span x-show="lang === 'en'">3D Prototype Pricing is Quoted Individually</span>
+                    </h3>
+                    <p class="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed font-sans max-w-4xl">
+                        <span x-show="lang === 'ua'">Ми виконуємо друк прототипів та деталей на 3D-принтері під індивідуальні вимоги замовника. Автоматичні калькулятори не здатні врахувати реальні технічні параметри (чи потрібне моделювання по фото, який масштаб і яка потрібна міцність). Тому ми прораховуємо фіксовану ціну індивідуально за 4 параметрами:</span>
+                        <span x-show="lang === 'en'">We manufacture custom 3D printed prototypes and functional components based on each client's specific requirements. Generic automated calculators cannot evaluate CAD modeling needs, infill load resistance, or part scale. We calculate a transparent, fixed price based on 4 parameters:</span>
+                    </p>
+
+                    <!-- 4 Pricing Factors Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 mt-6 font-mono text-xs">
+                        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="font-bold text-slate-900 flex items-center gap-2">
+                                <span class="text-sky-600">01.</span>
+                                <span x-show="lang === 'ua'">Вхідні дані (Фото чи 3D-файл):</span>
+                                <span x-show="lang === 'en'">Input Data (Photo vs 3D CAD):</span>
+                            </div>
+                            <div class="text-slate-600 mt-1 font-sans text-xs">
+                                <span x-show="lang === 'ua'">Друк з вашого готового файлу або створення 3D-моделі по фото/зразку.</span>
+                                <span x-show="lang === 'en'">Direct print from your STL/STEP or 3D modeling from your reference photo.</span>
+                            </div>
                         </div>
-                        <h3 class="font-heading text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-                            <span x-show="lang === 'ua'">Ціни на 3D-Друк Прототипів Обговорюються Індивідуально</span>
-                            <span x-show="lang === 'en'">3D Prototype Pricing is Quoted Individually</span>
-                        </h3>
-                        <p class="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed font-sans">
-                            <span x-show="lang === 'ua'">Ми виконуємо друк прототипів та деталей на 3D-принтері під індивідуальні вимоги замовника. Автоматичні калькулятори не здатні врахувати реальні технічні параметри (чи потрібне моделювання по фото, який масштаб і яка потрібна міцність). Тому ми прораховуємо фіксовану ціну індивідуально за 4 параметрами:</span>
-                            <span x-show="lang === 'en'">We manufacture custom 3D printed prototypes and functional components based on each client's specific requirements. Generic automated calculators cannot evaluate CAD modeling needs, infill load resistance, or part scale. We calculate a transparent, fixed price based on 4 parameters:</span>
-                        </p>
 
-                        <!-- 4 Pricing Factors Grid -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-6 font-mono text-xs">
-                            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-                                <div class="font-bold text-slate-900 flex items-center gap-2">
-                                    <span class="text-sky-600">01.</span>
-                                    <span x-show="lang === 'ua'">Вхідні дані (Фото чи 3D-файл):</span>
-                                    <span x-show="lang === 'en'">Input Data (Photo vs 3D CAD):</span>
-                                </div>
-                                <div class="text-slate-600 mt-1 font-sans text-xs">
-                                    <span x-show="lang === 'ua'">Друк з вашого готового файлу або створення 3D-моделі по фото/зразку.</span>
-                                    <span x-show="lang === 'en'">Direct print from your STL/STEP or 3D modeling from your reference photo.</span>
-                                </div>
+                        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="font-bold text-slate-900 flex items-center gap-2">
+                                <span class="text-sky-600">02.</span>
+                                <span x-show="lang === 'ua'">Матеріал (PLA або PETG):</span>
+                                <span x-show="lang === 'en'">Plastic Type (PLA or PETG):</span>
                             </div>
-
-                            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-                                <div class="font-bold text-slate-900 flex items-center gap-2">
-                                    <span class="text-sky-600">02.</span>
-                                    <span x-show="lang === 'ua'">Матеріал (PLA або PETG):</span>
-                                    <span x-show="lang === 'en'">Plastic Type (PLA or PETG):</span>
-                                </div>
-                                <div class="text-slate-600 mt-1 font-sans text-xs">
-                                    <span x-show="lang === 'ua'">PLA для високої деталізації макета чи PETG для міцності та навантажень.</span>
-                                    <span x-show="lang === 'en'">Smooth aesthetic PLA for models or tough PETG for mechanical parts.</span>
-                                </div>
+                            <div class="text-slate-600 mt-1 font-sans text-xs">
+                                <span x-show="lang === 'ua'">PLA для високої деталізації макета чи PETG для міцності та навантажень.</span>
+                                <span x-show="lang === 'en'">Smooth aesthetic PLA for models or tough PETG for mechanical parts.</span>
                             </div>
+                        </div>
 
-                            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-                                <div class="font-bold text-slate-900 flex items-center gap-2">
-                                    <span class="text-sky-600">03.</span>
-                                    <span x-show="lang === 'ua'">Масштаб та щільність:</span>
-                                    <span x-show="lang === 'en'">Scale &amp; Infill Density:</span>
-                                </div>
-                                <div class="text-slate-600 mt-1 font-sans text-xs">
-                                    <span x-show="lang === 'ua'">Зменшений демонстраційний макет чи функціональний зразок 1:1.</span>
-                                    <span x-show="lang === 'en'">Scaled display prototype or full 1:1 mechanical test component.</span>
-                                </div>
+                        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="font-bold text-slate-900 flex items-center gap-2">
+                                <span class="text-sky-600">03.</span>
+                                <span x-show="lang === 'ua'">Масштаб та щільність:</span>
+                                <span x-show="lang === 'en'">Scale &amp; Infill Density:</span>
                             </div>
+                            <div class="text-slate-600 mt-1 font-sans text-xs">
+                                <span x-show="lang === 'ua'">Зменшений демонстраційний макет чи функціональний зразок 1:1.</span>
+                                <span x-show="lang === 'en'">Scaled display prototype or full 1:1 mechanical test component.</span>
+                            </div>
+                        </div>
 
-                            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-                                <div class="font-bold text-slate-900 flex items-center gap-2">
-                                    <span class="text-sky-600">04.</span>
-                                    <span x-show="lang === 'ua'">Тираж деталей:</span>
-                                    <span x-show="lang === 'en'">Batch Quantity:</span>
-                                </div>
-                                <div class="text-slate-600 mt-1 font-sans text-xs">
-                                    <span x-show="lang === 'ua'">Одиничний тестовий прототип для примірки або серія зі знижкою.</span>
-                                    <span x-show="lang === 'en'">Single test prototype for fitment or volume production batch.</span>
-                                </div>
+                        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="font-bold text-slate-900 flex items-center gap-2">
+                                <span class="text-sky-600">04.</span>
+                                <span x-show="lang === 'ua'">Тираж деталей:</span>
+                                <span x-show="lang === 'en'">Batch Quantity:</span>
+                            </div>
+                            <div class="text-slate-600 mt-1 font-sans text-xs">
+                                <span x-show="lang === 'ua'">Одиничний тестовий прототип для примірки або серія зі знижкою.</span>
+                                <span x-show="lang === 'en'">Single test prototype for fitment or volume production batch.</span>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Right: Fast Consultation CTA -->
-                    <div class="lg:col-span-4 bg-slate-900 rounded-2xl p-6 sm:p-7 text-white border border-slate-800 shadow-md flex flex-col justify-between">
-                        <div>
-                            <div class="text-sky-400 font-mono text-xs font-bold uppercase tracking-wider mb-2">
-                                <span x-show="lang === 'ua'">ОЦІНКА ДРУКУ ПО ФОТО</span>
-                                <span x-show="lang === 'en'">ESTIMATE FROM PHOTO</span>
-                            </div>
-                            <h4 class="font-heading text-lg sm:text-xl font-black text-white leading-snug">
-                                <span x-show="lang === 'ua'">Дізнайтеся вартість друку прототипу за 15 хвилин</span>
-                                <span x-show="lang === 'en'">Get a prototype 3D print quote within 15 minutes</span>
-                            </h4>
-                            <p class="text-xs text-slate-300 mt-2 leading-relaxed font-sans" x-show="lang === 'ua'">
-                                Надішліть нам фото вузла, деталі або ескіз — ми оцінимо вартість 3D-моделювання та друку прототипу без зайвих затримок.
-                            </p>
-                            <p class="text-xs text-slate-300 mt-2 leading-relaxed font-sans" x-show="lang === 'en'">
-                                Send us a photo of the assembly, part, or sketch — we will calculate the 3D modeling and 3D printing cost without delays.
-                            </p>
-                        </div>
-
-                        <div class="mt-6 space-y-3">
-                            <button type="button" 
-                                    @click="orderModalOpen = true; selectedService = (lang === 'ua' ? '3D-друк прототипу за фото від замовника' : '3D Prototype from Client Reference Photo')" 
-                                    class="w-full btn-cyan-glow text-white font-mono text-xs font-bold py-3 px-4 rounded-xl cursor-pointer text-center transition-all">
-                                <span x-show="lang === 'ua'">Надіслати Фото на Оцінку &rarr;</span>
-                                <span x-show="lang === 'en'">Submit Photo for Quote &rarr;</span>
-                            </button>
-                            <a href="https://instagram.com/modexdesign" target="_blank" rel="noopener noreferrer" 
-                               class="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl border border-slate-700 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs font-bold transition-all">
-                                <svg class="w-4 h-4 text-pink-400" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                                </svg>
-                                <span>Instagram Direct</span>
-                            </a>
-                        </div>
-                    </div>
+                </div>
+            </div>
 
                 </div>
             </div>
