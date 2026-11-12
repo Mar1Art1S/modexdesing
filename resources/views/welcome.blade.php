@@ -1440,6 +1440,75 @@
                                     </div>
                                 </div>
 
+                                <!-- ЗАВАНТАЖЕННЯ ФАЙЛІВ (СМУЖКА З ВИПАДАЮЧИМ СПИСКОМ) -->
+                                <div x-data="{ openUpload: false, selectedFiles: [] }">
+                                    <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
+                                        <span x-show="lang === 'ua'">Завантажити файли або креслення:</span>
+                                        <span x-show="lang === 'en'">Upload CAD Files or Drawings:</span>
+                                    </label>
+
+                                    <!-- Смужка у вигляді випадаючого списку -->
+                                    <div @click="openUpload = !openUpload" 
+                                         class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 bg-slate-50/70 hover:bg-slate-100/90 text-sm cursor-pointer transition-all flex items-center justify-between select-none">
+                                        <div class="flex items-center gap-2.5 text-slate-700 truncate">
+                                            <span class="text-base text-sky-600">📎</span>
+                                            <template x-if="selectedFiles.length === 0">
+                                                <span class="text-slate-500 font-sans text-xs sm:text-sm">
+                                                    <span x-show="lang === 'ua'">Прикріпити файли (STL, STEP, PDF, фото або креслення)</span>
+                                                    <span x-show="lang === 'en'">Attach files (STL, STEP, PDF, photos or drawings)</span>
+                                                </span>
+                                            </template>
+                                            <template x-if="selectedFiles.length > 0">
+                                                <span class="font-bold text-sky-900 font-sans text-xs sm:text-sm">
+                                                    <span x-show="lang === 'ua'">Обрано файлів: <span x-text="selectedFiles.length"></span></span>
+                                                    <span x-show="lang === 'en'">Files attached: <span x-text="selectedFiles.length"></span></span>
+                                                </span>
+                                            </template>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-xs font-mono font-semibold text-slate-500 hidden sm:inline" x-show="selectedFiles.length === 0">до 100 МБ</span>
+                                            <svg class="w-4 h-4 text-slate-600 transition-transform duration-200" :class="openUpload ? 'rotate-180' : ''" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <!-- Випадаючий блок завантаження -->
+                                    <div x-show="openUpload" class="mt-2.5" style="display: none;">
+                                        <div class="rounded-xl border-2 border-dashed border-sky-400 bg-sky-50/50 p-4 text-center hover:bg-sky-50/80 transition-colors">
+                                            <input type="file" multiple 
+                                                   @change="selectedFiles = Array.from($event.target.files)"
+                                                   id="file-upload-input"
+                                                   class="hidden" />
+                                            <label for="file-upload-input" class="cursor-pointer block">
+                                                <div class="text-sky-700 font-bold text-xs sm:text-sm font-sans flex items-center justify-center gap-2">
+                                                    <svg class="w-5 h-5 text-sky-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                                    </svg>
+                                                    <span x-show="lang === 'ua'">Натисніть для вибору файлів або перетягніть сюди</span>
+                                                    <span x-show="lang === 'en'">Click to select files or drag and drop here</span>
+                                                </div>
+                                                <p class="text-[11px] text-slate-500 mt-1 font-sans">
+                                                    <span x-show="lang === 'ua'">Формати: STL, STEP, STP, IGES, OBJ, DXF, DWG, PDF, JPG, PNG (до 100 МБ)</span>
+                                                    <span x-show="lang === 'en'">Formats: STL, STEP, STP, IGES, OBJ, DXF, DWG, PDF, JPG, PNG (up to 100MB)</span>
+                                                </p>
+                                            </label>
+
+                                            <!-- Список обраних файлів -->
+                                            <template x-if="selectedFiles.length > 0">
+                                                <div class="mt-3 pt-3 border-t border-sky-200/80 text-left space-y-1.5 max-h-36 overflow-y-auto">
+                                                    <template x-for="(file, index) in selectedFiles" :key="index">
+                                                        <div class="flex items-center justify-between text-xs bg-white/80 px-2.5 py-1.5 rounded-lg border border-sky-200 text-slate-800 font-mono">
+                                                            <span class="truncate flex-1 pr-2" x-text="file.name"></span>
+                                                            <span class="text-[10px] text-slate-500 shrink-0" x-text="(file.size / 1024 / 1024).toFixed(2) + ' MB'"></span>
+                                                        </div>
+                                                    </template>
+                                                </div>
+                                            </template>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <!-- ОПИС ТА ПОСИЛАННЯ НА ФАЙЛИ / ФОТО -->
                                 <div>
                                     <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
