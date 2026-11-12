@@ -1,7 +1,6 @@
 {
   "version": 2,
   "framework": null,
-  "outputDirectory": ".",
   "functions": {
     "api/index.php": {
       "runtime": "vercel-php@0.9.0"
@@ -43,8 +42,7 @@
     "ASSET_URL": "https://modexdesing.vercel.app",
     "APP_DEBUG": "false",
     "APP_KEY": "base64:Qkza+NmkeWp/PGlPJ9VYf/qnoFuml8j7ZwoHSrnlyA0=",
-    "VERCEL": "1",
-    "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
+    "VIEW_COMPILED_PATH": "/tmp",
     "CACHE_STORE": "array",
     "SESSION_DRIVER": "cookie",
     "LOG_CHANNEL": "stderr",
