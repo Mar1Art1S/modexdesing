@@ -3,7 +3,7 @@
     <!-- ============================================================ -->
     <!-- SECTION 1: FULL-SCREEN HERO WITH ZAS.JPG & CAD DRAWING FRAME -->
     <!-- ============================================================ -->
-    <section id="hero" class="relative min-h-[700px] lg:h-[calc(100vh-5.5rem)] lg:max-h-[900px] flex flex-col justify-between overflow-hidden bg-[#e5e9ee] border-b-2 border-slate-900">
+    <section id="hero" class="relative min-h-[700px] lg:h-[calc(100vh-5.5rem)] lg:max-h-[900px] flex flex-col justify-between overflow-hidden bg-[#e5e9ee]">
         
         <!-- TECHNICAL DRAFTING BORDER: ZONE MARKERS (A-D, 1-8) -->
         <div class="hidden xl:flex absolute top-3 left-8 right-8 justify-between text-[11px] font-mono text-slate-500 font-bold select-none z-20 pointer-events-none">
@@ -121,7 +121,7 @@
     <!-- SECTION 2: CORE ENGINEERING CAPABILITIES SHOWCASE MATRIX      -->
     <!-- RECREATED TO MATCH TECHNICAL SPECIFICATION MATRIX BLUEPRINT   -->
     <!-- ============================================================ -->
-    <section id="services" class="py-20 lg:py-28 cad-blueprint-substrate border-b-2 border-slate-900 relative">
+    <section id="services" class="py-20 lg:py-28 cad-blueprint-substrate relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- TECHNICAL DIMENSION SEPARATOR (CAD LEADER ARROWS) -->
@@ -377,7 +377,7 @@
     <!-- SECTION 3: HARDWARE PROJECTS & CASE STUDIES PORTFOLIO        -->
     <!-- BIGGER PROJECT SHOWCASE BLOCKS WITH BLUEPRINT SCHEMATICS    -->
     <!-- ============================================================ -->
-    <section id="projects" class="py-20 lg:py-28 bg-white border-b-2 border-slate-900" x-data="{ currentFilter: 'all' }">
+    <section id="projects" class="py-20 lg:py-28 bg-white" x-data="{ currentFilter: 'all' }">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- TECHNICAL DIMENSION SEPARATOR -->
@@ -585,7 +585,7 @@
     <!-- SECTION 4: CLIENT PHOTOS → 3D PRINTED PROTOTYPE SHOWCASE     -->
     <!-- WORK PERFORMED: 3D PRINTING PROTOTYPES BASED ON CLIENT PHOTOS -->
     <!-- ============================================================ -->
-    <section id="printing" class="py-20 lg:py-28 cad-blueprint-substrate border-b-2 border-slate-900">
+    <section id="printing" class="py-20 lg:py-28 cad-blueprint-substrate">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- TECHNICAL DIMENSION SEPARATOR -->
@@ -974,7 +974,7 @@
     <!-- SECTION 5: 3D PRINTING & COLLABORATION WORKFLOW (4 STEPS)    -->
     <!-- DIRECT COMMUNICATION WITH CLIENT // PARTS 3D PRINTING FOCUS  -->
     <!-- ============================================================ -->
-    <section id="engineering" class="py-20 lg:py-28 bg-white border-b-2 border-slate-900">
+    <section id="engineering" class="py-20 lg:py-28 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- TECHNICAL DIMENSION SEPARATOR -->
@@ -1392,7 +1392,7 @@
     <!-- SECTION 6: INTAKE ORDER FORM (WORKFLOW STAGES)               -->
     <!-- (КРЕСЛЕННЯ) — МОДЕЛЮВАННЯ — ПРОЦЕС ДРУКУ — ГОТОВА МОДЕЛЬ     -->
     <!-- ============================================================ -->
-    <section id="contacts" class="py-20 lg:py-28 cad-blueprint-substrate border-t-2 border-slate-900" 
+    <section id="contacts" class="py-20 lg:py-28 cad-blueprint-substrate" 
              x-data="{ 
                  sent: false, 
                  orderType: 'drawing', 
