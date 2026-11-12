@@ -1374,206 +1374,210 @@
                 <span x-show="lang === 'en'">&vert;&larr;&mdash;&mdash;&mdash;&mdash;&mdash; ORDER SPECIFICATION // FROM DRAWING TO FINISHED PART &mdash;&mdash;&mdash;&mdash;&mdash;&rarr;&vert;</span>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
                 
                 <!-- Left: Interactive Order Intake Form -->
-                <div class="lg:col-span-7 bg-white rounded-2xl border-2 border-slate-900 p-8 sm:p-10 shadow-xl cad-corner-cross" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="w-3 h-3 rounded-full bg-sky-500"></span>
-                        <span class="text-xs sm:text-sm font-mono text-sky-800 font-bold uppercase tracking-wider" x-show="lang === 'ua'">ФОРМА ЗАМОВЛЕННЯ 3D-ДРУКУ ТА МОДЕЛЮВАННЯ</span>
-                        <span class="text-xs sm:text-sm font-mono text-sky-800 font-bold uppercase tracking-wider" x-show="lang === 'en'">3D PRINTING &amp; CAD ORDER INTAKE</span>
-                    </div>
-                    <h2 class="font-heading text-2xl sm:text-3xl font-black text-slate-900">
-                        <span x-show="lang === 'ua'">Оформити Замовлення на Деталь</span>
-                        <span x-show="lang === 'en'">Place Your 3D Print Order</span>
-                    </h2>
-                    <p class="text-sm text-slate-600 mt-2 mb-8 font-sans" x-show="lang === 'ua'">
-                        Залиште деталі вашого замовлення. Ми зв'яжемося протягом 15–30 хвилин з точним розрахунком вартості.
-                    </p>
-                    <p class="text-sm text-slate-600 mt-2 mb-8 font-sans" x-show="lang === 'en'">
-                        Leave the details of your order. We will contact you within 15–30 minutes with an exact price estimate.
-                    </p>
+                <div class="lg:col-span-7 bg-white rounded-2xl border-2 border-slate-900 p-8 sm:p-10 shadow-xl cad-corner-cross flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="w-3 h-3 rounded-full bg-sky-500"></span>
+                            <span class="text-xs sm:text-sm font-mono text-sky-800 font-bold uppercase tracking-wider" x-show="lang === 'ua'">ФОРМА ЗАМОВЛЕННЯ 3D-ДРУКУ ТА МОДЕЛЮВАННЯ</span>
+                            <span class="text-xs sm:text-sm font-mono text-sky-800 font-bold uppercase tracking-wider" x-show="lang === 'en'">3D PRINTING &amp; CAD ORDER INTAKE</span>
+                        </div>
+                        <h2 class="font-heading text-2xl sm:text-3xl font-black text-slate-900">
+                            <span x-show="lang === 'ua'">Оформити Замовлення на Деталь</span>
+                            <span x-show="lang === 'en'">Place Your 3D Print Order</span>
+                        </h2>
+                        <p class="text-sm text-slate-600 mt-2 mb-6 font-sans" x-show="lang === 'ua'">
+                            Залиште деталі вашого замовлення. Ми зв'яжемося протягом 15–30 хвилин з точним розрахунком вартості.
+                        </p>
+                        <p class="text-sm text-slate-600 mt-2 mb-6 font-sans" x-show="lang === 'en'">
+                            Leave the details of your order. We will contact you within 15–30 minutes with an exact price estimate.
+                        </p>
 
-                    <template x-if="!sent">
-                        <form @submit.prevent="sent = true" class="space-y-6">
-                            
-                            <!-- 1. ТИП ЗАМОВЛЕННЯ -->
-                            <div>
-                                <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2.5">
-                                    <span x-show="lang === 'ua'">Тип Замовлення:</span>
-                                    <span x-show="lang === 'en'">Order Type:</span>
-                                </label>
+                        <template x-if="!sent">
+                            <form @submit.prevent="sent = true" class="space-y-5">
                                 
-                                <div class="font-mono text-xs">
-                                    <div class="p-4 rounded-xl border-2 border-sky-600 bg-sky-50/80 text-sky-950 font-bold shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                                        <div class="flex items-center gap-2.5">
-                                            <span class="text-base">📐</span>
-                                            <span class="font-bold text-sm">
-                                                <span x-show="lang === 'ua'">Замовлення</span>
-                                                <span x-show="lang === 'en'">Order</span>
-                                            </span>
-                                        </div>
-                                        <div class="text-xs font-sans font-normal text-slate-600">
-                                            <span x-show="lang === 'ua'">Маю ескіз, фото або зразок деталі</span>
-                                            <span x-show="lang === 'en'">Have a sketch, photo, or sample</span>
+                                <!-- 1. ТИП ЗАМОВЛЕННЯ -->
+                                <div>
+                                    <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
+                                        <span x-show="lang === 'ua'">Тип Замовлення:</span>
+                                        <span x-show="lang === 'en'">Order Type:</span>
+                                    </label>
+                                    
+                                    <div class="font-mono text-xs">
+                                        <div class="p-3.5 rounded-xl border-2 border-sky-600 bg-sky-50/80 text-sky-950 font-bold shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                                            <div class="flex items-center gap-2.5">
+                                                <span class="text-base">📐</span>
+                                                <span class="font-bold text-sm">
+                                                    <span x-show="lang === 'ua'">Замовлення</span>
+                                                    <span x-show="lang === 'en'">Order</span>
+                                                </span>
+                                            </div>
+                                            <div class="text-xs font-sans font-normal text-slate-600">
+                                                <span x-show="lang === 'ua'">Маю ескіз, фото або зразок деталі</span>
+                                                <span x-show="lang === 'en'">Have a sketch, photo, or sample</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <!-- КОНТАКТНІ ДАНІ: ІМ'Я ТА EMAIL -->
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <!-- КОНТАКТНІ ДАНІ: ІМ'Я ТА EMAIL -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
+                                            <span x-show="lang === 'ua'">Ваше Ім'я:</span>
+                                            <span x-show="lang === 'en'">Your Name:</span>
+                                        </label>
+                                        <input type="text" required x-model="name" :placeholder="lang === 'ua' ? 'Олександр' : 'Alexander'" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 text-sm text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans" />
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
+                                            <span x-show="lang === 'ua'">Email (для розрахунку або файлів):</span>
+                                            <span x-show="lang === 'en'">Email Address (for quote or files):</span>
+                                        </label>
+                                        <input type="email" required x-model="email" :placeholder="lang === 'ua' ? 'alex@example.com' : 'alex@example.com'" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 text-sm text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans" />
+                                    </div>
+                                </div>
+
+                                <!-- ОПИС ТА ПОСИЛАННЯ НА ФАЙЛИ / ФОТО -->
                                 <div>
                                     <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
-                                        <span x-show="lang === 'ua'">Ваше Ім'я:</span>
-                                        <span x-show="lang === 'en'">Your Name:</span>
+                                        <span x-show="lang === 'ua'">Опис Завдання або Посилання на Фото / Креслення:</span>
+                                        <span x-show="lang === 'en'">Project Details &amp; Links to Photos / CAD Files:</span>
                                     </label>
-                                    <input type="text" required x-model="name" :placeholder="lang === 'ua' ? 'Олександр' : 'Alexander'" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 text-sm text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans" />
+                                    <textarea rows="4" x-model="details" :placeholder="lang === 'ua' ? 'Опишіть призначення деталі, орієнтовні розміри або вставте посилання на фото чи 3D-файл (Google Drive, Instagram, Facebook, хмара)...' : 'Describe the part purpose, rough dimensions, or paste a link to photos/CAD files (Google Drive, Instagram, Facebook, cloud storage)...'" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 text-sm text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans"></textarea>
                                 </div>
-                                <div>
-                                    <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
-                                        <span x-show="lang === 'ua'">Email (для надсилання розрахунку або файлів):</span>
-                                        <span x-show="lang === 'en'">Email Address (for quote or file transfer):</span>
-                                    </label>
-                                    <input type="email" required x-model="email" :placeholder="lang === 'ua' ? 'alex@example.com' : 'alex@example.com'" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 text-sm text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans" />
+
+                                <div class="pt-2">
+                                    <button type="submit" class="w-full btn-cyan-glow text-white font-bold py-4 rounded-xl cursor-pointer text-base sm:text-lg shadow-lg hover:shadow-cyan-500/30 transition-all">
+                                        <span x-show="lang === 'ua'">Надіслати Замовлення на Розрахунок &rarr;</span>
+                                        <span x-show="lang === 'en'">Submit Order for Estimation &rarr;</span>
+                                    </button>
+                                    <div class="text-center text-slate-500 text-xs font-mono mt-2.5">
+                                        <span x-show="lang === 'ua'">⚡ Відповідаємо протягом 15–30 хвилин. Конфіденційність гарантовано.</span>
+                                        <span x-show="lang === 'en'">⚡ We reply within 15–30 minutes. Complete confidentiality guaranteed.</span>
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
+                        </template>
 
-                            <!-- ОПИС ТА ПОСИЛАННЯ НА ФАЙЛИ / ФОТО -->
-                            <div>
-                                <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
-                                    <span x-show="lang === 'ua'">Опис Завдання або Посилання на Фото / Креслення:</span>
-                                    <span x-show="lang === 'en'">Project Details &amp; Links to Photos / CAD Files:</span>
-                                </label>
-                                <textarea rows="3" x-model="details" :placeholder="lang === 'ua' ? 'Опишіть призначення деталі, орієнтовні розміри або вставте посилання на фото чи 3D-файл (Google Drive, Instagram, Facebook, хмара)...' : 'Describe the part purpose, rough dimensions, or paste a link to photos/CAD files (Google Drive, Instagram, Facebook, cloud storage)...'" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 text-sm text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans"></textarea>
-                            </div>
-
-                            <div class="pt-2">
-                                <button type="submit" class="w-full btn-cyan-glow text-white font-bold py-4 rounded-xl cursor-pointer text-base sm:text-lg shadow-lg hover:shadow-cyan-500/30 transition-all">
-                                    <span x-show="lang === 'ua'">Надіслати Замовлення на Розрахунок &rarr;</span>
-                                    <span x-show="lang === 'en'">Submit Order for Estimation &rarr;</span>
+                        <template x-if="sent">
+                            <div class="text-center py-12 font-mono">
+                                <div class="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4">
+                                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                <h3 class="font-heading text-xl font-bold text-slate-900">
+                                    <span x-show="lang === 'ua'">ЗАМОВЛЕННЯ УСПІШНО ПРИЙНЯТО В РОБОТУ</span>
+                                    <span x-show="lang === 'en'">ORDER RECEIVED SUCCESSFULLY</span>
+                                </h3>
+                                <p class="text-sm text-slate-600 mt-2 max-w-sm mx-auto font-sans">
+                                    <span x-show="lang === 'ua'">Майстер зв'яжеться з вами найближчим часом (протягом 15–30 хвилин) для погодження вартості, матеріалу та термінів друку.</span>
+                                    <span x-show="lang === 'en'">Our engineer will contact you shortly (within 15–30 minutes) to confirm the price, material, and printing schedule.</span>
+                                </p>
+                                <button type="button" @click="sent = false" class="mt-6 text-sm text-sky-700 font-bold hover:underline">
+                                    <span x-show="lang === 'ua'">Надіслати ще одну деталь</span>
+                                    <span x-show="lang === 'en'">Send another part</span>
                                 </button>
-                                <div class="text-center text-slate-500 text-xs font-mono mt-2.5">
-                                    <span x-show="lang === 'ua'">⚡ Відповідаємо протягом 15–30 хвилин. Конфіденційність гарантовано.</span>
-                                    <span x-show="lang === 'en'">⚡ We reply within 15–30 minutes. Complete confidentiality guaranteed.</span>
-                                </div>
                             </div>
-                        </form>
-                    </template>
-
-                    <template x-if="sent">
-                        <div class="text-center py-12 font-mono">
-                            <div class="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4">
-                                <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                            </div>
-                            <h3 class="font-heading text-xl font-bold text-slate-900">
-                                <span x-show="lang === 'ua'">ЗАМОВЛЕННЯ УСПІШНО ПРИЙНЯТО В РОБОТУ</span>
-                                <span x-show="lang === 'en'">ORDER RECEIVED SUCCESSFULLY</span>
-                            </h3>
-                            <p class="text-sm text-slate-600 mt-2 max-w-sm mx-auto font-sans">
-                                <span x-show="lang === 'ua'">Майстер зв'яжеться з вами найближчим часом (протягом 15–30 хвилин) для погодження вартості, матеріалу та термінів друку.</span>
-                                <span x-show="lang === 'en'">Our engineer will contact you shortly (within 15–30 minutes) to confirm the price, material, and printing schedule.</span>
-                            </p>
-                            <button type="button" @click="sent = false" class="mt-6 text-sm text-sky-700 font-bold hover:underline">
-                                <span x-show="lang === 'ua'">Надіслати ще одну деталь</span>
-                                <span x-show="lang === 'en'">Send another part</span>
-                            </button>
-                        </div>
-                    </template>
+                        </template>
+                    </div>
                 </div>
 
                 <!-- Right: Workshop Direct Channels & Practical FAQ -->
-                <div class="lg:col-span-5 space-y-6">
+                <div class="lg:col-span-5 flex flex-col justify-between gap-6">
                     
                     <!-- Direct Channels Card -->
-                    <div class="bg-white rounded-2xl border-2 border-slate-900 p-8 shadow-xl font-mono text-xs sm:text-sm cad-corner-cross" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="font-heading text-base font-black text-slate-900 mb-6 pb-3 border-b-2 border-slate-900 uppercase">
+                    <div class="bg-white rounded-2xl border-2 border-slate-900 p-6 sm:p-7 shadow-xl font-mono text-xs sm:text-sm cad-corner-cross" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="font-heading text-base font-black text-slate-900 mb-5 pb-3 border-b-2 border-slate-900 uppercase">
                             <span x-show="lang === 'ua'">ПРЯМИЙ ЗВ'ЯЗОК З МАЙСТРОМ</span>
                             <span x-show="lang === 'en'">DIRECT CONTACT WITH ENGINEER</span>
                         </h3>
-                        <div class="space-y-6 text-slate-800">
+                        <div class="space-y-4 text-slate-800">
                             <!-- 1. INSTAGRAM -->
-                            <div class="flex items-start gap-4">
+                            <div class="flex items-start gap-3.5">
                                 <div class="w-9 h-9 rounded-lg bg-pink-100 text-pink-700 font-black flex items-center justify-center shrink-0 text-sm">IG</div>
                                 <div>
-                                    <div class="font-bold text-slate-500 text-xs uppercase">
+                                    <div class="font-bold text-slate-500 text-[11px] uppercase">
                                         <span x-show="lang === 'ua'">INSTAGRAM (ФОТО ДЕТАЛЕЙ ТА DIRECT)</span>
                                         <span x-show="lang === 'en'">INSTAGRAM (PHOTOS &amp; DIRECT)</span>
                                     </div>
-                                    <a href="https://instagram.com/modexdesign" target="_blank" rel="noopener noreferrer" class="text-pink-600 font-bold hover:underline text-sm sm:text-base">@modexdesign</a>
+                                    <a href="https://instagram.com/modexdesign" target="_blank" rel="noopener noreferrer" class="text-pink-600 font-bold hover:underline text-sm">@modexdesign</a>
                                 </div>
                             </div>
                             <!-- 2. FACEBOOK -->
-                            <div class="flex items-start gap-4">
+                            <div class="flex items-start gap-3.5">
                                 <div class="w-9 h-9 rounded-lg bg-blue-100 text-blue-700 font-black flex items-center justify-center shrink-0 text-sm">FB</div>
                                 <div>
-                                    <div class="font-bold text-slate-500 text-xs uppercase">
+                                    <div class="font-bold text-slate-500 text-[11px] uppercase">
                                         <span x-show="lang === 'ua'">FACEBOOK (ПОВІДОМЛЕННЯ ТА КОНСУЛЬТАЦІЯ)</span>
                                         <span x-show="lang === 'en'">FACEBOOK (MESSAGES &amp; CHAT)</span>
                                     </div>
-                                    <a href="https://facebook.com/modexdesign" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-bold hover:underline text-sm sm:text-base">facebook.com/modexdesign</a>
+                                    <a href="https://facebook.com/modexdesign" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-bold hover:underline text-sm">facebook.com/modexdesign</a>
                                 </div>
                             </div>
                             <!-- 3. EMAIL / ПОШТА -->
-                            <div class="flex items-start gap-4">
+                            <div class="flex items-start gap-3.5">
                                 <div class="w-9 h-9 rounded-lg bg-sky-100 text-sky-900 font-black flex items-center justify-center shrink-0 text-sm">@</div>
                                 <div>
-                                    <div class="font-bold text-slate-500 text-xs uppercase">
+                                    <div class="font-bold text-slate-500 text-[11px] uppercase">
                                         <span x-show="lang === 'ua'">ПОШТА ДЛЯ КРЕСЛЕНЬ ТА МОДЕЛЕЙ</span>
                                         <span x-show="lang === 'en'">EMAIL FOR DRAWINGS &amp; CAD</span>
                                     </div>
-                                    <a href="mailto:orders@modexdesign.com" class="text-sky-700 font-bold hover:underline text-sm sm:text-base">orders@modexdesign.com</a>
+                                    <a href="mailto:orders@modexdesign.com" class="text-sky-700 font-bold hover:underline text-sm">orders@modexdesign.com</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Practical FAQ Card -->
-                    <div class="bg-white rounded-2xl border-2 border-slate-900 p-8 shadow-xl font-mono text-xs sm:text-sm cad-corner-cross" data-aos="fade-up" data-aos-delay="300">
-                        <h3 class="font-heading text-base font-black text-slate-900 mb-4 pb-3 border-b-2 border-slate-200 uppercase">
-                            <span x-show="lang === 'ua'">ЧАСТІ ЗАПИТАННЯ ПО ЗАМОВЛЕННЮ</span>
-                            <span x-show="lang === 'en'">ORDERING FAQ</span>
-                        </h3>
-                        <div class="space-y-4">
-                            <div>
-                                <h4 class="font-bold text-slate-900">
-                                    <span x-show="lang === 'ua'">Як передати креслення чи фото деталі?</span>
-                                    <span x-show="lang === 'en'">How to send photos or drawings?</span>
-                                </h4>
-                                <p class="text-slate-600 text-xs mt-1 font-sans">
-                                    <span x-show="lang === 'ua'">Надішліть посилання на фото у формі, напишіть нам в Instagram @modexdesign, у Facebook або відправте файл на електронну пошту.</span>
-                                    <span x-show="lang === 'en'">Paste a link in the form, message us on Instagram @modexdesign, reach out via Facebook, or email us the files.</span>
-                                </p>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-slate-900">
-                                    <span x-show="lang === 'ua'">Якщо немає 3D-моделі, тільки зламана деталь?</span>
-                                    <span x-show="lang === 'en'">What if there is no 3D file, only a broken sample?</span>
-                                </h4>
-                                <p class="text-slate-600 text-xs mt-1 font-sans">
-                                    <span x-show="lang === 'ua'">Достатньо сфотографувати деталь поруч із лінійкою. Ми знімемо всі розміри, створимо точну 3D-модель та узгодимо її з вами перед друком.</span>
-                                    <span x-show="lang === 'en'">Take a photo of the part with a ruler next to it. We will engineer the 3D model and confirm it with you before printing.</span>
-                                </p>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-slate-900">
-                                    <span x-show="lang === 'ua'">Який пластик обрати: PLA чи PETG?</span>
-                                    <span x-show="lang === 'en'">Which plastic to choose: PLA or PETG?</span>
-                                </h4>
-                                <p class="text-slate-600 text-xs mt-1 font-sans">
-                                    <span x-show="lang === 'ua'"><strong>PLA</strong> підходить для макетів, корпусів та естетики. <strong>PETG</strong> — для міцних деталей, шестерень, кронштейнів, деталей авто та вулиці.</span>
-                                    <span x-show="lang === 'en'"><strong>PLA</strong> for visual mockups and smooth housings. <strong>PETG</strong> for high-strength functional brackets, gears, and outdoor parts.</span>
-                                </p>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-slate-900">
-                                    <span x-show="lang === 'ua'">Скільки часу займає виготовлення?</span>
-                                    <span x-show="lang === 'en'">How long does printing take?</span>
-                                </h4>
-                                <p class="text-slate-600 text-xs mt-1 font-sans">
-                                    <span x-show="lang === 'ua'">Зазвичай тестовий прототип або деталь друкується протягом 24–48 годин. Для термінових замовлень можливий друк день-у-день.</span>
-                                    <span x-show="lang === 'en'">Typically 24–48 hours for prototype parts. Express same-day service is available on request.</span>
-                                </p>
+                    <div class="bg-white rounded-2xl border-2 border-slate-900 p-6 sm:p-7 shadow-xl font-mono text-xs sm:text-sm cad-corner-cross flex-1 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+                        <div>
+                            <h3 class="font-heading text-base font-black text-slate-900 mb-4 pb-3 border-b-2 border-slate-900 uppercase">
+                                <span x-show="lang === 'ua'">ЧАСТІ ЗАПИТАННЯ ПО ЗАМОВЛЕННЮ</span>
+                                <span x-show="lang === 'en'">ORDERING FAQ</span>
+                            </h3>
+                            <div class="space-y-3.5">
+                                <div>
+                                    <h4 class="font-bold text-slate-900">
+                                        <span x-show="lang === 'ua'">Як передати креслення чи фото деталі?</span>
+                                        <span x-show="lang === 'en'">How to send photos or drawings?</span>
+                                    </h4>
+                                    <p class="text-slate-600 text-xs mt-1 font-sans leading-relaxed">
+                                        <span x-show="lang === 'ua'">Надішліть посилання у формі, напишіть в Instagram @modexdesign, Facebook або на пошту.</span>
+                                        <span x-show="lang === 'en'">Paste a link in the form, message us on Instagram @modexdesign, Facebook, or email us.</span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">
+                                        <span x-show="lang === 'ua'">Якщо немає 3D-моделі, тільки зламана деталь?</span>
+                                        <span x-show="lang === 'en'">What if there is no 3D file, only a broken sample?</span>
+                                    </h4>
+                                    <p class="text-slate-600 text-xs mt-1 font-sans leading-relaxed">
+                                        <span x-show="lang === 'ua'">Достатньо сфотографувати деталь поруч із лінійкою. Ми знімемо всі розміри та створимо точну 3D-модель.</span>
+                                        <span x-show="lang === 'en'">Take a photo of the part with a ruler next to it. We will engineer the 3D model accurately.</span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">
+                                        <span x-show="lang === 'ua'">Який пластик обрати: PLA чи PETG?</span>
+                                        <span x-show="lang === 'en'">Which plastic to choose: PLA or PETG?</span>
+                                    </h4>
+                                    <p class="text-slate-600 text-xs mt-1 font-sans leading-relaxed">
+                                        <span x-show="lang === 'ua'"><strong>PLA</strong> підходить для макетів та естетики. <strong>PETG</strong> — для міцних шестерень, кронштейнів та деталей авто.</span>
+                                        <span x-show="lang === 'en'"><strong>PLA</strong> for visual mockups. <strong>PETG</strong> for high-strength brackets, gears, and outdoor parts.</span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">
+                                        <span x-show="lang === 'ua'">Скільки часу займає виготовлення?</span>
+                                        <span x-show="lang === 'en'">How long does printing take?</span>
+                                    </h4>
+                                    <p class="text-slate-600 text-xs mt-1 font-sans leading-relaxed">
+                                        <span x-show="lang === 'ua'">Зазвичай тестовий прототип друкується протягом 24–48 годин. Можливий терміновий друк день-у-день.</span>
+                                        <span x-show="lang === 'en'">Typically 24–48 hours for prototype parts. Express same-day service is available on request.</span>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
