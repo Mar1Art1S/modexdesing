@@ -1388,131 +1388,58 @@
                         <span x-show="lang === 'en'">Place Your 3D Print Order</span>
                     </h2>
                     <p class="text-sm text-slate-600 mt-2 mb-8 font-sans" x-show="lang === 'ua'">
-                        Оберіть, на якому етапі знаходиться ваша деталь (креслення, моделювання, готовий файл чи серія). Ми зв'яжемося протягом 15–30 хвилин.
+                        Залиште деталі вашого замовлення. Ми зв'яжемося протягом 15–30 хвилин з точним розрахунком вартості.
                     </p>
                     <p class="text-sm text-slate-600 mt-2 mb-8 font-sans" x-show="lang === 'en'">
-                        Select your current stage (drawing, 3D modeling, ready file, or batch). We will contact you within 15–30 minutes with an exact estimate.
+                        Leave the details of your order. We will contact you within 15–30 minutes with an exact price estimate.
                     </p>
 
                     <template x-if="!sent">
                         <form @submit.prevent="sent = true" class="space-y-6">
                             
-                            <!-- 1. ТИП ЗАМОВЛЕННЯ (4 СТАДІЇ) -->
+                            <!-- 1. ТИП ЗАМОВЛЕННЯ -->
                             <div>
                                 <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2.5">
-                                    <span x-show="lang === 'ua'">1. Тип Замовлення (Оберіть ваш етап):</span>
-                                    <span x-show="lang === 'en'">1. Order Type (Select your stage):</span>
+                                    <span x-show="lang === 'ua'">Тип Замовлення:</span>
+                                    <span x-show="lang === 'en'">Order Type:</span>
                                 </label>
                                 
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-mono text-xs">
-                                    <!-- Option 1: Креслення / Фото -->
-                                    <label @click="orderType = 'drawing'"
-                                           :class="orderType === 'drawing' ? 'border-sky-600 bg-sky-50/80 ring-2 ring-sky-500/30 text-sky-950 font-bold shadow-xs' : 'border-slate-300 bg-slate-50/50 hover:bg-slate-100 text-slate-700'"
-                                           class="p-3.5 rounded-xl border-2 cursor-pointer transition-all flex flex-col justify-between">
-                                        <div class="flex items-center justify-between mb-1">
-                                            <span class="font-bold">📐 <span x-show="lang === 'ua'">Замовлення (Креслення / Фото)</span><span x-show="lang === 'en'">Drawings / Photo</span></span>
-                                            <input type="radio" name="order_stage" value="drawing" x-model="orderType" class="text-sky-600 focus:ring-sky-500" />
+                                <div class="font-mono text-xs">
+                                    <div class="p-4 rounded-xl border-2 border-sky-600 bg-sky-50/80 text-sky-950 font-bold shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                                        <div class="flex items-center gap-2.5">
+                                            <span class="text-base">📐</span>
+                                            <span class="font-bold text-sm">
+                                                <span x-show="lang === 'ua'">Замовлення</span>
+                                                <span x-show="lang === 'en'">Order</span>
+                                            </span>
                                         </div>
-                                        <div class="text-[11px] font-sans font-normal text-slate-500 mt-1" x-show="lang === 'ua'">Маю ескіз, фото або зразок деталі</div>
-                                        <div class="text-[11px] font-sans font-normal text-slate-500 mt-1" x-show="lang === 'en'">Have a sketch, photo, or broken sample</div>
-                                    </label>
-
-                                    <!-- Option 2: 3D-Моделювання -->
-                                    <label @click="orderType = 'modeling'"
-                                           :class="orderType === 'modeling' ? 'border-sky-600 bg-sky-50/80 ring-2 ring-sky-500/30 text-sky-950 font-bold shadow-xs' : 'border-slate-300 bg-slate-50/50 hover:bg-slate-100 text-slate-700'"
-                                           class="p-3.5 rounded-xl border-2 cursor-pointer transition-all flex flex-col justify-between">
-                                        <div class="flex items-center justify-between mb-1">
-                                            <span class="font-bold">💻 <span x-show="lang === 'ua'">3D-Моделювання</span><span x-show="lang === 'en'">3D CAD Modeling</span></span>
-                                            <input type="radio" name="order_stage" value="modeling" x-model="orderType" class="text-sky-600 focus:ring-sky-500" />
+                                        <div class="text-xs font-sans font-normal text-slate-600">
+                                            <span x-show="lang === 'ua'">Маю ескіз, фото або зразок деталі</span>
+                                            <span x-show="lang === 'en'">Have a sketch, photo, or sample</span>
                                         </div>
-                                        <div class="text-[11px] font-sans font-normal text-slate-500 mt-1" x-show="lang === 'ua'">Потрібно створити 3D-модель з нуля</div>
-                                        <div class="text-[11px] font-sans font-normal text-slate-500 mt-1" x-show="lang === 'en'">Need 3D model created from scratch</div>
-                                    </label>
-
-                                    <!-- Option 3: Процес Друку -->
-                                    <label @click="orderType = 'printing'"
-                                           :class="orderType === 'printing' ? 'border-sky-600 bg-sky-50/80 ring-2 ring-sky-500/30 text-sky-950 font-bold shadow-xs' : 'border-slate-300 bg-slate-50/50 hover:bg-slate-100 text-slate-700'"
-                                           class="p-3.5 rounded-xl border-2 cursor-pointer transition-all flex flex-col justify-between">
-                                        <div class="flex items-center justify-between mb-1">
-                                            <span class="font-bold">🖨️ <span x-show="lang === 'ua'">Процес Друку</span><span x-show="lang === 'en'">3D Print Process</span></span>
-                                            <input type="radio" name="order_stage" value="printing" x-model="orderType" class="text-sky-600 focus:ring-sky-500" />
-                                        </div>
-                                        <div class="text-[11px] font-sans font-normal text-slate-500 mt-1" x-show="lang === 'ua'">Маю готовий 3D-файл (STL, STEP) на друк</div>
-                                        <div class="text-[11px] font-sans font-normal text-slate-500 mt-1" x-show="lang === 'en'">Have a ready 3D file (STL/STEP) to print</div>
-                                    </label>
-
-                                    <!-- Option 4: Готова Модель / Серія -->
-                                    <label @click="orderType = 'batch'"
-                                           :class="orderType === 'batch' ? 'border-sky-600 bg-sky-50/80 ring-2 ring-sky-500/30 text-sky-950 font-bold shadow-xs' : 'border-slate-300 bg-slate-50/50 hover:bg-slate-100 text-slate-700'"
-                                           class="p-3.5 rounded-xl border-2 cursor-pointer transition-all flex flex-col justify-between">
-                                        <div class="flex items-center justify-between mb-1">
-                                            <span class="font-bold">📦 <span x-show="lang === 'ua'">Готова Модель / Серія</span><span x-show="lang === 'en'">Batch of Parts</span></span>
-                                            <input type="radio" name="order_stage" value="batch" x-model="orderType" class="text-sky-600 focus:ring-sky-500" />
-                                        </div>
-                                        <div class="text-[11px] font-sans font-normal text-slate-500 mt-1" x-show="lang === 'ua'">Тираж готової моделі або повторний друк</div>
-                                        <div class="text-[11px] font-sans font-normal text-slate-500 mt-1" x-show="lang === 'en'">Serial production or repeat batch</div>
-                                    </label>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- 2. МАТЕРІАЛ ТА КІЛЬКІСТЬ (ГРІД) -->
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                <!-- Матеріал (PLA / PETG) -->
-                                <div>
-                                    <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
-                                        <span x-show="lang === 'ua'">2. Пластик для Деталі:</span>
-                                        <span x-show="lang === 'en'">2. Material:</span>
-                                    </label>
-                                    <select x-model="material" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 text-sm text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans font-medium">
-                                        <option value="petg">PETG (Міцні силові деталі, стійкі до тепла і навантажень)</option>
-                                        <option value="pla">PLA (Корпуси, естетичні макети, гладка поверхня)</option>
-                                        <option value="consult">Потрібна порада майстра (Підкажіть найкращий варіант)</option>
-                                    </select>
-                                </div>
-
-                                <!-- Кількість деталей -->
-                                <div>
-                                    <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
-                                        <span x-show="lang === 'ua'">3. Кількість Деталей:</span>
-                                        <span x-show="lang === 'en'">3. Quantity:</span>
-                                    </label>
-                                    <select x-model="quantity" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 text-sm text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans font-medium">
-                                        <option value="1">1 шт (Тестовий прототип / примірка)</option>
-                                        <option value="2-10">2–10 шт (Мала партія)</option>
-                                        <option value="10-50">10–50 шт (Серійне виготовлення)</option>
-                                        <option value="50+">50+ шт (Оптова серія зі знижкою)</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <!-- 3. КОНТАКТНІ ДАНІ -->
+                            <!-- КОНТАКТНІ ДАНІ: ІМ'Я ТА EMAIL -->
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                 <div>
                                     <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
                                         <span x-show="lang === 'ua'">Ваше Ім'я:</span>
                                         <span x-show="lang === 'en'">Your Name:</span>
                                     </label>
-                                    <input type="text" required x-model="name" :placeholder="lang === 'ua' ? 'Олександр' : 'Alexander'" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 text-sm text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500" />
+                                    <input type="text" required x-model="name" :placeholder="lang === 'ua' ? 'Олександр' : 'Alexander'" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 text-sm text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans" />
                                 </div>
                                 <div>
                                     <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
-                                        <span x-show="lang === 'ua'">Instagram, Facebook або Телефон:</span>
-                                        <span x-show="lang === 'en'">Instagram, Facebook or Phone:</span>
+                                        <span x-show="lang === 'ua'">Email (для надсилання розрахунку або файлів):</span>
+                                        <span x-show="lang === 'en'">Email Address (for quote or file transfer):</span>
                                     </label>
-                                    <input type="text" required x-model="contact" :placeholder="lang === 'ua' ? '@instagram, Facebook або +380...' : '@instagram, Facebook or +380...'" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 text-sm text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500" />
+                                    <input type="email" required x-model="email" :placeholder="lang === 'ua' ? 'alex@example.com' : 'alex@example.com'" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 text-sm text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans" />
                                 </div>
                             </div>
 
-                            <!-- 4. EMAIL (НЕОБОВ'ЯЗКОВО ДЛЯ ШВИДКОСТІ) -->
-                            <div>
-                                <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
-                                    <span x-show="lang === 'ua'">Email (для надсилання розрахунку або файлів):</span>
-                                    <span x-show="lang === 'en'">Email Address (for quote or file transfer):</span>
-                                </label>
-                                <input type="email" x-model="email" :placeholder="lang === 'ua' ? 'alex@example.com' : 'alex@example.com'" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 text-sm text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500" />
-                            </div>
-
-                            <!-- 5. ОПИС ТА ПОСИЛАННЯ НА ФАЙЛИ / ФОТО -->
+                            <!-- ОПИС ТА ПОСИЛАННЯ НА ФАЙЛИ / ФОТО -->
                             <div>
                                 <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
                                     <span x-show="lang === 'ua'">Опис Завдання або Посилання на Фото / Креслення:</span>
