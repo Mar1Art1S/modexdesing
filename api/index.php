@@ -25,4 +25,13 @@ foreach ($directories as $dir) {
 }
 
 // Forward the request to public/index.php
-require __DIR__.'/../public/index.php';
+try {
+    require __DIR__.'/../public/index.php';
+} catch (Throwable $e) {
+    http_response_code(500);
+    header('Content-Type: text/plain; charset=utf-8');
+    echo "SERVERLESS BOOTSTRAP EXCEPTION:\n";
+    echo get_class($e).': '.$e->getMessage()."\n";
+    echo 'In '.$e->getFile().':'.$e->getLine()."\n\n";
+    echo $e->getTraceAsString();
+}
