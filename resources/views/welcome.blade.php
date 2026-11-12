@@ -1525,18 +1525,6 @@
                                     <a href="mailto:orders@modexdesign.com" class="text-sky-700 font-bold hover:underline text-sm sm:text-base">orders@modexdesign.com</a>
                                 </div>
                             </div>
-                            <!-- 4. LOCATION / ДОСТАВКА -->
-                            <div class="flex items-start gap-4 pt-2 border-t border-slate-100">
-                                <div class="w-9 h-9 rounded-lg bg-slate-100 text-slate-700 font-black flex items-center justify-center shrink-0 text-xs">LOC</div>
-                                <div>
-                                    <div class="font-bold text-slate-500 text-xs uppercase">
-                                        <span x-show="lang === 'ua'">МАЙСТЕРНЯ ТА ДОСТАВКА</span>
-                                        <span x-show="lang === 'en'">WORKSHOP &amp; DISPATCH</span>
-                                    </div>
-                                    <span class="text-slate-700 font-semibold text-xs sm:text-sm font-sans" x-show="lang === 'ua'">Київ, Україна &bull; Відправка Новою Поштою щодня</span>
-                                    <span class="text-slate-700 font-semibold text-xs sm:text-sm font-sans" x-show="lang === 'en'">Kyiv, Ukraine &bull; Express Courier Dispatch Daily</span>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
