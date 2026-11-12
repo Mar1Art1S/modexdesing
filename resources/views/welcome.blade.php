@@ -408,8 +408,15 @@
                             @click="currentFilter = 'all'" 
                             :class="currentFilter === 'all' ? 'bg-slate-900 text-white font-bold' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'"
                             class="px-4 py-2.5 rounded-xl border border-slate-400 transition-all cursor-pointer">
-                        <span x-show="lang === 'ua'">ВСІ [3]</span>
-                        <span x-show="lang === 'en'">ALL [3]</span>
+                        <span x-show="lang === 'ua'">ВСІ ПРОЕКТИ</span>
+                        <span x-show="lang === 'en'">ALL PROJECTS</span>
+                    </button>
+                    <button type="button" 
+                            @click="currentFilter = 'architecture'" 
+                            :class="currentFilter === 'architecture' ? 'bg-slate-900 text-white font-bold' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'"
+                            class="px-4 py-2.5 rounded-xl border border-slate-400 transition-all cursor-pointer">
+                        <span x-show="lang === 'ua'">АРХІТЕКТУРА</span>
+                        <span x-show="lang === 'en'">ARCHITECTURE</span>
                     </button>
                     <button type="button" 
                             @click="currentFilter = 'industrial'" 
@@ -429,8 +436,8 @@
                             @click="currentFilter = 'mechatronics'" 
                             :class="currentFilter === 'mechatronics' ? 'bg-slate-900 text-white font-bold' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'"
                             class="px-4 py-2.5 rounded-xl border border-slate-400 transition-all cursor-pointer">
-                        <span x-show="lang === 'ua'">МЕХАТРОНІКА ТА R&amp;D</span>
-                        <span x-show="lang === 'en'">MECHATRONICS &amp; R&amp;D</span>
+                        <span x-show="lang === 'ua'">МЕХАТРОНІКА</span>
+                        <span x-show="lang === 'en'">MECHATRONICS</span>
                     </button>
                 </div>
             </div>
@@ -576,6 +583,138 @@
                     </div>
                 </div>
 
+            </div>
+
+            <!-- SPECIAL SHOWCASE: BESPOKE ARCHITECTURAL DESIGN & 3D SCALE MODELS -->
+            <div x-show="currentFilter === 'all' || currentFilter === 'architecture'"
+                 x-data="{ 
+                     activeImg: '{{ asset('images/house/008.jpg') }}',
+                     activeIdx: 0,
+                     gallery: [
+                         '{{ asset('images/house/008.jpg') }}',
+                         '{{ asset('images/house/001.jpg') }}',
+                         '{{ asset('images/house/003.jpg') }}',
+                         '{{ asset('images/house/007.jpg') }}',
+                         '{{ asset('images/house/002.png') }}',
+                         '{{ asset('images/house/006.png') }}'
+                     ]
+                 }"
+                 class="mt-12 bg-white rounded-2xl border-2 border-slate-900 shadow-xl overflow-hidden cad-corner-cross" 
+                 data-aos="fade-up" data-aos-duration="700">
+                
+                <!-- TOP TECHNICAL BAR -->
+                <div class="px-6 py-2.5 bg-slate-900 text-slate-300 flex flex-wrap items-center justify-between text-xs font-mono border-b border-slate-800">
+                    <div class="flex items-center gap-3">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-bold text-white uppercase tracking-wider">
+                            <span x-show="lang === 'ua'">СПЕЦІАЛЬНИЙ НАПРЯМОК // АРХІТЕКТУРНІ РІШЕННЯ НА ЗАМОВЛЕННЯ</span>
+                            <span x-show="lang === 'en'">SPECIALIZED SECTOR // BESPOKE ARCHITECTURAL SOLUTIONS</span>
+                        </span>
+                    </div>
+                    <div class="text-slate-400 text-[11px] font-mono hidden sm:block">
+                        <span>DWG: MDX-ARCH-BIM // SCALE: 1:1 &amp; 1:50</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+                    
+                    <!-- Left (7 cols): Interactive Architectural Gallery with Hero View & Thumbnails -->
+                    <div class="lg:col-span-7 bg-slate-950 p-4 sm:p-6 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-slate-900">
+                        <div class="relative w-full h-72 sm:h-96 rounded-xl overflow-hidden bg-slate-900 border border-slate-800 group">
+                            <img :src="activeImg" 
+                                 alt="Bespoke Architectural Solutions by Modex" 
+                                 class="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-102" />
+                            
+                            <!-- Overlay badge -->
+                            <div class="absolute bottom-3 left-3 bg-slate-900/85 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-700 text-white font-mono text-[11px] flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+                                <span x-show="lang === 'ua'">3D Візуалізація &bull; Архітектурна Концепція</span>
+                                <span x-show="lang === 'en'">3D Visualization &bull; Architectural Concept</span>
+                            </div>
+                        </div>
+
+                        <!-- Thumbnails Row -->
+                        <div class="grid grid-cols-6 gap-2 sm:gap-2.5 mt-3">
+                            <template x-for="(imgSrc, idx) in gallery" :key="idx">
+                                <button type="button" 
+                                        @click="activeImg = imgSrc; activeIdx = idx"
+                                        :class="activeIdx === idx ? 'border-sky-400 ring-2 ring-sky-400/50 scale-102' : 'border-slate-800 opacity-60 hover:opacity-100'"
+                                        class="h-14 sm:h-16 rounded-lg overflow-hidden border-2 bg-slate-900 transition-all cursor-pointer">
+                                    <img :src="imgSrc" class="w-full h-full object-cover" />
+                                </button>
+                            </template>
+                        </div>
+                    </div>
+
+                    <!-- Right (5 cols): Description, Capabilities & Call to Action -->
+                    <div class="lg:col-span-5 p-7 sm:p-9 flex flex-col justify-between bg-white font-sans">
+                        <div>
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-50 border border-emerald-300 text-emerald-800 font-mono text-xs font-bold uppercase tracking-wider mb-3">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                <span x-show="lang === 'ua'">ПОВНИЙ ЦИКЛ ПРОЕКТУВАННЯ</span>
+                                <span x-show="lang === 'en'">TURNKEY ARCHITECTURAL CAD</span>
+                            </div>
+
+                            <h3 class="font-heading text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-snug">
+                                <span x-show="lang === 'ua'">Індивідуальні Архітектурні Рішення</span>
+                                <span x-show="lang === 'en'">Custom Architectural Solutions</span>
+                            </h3>
+
+                            <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                                <span x-show="lang === 'ua'">
+                                    Розробляємо ексклюзивні архітектурні концепції котеджів, резиденцій та просторів. Від перших ескізів, планувань та фотореалістичної візуалізації — до інженерних креслень і виготовлення точних фізичних 3D-макетів споруд.
+                                </span>
+                                <span x-show="lang === 'en'">
+                                    We design custom architectural concepts for private residences, modern cottages, and spaces. From initial schematics and renders to engineering blueprints and physical 3D architectural scale models.
+                                </span>
+                            </p>
+
+                            <!-- 3 Key Features -->
+                            <div class="space-y-3 mt-6 font-mono text-xs">
+                                <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
+                                    <div class="w-7 h-7 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm shrink-0">🏛️</div>
+                                    <div>
+                                        <div class="font-bold text-slate-900" x-show="lang === 'ua'">Архітектурне BIM &amp; CAD Моделювання</div>
+                                        <div class="font-bold text-slate-900" x-show="lang === 'en'">BIM &amp; CAD Architectural Modeling</div>
+                                        <div class="text-[11px] text-slate-500 font-sans mt-0.5" x-show="lang === 'ua'">Фасади, ергономічне планування, конструктивні форми.</div>
+                                        <div class="text-[11px] text-slate-500 font-sans mt-0.5" x-show="lang === 'en'">Facades, ergonomic floor plans, architectural forms.</div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
+                                    <div class="w-7 h-7 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm shrink-0">📐</div>
+                                    <div>
+                                        <div class="font-bold text-slate-900" x-show="lang === 'ua'">Фізичне 3D-Макетування Будинків</div>
+                                        <div class="font-bold text-slate-900" x-show="lang === 'en'">Physical 3D Scale Modeling</div>
+                                        <div class="text-[11px] text-slate-500 font-sans mt-0.5" x-show="lang === 'ua'">Високоточний 3D-друк споруд (1:50, 1:100) для презентацій.</div>
+                                        <div class="text-[11px] text-slate-500 font-sans mt-0.5" x-show="lang === 'en'">High-precision scale models (1:50, 1:100) for presentations.</div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
+                                    <div class="w-7 h-7 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm shrink-0">⚡</div>
+                                    <div>
+                                        <div class="font-bold text-slate-900" x-show="lang === 'ua'">Інтеграція Інженерних Мереж</div>
+                                        <div class="font-bold text-slate-900" x-show="lang === 'en'">Engineering Utility Coordination</div>
+                                        <div class="text-[11px] text-slate-500 font-sans mt-0.5" x-show="lang === 'ua'">Ув'язка архітектури з електрикою, освітленням та комунікаціями.</div>
+                                        <div class="text-[11px] text-slate-500 font-sans mt-0.5" x-show="lang === 'en'">Coordinating architecture with electrical and lighting systems.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <div class="mt-8 pt-6 border-t border-slate-200">
+                            <button type="button" 
+                                    @click="orderModalOpen = true; selectedService = (lang === 'ua' ? 'Архітектурне проектування та макетування' : 'Custom Architectural Design & Scale Modeling')"
+                                    class="w-full btn-cyan-glow text-white font-bold py-3.5 px-6 rounded-xl cursor-pointer text-sm font-mono transition-all flex items-center justify-center gap-2">
+                                <span x-show="lang === 'ua'">Замовити Архітектурне Рішення &rarr;</span>
+                                <span x-show="lang === 'en'">Request Architectural Solution &rarr;</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
         </div>
