@@ -5,14 +5,6 @@
     <!-- ============================================================ -->
     <section id="hero" class="relative min-h-[700px] lg:h-[calc(100vh-5.5rem)] lg:max-h-[900px] flex flex-col justify-between overflow-hidden bg-[#e5e9ee]">
         
-        <!-- TECHNICAL DRAFTING BORDER: ZONE MARKERS (A-D, 1-8) -->
-        <div class="hidden xl:flex absolute top-3 left-8 right-8 justify-between text-[11px] font-mono text-slate-500 font-bold select-none z-20 pointer-events-none">
-            <span>[ZONE: 01]</span><span>[ZONE: 02]</span><span>[ZONE: 03]</span><span>[ZONE: 04]</span><span>[ZONE: 05]</span><span>[ZONE: 06]</span><span>[ZONE: 07]</span><span>[ZONE: 08]</span>
-        </div>
-        <div class="hidden xl:flex flex-col absolute top-20 bottom-20 left-3 justify-between text-[11px] font-mono text-slate-500 font-bold select-none z-20 pointer-events-none">
-            <span>[A]</span><span>[B]</span><span>[C]</span><span>[D]</span>
-        </div>
-
         <!-- FULL-BLEED HERO BACKGROUND: ZAS.JPG SPREAD ACROSS ENTIRE SCREEN -->
         <div class="absolute inset-0 w-full h-full pointer-events-none select-none z-0 overflow-hidden">
             <!-- Full-screen original cover image (zas.jpg) -->
