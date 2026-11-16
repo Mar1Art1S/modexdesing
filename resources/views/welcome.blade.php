@@ -73,18 +73,26 @@
                 </div>
 
                 <!-- TECHNICAL HIGHLIGHT SPECS (LARGER BOLD NUMBERS) -->
-                <div class="mt-10 pt-6 border-t-2 border-slate-300/80 grid grid-cols-3 gap-6 max-w-xl font-mono" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
+                <div class="mt-10 pt-6 border-t-2 border-slate-300/80 grid grid-cols-3 gap-4 sm:gap-6 max-w-xl font-mono" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
                     <div>
-                        <div class="font-heading text-2xl sm:text-3xl font-black text-slate-900">±0.05 <span class="text-sky-600 text-sm font-normal">mm</span></div>
-                        <div class="text-xs text-slate-600 uppercase tracking-wider mt-1 font-bold" x-text="lang === 'ua' ? 'Точність друку' : 'Precision Accuracy'"></div>
+                        <div class="font-heading text-xl sm:text-2xl lg:text-3xl font-black text-slate-900">
+                            <span x-show="lang === 'ua'">від 1</span><span x-show="lang === 'en'">from 1</span>
+                            <span class="text-sky-600 text-sm font-normal" x-show="lang === 'ua'"> шт</span><span class="text-sky-600 text-sm font-normal" x-show="lang === 'en'"> pc</span>
+                        </div>
+                        <div class="text-[11px] sm:text-xs text-slate-600 uppercase tracking-wider mt-1 font-bold" x-text="lang === 'ua' ? 'Мін. замовлення' : 'Minimum Order'"></div>
                     </div>
                     <div>
-                        <div class="font-heading text-2xl sm:text-3xl font-black text-slate-900">24 <span class="text-sky-600 text-sm font-normal">hrs</span></div>
-                        <div class="text-xs text-slate-600 uppercase tracking-wider mt-1 font-bold" x-text="lang === 'ua' ? 'Швидкість партії' : 'Rapid Turnaround'"></div>
+                        <div class="font-heading text-xl sm:text-2xl lg:text-3xl font-black text-slate-900 whitespace-nowrap">
+                            <span x-show="lang === 'ua'">до 300</span><span x-show="lang === 'en'">&le;300</span>
+                            <span class="text-sky-600 text-sm font-normal"> mm</span>
+                        </div>
+                        <div class="text-[11px] sm:text-xs text-slate-600 uppercase tracking-wider mt-1 font-bold" x-text="lang === 'ua' ? 'Габарит друку' : 'Max Build Volume'"></div>
                     </div>
                     <div>
-                        <div class="font-heading text-2xl sm:text-3xl font-black text-slate-900">100% <span class="text-sky-600 text-sm font-normal">CAD</span></div>
-                        <div class="text-xs text-slate-600 uppercase tracking-wider mt-1 font-bold" x-text="lang === 'ua' ? 'Параметричне CAD' : 'Parametric Design'"></div>
+                        <div class="font-heading text-xl sm:text-2xl lg:text-3xl font-black text-slate-900 whitespace-nowrap">
+                            PLA <span class="text-sky-600 text-sm font-normal">&amp;</span> PETG
+                        </div>
+                        <div class="text-[11px] sm:text-xs text-slate-600 uppercase tracking-wider mt-1 font-bold" x-text="lang === 'ua' ? 'Інженерні пластики' : 'Engineering Plastics'"></div>
                     </div>
                 </div>
 
