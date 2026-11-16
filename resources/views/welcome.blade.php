@@ -25,22 +25,6 @@
             <div class="absolute bottom-0 left-0 right-0 h-44 bg-gradient-to-t from-[#e5e9ee] via-[#e5e9ee]/75 to-transparent pointer-events-none"></div>
         </div>
 
-        <!-- FLOATING CAD HUD BADGES (OVER TECHNICAL SUBSTATION COVER) -->
-        <div class="hidden lg:flex items-center gap-3 absolute top-6 right-8 xl:right-16 z-20 pointer-events-auto select-none">
-            <div class="px-3.5 py-1.5 rounded-md bg-white/90 backdrop-blur-md border border-slate-300 shadow-sm text-xs font-mono text-slate-700 flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span x-show="lang === 'ua'">3D ДРУК ДЕТАЛЕЙ // МАЙСТЕРНЯ ПРОТОТИПІВ</span>
-                <span x-show="lang === 'en'">3D PRINTING WORKSHOP // PROTOTYPING</span>
-            </div>
-            <div class="px-3 py-1.5 rounded-md bg-white/90 backdrop-blur-md border border-slate-300 shadow-sm text-xs font-mono text-slate-700">
-                <span x-show="lang === 'ua'">МАСШТАБ: 1:1 (ТОЧНИЙ РОЗМІР)</span>
-                <span x-show="lang === 'en'">SCALE: 1:1 (EXACT FIT)</span>
-            </div>
-            <div class="px-3 py-1.5 rounded-md bg-white/90 backdrop-blur-md border border-slate-300 shadow-sm text-xs font-mono text-slate-700">
-                <span class="text-sky-600 font-bold">&plusmn;0.05 mm</span>
-            </div>
-        </div>
-
         <!-- UPPER HERO: HEADLINE, SUBTITLE, BUTTONS, SPECS (BIG TEXT & BIG BLOCKS) -->
         <div class="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-16 pb-8 grow flex items-center">
             <div class="max-w-3xl lg:max-w-2xl xl:max-w-3xl">
