@@ -3,7 +3,7 @@
     <!-- ============================================================ -->
     <!-- SECTION 1: FULL-SCREEN HERO WITH ZAS.JPG & CAD DRAWING FRAME -->
     <!-- ============================================================ -->
-    <section id="hero" class="relative min-h-[700px] lg:h-[calc(100vh-5.5rem)] lg:max-h-[900px] flex flex-col justify-between overflow-hidden bg-[#e5e9ee]">
+    <section id="hero" class="relative min-h-[650px] lg:min-h-[calc(100vh-5.5rem)] py-10 sm:py-14 lg:py-16 flex flex-col justify-center overflow-hidden bg-[#e5e9ee]">
         
         <!-- FULL-BLEED HERO BACKGROUND: ZAS.JPG SPREAD ACROSS ENTIRE SCREEN -->
         <div class="absolute inset-0 w-full h-full pointer-events-none select-none z-0 overflow-hidden">
@@ -26,7 +26,7 @@
         </div>
 
         <!-- UPPER HERO: HEADLINE, SUBTITLE, BUTTONS, SPECS (BIG TEXT & BIG BLOCKS) -->
-        <div class="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-16 pb-8 grow flex items-center">
+        <div class="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 grow flex items-center">
             <div class="max-w-3xl lg:max-w-2xl xl:max-w-3xl">
                 
                 <!-- TECHNICAL BADGE (LARGER & BOLDER) -->
@@ -72,27 +72,37 @@
                     </a>
                 </div>
 
-                <!-- TECHNICAL HIGHLIGHT SPECS (LARGER BOLD NUMBERS) -->
-                <div class="mt-10 pt-6 border-t-2 border-slate-300/80 grid grid-cols-3 gap-4 sm:gap-6 max-w-xl font-mono" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
+                <!-- TECHNICAL HIGHLIGHT SPECS (OPTION 2: ±0.05 mm | 24 hrs | 100% CAD) -->
+                <div class="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t-2 border-slate-300/80 grid grid-cols-3 gap-4 sm:gap-8 max-w-xl font-mono" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
                     <div>
-                        <div class="font-heading text-xl sm:text-2xl lg:text-3xl font-black text-slate-900">
-                            <span x-show="lang === 'ua'">від 1</span><span x-show="lang === 'en'">from 1</span>
-                            <span class="text-sky-600 text-sm font-normal" x-show="lang === 'ua'"> шт</span><span class="text-sky-600 text-sm font-normal" x-show="lang === 'en'"> pc</span>
+                        <div class="font-heading text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight flex items-baseline gap-1">
+                            <span>&plusmn;0.05</span>
+                            <span class="text-sky-500 font-bold text-base sm:text-lg lg:text-xl">mm</span>
                         </div>
-                        <div class="text-[11px] sm:text-xs text-slate-600 uppercase tracking-wider mt-1 font-bold" x-text="lang === 'ua' ? 'Мін. замовлення' : 'Minimum Order'"></div>
+                        <div class="text-[11px] sm:text-xs font-mono font-bold tracking-wider text-slate-600 uppercase mt-1.5">
+                            <span x-show="lang === 'ua'">ТОЧНІСТЬ ДРУКУ</span>
+                            <span x-show="lang === 'en'">PRECISION ACCURACY</span>
+                        </div>
                     </div>
                     <div>
-                        <div class="font-heading text-xl sm:text-2xl lg:text-3xl font-black text-slate-900 whitespace-nowrap">
-                            <span x-show="lang === 'ua'">до 300</span><span x-show="lang === 'en'">&le;300</span>
-                            <span class="text-sky-600 text-sm font-normal"> mm</span>
+                        <div class="font-heading text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight flex items-baseline gap-1">
+                            <span>24</span>
+                            <span class="text-sky-500 font-bold text-base sm:text-lg lg:text-xl">hrs</span>
                         </div>
-                        <div class="text-[11px] sm:text-xs text-slate-600 uppercase tracking-wider mt-1 font-bold" x-text="lang === 'ua' ? 'Габарит друку' : 'Max Build Volume'"></div>
+                        <div class="text-[11px] sm:text-xs font-mono font-bold tracking-wider text-slate-600 uppercase mt-1.5">
+                            <span x-show="lang === 'ua'">ШВИДКИЙ ДРУК</span>
+                            <span x-show="lang === 'en'">RAPID TURNAROUND</span>
+                        </div>
                     </div>
                     <div>
-                        <div class="font-heading text-xl sm:text-2xl lg:text-3xl font-black text-slate-900 whitespace-nowrap">
-                            PLA <span class="text-sky-600 text-sm font-normal">&amp;</span> PETG
+                        <div class="font-heading text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight flex items-baseline gap-1">
+                            <span>100%</span>
+                            <span class="text-sky-500 font-bold text-base sm:text-lg lg:text-xl">CAD</span>
                         </div>
-                        <div class="text-[11px] sm:text-xs text-slate-600 uppercase tracking-wider mt-1 font-bold" x-text="lang === 'ua' ? 'Інженерні пластики' : 'Engineering Plastics'"></div>
+                        <div class="text-[11px] sm:text-xs font-mono font-bold tracking-wider text-slate-600 uppercase mt-1.5">
+                            <span x-show="lang === 'ua'">ПАРАМЕТРИЧНИЙ ДИЗАЙН</span>
+                            <span x-show="lang === 'en'">PARAMETRIC DESIGN</span>
+                        </div>
                     </div>
                 </div>
 
