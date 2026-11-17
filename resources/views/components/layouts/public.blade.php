@@ -8,8 +8,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ filled($title) ? $title . ' | Modex - Фулстек 3D Друк та Інженерія' : 'Modex - Фулстек 3D Друк та Технічне Проектування' }}</title>
-        <meta name="description" content="{{ $description ?? 'Від задуму до фізичної реальності: Фулстек інженерне проектування, параметричне 3D CAD моделювання, індустріальне адитивне виробництво та складання «під ключ».' }}">
+        <title>{{ filled($title) ? $title . ' | Modex - 3D Printing & Engineering / 3D Друк та Інженерія' : 'Modex - Full-Stack 3D Printing & Engineering / Фулстек 3D Друк та Технічне Проектування' }}</title>
+        <meta name="description" content="{{ $description ?? 'From concept to physical reality: Full-Stack Hardware Engineering, 3D CAD Prototyping & Precision 3D Printing / Фулстек інженерне проектування, параметричне 3D CAD моделювання та 3D-друк.' }}">
 
         <link rel="icon" href="/favicon.ico" sizes="any">
         <link rel="icon" href="/favicon.svg" type="image/svg+xml">
