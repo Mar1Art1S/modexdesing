@@ -113,9 +113,9 @@
             
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12" data-aos="fade-up" data-aos-duration="600">
                 <div>
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-sky-100 border border-sky-400 text-sky-900 text-xs sm:text-sm font-mono font-bold uppercase tracking-wider mb-3">
-                        <span x-show="lang === 'ua'">ПОРТФОЛІО // РЕАЛЬНА ІНЖЕНЕРІЯ</span>
-                        <span x-show="lang === 'en'">PORTFOLIO // REAL ENGINEERING</span>
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-sky-100 border-2 border-sky-400 text-sky-950 text-xs sm:text-sm font-mono font-black uppercase tracking-wider mb-3 shadow-xs">
+                        <span x-show="lang === 'ua'">НАШЕ ПОРТФОЛІО</span>
+                        <span x-show="lang === 'en'">OUR PORTFOLIO</span>
                     </div>
                     <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
                         <span x-show="lang === 'ua'">Реалізовані Інженерні Кейси</span>
