@@ -122,7 +122,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-8 items-stretch">
                 
                 <!-- CARD 1: 3D PRINTING & PROTOTYPING -->
-                <div class="bg-white rounded-3xl border border-slate-200/90 hover:border-sky-500 p-8 sm:p-10 shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                <a href="#printing" class="bg-white rounded-3xl border border-slate-200/90 hover:border-sky-500 p-8 sm:p-10 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden block" data-aos="fade-up" data-aos-delay="100">
                     <div>
                         <!-- Header: Icon & Number -->
                         <div class="flex items-center justify-between">
@@ -135,51 +135,18 @@
                         </div>
 
                         <!-- Card Title -->
-                        <h3 class="font-heading text-2xl lg:text-[28px] font-black text-slate-900 mt-7 leading-tight group-hover:text-sky-600 transition-colors">
-                            <span x-show="lang === 'ua'">3D Друк: PLA &amp; PETG</span>
-                            <span x-show="lang === 'en'">3D Printing: PLA &amp; PETG</span>
+                        <h3 class="font-heading text-2xl lg:text-[28px] font-black text-slate-900 mt-8 leading-tight group-hover:text-sky-600 transition-colors flex items-center justify-between gap-3">
+                            <span>
+                                <span x-show="lang === 'ua'">3D Друк: PLA &amp; PETG</span>
+                                <span x-show="lang === 'en'">3D Printing: PLA &amp; PETG</span>
+                            </span>
+                            <span class="text-xl sm:text-2xl text-slate-300 group-hover:text-sky-500 group-hover:translate-x-1.5 transition-all duration-200">&rarr;</span>
                         </h3>
-
-                        <!-- Crisp Feature Bullet Points -->
-                        <ul class="mt-6 space-y-3.5 text-slate-700 text-sm sm:text-base font-sans">
-                            <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center mt-0.5 font-bold text-xs">✓</span>
-                                <div>
-                                    <span class="font-semibold text-slate-900" x-show="lang === 'ua'">Точність виготовлення:</span>
-                                    <span class="font-semibold text-slate-900" x-show="lang === 'en'">Precision accuracy:</span>
-                                    <span class="text-slate-600"> &plusmn;0.05 mm</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center mt-0.5 font-bold text-xs">✓</span>
-                                <div>
-                                    <span class="font-semibold text-slate-900" x-show="lang === 'ua'">Робоче поле:</span>
-                                    <span class="font-semibold text-slate-900" x-show="lang === 'en'">Max build volume:</span>
-                                    <span class="text-slate-600"> 420&times;380&times;500 mm</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center mt-0.5 font-bold text-xs">✓</span>
-                                <div>
-                                    <span class="font-semibold text-slate-900" x-show="lang === 'ua'">Матеріали:</span>
-                                    <span class="font-semibold text-slate-900" x-show="lang === 'en'">Materials:</span>
-                                    <span class="text-slate-600" x-show="lang === 'ua'"> PLA та міцний PETG</span>
-                                    <span class="text-slate-600" x-show="lang === 'en'"> PLA &amp; rigid PETG</span>
-                                </div>
-                            </li>
-                        </ul>
                     </div>
-
-                    <div class="mt-8 pt-6 border-t border-slate-100">
-                        <a href="#printing" class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-2xl bg-slate-900 text-white font-bold text-sm sm:text-base hover:bg-sky-500 hover:shadow-lg hover:shadow-sky-500/25 transition-all duration-200">
-                            <span x-show="lang === 'ua'">Замовити 3D-друк &rarr;</span>
-                            <span x-show="lang === 'en'">Order 3D Printing &rarr;</span>
-                        </a>
-                    </div>
-                </div>
+                </a>
 
                 <!-- CARD 2: 3D CAD MODELING -->
-                <div class="bg-white rounded-3xl border border-slate-200/90 hover:border-blue-500 p-8 sm:p-10 shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                <a href="#engineering" class="bg-white rounded-3xl border border-slate-200/90 hover:border-blue-500 p-8 sm:p-10 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden block" data-aos="fade-up" data-aos-delay="200">
                     <div>
                         <!-- Header: Icon & Number -->
                         <div class="flex items-center justify-between">
@@ -192,52 +159,18 @@
                         </div>
 
                         <!-- Card Title -->
-                        <h3 class="font-heading text-2xl lg:text-[28px] font-black text-slate-900 mt-7 leading-tight group-hover:text-blue-600 transition-colors">
-                            <span x-show="lang === 'ua'">3D CAD Моделювання</span>
-                            <span x-show="lang === 'en'">3D CAD Modeling</span>
+                        <h3 class="font-heading text-2xl lg:text-[28px] font-black text-slate-900 mt-8 leading-tight group-hover:text-blue-600 transition-colors flex items-center justify-between gap-3">
+                            <span>
+                                <span x-show="lang === 'ua'">3D CAD Моделювання</span>
+                                <span x-show="lang === 'en'">3D CAD Modeling</span>
+                            </span>
+                            <span class="text-xl sm:text-2xl text-slate-300 group-hover:text-blue-600 group-hover:translate-x-1.5 transition-all duration-200">&rarr;</span>
                         </h3>
-
-                        <!-- Crisp Feature Bullet Points -->
-                        <ul class="mt-6 space-y-3.5 text-slate-700 text-sm sm:text-base font-sans">
-                            <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mt-0.5 font-bold text-xs">✓</span>
-                                <div>
-                                    <span class="font-semibold text-slate-900" x-show="lang === 'ua'">Вхідні дані:</span>
-                                    <span class="font-semibold text-slate-900" x-show="lang === 'en'">Input sources:</span>
-                                    <span class="text-slate-600" x-show="lang === 'ua'"> зразок, фото чи ескіз</span>
-                                    <span class="text-slate-600" x-show="lang === 'en'"> sample, photo or sketch</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mt-0.5 font-bold text-xs">✓</span>
-                                <div>
-                                    <span class="font-semibold text-slate-900" x-show="lang === 'ua'">Оптимізація:</span>
-                                    <span class="font-semibold text-slate-900" x-show="lang === 'en'">Optimization:</span>
-                                    <span class="text-slate-600" x-show="lang === 'ua'"> ребра жорсткості під навантаження</span>
-                                    <span class="text-slate-600" x-show="lang === 'en'"> ribs &amp; structural load tuning</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mt-0.5 font-bold text-xs">✓</span>
-                                <div>
-                                    <span class="font-semibold text-slate-900" x-show="lang === 'ua'">Готові формати:</span>
-                                    <span class="font-semibold text-slate-900" x-show="lang === 'en'">Output formats:</span>
-                                    <span class="text-slate-600"> STEP, STL, CAD 3D</span>
-                                </div>
-                            </li>
-                        </ul>
                     </div>
-
-                    <div class="mt-8 pt-6 border-t border-slate-100">
-                        <a href="#engineering" class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-2xl bg-slate-900 text-white font-bold text-sm sm:text-base hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-600/25 transition-all duration-200">
-                            <span x-show="lang === 'ua'">Замовити CAD-модель &rarr;</span>
-                            <span x-show="lang === 'en'">Order CAD Model &rarr;</span>
-                        </a>
-                    </div>
-                </div>
+                </a>
 
                 <!-- CARD 3: ENCLOSURES & TURNKEY ASSEMBLY -->
-                <div class="bg-white rounded-3xl border border-slate-200/90 hover:border-emerald-500 p-8 sm:p-10 shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                <a href="#contacts" class="bg-white rounded-3xl border border-slate-200/90 hover:border-emerald-500 p-8 sm:p-10 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden block" data-aos="fade-up" data-aos-delay="300">
                     <div>
                         <!-- Header: Icon & Number -->
                         <div class="flex items-center justify-between">
@@ -250,49 +183,15 @@
                         </div>
 
                         <!-- Card Title -->
-                        <h3 class="font-heading text-2xl lg:text-[28px] font-black text-slate-900 mt-7 leading-tight group-hover:text-emerald-600 transition-colors">
-                            <span x-show="lang === 'ua'">Корпуси &amp; Складання</span>
-                            <span x-show="lang === 'en'">Enclosures &amp; Assembly</span>
+                        <h3 class="font-heading text-2xl lg:text-[28px] font-black text-slate-900 mt-8 leading-tight group-hover:text-emerald-600 transition-colors flex items-center justify-between gap-3">
+                            <span>
+                                <span x-show="lang === 'ua'">Корпуси &amp; Складання</span>
+                                <span x-show="lang === 'en'">Enclosures &amp; Assembly</span>
+                            </span>
+                            <span class="text-xl sm:text-2xl text-slate-300 group-hover:text-emerald-600 group-hover:translate-x-1.5 transition-all duration-200">&rarr;</span>
                         </h3>
-
-                        <!-- Crisp Feature Bullet Points -->
-                        <ul class="mt-6 space-y-3.5 text-slate-700 text-sm sm:text-base font-sans">
-                            <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mt-0.5 font-bold text-xs">✓</span>
-                                <div>
-                                    <span class="font-semibold text-slate-900" x-show="lang === 'ua'">Посадка електроніки:</span>
-                                    <span class="font-semibold text-slate-900" x-show="lang === 'en'">Electronics fit:</span>
-                                    <span class="text-slate-600" x-show="lang === 'ua'"> точний розмір під плати й датчики</span>
-                                    <span class="text-slate-600" x-show="lang === 'en'"> custom fit for PCBs &amp; sensors</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mt-0.5 font-bold text-xs">✓</span>
-                                <div>
-                                    <span class="font-semibold text-slate-900" x-show="lang === 'ua'">Різьбові втулки:</span>
-                                    <span class="font-semibold text-slate-900" x-show="lang === 'en'">Threaded inserts:</span>
-                                    <span class="text-slate-600"> M2–M8 латунь (heat-set)</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mt-0.5 font-bold text-xs">✓</span>
-                                <div>
-                                    <span class="font-semibold text-slate-900" x-show="lang === 'ua'">Готовий вузол:</span>
-                                    <span class="font-semibold text-slate-900" x-show="lang === 'en'">Turnkey delivery:</span>
-                                    <span class="text-slate-600" x-show="lang === 'ua'"> повне збирання «під ключ»</span>
-                                    <span class="text-slate-600" x-show="lang === 'en'"> assembled &amp; ready to use</span>
-                                </div>
-                            </li>
-                        </ul>
                     </div>
-
-                    <div class="mt-8 pt-6 border-t border-slate-100">
-                        <a href="#contacts" class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-2xl bg-slate-900 text-white font-bold text-sm sm:text-base hover:bg-emerald-600 hover:shadow-lg hover:shadow-emerald-600/25 transition-all duration-200">
-                            <span x-show="lang === 'ua'">Замовити корпус &rarr;</span>
-                            <span x-show="lang === 'en'">Order Enclosure &rarr;</span>
-                        </a>
-                    </div>
-                </div>
+                </a>
 
             </div>
 
