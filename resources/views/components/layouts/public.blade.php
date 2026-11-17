@@ -190,7 +190,7 @@
                 </a>
 
                 <!-- DESKTOP ONE-PAGE ANCHOR NAVIGATION LINKS -->
-                <nav class="hidden md:flex items-center gap-6 text-[14px] lg:text-[15px] tracking-normal font-medium">
+                <nav class="hidden md:flex items-center gap-7 text-[15px] lg:text-[16px] tracking-normal font-semibold">
                     <a href="#hero" 
                        :class="activeSection === 'hero' ? 'nav-active-glow' : 'text-slate-600 hover:text-sky-600'" 
                        class="py-1 transition-colors duration-200">
@@ -230,19 +230,19 @@
                 </nav>
 
                 <!-- HEADER ACTION BUTTONS & LANGUAGE SWITCHER -->
-                <div class="hidden sm:flex items-center gap-3.5">
+                <div class="hidden sm:flex items-center gap-4">
                     <!-- LANGUAGE TOGGLE -->
-                    <div class="flex items-center p-0.5 rounded-lg bg-slate-100 border border-slate-300 text-xs font-semibold">
+                    <div class="flex items-center p-0.5 rounded-lg bg-slate-100 border border-slate-300 text-xs font-bold">
                         <button type="button" 
                                 @click="setLang('en')"
                                 :class="lang === 'en' ? 'bg-white text-sky-600 shadow-xs' : 'text-slate-500 hover:text-slate-800'"
-                                class="px-2.5 py-1 rounded-md transition-all cursor-pointer">
+                                class="px-3 py-1.5 rounded-md transition-all cursor-pointer">
                             EN
                         </button>
                         <button type="button" 
                                 @click="setLang('ua')"
                                 :class="lang === 'ua' ? 'bg-white text-sky-600 shadow-xs' : 'text-slate-500 hover:text-slate-800'"
-                                class="px-2.5 py-1 rounded-md transition-all cursor-pointer">
+                                class="px-3 py-1.5 rounded-md transition-all cursor-pointer">
                             UA
                         </button>
                     </div>
@@ -250,16 +250,16 @@
                     <!-- ORDER PROJECT CTA (EXACT GLOW FROM MOCKUP) -->
                     <button type="button" 
                             @click="orderModalOpen = true; selectedService = (lang === 'ua' ? 'Загальний Проект' : 'General Project')" 
-                            class="btn-cyan-glow text-white text-xs sm:text-sm font-semibold px-4.5 py-2.5 rounded-xl cursor-pointer">
+                            class="btn-cyan-glow text-white text-sm sm:text-base font-bold px-5 sm:px-6 py-2.5 rounded-xl cursor-pointer">
                         <span x-show="lang === 'en'">Order a Project</span>
                         <span x-show="lang === 'ua'">Замовити Проект</span>
                     </button>
                 </div>
 
-                <!-- MOBILE HAMBURGER TOGGLE -->
+                <!-- MOBILE HAMBURGER TOGGLE (LARGE TAP TARGET) -->
                 <button type="button" 
                         @click="mobileMenuOpen = !mobileMenuOpen"
-                        class="md:hidden p-2 rounded-lg text-slate-700 hover:text-sky-600 hover:bg-slate-100 transition-colors"
+                        class="md:hidden w-11 h-11 flex items-center justify-center rounded-xl text-slate-800 hover:text-sky-600 bg-slate-100 hover:bg-slate-200 transition-colors"
                         aria-label="Toggle navigation menu">
                     <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -268,7 +268,7 @@
                 </button>
             </div>
 
-            <!-- MOBILE MENU DROPDOWN -->
+            <!-- MOBILE MENU DROPDOWN (ENHANCED TOUCH ACCESSIBILITY) -->
             <div x-show="mobileMenuOpen" 
                  x-transition:enter="transition ease-out duration-200"
                  x-transition:enter-start="opacity-0 -translate-y-2"
@@ -276,39 +276,39 @@
                  x-transition:leave="transition ease-in duration-150"
                  x-transition:leave-start="opacity-100 translate-y-0"
                  x-transition:leave-end="opacity-0 -translate-y-2"
-                 class="md:hidden bg-white/98 backdrop-blur-md border-b border-slate-300 px-6 py-4 space-y-3">
-                <div class="flex items-center justify-between pb-2 border-b border-slate-200">
-                    <span class="text-xs text-slate-500 font-mono">LANGUAGE:</span>
-                    <div class="flex items-center p-0.5 rounded-lg bg-slate-100 border border-slate-300 text-xs font-semibold">
-                        <button type="button" @click="setLang('en')" :class="lang === 'en' ? 'bg-white text-sky-600 shadow-xs' : 'text-slate-500'" class="px-2.5 py-1 rounded-md">EN</button>
-                        <button type="button" @click="setLang('ua')" :class="lang === 'ua' ? 'bg-white text-sky-600 shadow-xs' : 'text-slate-500'" class="px-2.5 py-1 rounded-md">UA</button>
+                 class="md:hidden bg-white/98 backdrop-blur-md border-b-2 border-slate-300 px-5 py-5 space-y-2 shadow-xl">
+                <div class="flex items-center justify-between pb-3 mb-2 border-b border-slate-200">
+                    <span class="text-xs font-mono font-bold text-slate-500 uppercase tracking-wider">МОВА // LANGUAGE:</span>
+                    <div class="flex items-center p-1 rounded-xl bg-slate-100 border border-slate-300 text-xs font-bold">
+                        <button type="button" @click="setLang('en')" :class="lang === 'en' ? 'bg-white text-sky-600 shadow-sm' : 'text-slate-600'" class="px-3 py-1.5 rounded-lg">EN</button>
+                        <button type="button" @click="setLang('ua')" :class="lang === 'ua' ? 'bg-white text-sky-600 shadow-sm' : 'text-slate-600'" class="px-3 py-1.5 rounded-lg">UA</button>
                     </div>
                 </div>
-                <a href="#hero" @click="mobileMenuOpen = false" class="block text-slate-700 hover:text-sky-600 font-medium py-1">
+                <a href="#hero" @click="mobileMenuOpen = false" class="block text-slate-800 hover:text-sky-600 active:bg-sky-50 font-bold text-lg py-2.5 px-3 rounded-xl transition-colors">
                     <span x-show="lang === 'en'">Home</span><span x-show="lang === 'ua'">Головна</span>
                 </a>
-                <a href="#services" @click="mobileMenuOpen = false" class="block text-slate-700 hover:text-sky-600 font-medium py-1">
+                <a href="#services" @click="mobileMenuOpen = false" class="block text-slate-800 hover:text-sky-600 active:bg-sky-50 font-bold text-lg py-2.5 px-3 rounded-xl transition-colors">
                     <span x-show="lang === 'en'">Capabilities</span><span x-show="lang === 'ua'">Напрямки</span>
                 </a>
-                <a href="#projects" @click="mobileMenuOpen = false" class="block text-slate-700 hover:text-sky-600 font-medium py-1">
+                <a href="#projects" @click="mobileMenuOpen = false" class="block text-slate-800 hover:text-sky-600 active:bg-sky-50 font-bold text-lg py-2.5 px-3 rounded-xl transition-colors">
                     <span x-show="lang === 'en'">Projects</span><span x-show="lang === 'ua'">Проекти</span>
                 </a>
-                <a href="#printing" @click="mobileMenuOpen = false" class="block text-slate-700 hover:text-sky-600 font-medium py-1">
+                <a href="#printing" @click="mobileMenuOpen = false" class="block text-slate-800 hover:text-sky-600 active:bg-sky-50 font-bold text-lg py-2.5 px-3 rounded-xl transition-colors">
                     <span x-show="lang === 'en'">3D Printing</span><span x-show="lang === 'ua'">3D Друк</span>
                 </a>
-                <a href="#engineering" @click="mobileMenuOpen = false" class="block text-slate-700 hover:text-sky-600 font-medium py-1">
+                <a href="#engineering" @click="mobileMenuOpen = false" class="block text-slate-800 hover:text-sky-600 active:bg-sky-50 font-bold text-lg py-2.5 px-3 rounded-xl transition-colors">
                     <span x-show="lang === 'en'">How it Works</span><span x-show="lang === 'ua'">Як ми працюємо</span>
                 </a>
-                <a href="#contacts" @click="mobileMenuOpen = false" class="block text-slate-700 hover:text-sky-600 font-medium py-1">
+                <a href="#contacts" @click="mobileMenuOpen = false" class="block text-slate-800 hover:text-sky-600 active:bg-sky-50 font-bold text-lg py-2.5 px-3 rounded-xl transition-colors">
                     <span x-show="lang === 'en'">Contacts</span><span x-show="lang === 'ua'">Контакти</span>
                 </a>
-                <a href="{{ route('test-animation') }}" class="inline-flex items-center gap-2 text-slate-500 hover:text-slate-700 font-medium py-0.5 font-mono text-xs">
+                <a href="{{ route('test-animation') }}" class="inline-flex items-center gap-2 text-slate-500 hover:text-slate-800 font-mono text-sm py-2 px-3">
                     <span>🌀 Xplore AI Демо &rarr;</span>
                 </a>
-                <div class="pt-2">
+                <div class="pt-3">
                     <button type="button" 
                             @click="orderModalOpen = true; mobileMenuOpen = false; selectedService = (lang === 'ua' ? 'Загальний Проект' : 'General Project')" 
-                            class="w-full btn-cyan-glow text-white text-sm font-semibold px-5 py-2.5 rounded-xl cursor-pointer">
+                            class="w-full btn-cyan-glow text-white text-base font-bold py-3.5 px-6 rounded-xl cursor-pointer shadow-md">
                         <span x-show="lang === 'en'">Order a Project</span>
                         <span x-show="lang === 'ua'">Замовити Проект</span>
                     </button>
@@ -339,11 +339,11 @@
 
                     <!-- Services -->
                     <div data-aos="fade-up" data-aos-delay="200">
-                        <h4 class="font-heading text-xs font-bold text-white uppercase tracking-wider mb-4">
+                        <h4 class="font-heading text-sm sm:text-base font-bold text-white uppercase tracking-wider mb-4">
                             <span x-show="lang === 'ua'">Напрямки Діяльності</span>
                             <span x-show="lang === 'en'">Core Competencies</span>
                         </h4>
-                        <ul class="space-y-2.5 text-sm text-slate-400">
+                        <ul class="space-y-3 text-sm sm:text-base text-slate-300">
                             <li>
                                 <a href="#services" class="hover:text-sky-400 transition-colors">
                                     <span x-show="lang === 'ua'">3D-Моделювання</span>
@@ -373,25 +373,25 @@
 
                     <!-- Contact -->
                     <div data-aos="fade-up" data-aos-delay="300">
-                        <h4 class="font-heading text-xs font-bold text-white uppercase tracking-wider mb-4">
+                        <h4 class="font-heading text-sm sm:text-base font-bold text-white uppercase tracking-wider mb-4">
                             <span x-show="lang === 'ua'">Майстерня та Зв'язок</span>
                             <span x-show="lang === 'en'">Workshop &amp; Direct Contact</span>
                         </h4>
-                        <ul class="space-y-2.5 text-sm text-slate-400">
+                        <ul class="space-y-3 text-sm sm:text-base text-slate-300">
                             <li class="flex items-center gap-2.5">
-                                <svg class="w-4 h-4 text-sky-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-5 h-5 text-sky-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                                 </svg>
                                 <a href="mailto:orders@modexdesign.com" class="hover:text-sky-400 transition-colors">orders@modexdesign.com</a>
                             </li>
                             <li class="flex items-center gap-2.5">
-                                <svg class="w-4 h-4 text-pink-400 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-5 h-5 text-pink-400 shrink-0" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                                 </svg>
                                 <a href="https://instagram.com/modexdesign" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 transition-colors">Instagram: @modexdesign</a>
                             </li>
                             <li class="flex items-center gap-2.5">
-                                <svg class="w-4 h-4 text-blue-400 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-5 h-5 text-blue-400 shrink-0" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                                 </svg>
                                 <a href="https://facebook.com/modexdesign" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors">Facebook: modexdesign</a>
@@ -399,7 +399,7 @@
                             <li class="pt-2">
                                 <button type="button" 
                                         @click="orderModalOpen = true"
-                                        class="text-xs font-semibold text-sky-400 hover:text-sky-300 underline underline-offset-4 cursor-pointer">
+                                        class="text-sm font-bold text-sky-400 hover:text-sky-300 underline underline-offset-4 cursor-pointer">
                                     <span x-show="lang === 'ua'">Замовити Консультацію Інженера &rarr;</span>
                                     <span x-show="lang === 'en'">Book Technical Consultation &rarr;</span>
                                 </button>
@@ -408,16 +408,16 @@
                     </div>
                 </div>
 
-                <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm text-slate-400 gap-4">
                     <p x-show="lang === 'ua'">&copy; {{ date('Y') }} Modex. Фулстек 3D Інженерія. Всі права захищено.</p>
                     <p x-show="lang === 'en'">&copy; {{ date('Y') }} Modex. Full-Stack 3D Engineering. All rights reserved.</p>
-                    <div class="flex items-center gap-4">
-                        <a href="{{ route('login') }}" class="hover:text-slate-400 transition-colors">
+                    <div class="flex items-center gap-5">
+                        <a href="{{ route('login') }}" class="hover:text-white transition-colors">
                             <span x-show="lang === 'ua'">Портал Клієнта</span>
                             <span x-show="lang === 'en'">Client Portal</span>
                         </a>
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="hover:text-slate-400 transition-colors">
+                            <a href="{{ route('register') }}" class="hover:text-white transition-colors">
                                 <span x-show="lang === 'ua'">Реєстрація</span>
                                 <span x-show="lang === 'en'">Register</span>
                             </a>
@@ -483,11 +483,11 @@
 
                             <form @submit.prevent="submitted = true" class="mt-6 space-y-4">
                                 <div>
-                                    <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                                    <label class="block text-sm font-bold text-slate-800 uppercase tracking-wider mb-1.5">
                                         <span x-show="lang === 'ua'">Основний Напрям</span>
                                         <span x-show="lang === 'en'">Primary Scope</span>
                                     </label>
-                                    <select x-model="selectedService" class="w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm text-slate-800 focus:outline-hidden focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 bg-slate-50/50">
+                                    <select x-model="selectedService" class="w-full rounded-xl border border-slate-300 px-4 py-3 text-base text-slate-800 focus:outline-hidden focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 bg-slate-50/50">
                                         <template x-if="lang === 'ua'">
                                             <optgroup label="Оберіть тип замовлення">
                                                 <option value="Замовлення (Креслення / Фото деталі)">1. Замовлення (Креслення / Фото деталі)</option>
@@ -507,45 +507,45 @@
                                     </select>
                                 </div>
 
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                                     <div>
-                                        <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                                        <label class="block text-sm font-bold text-slate-800 uppercase tracking-wider mb-1.5">
                                             <span x-show="lang === 'ua'">Ваше Ім'я</span>
                                             <span x-show="lang === 'en'">Name</span>
                                         </label>
-                                        <input type="text" required :placeholder="lang === 'ua' ? 'Олександр Коваленко' : 'Alex Miller'" class="w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm text-slate-800 focus:outline-hidden focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 bg-slate-50/50" />
+                                        <input type="text" required :placeholder="lang === 'ua' ? 'Олександр Коваленко' : 'Alex Miller'" class="w-full rounded-xl border border-slate-300 px-4 py-3 text-base text-slate-800 focus:outline-hidden focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 bg-slate-50/50" />
                                     </div>
                                     <div>
-                                        <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                                        <label class="block text-sm font-bold text-slate-800 uppercase tracking-wider mb-1.5">
                                             <span x-show="lang === 'ua'">Email / Телефон</span>
                                             <span x-show="lang === 'en'">Email / Phone</span>
                                         </label>
-                                        <input type="text" required :placeholder="lang === 'ua' ? 'alex@engineering.ua' : 'alex@tech.com'" class="w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm text-slate-800 focus:outline-hidden focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 bg-slate-50/50" />
+                                        <input type="text" required :placeholder="lang === 'ua' ? 'alex@engineering.ua' : 'alex@tech.com'" class="w-full rounded-xl border border-slate-300 px-4 py-3 text-base text-slate-800 focus:outline-hidden focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 bg-slate-50/50" />
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                                    <label class="block text-sm font-bold text-slate-800 uppercase tracking-wider mb-1.5">
                                         <span x-show="lang === 'ua'">Технічне Завдання, Матеріал та Допуски</span>
                                         <span x-show="lang === 'en'">Technical Brief &amp; Tolerances</span>
                                     </label>
-                                    <textarea rows="3" :placeholder="lang === 'ua' ? 'Цільовий матеріал (PLA, PETG), колір, заповнення, умови експлуатації або обсяг партії...' : 'Target material (PLA, PETG), color, infill, operating environment, or batch volume...'" class="w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm text-slate-800 focus:outline-hidden focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 bg-slate-50/50"></textarea>
+                                    <textarea rows="3" :placeholder="lang === 'ua' ? 'Цільовий матеріал (PLA, PETG), колір, заповнення, умови експлуатації або обсяг партії...' : 'Target material (PLA, PETG), color, infill, operating environment, or batch volume...'" class="w-full rounded-xl border border-slate-300 px-4 py-3 text-base text-slate-800 focus:outline-hidden focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 bg-slate-50/50"></textarea>
                                 </div>
 
                                 <div>
-                                    <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                                    <label class="block text-sm font-bold text-slate-800 uppercase tracking-wider mb-1.5">
                                         <span x-show="lang === 'ua'">Завантажити файли 3D CAD / Gerber</span>
                                         <span x-show="lang === 'en'">Upload 3D CAD / PCB Files</span>
                                     </label>
                                     <div class="rounded-xl border border-dashed border-slate-300 p-3 text-center bg-slate-50/60 hover:bg-sky-50/40 transition-colors">
                                         <input type="file" multiple class="text-xs text-slate-500 file:mr-3 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-sky-600 file:text-white hover:file:bg-sky-700 cursor-pointer" />
-                                        <p class="text-[11px] text-slate-400 mt-1" x-show="lang === 'ua'">Підтримуються формати STL, STEP, IGES, OBJ, DXF, Gerber або PDF (до 100 МБ)</p>
-                                        <p class="text-[11px] text-slate-400 mt-1" x-show="lang === 'en'">Accepts STL, STEP, IGES, OBJ, DXF, Gerber, or PDF (up to 100MB)</p>
+                                        <p class="text-xs text-slate-500 mt-1.5" x-show="lang === 'ua'">Підтримуються формати STL, STEP, IGES, OBJ, DXF, Gerber або PDF (до 100 МБ)</p>
+                                        <p class="text-xs text-slate-500 mt-1.5" x-show="lang === 'en'">Accepts STL, STEP, IGES, OBJ, DXF, Gerber, or PDF (up to 100MB)</p>
                                     </div>
                                 </div>
 
                                 <div class="pt-2">
-                                    <button type="submit" class="w-full btn-cyan-glow text-white font-semibold py-3 px-5 rounded-xl cursor-pointer text-sm">
+                                    <button type="submit" class="w-full btn-cyan-glow text-white font-bold py-3.5 px-6 rounded-xl cursor-pointer text-base">
                                         <span x-show="lang === 'ua'">Надіслати Технічний Запит</span>
                                         <span x-show="lang === 'en'">Submit Technical Request</span>
                                     </button>

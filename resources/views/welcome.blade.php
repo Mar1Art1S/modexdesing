@@ -56,43 +56,43 @@
                     <span x-show="lang === 'en'">High-precision 3D modeling, rapid prototyping, and turnkey manufacturing of complex hardware engineering projects.</span>
                 </p>
 
-                <!-- ACTION BUTTONS (LARGER, IMPACTFUL BUTTONS) -->
-                <div class="mt-8 flex flex-wrap items-center gap-4" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
+                <!-- ACTION BUTTONS (LARGER, IMPACTFUL BUTTONS & MOBILE OPTIMIZED) -->
+                <div class="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
                     <button type="button" 
                             @click="orderModalOpen = true; selectedService = (lang === 'ua' ? '3D Друк та Прототипування' : '3D Printing & Prototyping')"
-                            class="btn-cyan-glow text-white text-base sm:text-lg font-bold px-8 sm:px-10 py-4 rounded-xl cursor-pointer">
+                            class="w-full sm:w-auto btn-cyan-glow text-white text-base sm:text-lg font-bold px-8 sm:px-10 py-4 rounded-xl cursor-pointer text-center shadow-lg">
                         <span x-show="lang === 'ua'">Почати Проект</span>
                         <span x-show="lang === 'en'">Start a Project</span>
                     </button>
                     
                     <a href="#services" 
-                       class="inline-flex items-center justify-center px-8 sm:px-9 py-4 rounded-xl text-base sm:text-lg font-bold text-slate-900 bg-white hover:bg-slate-50 border-2 border-slate-900 shadow-sm hover:border-sky-500 hover:text-sky-600 hover:shadow-[0_0_20px_rgba(14,165,233,0.25)] transition-all duration-300">
+                       class="w-full sm:w-auto inline-flex items-center justify-center px-8 sm:px-9 py-4 rounded-xl text-base sm:text-lg font-bold text-slate-900 bg-white hover:bg-slate-50 border-2 border-slate-900 shadow-sm hover:border-sky-500 hover:text-sky-600 hover:shadow-[0_0_20px_rgba(14,165,233,0.25)] transition-all duration-300 text-center">
                         <span x-show="lang === 'ua'">Наші Напрямки &darr;</span>
                         <span x-show="lang === 'en'">Our Capabilities &darr;</span>
                     </a>
                 </div>
 
-                <!-- TECHNICAL HIGHLIGHT SPECS (LARGER BOLD NUMBERS) -->
-                <div class="mt-10 pt-6 border-t-2 border-slate-300/80 grid grid-cols-3 gap-4 sm:gap-6 max-w-xl font-mono" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
+                <!-- TECHNICAL HIGHLIGHT SPECS (LARGER BOLD NUMBERS & LABELS) -->
+                <div class="mt-10 pt-6 border-t-2 border-slate-300/80 grid grid-cols-3 gap-2.5 sm:gap-6 max-w-xl font-mono" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
                     <div>
                         <div class="font-heading text-xl sm:text-2xl lg:text-3xl font-black text-slate-900">
                             <span x-show="lang === 'ua'">від 1</span><span x-show="lang === 'en'">from 1</span>
                             <span class="text-sky-600 text-sm font-normal" x-show="lang === 'ua'"> шт</span><span class="text-sky-600 text-sm font-normal" x-show="lang === 'en'"> pc</span>
                         </div>
-                        <div class="text-[11px] sm:text-xs text-slate-600 uppercase tracking-wider mt-1 font-bold" x-text="lang === 'ua' ? 'Мін. замовлення' : 'Minimum Order'"></div>
+                        <div class="text-xs sm:text-sm text-slate-700 uppercase tracking-wider mt-1.5 font-bold" x-text="lang === 'ua' ? 'Мін. замовлення' : 'Minimum Order'"></div>
                     </div>
                     <div>
                         <div class="font-heading text-xl sm:text-2xl lg:text-3xl font-black text-slate-900 whitespace-nowrap">
                             <span x-show="lang === 'ua'">до 300</span><span x-show="lang === 'en'">&le;300</span>
                             <span class="text-sky-600 text-sm font-normal"> mm</span>
                         </div>
-                        <div class="text-[11px] sm:text-xs text-slate-600 uppercase tracking-wider mt-1 font-bold" x-text="lang === 'ua' ? 'Габарит друку' : 'Max Build Volume'"></div>
+                        <div class="text-xs sm:text-sm text-slate-700 uppercase tracking-wider mt-1.5 font-bold" x-text="lang === 'ua' ? 'Габарит друку' : 'Max Build Volume'"></div>
                     </div>
                     <div>
                         <div class="font-heading text-xl sm:text-2xl lg:text-3xl font-black text-slate-900 whitespace-nowrap">
                             PLA <span class="text-sky-600 text-sm font-normal">&amp;</span> PETG
                         </div>
-                        <div class="text-[11px] sm:text-xs text-slate-600 uppercase tracking-wider mt-1 font-bold" x-text="lang === 'ua' ? 'Інженерні пластики' : 'Engineering Plastics'"></div>
+                        <div class="text-xs sm:text-sm text-slate-700 uppercase tracking-wider mt-1.5 font-bold" x-text="lang === 'ua' ? 'Інженерні пластики' : 'Engineering Plastics'"></div>
                     </div>
                 </div>
 
@@ -142,7 +142,7 @@
                         </h2>
 
                         <!-- Intro Paragraph -->
-                        <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed font-normal">
+                        <p class="text-lg sm:text-xl text-slate-700 mt-4 leading-relaxed font-normal">
                             <span x-show="lang === 'ua'">Від першої ідеї, фотографії зразка чи простого ескізу на папері — до точної 3D-моделі, підбору надійного пластику (PLA або PETG) та чистого друку готової деталі.</span>
                             <span x-show="lang === 'en'">From an initial idea, reference photo, or paper sketch — to a precise 3D model, proper plastic selection (PLA or PETG), and clean manufacturing of the finished part.</span>
                         </p>
@@ -151,61 +151,61 @@
                     <!-- MODEX WORKSHOP DRAFTING SHEET TITLE BLOCK -->
                     <div class="mt-8 lg:mt-12 border-2 border-slate-900 bg-white shadow-xs font-mono text-xs overflow-hidden" data-aos="fade-up" data-aos-delay="200">
                         <!-- Dark Top Title Bar -->
-                        <div class="bg-slate-900 text-white px-3.5 py-2 flex items-center justify-between font-bold text-[11px] sm:text-xs tracking-wider">
+                        <div class="bg-slate-900 text-white px-4 py-2.5 flex items-center justify-between font-bold text-xs sm:text-sm tracking-wider">
                             <span>MODEX WORKSHOP DRAFTING SHEET</span>
                             <span class="text-sky-400">DWG: MDX-2026-FDM</span>
                         </div>
 
                         <!-- Row 1: Developer & Project Code (2 columns) -->
                         <div class="grid grid-cols-2 divide-x divide-slate-900 border-b border-slate-900">
-                            <div class="p-2.5 sm:p-3">
-                                <div class="text-[9px] uppercase tracking-wider text-slate-500 font-semibold">
+                            <div class="p-3 sm:p-3.5">
+                                <div class="text-[10px] sm:text-xs uppercase tracking-wider text-slate-500 font-semibold">
                                     <span x-show="lang === 'ua'">МАЙСТЕРНЯ / ВИРОБНИЦТВО:</span>
                                     <span x-show="lang === 'en'">WORKSHOP / PRODUCER:</span>
                                 </div>
-                                <div class="text-[11px] sm:text-xs font-bold text-slate-900 mt-0.5">MODEX 3D WORKSHOP</div>
+                                <div class="text-xs sm:text-sm font-bold text-slate-900 mt-0.5">MODEX 3D WORKSHOP</div>
                             </div>
-                            <div class="p-2.5 sm:p-3">
-                                <div class="text-[9px] uppercase tracking-wider text-slate-500 font-semibold">
+                            <div class="p-3 sm:p-3.5">
+                                <div class="text-[10px] sm:text-xs uppercase tracking-wider text-slate-500 font-semibold">
                                     <span x-show="lang === 'ua'">НАПРЯМОК РОБІТ:</span>
                                     <span x-show="lang === 'en'">PROJECT SCOPE:</span>
                                 </div>
-                                <div class="text-[11px] sm:text-xs font-bold text-slate-900 mt-0.5">CUSTOM 3D PRINTING</div>
+                                <div class="text-xs sm:text-sm font-bold text-slate-900 mt-0.5">CUSTOM 3D PRINTING</div>
                             </div>
                         </div>
 
                         <!-- Row 2: Scale, Tolerance, Material (3 columns) -->
                         <div class="grid grid-cols-3 divide-x divide-slate-900 border-b border-slate-900">
-                            <div class="p-2.5 sm:p-3">
-                                <div class="text-[9px] uppercase tracking-wider text-slate-500 font-semibold">
+                            <div class="p-3 sm:p-3.5">
+                                <div class="text-[10px] sm:text-xs uppercase tracking-wider text-slate-500 font-semibold">
                                     <span x-show="lang === 'ua'">МАСШТАБ:</span>
                                     <span x-show="lang === 'en'">SCALE:</span>
                                 </div>
-                                <div class="text-[11px] sm:text-xs font-bold text-slate-900 mt-0.5">1:1 (EXACT FIT)</div>
+                                <div class="text-xs sm:text-sm font-bold text-slate-900 mt-0.5">1:1 (EXACT FIT)</div>
                             </div>
-                            <div class="p-2.5 sm:p-3">
-                                <div class="text-[9px] uppercase tracking-wider text-slate-500 font-semibold">
+                            <div class="p-3 sm:p-3.5">
+                                <div class="text-[10px] sm:text-xs uppercase tracking-wider text-slate-500 font-semibold">
                                     <span x-show="lang === 'ua'">ТОЧНІСТЬ:</span>
                                     <span x-show="lang === 'en'">TOLERANCE:</span>
                                 </div>
-                                <div class="text-[11px] sm:text-xs font-bold text-sky-600 mt-0.5">&plusmn;0.05 mm</div>
+                                <div class="text-xs sm:text-sm font-bold text-sky-600 mt-0.5">&plusmn;0.05 mm</div>
                             </div>
-                            <div class="p-2.5 sm:p-3">
-                                <div class="text-[9px] uppercase tracking-wider text-slate-500 font-semibold">
+                            <div class="p-3 sm:p-3.5">
+                                <div class="text-[10px] sm:text-xs uppercase tracking-wider text-slate-500 font-semibold">
                                     <span x-show="lang === 'ua'">ПЛАСТИК:</span>
                                     <span x-show="lang === 'en'">MATERIAL:</span>
                                 </div>
-                                <div class="text-[11px] sm:text-xs font-bold text-slate-900 mt-0.5">PLA / PETG</div>
+                                <div class="text-xs sm:text-sm font-bold text-slate-900 mt-0.5">PLA / PETG</div>
                             </div>
                         </div>
 
                         <!-- Row 3: Status & Sheet Number (with dividing vertical line) -->
                         <div class="grid grid-cols-12 divide-x divide-slate-900">
-                            <div class="col-span-8 p-2.5 sm:p-3 text-[10px] sm:text-[11px] font-bold text-emerald-700 tracking-wider">
+                            <div class="col-span-8 p-3 sm:p-3.5 text-xs sm:text-sm font-bold text-emerald-700 tracking-wider">
                                 <span x-show="lang === 'ua'">СТАТУС: ГОТОВО ДО ДРУКУ</span>
                                 <span x-show="lang === 'en'">STATUS: VERIFIED FOR PRODUCTION</span>
                             </div>
-                            <div class="col-span-4 p-2.5 sm:p-3 text-right text-[10px] sm:text-[11px] font-bold text-slate-600 tracking-wider">
+                            <div class="col-span-4 p-3 sm:p-3.5 text-right text-xs sm:text-sm font-bold text-slate-600 tracking-wider">
                                 SHEET 1 OF 1
                             </div>
                         </div>
@@ -213,43 +213,43 @@
                 </div>
 
                 <!-- RIGHT COLUMN: 3 STACKED ENGINEERING PILLAR CARDS -->
-                <div class="lg:col-span-7 flex flex-col gap-4 sm:gap-5 justify-between">
+                <div class="lg:col-span-7 flex flex-col gap-5 sm:gap-6 justify-between">
                     
                     <!-- PILLAR 01: ADDITIVE 3D PRINTING -->
-                    <a href="#printing" class="block group relative bg-white rounded-2xl border border-slate-300/80 shadow-xs pt-4 pb-4.5 px-5 sm:px-6 hover:border-sky-400 hover:shadow-md transition-all duration-200" data-aos="fade-left" data-aos-delay="100">
+                    <a href="#printing" class="block group relative bg-white rounded-2xl border-2 border-slate-900/80 shadow-xs pt-5 pb-5 px-6 sm:px-7 hover:border-sky-500 hover:shadow-lg transition-all duration-200" data-aos="fade-left" data-aos-delay="100">
                         <!-- Corner Crosses -->
-                        <span class="absolute top-2 left-2.5 text-sky-600 font-mono text-xs font-bold leading-none select-none pointer-events-none">+</span>
-                        <span class="absolute bottom-2 right-2.5 text-sky-600 font-mono text-xs font-bold leading-none select-none pointer-events-none">+</span>
+                        <span class="absolute top-2.5 left-3 text-sky-600 font-mono text-sm font-bold leading-none select-none pointer-events-none">+</span>
+                        <span class="absolute bottom-2.5 right-3 text-sky-600 font-mono text-sm font-bold leading-none select-none pointer-events-none">+</span>
 
                         <!-- Header Row -->
-                        <div class="flex items-center justify-between font-mono text-xs mb-1.5 pl-2">
+                        <div class="flex items-center justify-between font-mono text-xs sm:text-sm mb-2 pl-2">
                             <span class="text-sky-700 font-bold tracking-wider">PILLAR 01 // 3D PRINTING</span>
-                            <span class="text-slate-500 font-normal">PRECISION: &plusmn;0.05mm</span>
+                            <span class="text-slate-500 font-semibold">PRECISION: &plusmn;0.05mm</span>
                         </div>
 
                         <!-- Title -->
-                        <h3 class="font-heading font-black text-slate-900 text-lg sm:text-xl lg:text-[22px] leading-snug group-hover:text-sky-600 transition-colors">
+                        <h3 class="font-heading font-black text-slate-900 text-xl sm:text-2xl leading-snug group-hover:text-sky-600 transition-colors">
                             <span x-show="lang === 'ua'">3D Друк та Прототипування: PLA та PETG</span>
                             <span x-show="lang === 'en'">3D Printing &amp; Prototyping: PLA &amp; PETG</span>
                         </h3>
 
                         <!-- Description -->
-                        <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed font-normal">
+                        <p class="text-slate-700 text-sm sm:text-base mt-2.5 leading-relaxed font-normal">
                             <span x-show="lang === 'ua'">Високоточний 3D-друк деталей, функціональних корпусів та механічних вузлів матеріалами PLA та міцним PETG. Точне калібрування принтерів, стабільна геометрія та чисті поверхні.</span>
                             <span x-show="lang === 'en'">High-precision 3D printing of functional parts, enclosures, and mechanical components using PLA and sturdy PETG. Accurate printer calibration and clean surface finish.</span>
                         </p>
 
                         <!-- Dotted Divider -->
-                        <div class="border-t border-dotted border-slate-200 my-3.5"></div>
+                        <div class="border-t border-dotted border-slate-200 my-4"></div>
 
                         <!-- Bottom Pills Row -->
-                        <div class="flex flex-wrap items-center gap-2">
-                            <span class="px-2.5 py-1 rounded bg-slate-100/80 border border-slate-200/80 text-slate-700 font-mono text-[10px] sm:text-[11px] font-semibold tracking-wide">MAX BUILD: 420x380x500 mm</span>
-                            <span class="px-2.5 py-1 rounded bg-slate-100/80 border border-slate-200/80 text-slate-700 font-mono text-[10px] sm:text-[11px] font-semibold tracking-wide">
+                        <div class="flex flex-wrap items-center gap-2.5">
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-300 text-slate-800 font-mono text-xs sm:text-sm font-bold tracking-wide">MAX BUILD: 420x380x500 mm</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-300 text-slate-800 font-mono text-xs sm:text-sm font-bold tracking-wide">
                                 <span x-show="lang === 'ua'">ШАР: 0.08 - 0.32 mm</span>
                                 <span x-show="lang === 'en'">LAYER: 0.08 - 0.32 mm</span>
                             </span>
-                            <span class="px-2.5 py-1 rounded bg-slate-100/80 border border-slate-200/80 text-slate-700 font-mono text-[10px] sm:text-[11px] font-semibold tracking-wide">
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-300 text-slate-800 font-mono text-xs sm:text-sm font-bold tracking-wide">
                                 <span x-show="lang === 'ua'">МАТЕРІАЛИ: PLA / PETG</span>
                                 <span x-show="lang === 'en'">MATERIALS: PLA / PETG</span>
                             </span>
@@ -257,46 +257,46 @@
                     </a>
 
                     <!-- PILLAR 02: 3D CAD MODELING FROM SCRATCH -->
-                    <a href="#engineering" class="block group relative bg-white rounded-2xl border border-slate-300/80 shadow-xs pt-4 pb-4.5 px-5 sm:px-6 hover:border-sky-400 hover:shadow-md transition-all duration-200" data-aos="fade-left" data-aos-delay="200">
+                    <a href="#engineering" class="block group relative bg-white rounded-2xl border-2 border-slate-900/80 shadow-xs pt-5 pb-5 px-6 sm:px-7 hover:border-sky-500 hover:shadow-lg transition-all duration-200" data-aos="fade-left" data-aos-delay="200">
                         <!-- Corner Crosses -->
-                        <span class="absolute top-2 left-2.5 text-sky-600 font-mono text-xs font-bold leading-none select-none pointer-events-none">+</span>
-                        <span class="absolute bottom-2 right-2.5 text-sky-600 font-mono text-xs font-bold leading-none select-none pointer-events-none">+</span>
+                        <span class="absolute top-2.5 left-3 text-sky-600 font-mono text-sm font-bold leading-none select-none pointer-events-none">+</span>
+                        <span class="absolute bottom-2.5 right-3 text-sky-600 font-mono text-sm font-bold leading-none select-none pointer-events-none">+</span>
 
                         <!-- Header Row -->
-                        <div class="flex items-center justify-between font-mono text-xs mb-1.5 pl-2">
+                        <div class="flex items-center justify-between font-mono text-xs sm:text-sm mb-2 pl-2">
                             <span class="text-sky-700 font-bold tracking-wider">PILLAR 02 // 3D CAD MODELING</span>
-                            <span class="text-slate-500 font-normal">
+                            <span class="text-slate-500 font-semibold">
                                 <span x-show="lang === 'ua'">ВІД ІДЕЇ ТА ЗРАЗКА</span>
                                 <span x-show="lang === 'en'">FROM IDEA &amp; SAMPLE</span>
                             </span>
                         </div>
 
                         <!-- Title -->
-                        <h3 class="font-heading font-black text-slate-900 text-lg sm:text-xl lg:text-[22px] leading-snug group-hover:text-sky-600 transition-colors">
+                        <h3 class="font-heading font-black text-slate-900 text-xl sm:text-2xl leading-snug group-hover:text-sky-600 transition-colors">
                             <span x-show="lang === 'ua'">3D-Моделювання Деталей та Розрахунок Міцності</span>
                             <span x-show="lang === 'en'">3D CAD Modeling &amp; Strength Optimization</span>
                         </h3>
 
                         <!-- Description -->
-                        <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed font-normal">
+                        <p class="text-slate-700 text-sm sm:text-base mt-2.5 leading-relaxed font-normal">
                             <span x-show="lang === 'ua'">Побудова точних 3D-моделей за вашим зразком, фотографією чи зламаною деталлю. Оптимізація форми під робочі навантаження, посилення вразливих місць ребрами жорсткості та підготовка до запуску на принтері.</span>
                             <span x-show="lang === 'en'">Accurate 3D modeling from your physical sample, photo, or broken part. Geometry optimization under mechanical loads, structural rib reinforcement, and complete print-ready file preparation.</span>
                         </p>
 
                         <!-- Dotted Divider -->
-                        <div class="border-t border-dotted border-slate-200 my-3.5"></div>
+                        <div class="border-t border-dotted border-slate-200 my-4"></div>
 
                         <!-- Bottom Pills Row -->
-                        <div class="flex flex-wrap items-center gap-2">
-                            <span class="px-2.5 py-1 rounded bg-slate-100/80 border border-slate-200/80 text-slate-700 font-mono text-[10px] sm:text-[11px] font-semibold tracking-wide">
+                        <div class="flex flex-wrap items-center gap-2.5">
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-300 text-slate-800 font-mono text-xs sm:text-sm font-bold tracking-wide">
                                 <span x-show="lang === 'ua'">ТОЧНІ РОЗМІРИ</span>
                                 <span x-show="lang === 'en'">ACCURATE DIMENSIONS</span>
                             </span>
-                            <span class="px-2.5 py-1 rounded bg-slate-100/80 border border-slate-200/80 text-slate-700 font-mono text-[10px] sm:text-[11px] font-semibold tracking-wide">
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-300 text-slate-800 font-mono text-xs sm:text-sm font-bold tracking-wide">
                                 <span x-show="lang === 'ua'">ПОСИЛЕННЯ РЕБРАМИ ЖОРСТКОСТІ</span>
                                 <span x-show="lang === 'en'">STRUCTURAL REINFORCEMENT</span>
                             </span>
-                            <span class="px-2.5 py-1 rounded bg-slate-100/80 border border-slate-200/80 text-slate-700 font-mono text-[10px] sm:text-[11px] font-semibold tracking-wide">
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-300 text-slate-800 font-mono text-xs sm:text-sm font-bold tracking-wide">
                                 <span x-show="lang === 'ua'">ПІДГОТОВКА ДО ДРУКУ</span>
                                 <span x-show="lang === 'en'">PRINT OPTIMIZATION</span>
                             </span>
@@ -304,46 +304,46 @@
                     </a>
 
                     <!-- PILLAR 03: ENCLOSURES & ASSEMBLY -->
-                    <a href="#projects" class="block group relative bg-white rounded-2xl border border-slate-300/80 shadow-xs pt-4 pb-4.5 px-5 sm:px-6 hover:border-sky-400 hover:shadow-md transition-all duration-200" data-aos="fade-left" data-aos-delay="300">
+                    <a href="#projects" class="block group relative bg-white rounded-2xl border-2 border-slate-900/80 shadow-xs pt-5 pb-5 px-6 sm:px-7 hover:border-sky-500 hover:shadow-lg transition-all duration-200" data-aos="fade-left" data-aos-delay="300">
                         <!-- Corner Crosses -->
-                        <span class="absolute top-2 left-2.5 text-sky-600 font-mono text-xs font-bold leading-none select-none pointer-events-none">+</span>
-                        <span class="absolute bottom-2 right-2.5 text-sky-600 font-mono text-xs font-bold leading-none select-none pointer-events-none">+</span>
+                        <span class="absolute top-2.5 left-3 text-sky-600 font-mono text-sm font-bold leading-none select-none pointer-events-none">+</span>
+                        <span class="absolute bottom-2.5 right-3 text-sky-600 font-mono text-sm font-bold leading-none select-none pointer-events-none">+</span>
 
                         <!-- Header Row -->
-                        <div class="flex items-center justify-between font-mono text-xs mb-1.5 pl-2">
+                        <div class="flex items-center justify-between font-mono text-xs sm:text-sm mb-2 pl-2">
                             <span class="text-sky-700 font-bold tracking-wider">PILLAR 03 // ENCLOSURES &amp; ASSEMBLY</span>
-                            <span class="text-slate-500 font-normal">
+                            <span class="text-slate-500 font-semibold">
                                 <span x-show="lang === 'ua'">СКЛАДАННЯ «ПІД КЛЮЧ»</span>
                                 <span x-show="lang === 'en'">TURNKEY ASSEMBLY</span>
                             </span>
                         </div>
 
                         <!-- Title -->
-                        <h3 class="font-heading font-black text-slate-900 text-lg sm:text-xl lg:text-[22px] leading-snug group-hover:text-sky-600 transition-colors">
+                        <h3 class="font-heading font-black text-slate-900 text-xl sm:text-2xl leading-snug group-hover:text-sky-600 transition-colors">
                             <span x-show="lang === 'ua'">Корпуси, Різьбові З'єднання та Складання Вузлів</span>
                             <span x-show="lang === 'en'">Enclosures, Threaded Inserts &amp; Assembly</span>
                         </h3>
 
                         <!-- Description -->
-                        <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed font-normal">
+                        <p class="text-slate-700 text-sm sm:text-base mt-2.5 leading-relaxed font-normal">
                             <span x-show="lang === 'ua'">Проектування та друк корпусів під розміри ваших плат чи електроніки, надійна термопосадка латунних різьбових втулок M2–M8 для багаторазового закручування, захист від пилу й вологи та фінальне складання готового вузла.</span>
                             <span x-show="lang === 'en'">Precision enclosure 3D printing designed around your boards and electronic components, durable heat-set brass threaded inserts (M2–M8) for repeated bolting, dust/moisture protection, and complete assembly.</span>
                         </p>
 
                         <!-- Dotted Divider -->
-                        <div class="border-t border-dotted border-slate-200 my-3.5"></div>
+                        <div class="border-t border-dotted border-slate-200 my-4"></div>
 
                         <!-- Bottom Pills Row -->
-                        <div class="flex flex-wrap items-center gap-2">
-                            <span class="px-2.5 py-1 rounded bg-slate-100/80 border border-slate-200/80 text-slate-700 font-mono text-[10px] sm:text-[11px] font-semibold tracking-wide">
+                        <div class="flex flex-wrap items-center gap-2.5">
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-300 text-slate-800 font-mono text-xs sm:text-sm font-bold tracking-wide">
                                 <span x-show="lang === 'ua'">РІЗЬБОВІ ВТУЛКИ M2-M8</span>
                                 <span x-show="lang === 'en'">BRASS INSERTS M2-M8</span>
                             </span>
-                            <span class="px-2.5 py-1 rounded bg-slate-100/80 border border-slate-200/80 text-slate-700 font-mono text-[10px] sm:text-[11px] font-semibold tracking-wide">
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-300 text-slate-800 font-mono text-xs sm:text-sm font-bold tracking-wide">
                                 <span x-show="lang === 'ua'">ПІДГОНКА ПІД ЕЛЕКТРОНІКУ</span>
                                 <span x-show="lang === 'en'">PCB &amp; ELECTRONICS FIT</span>
                             </span>
-                            <span class="px-2.5 py-1 rounded bg-slate-100/80 border border-slate-200/80 text-slate-700 font-mono text-[10px] sm:text-[11px] font-semibold tracking-wide">
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-300 text-slate-800 font-mono text-xs sm:text-sm font-bold tracking-wide">
                                 <span x-show="lang === 'ua'">СКЛАДАННЯ ГОТОВОГО ВИРОБУ</span>
                                 <span x-show="lang === 'en'">FINISHED ASSEMBLY</span>
                             </span>
@@ -442,7 +442,7 @@
                             <span x-show="lang === 'ua'">Модульна Підстанція 10кВ та Шинопровід</span>
                             <span x-show="lang === 'en'">10kV Substation Busbar &amp; Modular Insulator</span>
                         </h3>
-                        <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">
+                        <p class="text-base text-slate-700 mt-2.5 leading-relaxed">
                             <span x-show="lang === 'ua'">Вогнестійкі діелектричні опори шинопровід з внутрішнім аеродинамічним ребруванням для запобігання дуговому розряду під робочою напругою 10 000 В.</span>
                             <span x-show="lang === 'en'">Flame-retardant high-voltage dielectric busbar supports with internal aerodynamic ribbing to eliminate arc discharge under 10,000V live load.</span>
                         </p>
@@ -462,7 +462,7 @@
                     <div class="p-5 sm:p-6 bg-slate-50">
                         <button type="button" 
                                 @click="orderModalOpen = true; selectedService = (lang === 'ua' ? 'Проект: Модульна Підстанція 10кВ' : '10kV Substation Insulator Project')"
-                                class="w-full py-3 rounded-xl border-2 border-slate-900 bg-white hover:bg-slate-900 hover:text-white text-slate-900 text-sm font-bold font-mono transition-all cursor-pointer shadow-xs">
+                                class="w-full py-3.5 rounded-xl border-2 border-slate-900 bg-white hover:bg-slate-900 hover:text-white text-slate-900 text-base font-bold font-mono transition-all cursor-pointer shadow-xs">
                             <span x-show="lang === 'ua'">Замовити CAD Специфікацію &rarr;</span>
                             <span x-show="lang === 'en'">Request CAD Specification &rarr;</span>
                         </button>
@@ -482,7 +482,7 @@
                             <span x-show="lang === 'ua'">Гусенична Робоплатформа з Маніпулятором</span>
                             <span x-show="lang === 'en'">Autonomous Tracked Rover with Robotic Manipulator</span>
                         </h3>
-                        <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">
+                        <p class="text-base text-slate-700 mt-2.5 leading-relaxed">
                             <span x-show="lang === 'ua'">Проектування від технічного ескізу до робочого зразка: міцне гусеничне шасі, 6-осьова 3D-друкована рука з сервоприводами, ергономічний захват та інтегрований блок датчиків.</span>
                             <span x-show="lang === 'en'">End-to-end design from engineering sketch to functioning prototype: reinforced tracked chassis, 6-axis 3D-printed manipulator arm, custom gripper, and sensor payload.</span>
                         </p>
@@ -502,7 +502,7 @@
                     <div class="p-5 sm:p-6 bg-slate-50">
                         <button type="button" 
                                 @click="orderModalOpen = true; selectedService = (lang === 'ua' ? 'Проект: Гусенична Робоплатформа з Маніпулятором' : 'Tracked Rover with Manipulator Project')"
-                                class="w-full py-3 rounded-xl border-2 border-slate-900 bg-white hover:bg-slate-900 hover:text-white text-slate-900 text-sm font-bold font-mono transition-all cursor-pointer shadow-xs">
+                                class="w-full py-3.5 rounded-xl border-2 border-slate-900 bg-white hover:bg-slate-900 hover:text-white text-slate-900 text-base font-bold font-mono transition-all cursor-pointer shadow-xs">
                             <span x-show="lang === 'ua'">Замовити CAD Специфікацію &rarr;</span>
                             <span x-show="lang === 'en'">Request CAD Specification &rarr;</span>
                         </button>
@@ -522,7 +522,7 @@
                             <span x-show="lang === 'ua'">Крокуючий Робот: Повний Цикл від Ескізу до Складання</span>
                             <span x-show="lang === 'en'">Full-Cycle Walking Robot (Draft to Assembly)</span>
                         </h3>
-                        <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">
+                        <p class="text-base text-slate-700 mt-2.5 leading-relaxed">
                             <span x-show="lang === 'ua'">4 етапи розробки Modex: інженерний розрахунок і ручний ескіз, параметричне 3D CAD-моделювання, FDM-друк рухомих шарнірів та фінальне складання з електронікою.</span>
                             <span x-show="lang === 'en'">Modex 4-stage turnkey development: engineering math and hand drafting, parametric 3D CAD simulation, FDM 3D printing of joints, and electromechanical assembly.</span>
                         </p>
@@ -542,7 +542,7 @@
                     <div class="p-5 sm:p-6 bg-slate-50">
                         <button type="button" 
                                 @click="orderModalOpen = true; selectedService = (lang === 'ua' ? 'Проект: Крокуючий Робот Повного Циклу' : 'Full-Cycle Walking Robot Project')"
-                                class="w-full py-3 rounded-xl border-2 border-slate-900 bg-white hover:bg-slate-900 hover:text-white text-slate-900 text-sm font-bold font-mono transition-all cursor-pointer shadow-xs">
+                                class="w-full py-3.5 rounded-xl border-2 border-slate-900 bg-white hover:bg-slate-900 hover:text-white text-slate-900 text-base font-bold font-mono transition-all cursor-pointer shadow-xs">
                             <span x-show="lang === 'ua'">Замовити CAD Специфікацію &rarr;</span>
                             <span x-show="lang === 'en'">Request CAD Specification &rarr;</span>
                         </button>
@@ -617,7 +617,7 @@
                                 <span x-show="lang === 'en'">Custom Architectural Solutions</span>
                             </h3>
 
-                            <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                            <p class="text-base sm:text-lg text-slate-700 mt-3.5 leading-relaxed">
                                 <span x-show="lang === 'ua'">
                                     Розробляємо ексклюзивні архітектурні концепції котеджів, резиденцій та просторів. Від перших ескізів, планувань та фотореалістичної візуалізації — до інженерних креслень і виготовлення точних фізичних 3D-макетів споруд.
                                 </span>
@@ -626,25 +626,25 @@
                                 </span>
                             </p>
 
-                            <!-- 3 Key Features -->
-                            <div class="space-y-3 mt-6 font-mono text-xs">
-                                <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
-                                    <div class="w-7 h-7 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm shrink-0">🏛️</div>
+                            <!-- 2 Key Features -->
+                            <div class="space-y-3.5 mt-6 font-mono">
+                                <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+                                    <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-base shrink-0">🏛️</div>
                                     <div>
-                                        <div class="font-bold text-slate-900" x-show="lang === 'ua'">Архітектурне BIM &amp; CAD Моделювання</div>
-                                        <div class="font-bold text-slate-900" x-show="lang === 'en'">BIM &amp; CAD Architectural Modeling</div>
-                                        <div class="text-[11px] text-slate-500 font-sans mt-0.5" x-show="lang === 'ua'">Фасади, ергономічне планування, конструктивні форми.</div>
-                                        <div class="text-[11px] text-slate-500 font-sans mt-0.5" x-show="lang === 'en'">Facades, ergonomic floor plans, architectural forms.</div>
+                                        <div class="font-bold text-slate-900 text-sm sm:text-base" x-show="lang === 'ua'">Архітектурне BIM &amp; CAD Моделювання</div>
+                                        <div class="font-bold text-slate-900 text-sm sm:text-base" x-show="lang === 'en'">BIM &amp; CAD Architectural Modeling</div>
+                                        <div class="text-xs sm:text-sm text-slate-600 font-sans mt-0.5" x-show="lang === 'ua'">Фасади, ергономічне планування, конструктивні форми.</div>
+                                        <div class="text-xs sm:text-sm text-slate-600 font-sans mt-0.5" x-show="lang === 'en'">Facades, ergonomic floor plans, architectural forms.</div>
                                     </div>
                                 </div>
 
-                                <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
-                                    <div class="w-7 h-7 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm shrink-0">📐</div>
+                                <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+                                    <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-base shrink-0">📐</div>
                                     <div>
-                                        <div class="font-bold text-slate-900" x-show="lang === 'ua'">Фізичне 3D-Макетування Будинків</div>
-                                        <div class="font-bold text-slate-900" x-show="lang === 'en'">Physical 3D Scale Modeling</div>
-                                        <div class="text-[11px] text-slate-500 font-sans mt-0.5" x-show="lang === 'ua'">Високоточний 3D-друк споруд (1:50, 1:100) для презентацій.</div>
-                                        <div class="text-[11px] text-slate-500 font-sans mt-0.5" x-show="lang === 'en'">High-precision scale models (1:50, 1:100) for presentations.</div>
+                                        <div class="font-bold text-slate-900 text-sm sm:text-base" x-show="lang === 'ua'">Фізичне 3D-Макетування Будинків</div>
+                                        <div class="font-bold text-slate-900 text-sm sm:text-base" x-show="lang === 'en'">Physical 3D Scale Modeling</div>
+                                        <div class="text-xs sm:text-sm text-slate-600 font-sans mt-0.5" x-show="lang === 'ua'">Високоточний 3D-друк споруд (1:50, 1:100) для презентацій.</div>
+                                        <div class="text-xs sm:text-sm text-slate-600 font-sans mt-0.5" x-show="lang === 'en'">High-precision scale models (1:50, 1:100) for presentations.</div>
                                     </div>
                                 </div>
                             </div>
@@ -654,7 +654,7 @@
                         <div class="mt-8 pt-6 border-t border-slate-200">
                             <button type="button" 
                                     @click="orderModalOpen = true; selectedService = (lang === 'ua' ? 'Архітектурне проектування та макетування' : 'Custom Architectural Design & Scale Modeling')"
-                                    class="w-full btn-cyan-glow text-white font-bold py-3.5 px-6 rounded-xl cursor-pointer text-sm font-mono transition-all flex items-center justify-center gap-2">
+                                    class="w-full btn-cyan-glow text-white font-bold py-4 px-6 rounded-xl cursor-pointer text-base font-mono transition-all flex items-center justify-center gap-2 shadow-md">
                                 <span x-show="lang === 'ua'">Замовити Архітектурне Рішення &rarr;</span>
                                 <span x-show="lang === 'en'">Request Architectural Solution &rarr;</span>
                             </button>
@@ -721,38 +721,38 @@
 
                         <!-- Card Content -->
                         <div class="p-5 sm:p-6">
-                            <h3 class="font-heading text-lg font-black text-slate-900 leading-snug">
+                            <h3 class="font-heading text-xl font-black text-slate-900 leading-snug">
                                 <span x-show="lang === 'ua'">Портальні Ферми та Шинопровід</span>
                                 <span x-show="lang === 'en'">Portal Structures &amp; Busbars</span>
                             </h3>
 
                             <!-- What Client Provided -->
-                            <div class="mt-3 p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700">
-                                <div class="font-bold text-slate-900 flex items-center gap-1.5 mb-1">
+                            <div class="mt-3.5 p-3 sm:p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-700">
+                                <div class="font-bold text-slate-900 flex items-center gap-1.5 mb-1 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-slate-500"></span>
                                     <span x-show="lang === 'ua'">Що надав замовник:</span>
                                     <span x-show="lang === 'en'">What client provided:</span>
                                 </div>
-                                <p class="text-slate-600 text-[11px] leading-relaxed" x-show="lang === 'ua'">Фото цеху та портальних сталевих ферм для оцінки габаритів та прив'язки вузлів.</p>
-                                <p class="text-slate-600 text-[11px] leading-relaxed" x-show="lang === 'en'">Hangar photos showing portal steel frames and spatial layout to assess scale.</p>
+                                <p class="text-slate-700 text-xs sm:text-sm leading-relaxed" x-show="lang === 'ua'">Фото цеху та портальних сталевих ферм для оцінки габаритів та прив'язки вузлів.</p>
+                                <p class="text-slate-700 text-xs sm:text-sm leading-relaxed" x-show="lang === 'en'">Hangar photos showing portal steel frames and spatial layout to assess scale.</p>
                             </div>
 
                             <!-- What We Did on 3D Printer -->
-                            <div class="mt-2.5 p-3 rounded-xl bg-sky-50 border border-sky-200 text-xs text-sky-950">
-                                <div class="font-bold text-sky-900 flex items-center gap-1.5 mb-1">
+                            <div class="mt-3 p-3 sm:p-3.5 rounded-xl bg-sky-50 border border-sky-200 text-xs sm:text-sm text-sky-950">
+                                <div class="font-bold text-sky-900 flex items-center gap-1.5 mb-1 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span>
                                     <span x-show="lang === 'ua'">Робота на 3D-принтері:</span>
                                     <span x-show="lang === 'en'">Our 3D print work:</span>
                                 </div>
-                                <p class="text-sky-800 text-[11px] leading-relaxed" x-show="lang === 'ua'">3D-моделювання та друк точного масштабного макета для просторової перевірки та презентації.</p>
-                                <p class="text-sky-800 text-[11px] leading-relaxed" x-show="lang === 'en'">3D CAD modeling and precision scaled 3D print for spatial fit check and presentation.</p>
+                                <p class="text-sky-900 text-xs sm:text-sm leading-relaxed" x-show="lang === 'ua'">3D-моделювання та друк точного масштабного макета для просторової перевірки та презентації.</p>
+                                <p class="text-sky-900 text-xs sm:text-sm leading-relaxed" x-show="lang === 'en'">3D CAD modeling and precision scaled 3D print for spatial fit check and presentation.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Footer Material Badge -->
                     <div class="p-5 sm:p-6 pt-0 border-t border-slate-100 mt-2">
-                        <div class="flex items-center justify-between text-[11px] font-mono text-slate-700 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+                        <div class="flex items-center justify-between text-xs sm:text-sm font-mono text-slate-700 bg-slate-50 p-3 rounded-xl border border-slate-200">
                             <span class="font-bold text-slate-900" x-show="lang === 'ua'">Матеріал друку:</span>
                             <span class="font-bold text-slate-900" x-show="lang === 'en'">3D Material:</span>
                             <span class="text-sky-700 font-bold">PLA (Точний макет)</span>
@@ -774,45 +774,45 @@
                             <div class="absolute top-3 left-3 px-2 py-1 rounded bg-slate-900/90 border border-amber-400 text-amber-400 font-mono text-[10px] font-bold">
                                 📸 <span x-show="lang === 'ua'">ФОТО ВІД ЗАМОВНИКА</span><span x-show="lang === 'en'">CLIENT PHOTO</span>
                             </div>
-                            <div class="absolute bottom-3 left-3 right-3 text-white font-mono text-[11px] font-bold truncate">
+                            <div class="absolute bottom-3 left-3 right-3 text-white font-mono text-xs font-bold truncate">
                                 [ВХІДНИЙ ОБ'ЄКТ // РОЗ'ЄДНУВАЧ]
                             </div>
                         </div>
 
                         <!-- Card Content -->
                         <div class="p-5 sm:p-6">
-                            <h3 class="font-heading text-lg font-black text-slate-900 leading-snug">
+                            <h3 class="font-heading text-xl font-black text-slate-900 leading-snug">
                                 <span x-show="lang === 'ua'">Силовий Роз'єднувач та Замок</span>
                                 <span x-show="lang === 'en'">Disconnect Switch &amp; Latch</span>
                             </h3>
 
                             <!-- What Client Provided -->
-                            <div class="mt-3 p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700">
-                                <div class="font-bold text-slate-900 flex items-center gap-1.5 mb-1">
+                            <div class="mt-3.5 p-3 sm:p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-700">
+                                <div class="font-bold text-slate-900 flex items-center gap-1.5 mb-1 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-slate-500"></span>
                                     <span x-show="lang === 'ua'">Що надав замовник:</span>
                                     <span x-show="lang === 'en'">What client provided:</span>
                                 </div>
-                                <p class="text-slate-600 text-[11px] leading-relaxed" x-show="lang === 'ua'">Фото вузла розмикача з мідними ножами та замком для перевірки механіки ходу.</p>
-                                <p class="text-slate-600 text-[11px] leading-relaxed" x-show="lang === 'en'">Photo of the knife disconnect blade and lock mechanism to verify articulation.</p>
+                                <p class="text-slate-700 text-xs sm:text-sm leading-relaxed" x-show="lang === 'ua'">Фото вузла розмикача з мідними ножами та замком для перевірки механіки ходу.</p>
+                                <p class="text-slate-700 text-xs sm:text-sm leading-relaxed" x-show="lang === 'en'">Photo of the knife disconnect blade and lock mechanism to verify articulation.</p>
                             </div>
 
                             <!-- What We Did on 3D Printer -->
-                            <div class="mt-2.5 p-3 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-950">
-                                <div class="font-bold text-amber-900 flex items-center gap-1.5 mb-1">
+                            <div class="mt-3 p-3 sm:p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-xs sm:text-sm text-amber-950">
+                                <div class="font-bold text-amber-900 flex items-center gap-1.5 mb-1 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
                                     <span x-show="lang === 'ua'">Робота на 3D-принтері:</span>
                                     <span x-show="lang === 'en'">Our 3D print work:</span>
                                 </div>
-                                <p class="text-amber-800 text-[11px] leading-relaxed" x-show="lang === 'ua'">Розробка геометрії шарнірів та 3D-друк рухомого тестового прототипу механізму замикання.</p>
-                                <p class="text-amber-800 text-[11px] leading-relaxed" x-show="lang === 'en'">Joint geometry design and 3D printing an articulated functional prototype of the mechanism.</p>
+                                <p class="text-amber-950 text-xs sm:text-sm leading-relaxed" x-show="lang === 'ua'">Розробка геометрії шарнірів та 3D-друк рухомого тестового прототипу механізму замикання.</p>
+                                <p class="text-amber-950 text-xs sm:text-sm leading-relaxed" x-show="lang === 'en'">Joint geometry design and 3D printing an articulated functional prototype of the mechanism.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Footer Material Badge -->
                     <div class="p-5 sm:p-6 pt-0 border-t border-slate-100 mt-2">
-                        <div class="flex items-center justify-between text-[11px] font-mono text-slate-700 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+                        <div class="flex items-center justify-between text-xs sm:text-sm font-mono text-slate-700 bg-slate-50 p-3 rounded-xl border border-slate-200">
                             <span class="font-bold text-slate-900" x-show="lang === 'ua'">Матеріал друку:</span>
                             <span class="font-bold text-slate-900" x-show="lang === 'en'">3D Material:</span>
                             <span class="text-amber-700 font-bold">PETG (Міцні шарніри)</span>
@@ -834,45 +834,45 @@
                             <div class="absolute top-3 left-3 px-2 py-1 rounded bg-slate-900/90 border border-sky-400 text-sky-400 font-mono text-[10px] font-bold">
                                 📸 <span x-show="lang === 'ua'">ФОТО ВІД ЗАМОВНИКА</span><span x-show="lang === 'en'">CLIENT PHOTO</span>
                             </div>
-                            <div class="absolute bottom-3 left-3 right-3 text-white font-mono text-[11px] font-bold truncate">
+                            <div class="absolute bottom-3 left-3 right-3 text-white font-mono text-xs font-bold truncate">
                                 [ВХІДНИЙ ОБ'ЄКТ // ПІДСТАНЦІЯ]
                             </div>
                         </div>
 
                         <!-- Card Content -->
                         <div class="p-5 sm:p-6">
-                            <h3 class="font-heading text-lg font-black text-slate-900 leading-snug">
+                            <h3 class="font-heading text-xl font-black text-slate-900 leading-snug">
                                 <span x-show="lang === 'ua'">Модульна Підстанція у Зборі</span>
                                 <span x-show="lang === 'en'">Modular Substation Assembly</span>
                             </h3>
 
                             <!-- What Client Provided -->
-                            <div class="mt-3 p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700">
-                                <div class="font-bold text-slate-900 flex items-center gap-1.5 mb-1">
+                            <div class="mt-3.5 p-3 sm:p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-700">
+                                <div class="font-bold text-slate-900 flex items-center gap-1.5 mb-1 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-slate-500"></span>
                                     <span x-show="lang === 'ua'">Що надав замовник:</span>
                                     <span x-show="lang === 'en'">What client provided:</span>
                                 </div>
-                                <p class="text-slate-600 text-[11px] leading-relaxed" x-show="lang === 'ua'">Фото готового великогабаритного модуля на тралі для виготовлення точної мініатюрної копії.</p>
-                                <p class="text-slate-600 text-[11px] leading-relaxed" x-show="lang === 'en'">Photo of the full-scale assembled module on transport for scale model fabrication.</p>
+                                <p class="text-slate-700 text-xs sm:text-sm leading-relaxed" x-show="lang === 'ua'">Фото готового великогабаритного модуля на тралі для виготовлення точної мініатюрної копії.</p>
+                                <p class="text-slate-700 text-xs sm:text-sm leading-relaxed" x-show="lang === 'en'">Photo of the full-scale assembled module on transport for scale model fabrication.</p>
                             </div>
 
                             <!-- What We Did on 3D Printer -->
-                            <div class="mt-2.5 p-3 rounded-xl bg-sky-50 border border-sky-200 text-xs text-sky-950">
-                                <div class="font-bold text-sky-900 flex items-center gap-1.5 mb-1">
+                            <div class="mt-3 p-3 sm:p-3.5 rounded-xl bg-sky-50 border border-sky-200 text-xs sm:text-sm text-sky-950">
+                                <div class="font-bold text-sky-900 flex items-center gap-1.5 mb-1 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span>
                                     <span x-show="lang === 'ua'">Робота на 3D-принтері:</span>
                                     <span x-show="lang === 'en'">Our 3D print work:</span>
                                 </div>
-                                <p class="text-sky-800 text-[11px] leading-relaxed" x-show="lang === 'ua'">3D-друк збірного макета модуля в масштабі з окремими порталами для виставок та тендерів.</p>
-                                <p class="text-sky-800 text-[11px] leading-relaxed" x-show="lang === 'en'">Multi-part scaled 3D print of the modular substation for exhibitions and project approvals.</p>
+                                <p class="text-sky-900 text-xs sm:text-sm leading-relaxed" x-show="lang === 'ua'">3D-друк збірного макета модуля в масштабі з окремими порталами для виставок та тендерів.</p>
+                                <p class="text-sky-900 text-xs sm:text-sm leading-relaxed" x-show="lang === 'en'">Multi-part scaled 3D print of the modular substation for exhibitions and project approvals.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Footer Material Badge -->
                     <div class="p-5 sm:p-6 pt-0 border-t border-slate-100 mt-2">
-                        <div class="flex items-center justify-between text-[11px] font-mono text-slate-700 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+                        <div class="flex items-center justify-between text-xs sm:text-sm font-mono text-slate-700 bg-slate-50 p-3 rounded-xl border border-slate-200">
                             <span class="font-bold text-slate-900" x-show="lang === 'ua'">Матеріал друку:</span>
                             <span class="font-bold text-slate-900" x-show="lang === 'en'">3D Material:</span>
                             <span class="text-sky-700 font-bold">PLA (Збірний макет)</span>
@@ -894,45 +894,45 @@
                             <div class="absolute top-3 left-3 px-2 py-1 rounded bg-slate-900/90 border border-emerald-400 text-emerald-400 font-mono text-[10px] font-bold">
                                 📸 <span x-show="lang === 'ua'">ФОТО ВІД ЗАМОВНИКА</span><span x-show="lang === 'en'">CLIENT PHOTO</span>
                             </div>
-                            <div class="absolute bottom-3 left-3 right-3 text-white font-mono text-[11px] font-bold truncate">
+                            <div class="absolute bottom-3 left-3 right-3 text-white font-mono text-xs font-bold truncate">
                                 [ВХІДНИЙ ОБ'ЄКТ // ІЗОЛЯТОРИ]
                             </div>
                         </div>
 
                         <!-- Card Content -->
                         <div class="p-5 sm:p-6">
-                            <h3 class="font-heading text-lg font-black text-slate-900 leading-snug">
+                            <h3 class="font-heading text-xl font-black text-slate-900 leading-snug">
                                 <span x-show="lang === 'ua'">Ізоляційні Колони та Струмовводи</span>
                                 <span x-show="lang === 'en'">Insulator Columns &amp; Leads</span>
                             </h3>
 
                             <!-- What Client Provided -->
-                            <div class="mt-3 p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700">
-                                <div class="font-bold text-slate-900 flex items-center gap-1.5 mb-1">
+                            <div class="mt-3.5 p-3 sm:p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-700">
+                                <div class="font-bold text-slate-900 flex items-center gap-1.5 mb-1 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-slate-500"></span>
                                     <span x-show="lang === 'ua'">Що надав замовник:</span>
                                     <span x-show="lang === 'en'">What client provided:</span>
                                 </div>
-                                <p class="text-slate-600 text-[11px] leading-relaxed" x-show="lang === 'ua'">Фото ребристих ізоляторів та кріплень кабелів із серійними мітками для розробки нових адаптерів.</p>
-                                <p class="text-slate-600 text-[11px] leading-relaxed" x-show="lang === 'en'">Photo of insulator stacks and cable clamp brackets to design custom mounting adapters.</p>
+                                <p class="text-slate-700 text-xs sm:text-sm leading-relaxed" x-show="lang === 'ua'">Фото ребристих ізоляторів та кріплень кабелів із серійними мітками для розробки нових адаптерів.</p>
+                                <p class="text-slate-700 text-xs sm:text-sm leading-relaxed" x-show="lang === 'en'">Photo of insulator stacks and cable clamp brackets to design custom mounting adapters.</p>
                             </div>
 
                             <!-- What We Did on 3D Printer -->
-                            <div class="mt-2.5 p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-950">
-                                <div class="font-bold text-emerald-900 flex items-center gap-1.5 mb-1">
+                            <div class="mt-3 p-3 sm:p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-xs sm:text-sm text-emerald-950">
+                                <div class="font-bold text-emerald-900 flex items-center gap-1.5 mb-1 text-xs sm:text-sm">
                                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
                                     <span x-show="lang === 'ua'">Робота на 3D-принтері:</span>
                                     <span x-show="lang === 'en'">Our 3D print work:</span>
                                 </div>
-                                <p class="text-emerald-800 text-[11px] leading-relaxed" x-show="lang === 'ua'">Проектування перехідних кронштейнів та 3D-друк примірочних прототипів перед запуском у виробництво.</p>
-                                <p class="text-emerald-800 text-[11px] leading-relaxed" x-show="lang === 'en'">CAD engineering of mounting brackets and 3D printing fitment prototypes prior to production.</p>
+                                <p class="text-emerald-950 text-xs sm:text-sm leading-relaxed" x-show="lang === 'ua'">Проектування перехідних кронштейнів та 3D-друк примірочних прототипів перед запуском у виробництво.</p>
+                                <p class="text-emerald-950 text-xs sm:text-sm leading-relaxed" x-show="lang === 'en'">CAD engineering of mounting brackets and 3D printing fitment prototypes prior to production.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Footer Material Badge -->
                     <div class="p-5 sm:p-6 pt-0 border-t border-slate-100 mt-2">
-                        <div class="flex items-center justify-between text-[11px] font-mono text-slate-700 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+                        <div class="flex items-center justify-between text-xs sm:text-sm font-mono text-slate-700 bg-slate-50 p-3 rounded-xl border border-slate-200">
                             <span class="font-bold text-slate-900" x-show="lang === 'ua'">Матеріал друку:</span>
                             <span class="font-bold text-slate-900" x-show="lang === 'en'">3D Material:</span>
                             <span class="text-emerald-700 font-bold">PETG (Міцний адаптер)</span>
@@ -1319,62 +1319,62 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
                 
                 <!-- Left: Interactive Order Intake Form -->
-                <div class="lg:col-span-7 bg-white rounded-2xl border-2 border-slate-900 p-8 sm:p-10 shadow-xl cad-corner-cross flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                <div class="lg:col-span-7 bg-white rounded-2xl border-2 border-slate-900 p-6 sm:p-10 shadow-xl cad-corner-cross flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
                     <div>
-                        <h2 class="font-heading text-2xl sm:text-3xl font-black text-slate-900 mb-6">
+                        <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 mb-6 sm:mb-8">
                             <span x-show="lang === 'ua'">Оформити Замовлення на Деталь</span>
                             <span x-show="lang === 'en'">Place Your 3D Print Order</span>
                         </h2>
 
                         <template x-if="!sent">
-                            <form @submit.prevent="sent = true" class="space-y-5">
+                            <form @submit.prevent="sent = true" class="space-y-5 sm:space-y-6">
                                 
                                 <!-- КОНТАКТНІ ДАНІ: ІМ'Я ТА EMAIL -->
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                                     <div>
-                                        <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
+                                        <label class="block text-sm sm:text-base font-mono font-bold text-slate-900 uppercase mb-2">
                                             <span x-show="lang === 'ua'">Ваше Ім'я:</span>
                                             <span x-show="lang === 'en'">Your Name:</span>
                                         </label>
-                                        <input type="text" required x-model="name" :placeholder="lang === 'ua' ? 'Олександр' : 'Alexander'" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 text-sm text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans" />
+                                        <input type="text" required x-model="name" :placeholder="lang === 'ua' ? 'Олександр' : 'Alexander'" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3.5 text-base text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans transition-colors" />
                                     </div>
                                     <div>
-                                        <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
+                                        <label class="block text-sm sm:text-base font-mono font-bold text-slate-900 uppercase mb-2">
                                             <span x-show="lang === 'ua'">Email (для розрахунку або файлів):</span>
                                             <span x-show="lang === 'en'">Email Address (for quote or files):</span>
                                         </label>
-                                        <input type="email" required x-model="email" :placeholder="lang === 'ua' ? 'alex@example.com' : 'alex@example.com'" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 text-sm text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans" />
+                                        <input type="email" required x-model="email" :placeholder="lang === 'ua' ? 'alex@example.com' : 'alex@example.com'" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3.5 text-base text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans transition-colors" />
                                     </div>
                                 </div>
 
                                 <!-- ЗАВАНТАЖЕННЯ ФАЙЛІВ (СМУЖКА З ВИПАДАЮЧИМ СПИСКОМ) -->
                                 <div x-data="{ openUpload: false, selectedFiles: [] }">
-                                    <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
+                                    <label class="block text-sm sm:text-base font-mono font-bold text-slate-900 uppercase mb-2">
                                         <span x-show="lang === 'ua'">Завантажити файли, креслення або фото:</span>
                                         <span x-show="lang === 'en'">Upload CAD Files, Drawings or Photos:</span>
                                     </label>
 
                                     <!-- Смужка у вигляді випадаючого списку -->
                                     <div @click="openUpload = !openUpload" 
-                                         class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 bg-slate-50/70 hover:bg-slate-100/90 text-sm cursor-pointer transition-all flex items-center justify-between select-none">
-                                        <div class="flex items-center gap-2.5 text-slate-700 truncate">
-                                            <span class="text-base text-sky-600">📎</span>
+                                         class="w-full rounded-xl border-2 border-slate-300 px-4 py-3.5 bg-slate-50/70 hover:bg-slate-100/90 text-base cursor-pointer transition-all flex items-center justify-between select-none">
+                                        <div class="flex items-center gap-3 text-slate-700 truncate">
+                                            <span class="text-lg text-sky-600">📎</span>
                                             <template x-if="selectedFiles.length === 0">
-                                                <span class="text-slate-500 font-sans text-xs sm:text-sm">
+                                                <span class="text-slate-500 font-sans text-sm sm:text-base">
                                                     <span x-show="lang === 'ua'">Прикріпити файли (STL, STEP, PDF, фото або креслення)</span>
                                                     <span x-show="lang === 'en'">Attach files (STL, STEP, PDF, photos or drawings)</span>
                                                 </span>
                                             </template>
                                             <template x-if="selectedFiles.length > 0">
-                                                <span class="font-bold text-sky-900 font-sans text-xs sm:text-sm">
+                                                <span class="font-bold text-sky-900 font-sans text-sm sm:text-base">
                                                     <span x-show="lang === 'ua'">Обрано файлів: <span x-text="selectedFiles.length"></span></span>
                                                     <span x-show="lang === 'en'">Files attached: <span x-text="selectedFiles.length"></span></span>
                                                 </span>
                                             </template>
                                         </div>
                                         <div class="flex items-center gap-2">
-                                            <span class="text-xs font-mono font-semibold text-slate-500 hidden sm:inline" x-show="selectedFiles.length === 0">до 100 МБ</span>
-                                            <svg class="w-4 h-4 text-slate-600 transition-transform duration-200" :class="openUpload ? 'rotate-180' : ''" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <span class="text-xs font-mono font-bold text-slate-500 hidden sm:inline" x-show="selectedFiles.length === 0">до 100 МБ</span>
+                                            <svg class="w-5 h-5 text-slate-600 transition-transform duration-200" :class="openUpload ? 'rotate-180' : ''" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                                             </svg>
                                         </div>
@@ -1382,20 +1382,20 @@
 
                                     <!-- Випадаючий блок завантаження -->
                                     <div x-show="openUpload" class="mt-2.5" style="display: none;">
-                                        <div class="rounded-xl border-2 border-dashed border-sky-400 bg-sky-50/50 p-4 text-center hover:bg-sky-50/80 transition-colors">
+                                        <div class="rounded-xl border-2 border-dashed border-sky-400 bg-sky-50/50 p-5 text-center hover:bg-sky-50/80 transition-colors">
                                             <input type="file" multiple 
                                                    @change="selectedFiles = Array.from($event.target.files)"
                                                    id="file-upload-input"
                                                    class="hidden" />
                                             <label for="file-upload-input" class="cursor-pointer block">
-                                                <div class="text-sky-700 font-bold text-xs sm:text-sm font-sans flex items-center justify-center gap-2">
+                                                <div class="text-sky-700 font-bold text-sm sm:text-base font-sans flex items-center justify-center gap-2">
                                                     <svg class="w-5 h-5 text-sky-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                                                     </svg>
                                                     <span x-show="lang === 'ua'">Натисніть для вибору файлів або перетягніть сюди</span>
                                                     <span x-show="lang === 'en'">Click to select files or drag and drop here</span>
                                                 </div>
-                                                <p class="text-[11px] text-slate-500 mt-1 font-sans">
+                                                <p class="text-xs sm:text-sm text-slate-500 mt-1.5 font-sans">
                                                     <span x-show="lang === 'ua'">Формати: STL, STEP, STP, IGES, OBJ, DXF, DWG, PDF, JPG, PNG (до 100 МБ)</span>
                                                     <span x-show="lang === 'en'">Formats: STL, STEP, STP, IGES, OBJ, DXF, DWG, PDF, JPG, PNG (up to 100MB)</span>
                                                 </p>
@@ -1403,11 +1403,11 @@
 
                                             <!-- Список обраних файлів -->
                                             <template x-if="selectedFiles.length > 0">
-                                                <div class="mt-3 pt-3 border-t border-sky-200/80 text-left space-y-1.5 max-h-36 overflow-y-auto">
+                                                <div class="mt-3.5 pt-3.5 border-t border-sky-200/80 text-left space-y-2 max-h-40 overflow-y-auto">
                                                     <template x-for="(file, index) in selectedFiles" :key="index">
-                                                        <div class="flex items-center justify-between text-xs bg-white/80 px-2.5 py-1.5 rounded-lg border border-sky-200 text-slate-800 font-mono">
+                                                        <div class="flex items-center justify-between text-xs sm:text-sm bg-white/90 px-3 py-2 rounded-lg border border-sky-200 text-slate-800 font-mono">
                                                             <span class="truncate flex-1 pr-2" x-text="file.name"></span>
-                                                            <span class="text-[10px] text-slate-500 shrink-0" x-text="(file.size / 1024 / 1024).toFixed(2) + ' MB'"></span>
+                                                            <span class="text-xs text-slate-500 shrink-0 font-bold" x-text="(file.size / 1024 / 1024).toFixed(2) + ' MB'"></span>
                                                         </div>
                                                     </template>
                                                 </div>
@@ -1418,11 +1418,11 @@
 
                                 <!-- ОПИС ТА ПОСИЛАННЯ НА ФАЙЛИ / ФОТО -->
                                 <div>
-                                    <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
+                                    <label class="block text-sm sm:text-base font-mono font-bold text-slate-900 uppercase mb-2">
                                         <span x-show="lang === 'ua'">Опис Завдання або Посилання на Фото / Креслення:</span>
                                         <span x-show="lang === 'en'">Project Details &amp; Links to Photos / CAD Files:</span>
                                     </label>
-                                    <textarea rows="4" x-model="details" :placeholder="lang === 'ua' ? 'Опишіть призначення деталі, орієнтовні розміри або вставте посилання на фото чи 3D-файл (Google Drive, Instagram, Facebook, хмара)...' : 'Describe the part purpose, rough dimensions, or paste a link to photos/CAD files (Google Drive, Instagram, Facebook, cloud storage)...'" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 text-sm text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans"></textarea>
+                                    <textarea rows="4" x-model="details" :placeholder="lang === 'ua' ? 'Опишіть призначення деталі, орієнтовні розміри або вставте посилання на фото чи 3D-файл (Google Drive, Instagram, Facebook, хмара)...' : 'Describe the part purpose, rough dimensions, or paste a link to photos/CAD files (Google Drive, Instagram, Facebook, cloud storage)...'" class="w-full rounded-xl border-2 border-slate-300 p-4 text-base text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans transition-colors"></textarea>
                                 </div>
 
                                 <div class="pt-2">
@@ -1430,7 +1430,7 @@
                                         <span x-show="lang === 'ua'">Надіслати Замовлення на Розрахунок &rarr;</span>
                                         <span x-show="lang === 'en'">Submit Order for Estimation &rarr;</span>
                                     </button>
-                                    <div class="text-center text-slate-500 text-xs font-mono mt-2.5">
+                                    <div class="text-center text-slate-600 text-xs sm:text-sm font-mono mt-3 font-semibold">
                                         <span x-show="lang === 'ua'">⚡ Відповідаємо протягом 15–30 хвилин. Конфіденційність гарантовано.</span>
                                         <span x-show="lang === 'en'">⚡ We reply within 15–30 minutes. Complete confidentiality guaranteed.</span>
                                     </div>
@@ -1507,49 +1507,49 @@
                     </div>
 
                     <!-- Practical FAQ Card -->
-                    <div class="bg-white rounded-2xl border-2 border-slate-900 p-6 sm:p-7 shadow-xl font-mono text-xs sm:text-sm cad-corner-cross flex-1 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-white rounded-2xl border-2 border-slate-900 p-6 sm:p-7 shadow-xl font-mono text-sm sm:text-base cad-corner-cross flex-1 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
                         <div>
-                            <h3 class="font-heading text-base font-black text-slate-900 mb-4 pb-3 border-b-2 border-slate-900 uppercase">
+                            <h3 class="font-heading text-lg font-black text-slate-900 mb-5 pb-3 border-b-2 border-slate-900 uppercase">
                                 <span x-show="lang === 'ua'">ЧАСТІ ЗАПИТАННЯ ПО ЗАМОВЛЕННЮ</span>
                                 <span x-show="lang === 'en'">ORDERING FAQ</span>
                             </h3>
-                            <div class="space-y-3.5">
+                            <div class="space-y-4">
                                 <div>
-                                    <h4 class="font-bold text-slate-900">
+                                    <h4 class="font-bold text-slate-900 text-sm sm:text-base">
                                         <span x-show="lang === 'ua'">Як передати креслення чи фото деталі?</span>
                                         <span x-show="lang === 'en'">How to send photos or drawings?</span>
                                     </h4>
-                                    <p class="text-slate-600 text-xs mt-1 font-sans leading-relaxed">
+                                    <p class="text-slate-600 text-sm sm:text-base mt-1 font-sans leading-relaxed">
                                         <span x-show="lang === 'ua'">Надішліть посилання у формі, напишіть в Instagram @modexdesign, Facebook або на пошту.</span>
                                         <span x-show="lang === 'en'">Paste a link in the form, message us on Instagram @modexdesign, Facebook, or email us.</span>
                                     </p>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-900">
+                                    <h4 class="font-bold text-slate-900 text-sm sm:text-base">
                                         <span x-show="lang === 'ua'">Якщо немає 3D-моделі, тільки зламана деталь?</span>
                                         <span x-show="lang === 'en'">What if there is no 3D file, only a broken sample?</span>
                                     </h4>
-                                    <p class="text-slate-600 text-xs mt-1 font-sans leading-relaxed">
+                                    <p class="text-slate-600 text-sm sm:text-base mt-1 font-sans leading-relaxed">
                                         <span x-show="lang === 'ua'">Достатньо сфотографувати деталь поруч із лінійкою. Ми знімемо всі розміри та створимо точну 3D-модель.</span>
                                         <span x-show="lang === 'en'">Take a photo of the part with a ruler next to it. We will engineer the 3D model accurately.</span>
                                     </p>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-900">
+                                    <h4 class="font-bold text-slate-900 text-sm sm:text-base">
                                         <span x-show="lang === 'ua'">Який пластик обрати: PLA чи PETG?</span>
                                         <span x-show="lang === 'en'">Which plastic to choose: PLA or PETG?</span>
                                     </h4>
-                                    <p class="text-slate-600 text-xs mt-1 font-sans leading-relaxed">
+                                    <p class="text-slate-600 text-sm sm:text-base mt-1 font-sans leading-relaxed">
                                         <span x-show="lang === 'ua'"><strong>PLA</strong> підходить для макетів та естетики. <strong>PETG</strong> — для міцних шестерень, кронштейнів та деталей авто.</span>
                                         <span x-show="lang === 'en'"><strong>PLA</strong> for visual mockups. <strong>PETG</strong> for high-strength brackets, gears, and outdoor parts.</span>
                                     </p>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-900">
+                                    <h4 class="font-bold text-slate-900 text-sm sm:text-base">
                                         <span x-show="lang === 'ua'">Скільки часу займає виготовлення?</span>
                                         <span x-show="lang === 'en'">How long does printing take?</span>
                                     </h4>
-                                    <p class="text-slate-600 text-xs mt-1 font-sans leading-relaxed">
+                                    <p class="text-slate-600 text-sm sm:text-base mt-1 font-sans leading-relaxed">
                                         <span x-show="lang === 'ua'">Зазвичай тестовий прототип друкується протягом 24–48 годин. Можливий терміновий друк день-у-день.</span>
                                         <span x-show="lang === 'en'">Typically 24–48 hours for prototype parts. Express same-day service is available on request.</span>
                                     </p>
