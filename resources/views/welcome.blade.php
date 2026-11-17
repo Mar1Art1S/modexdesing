@@ -58,10 +58,10 @@
                         <span x-show="lang === 'en'">Start a Project</span>
                     </button>
                     
-                    <a href="#services" 
+                    <a href="#projects" 
                        class="inline-flex items-center justify-center px-8 sm:px-9 py-4 rounded-xl text-base sm:text-lg font-bold text-slate-900 bg-white hover:bg-slate-50 border-2 border-slate-900 shadow-sm hover:border-sky-500 hover:text-sky-600 hover:shadow-[0_0_20px_rgba(14,165,233,0.25)] transition-all duration-300 w-full sm:w-auto">
-                        <span x-show="lang === 'ua'">Наші Напрямки &darr;</span>
-                        <span x-show="lang === 'en'">Our Capabilities &darr;</span>
+                        <span x-show="lang === 'ua'">Переглянути Проекти &darr;</span>
+                        <span x-show="lang === 'en'">View Projects &darr;</span>
                     </a>
                 </div>
 
@@ -102,100 +102,6 @@
             </div>
         </div>
 
-    </section>
-
-    <!-- ============================================================ -->
-    <!-- SECTION 2: CORE CAPABILITIES (LARGE MODERN 3-CARD SHOWCASE) -->
-    <!-- ============================================================ -->
-    <section id="services" class="py-20 lg:py-28 bg-[#f8fafc] border-y border-slate-200/80 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- SECTION HEADER: CLEAN DISPLAY TYPOGRAPHY -->
-            <div class="text-center max-w-4xl mx-auto mb-14 lg:mb-18" data-aos="fade-up" data-aos-duration="600">
-                <h2 class="font-heading text-3xl sm:text-5xl lg:text-[50px] font-black text-slate-900 tracking-tight leading-[1.14]">
-                    <span x-show="lang === 'ua'">Повний Цикл Виготовлення: Від Ідеї до Готової Деталі</span>
-                    <span x-show="lang === 'en'">Complete Parts Prototyping &amp; 3D Manufacturing</span>
-                </h2>
-            </div>
-
-            <!-- 3 LARGE BOLD CARDS GRID (EQUAL HEIGHT, ROOMY, CRISP) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-8 items-stretch">
-                
-                <!-- CARD 1: 3D PRINTING & PROTOTYPING -->
-                <a href="#printing" class="bg-white rounded-3xl border border-slate-200/90 hover:border-sky-500 p-8 sm:p-10 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden block" data-aos="fade-up" data-aos-delay="100">
-                    <div>
-                        <!-- Header: Icon & Number -->
-                        <div class="flex items-center justify-between">
-                            <div class="w-16 h-16 rounded-2xl bg-sky-50 border border-sky-200 text-sky-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-sky-500 group-hover:text-white group-hover:border-sky-500 transition-all duration-300 shadow-sm">
-                                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                                </svg>
-                            </div>
-                            <span class="font-mono text-3xl sm:text-4xl font-black text-slate-200 group-hover:text-sky-200 transition-colors">01</span>
-                        </div>
-
-                        <!-- Card Title -->
-                        <h3 class="font-heading text-2xl lg:text-[28px] font-black text-slate-900 mt-8 leading-tight group-hover:text-sky-600 transition-colors flex items-center justify-between gap-3">
-                            <span>
-                                <span x-show="lang === 'ua'">3D Друк: PLA &amp; PETG</span>
-                                <span x-show="lang === 'en'">3D Printing: PLA &amp; PETG</span>
-                            </span>
-                            <span class="text-xl sm:text-2xl text-slate-300 group-hover:text-sky-500 group-hover:translate-x-1.5 transition-all duration-200">&rarr;</span>
-                        </h3>
-                    </div>
-                </a>
-
-                <!-- CARD 2: 3D CAD MODELING -->
-                <a href="#engineering" class="bg-white rounded-3xl border border-slate-200/90 hover:border-blue-500 p-8 sm:p-10 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden block" data-aos="fade-up" data-aos-delay="200">
-                    <div>
-                        <!-- Header: Icon & Number -->
-                        <div class="flex items-center justify-between">
-                            <div class="w-16 h-16 rounded-2xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all duration-300 shadow-sm">
-                                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
-                                </svg>
-                            </div>
-                            <span class="font-mono text-3xl sm:text-4xl font-black text-slate-200 group-hover:text-blue-200 transition-colors">02</span>
-                        </div>
-
-                        <!-- Card Title -->
-                        <h3 class="font-heading text-2xl lg:text-[28px] font-black text-slate-900 mt-8 leading-tight group-hover:text-blue-600 transition-colors flex items-center justify-between gap-3">
-                            <span>
-                                <span x-show="lang === 'ua'">3D CAD Моделювання</span>
-                                <span x-show="lang === 'en'">3D CAD Modeling</span>
-                            </span>
-                            <span class="text-xl sm:text-2xl text-slate-300 group-hover:text-blue-600 group-hover:translate-x-1.5 transition-all duration-200">&rarr;</span>
-                        </h3>
-                    </div>
-                </a>
-
-                <!-- CARD 3: ENCLOSURES & TURNKEY ASSEMBLY -->
-                <a href="#contacts" class="bg-white rounded-3xl border border-slate-200/90 hover:border-emerald-500 p-8 sm:p-10 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden block" data-aos="fade-up" data-aos-delay="300">
-                    <div>
-                        <!-- Header: Icon & Number -->
-                        <div class="flex items-center justify-between">
-                            <div class="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-300 shadow-sm">
-                                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-                                </svg>
-                            </div>
-                            <span class="font-mono text-3xl sm:text-4xl font-black text-slate-200 group-hover:text-emerald-200 transition-colors">03</span>
-                        </div>
-
-                        <!-- Card Title -->
-                        <h3 class="font-heading text-2xl lg:text-[28px] font-black text-slate-900 mt-8 leading-tight group-hover:text-emerald-600 transition-colors flex items-center justify-between gap-3">
-                            <span>
-                                <span x-show="lang === 'ua'">Корпуси &amp; Складання</span>
-                                <span x-show="lang === 'en'">Enclosures &amp; Assembly</span>
-                            </span>
-                            <span class="text-xl sm:text-2xl text-slate-300 group-hover:text-emerald-600 group-hover:translate-x-1.5 transition-all duration-200">&rarr;</span>
-                        </h3>
-                    </div>
-                </a>
-
-            </div>
-
-        </div>
     </section>
 
     <!-- ============================================================ -->

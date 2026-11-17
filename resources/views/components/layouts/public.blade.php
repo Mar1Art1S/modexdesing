@@ -230,12 +230,6 @@
                         <span x-show="lang === 'en'">Home</span>
                         <span x-show="lang === 'ua'">Головна</span>
                     </a>
-                    <a href="#services" 
-                       :class="activeSection === 'services' ? 'nav-active-glow' : 'text-slate-600 hover:text-sky-600'" 
-                       class="py-1 transition-colors duration-200">
-                        <span x-show="lang === 'en'">Capabilities</span>
-                        <span x-show="lang === 'ua'">Напрямки</span>
-                    </a>
                     <a href="#projects" 
                        :class="activeSection === 'projects' ? 'nav-active-glow' : 'text-slate-600 hover:text-sky-600'" 
                        class="py-1 transition-colors duration-200">
@@ -320,9 +314,6 @@
                 <a href="#hero" @click="mobileMenuOpen = false" class="block text-slate-800 hover:text-sky-600 active:bg-sky-50 font-bold text-lg py-2.5 px-3 rounded-xl transition-colors">
                     <span x-show="lang === 'en'">Home</span><span x-show="lang === 'ua'">Головна</span>
                 </a>
-                <a href="#services" @click="mobileMenuOpen = false" class="block text-slate-800 hover:text-sky-600 active:bg-sky-50 font-bold text-lg py-2.5 px-3 rounded-xl transition-colors">
-                    <span x-show="lang === 'en'">Capabilities</span><span x-show="lang === 'ua'">Напрямки</span>
-                </a>
                 <a href="#projects" @click="mobileMenuOpen = false" class="block text-slate-800 hover:text-sky-600 active:bg-sky-50 font-bold text-lg py-2.5 px-3 rounded-xl transition-colors">
                     <span x-show="lang === 'en'">Projects</span><span x-show="lang === 'ua'">Проекти</span>
                 </a>
@@ -375,7 +366,7 @@
                         </h4>
                         <ul class="space-y-3 text-sm sm:text-base text-slate-300">
                             <li>
-                                <a href="#services" class="hover:text-sky-400 transition-colors">
+                                <a href="#engineering" class="hover:text-sky-400 transition-colors">
                                     <span x-show="lang === 'ua'">3D-Моделювання</span>
                                     <span x-show="lang === 'en'">3D Modeling</span>
                                 </a>
