@@ -189,7 +189,7 @@
                   }
               },
               init() {
-                  const sections = ['hero', 'services', 'projects', 'printing', 'engineering', 'contacts'];
+                  const sections = ['hero', 'projects', 'printing', 'engineering', 'contacts'];
                   const onScroll = () => {
                       const scrollPos = window.scrollY + 140;
                       for (const id of sections) {
