@@ -1266,12 +1266,6 @@
                 </div>
 
                 <div class="relative z-10 flex flex-wrap items-center justify-center gap-4 shrink-0">
-                    <button type="button" 
-                            @click="orderModalOpen = true; selectedService = (lang === 'ua' ? '3D-друк деталей: Від фото/ескізу до готового зразка' : '3D Printing of Parts: From Photo to Ready Sample')" 
-                            class="btn-cyan-glow text-white font-mono text-xs sm:text-sm font-bold px-6 py-3.5 rounded-xl cursor-pointer shadow-lg hover:shadow-cyan-500/30 transition-all">
-                        <span x-show="lang === 'ua'">Замовити 3D-Друк Деталей &rarr;</span>
-                        <span x-show="lang === 'en'">Order 3D Printing of Parts &rarr;</span>
-                    </button>
                     <a href="https://instagram.com/modexdesign" target="_blank" rel="noopener noreferrer" 
                        class="px-5 py-3.5 rounded-xl border border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-white font-mono text-xs sm:text-sm font-bold transition-all flex items-center gap-2">
                         <svg class="w-4 h-4 text-pink-400" viewBox="0 0 24 24" fill="currentColor">
