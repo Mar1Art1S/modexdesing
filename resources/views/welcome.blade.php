@@ -28,13 +28,6 @@
         <!-- UPPER HERO: HEADLINE, SUBTITLE, BUTTONS, SPECS (BIG TEXT & BIG BLOCKS) -->
         <div class="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 grow flex items-center">
             <div class="max-w-3xl lg:max-w-2xl xl:max-w-3xl">
-                
-                <!-- TECHNICAL BADGE (LARGER & BOLDER) -->
-                <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/95 backdrop-blur-md border-2 border-sky-400 text-sky-900 text-xs sm:text-sm font-mono font-bold mb-6 shadow-sm" data-aos="fade-down" data-aos-duration="600">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
-                    <span x-show="lang === 'ua'">ІНДУСТРІАЛЬНИЙ 3D ДРУК ТА ФУЛСТЕК ІНЖЕНЕРІЯ</span>
-                    <span x-show="lang === 'en'">INDUSTRIAL 3D PROTOTYPING &amp; FULL-STACK HARDWARE</span>
-                </div>
 
                 <!-- MAIN TITLE (BIGGER DISPLAY TYPOGRAPHY) -->
                 <h1 class="font-heading text-3xl sm:text-5xl lg:text-[3.35rem] xl:text-[3.75rem] font-black tracking-tight text-slate-900 leading-[1.08]" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
