@@ -1255,41 +1255,117 @@
 
             </div>
 
-            <!-- COLLABORATION CTA BANNER -->
-            <div class="mt-12 bg-slate-900 rounded-2xl p-6 sm:p-8 lg:p-10 border-2 border-slate-800 shadow-xl text-white flex flex-col lg:flex-row items-center justify-between gap-6 relative overflow-hidden">
-                <div class="absolute inset-0 bg-blueprint-grid opacity-15 pointer-events-none"></div>
+            <!-- COLLABORATION CTA BANNER (HIGH-TECH CAD CALLOUT) -->
+            <div class="mt-14 relative rounded-3xl p-8 sm:p-10 lg:p-12 overflow-hidden bg-gradient-to-br from-[#0c1926] via-[#0f243a] to-[#0a1522] border-2 border-sky-500/40 shadow-2xl shadow-sky-950/20 text-white flex flex-col lg:flex-row items-center justify-between gap-8" data-aos="fade-up" data-aos-duration="700">
                 
+                <!-- Ambient Glow Lights -->
+                <div class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-sky-500/20 blur-[80px] pointer-events-none"></div>
+                <div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-blue-600/15 blur-[80px] pointer-events-none"></div>
+                <div class="absolute inset-0 bg-blueprint-grid opacity-20 pointer-events-none"></div>
+
+                <!-- CAD Blueprint Corner Markers -->
+                <span class="absolute top-3 left-4 text-sky-400 font-mono text-sm font-bold pointer-events-none select-none opacity-60">+</span>
+                <span class="absolute top-3 right-4 text-sky-400 font-mono text-sm font-bold pointer-events-none select-none opacity-60">+</span>
+                <span class="absolute bottom-3 left-4 text-sky-400 font-mono text-sm font-bold pointer-events-none select-none opacity-60">+</span>
+                <span class="absolute bottom-3 right-4 text-sky-400 font-mono text-sm font-bold pointer-events-none select-none opacity-60">+</span>
+
+                <!-- Left Column: Headline, Specs & Guarantees -->
                 <div class="relative z-10 max-w-2xl text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-sky-500/20 border border-sky-400/40 text-sky-300 font-mono text-xs font-bold uppercase tracking-wider mb-3">
-                        <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+                    <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-sky-500/15 border border-sky-400/40 text-sky-300 font-mono text-xs font-bold uppercase tracking-wider mb-4 shadow-[0_0_15px_rgba(14,165,233,0.15)]">
+                        <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse shadow-[0_0_8px_#38bdf8]"></span>
                         <span x-show="lang === 'ua'">ПРЯМИЙ ЗВ'ЯЗОК // ОЦІНКА ДРУКУ ЗА 15 ХВИЛИН</span>
                         <span x-show="lang === 'en'">DIRECT CONTACT // 15-MIN QUOTE</span>
                     </div>
-                    <h3 class="font-heading text-2xl sm:text-3xl font-black text-white tracking-tight">
+
+                    <h3 class="font-heading text-2xl sm:text-3xl lg:text-[2.1rem] font-black text-white tracking-tight leading-tight">
                         <span x-show="lang === 'ua'">Потрібно надрукувати деталь або відновити зламану?</span>
                         <span x-show="lang === 'en'">Need to 3D print a part or replace a broken one?</span>
                     </h3>
-                    <p class="text-slate-300 text-sm sm:text-base mt-2 leading-relaxed font-sans">
-                        <span x-show="lang === 'ua'">Надішліть нам фото або креслення. Ми швидко оцінимо вартість друку, підкажемо, який пластик обрати (PLA для макетів чи PETG для міцності) та одразу візьмемо в роботу.</span>
+
+                    <p class="text-slate-300 text-sm sm:text-base lg:text-[17px] mt-3 leading-relaxed font-sans">
+                        <span x-show="lang === 'ua'">Надішліть нам фото або креслення. Швидко розрахуємо вартість друку, підкажемо, який пластик обрати (PLA для макетів чи PETG для навантажень) та одразу запустимо у виробництво.</span>
                         <span x-show="lang === 'en'">Send us a photo or sketch. We will quickly calculate the print cost, advise whether PLA or PETG fits best, and start printing right away.</span>
                     </p>
+
+                    <!-- Fast Benefits Row -->
+                    <div class="mt-5 flex flex-wrap items-center justify-center lg:justify-start gap-y-2 gap-x-5 text-xs sm:text-sm font-mono text-slate-300">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span x-show="lang === 'ua'">Швидка відповідь за 15 хв</span>
+                            <span x-show="lang === 'en'">Fast 15-min response</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span x-show="lang === 'ua'">Від 1 шт до серії</span>
+                            <span x-show="lang === 'en'">From 1 piece to batch</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span x-show="lang === 'ua'">Контроль штангенциркулем</span>
+                            <span x-show="lang === 'en'">Digital caliper check</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="relative z-10 flex flex-wrap items-center justify-center gap-4 shrink-0">
-                                        <a href="https://instagram.com/modexdesign" target="_blank" rel="noopener noreferrer" 
-                       class="px-5 py-3.5 rounded-xl border border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-white font-mono text-xs sm:text-sm font-bold transition-all flex items-center gap-2">
-                        <svg class="w-4 h-4 text-pink-400" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                        </svg>
-                        <span>Instagram</span>
+                <!-- Right Column: Interactive Direct Contact Cards -->
+                <div class="relative z-10 w-full sm:w-auto flex flex-col sm:flex-row lg:flex-col gap-3.5 shrink-0">
+                    
+                    <!-- 1. INSTAGRAM DIRECT CARD -->
+                    <a href="https://instagram.com/modexdesign" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="group p-4 sm:p-5 rounded-2xl bg-slate-900/90 border-2 border-slate-700/80 hover:border-pink-500/80 hover:bg-slate-800/90 transition-all duration-300 shadow-lg hover:shadow-pink-500/20 flex items-center gap-4 hover:-translate-y-0.5">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex items-center justify-center shrink-0 shadow-md shadow-pink-600/30 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-[11px] font-mono font-bold tracking-wider uppercase text-pink-400">
+                                <span x-show="lang === 'ua'">Instagram Direct</span>
+                                <span x-show="lang === 'en'">Instagram Direct</span>
+                            </div>
+                            <div class="font-heading font-black text-white text-base group-hover:text-pink-300 transition-colors">
+                                @modexdesign
+                            </div>
+                            <div class="text-xs text-slate-400 font-sans mt-0.5">
+                                <span x-show="lang === 'ua'">Надіслати фото або креслення →</span>
+                                <span x-show="lang === 'en'">Send photo or drawing →</span>
+                            </div>
+                        </div>
                     </a>
-                    <a href="https://facebook.com/modexdesign" target="_blank" rel="noopener noreferrer" 
-                       class="px-5 py-3.5 rounded-xl border border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-white font-mono text-xs sm:text-sm font-bold transition-all flex items-center gap-2">
-                        <svg class="w-4 h-4 text-blue-400" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                        </svg>
-                        <span>Facebook</span>
+
+                    <!-- 2. FACEBOOK MESSENGER CARD -->
+                    <a href="https://facebook.com/modexdesign" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="group p-4 sm:p-5 rounded-2xl bg-slate-900/90 border-2 border-slate-700/80 hover:border-blue-500/80 hover:bg-slate-800/90 transition-all duration-300 shadow-lg hover:shadow-blue-500/20 flex items-center gap-4 hover:-translate-y-0.5">
+                        <div class="w-12 h-12 rounded-xl bg-[#1877F2] text-white flex items-center justify-center shrink-0 shadow-md shadow-blue-600/30 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-[11px] font-mono font-bold tracking-wider uppercase text-blue-400">
+                                <span x-show="lang === 'ua'">Facebook Messenger</span>
+                                <span x-show="lang === 'en'">Facebook Messenger</span>
+                            </div>
+                            <div class="font-heading font-black text-white text-base group-hover:text-blue-300 transition-colors">
+                                modexdesign
+                            </div>
+                            <div class="text-xs text-slate-400 font-sans mt-0.5">
+                                <span x-show="lang === 'ua'">Написати нам у чат →</span>
+                                <span x-show="lang === 'en'">Message us in chat →</span>
+                            </div>
+                        </div>
                     </a>
+
                 </div>
             </div>
 
