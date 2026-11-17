@@ -656,16 +656,6 @@
                                         <div class="text-[11px] text-slate-500 font-sans mt-0.5" x-show="lang === 'en'">High-precision scale models (1:50, 1:100) for presentations.</div>
                                     </div>
                                 </div>
-
-                                <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
-                                    <div class="w-7 h-7 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm shrink-0">⚡</div>
-                                    <div>
-                                        <div class="font-bold text-slate-900" x-show="lang === 'ua'">Інтеграція Інженерних Мереж</div>
-                                        <div class="font-bold text-slate-900" x-show="lang === 'en'">Engineering Utility Coordination</div>
-                                        <div class="text-[11px] text-slate-500 font-sans mt-0.5" x-show="lang === 'ua'">Ув'язка архітектури з електрикою, освітленням та комунікаціями.</div>
-                                        <div class="text-[11px] text-slate-500 font-sans mt-0.5" x-show="lang === 'en'">Coordinating architecture with electrical and lighting systems.</div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
