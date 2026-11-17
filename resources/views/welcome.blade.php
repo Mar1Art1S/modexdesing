@@ -459,16 +459,10 @@
                         </div>
                     </div>
 
-                    <div class="p-6 bg-slate-50 font-mono text-xs text-slate-800">
-                        <div class="grid grid-cols-2 gap-3 mb-4 pb-4 border-b border-slate-300">
-                            <div><strong x-show="lang === 'ua'">МАТЕРІАЛ:</strong><strong x-show="lang === 'en'">MATERIAL:</strong> PETG Engineering</div>
-                            <div><strong x-show="lang === 'ua'">ТОЧНІСТЬ:</strong><strong x-show="lang === 'en'">TOLERANCE:</strong> &plusmn;0.04 mm</div>
-                            <div><strong x-show="lang === 'ua'">ТЕМП. ПІК:</strong><strong x-show="lang === 'en'">TEMP PEAK:</strong> 85&deg;C</div>
-                            <div><strong x-show="lang === 'ua'">ДІЕЛЕКТРИК:</strong><strong x-show="lang === 'en'">DIELECTRIC:</strong> 22 kV/mm</div>
-                        </div>
+                    <div class="p-5 sm:p-6 bg-slate-50">
                         <button type="button" 
                                 @click="orderModalOpen = true; selectedService = (lang === 'ua' ? 'Проект: Модульна Підстанція 10кВ' : '10kV Substation Insulator Project')"
-                                class="w-full py-3 rounded-xl border-2 border-slate-900 bg-white hover:bg-slate-900 hover:text-white text-slate-900 text-sm font-bold transition-all cursor-pointer shadow-xs">
+                                class="w-full py-3 rounded-xl border-2 border-slate-900 bg-white hover:bg-slate-900 hover:text-white text-slate-900 text-sm font-bold font-mono transition-all cursor-pointer shadow-xs">
                             <span x-show="lang === 'ua'">Замовити CAD Специфікацію &rarr;</span>
                             <span x-show="lang === 'en'">Request CAD Specification &rarr;</span>
                         </button>
@@ -505,16 +499,10 @@
                         </div>
                     </div>
 
-                    <div class="p-6 bg-slate-50 font-mono text-xs text-slate-800">
-                        <div class="grid grid-cols-2 gap-3 mb-4 pb-4 border-b border-slate-300">
-                            <div><strong x-show="lang === 'ua'">МАТЕРІАЛ:</strong><strong x-show="lang === 'en'">MATERIAL:</strong> PETG + PLA</div>
-                            <div><strong x-show="lang === 'ua'">ШАСІ:</strong><strong x-show="lang === 'en'">CHASSIS:</strong> All-Terrain Tracks</div>
-                            <div><strong x-show="lang === 'ua'">МАНІПУЛЯТОР:</strong><strong x-show="lang === 'en'">MANIPULATOR:</strong> 6-DOF Servo</div>
-                            <div><strong x-show="lang === 'ua'">ТОЧНІСТЬ:</strong><strong x-show="lang === 'en'">TOLERANCE:</strong> &plusmn;0.04 mm</div>
-                        </div>
+                    <div class="p-5 sm:p-6 bg-slate-50">
                         <button type="button" 
                                 @click="orderModalOpen = true; selectedService = (lang === 'ua' ? 'Проект: Гусенична Робоплатформа з Маніпулятором' : 'Tracked Rover with Manipulator Project')"
-                                class="w-full py-3 rounded-xl border-2 border-slate-900 bg-white hover:bg-slate-900 hover:text-white text-slate-900 text-sm font-bold transition-all cursor-pointer shadow-xs">
+                                class="w-full py-3 rounded-xl border-2 border-slate-900 bg-white hover:bg-slate-900 hover:text-white text-slate-900 text-sm font-bold font-mono transition-all cursor-pointer shadow-xs">
                             <span x-show="lang === 'ua'">Замовити CAD Специфікацію &rarr;</span>
                             <span x-show="lang === 'en'">Request CAD Specification &rarr;</span>
                         </button>
@@ -551,16 +539,10 @@
                         </div>
                     </div>
 
-                    <div class="p-6 bg-slate-50 font-mono text-xs text-slate-800">
-                        <div class="grid grid-cols-2 gap-3 mb-4 pb-4 border-b border-slate-300">
-                            <div><strong x-show="lang === 'ua'">МАТЕРІАЛ:</strong><strong x-show="lang === 'en'">MATERIAL:</strong> Tough PETG + PLA</div>
-                            <div><strong x-show="lang === 'ua'">КІНЕМАТИКА:</strong><strong x-show="lang === 'en'">KINEMATICS:</strong> 12-DOF Gait</div>
-                            <div><strong x-show="lang === 'ua'">СЕНСОРИ:</strong><strong x-show="lang === 'en'">SENSORS:</strong> Sonar + MCU</div>
-                            <div><strong x-show="lang === 'ua'">ТОЧНІСТЬ:</strong><strong x-show="lang === 'en'">TOLERANCE:</strong> &plusmn;0.05 mm</div>
-                        </div>
+                    <div class="p-5 sm:p-6 bg-slate-50">
                         <button type="button" 
                                 @click="orderModalOpen = true; selectedService = (lang === 'ua' ? 'Проект: Крокуючий Робот Повного Циклу' : 'Full-Cycle Walking Robot Project')"
-                                class="w-full py-3 rounded-xl border-2 border-slate-900 bg-white hover:bg-slate-900 hover:text-white text-slate-900 text-sm font-bold transition-all cursor-pointer shadow-xs">
+                                class="w-full py-3 rounded-xl border-2 border-slate-900 bg-white hover:bg-slate-900 hover:text-white text-slate-900 text-sm font-bold font-mono transition-all cursor-pointer shadow-xs">
                             <span x-show="lang === 'ua'">Замовити CAD Специфікацію &rarr;</span>
                             <span x-show="lang === 'en'">Request CAD Specification &rarr;</span>
                         </button>

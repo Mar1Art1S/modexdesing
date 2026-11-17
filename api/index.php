@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 // Ensure writable directories exist in Vercel's /tmp environment
 $storagePath = '/tmp/storage';
