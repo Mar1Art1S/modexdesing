@@ -112,257 +112,151 @@
     </section>
 
     <!-- ============================================================ -->
-    <!-- SECTION 2: CORE ENGINEERING CAPABILITIES SHOWCASE MATRIX      -->
-    <!-- RECREATED TO MATCH TECHNICAL SPECIFICATION MATRIX BLUEPRINT   -->
+    <!-- SECTION 2: CORE CAPABILITIES (LARGE MODERN 3-CARD SHOWCASE) -->
     <!-- ============================================================ -->
-    <section id="services" class="py-20 lg:py-28 cad-blueprint-substrate relative">
+    <section id="services" class="py-20 lg:py-28 bg-[#f8fafc] border-y border-slate-200/80 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- TECHNICAL DIMENSION SEPARATOR (CAD LEADER ARROWS) -->
-            <div class="flex items-center justify-between text-[11px] sm:text-xs font-mono text-slate-500 font-semibold mb-12 select-none">
-                <div class="flex items-center flex-1">
-                    <span class="text-slate-400 font-mono font-bold select-none">|&larr;</span>
-                    <span class="flex-1 border-t border-slate-300 ml-2 mr-3"></span>
+            <!-- SECTION HEADER: BIG, BOLD DISPLAY TYPOGRAPHY -->
+            <div class="text-center max-w-3xl mx-auto mb-14 lg:mb-18" data-aos="fade-up" data-aos-duration="600">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-100 text-sky-800 text-xs sm:text-sm font-mono font-bold uppercase tracking-wider mb-5">
+                    <span class="w-2 h-2 rounded-full bg-sky-500"></span>
+                    <span x-show="lang === 'ua'">НАПРЯМКИ РОБІТ ТА ВИРОБНИЦТВО</span>
+                    <span x-show="lang === 'en'">CORE CAPABILITIES &amp; PRODUCTION</span>
                 </div>
-                <span class="tracking-widest uppercase text-slate-500 text-center font-bold px-1 whitespace-nowrap">
-                    CORE ENGINEERING CAPABILITIES // SPECIFICATION MATRIX [REF: MODEX-P01]
-                </span>
-                <div class="flex items-center flex-1">
-                    <span class="flex-1 border-t border-slate-300 ml-3 mr-2"></span>
-                    <span class="text-slate-400 font-mono font-bold select-none">&rarr;|</span>
-                </div>
-            </div>
-
-            <!-- TWO-COLUMN ENGINEERING MATRIX LAYOUT -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
                 
-                <!-- LEFT COLUMN: TITLE, INTRO & DRAFTING SHEET STAMP -->
-                <div class="lg:col-span-5 flex flex-col justify-between" data-aos="fade-right" data-aos-duration="700">
+                <h2 class="font-heading text-3xl sm:text-5xl lg:text-[52px] font-black text-slate-900 tracking-tight leading-[1.12]">
+                    <span x-show="lang === 'ua'">Повний Цикл Виготовлення: Від Ідеї до Готової Деталі</span>
+                    <span x-show="lang === 'en'">Complete Parts Prototyping &amp; 3D Manufacturing</span>
+                </h2>
+
+                <p class="text-base sm:text-xl text-slate-600 mt-5 leading-relaxed font-sans">
+                    <span x-show="lang === 'ua'">Беремо в роботу будь-який вхідний матеріал — зламану деталь, фото з розмірами, креслення або 3D-файл. Моделюємо, підбираємо пластик та виготовляємо з точністю до ±0.05 мм.</span>
+                    <span x-show="lang === 'en'">We work from any reference: a broken part, a photo with dimensions, sketch, or 3D file. We model, select the right plastic, and manufacture with ±0.05 mm precision.</span>
+                </p>
+            </div>
+
+            <!-- 3 LARGE BOLD CARDS GRID (EQUAL HEIGHT, ROOMY, CRISP) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-8 items-stretch">
+                
+                <!-- CARD 1: 3D PRINTING & PROTOTYPING -->
+                <div class="bg-white rounded-3xl border-2 border-slate-900 p-8 sm:p-10 shadow-sm hover:shadow-2xl hover:border-sky-500 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
                     <div>
-                        <!-- Section Badge -->
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-50 border border-sky-300 text-sky-800 text-xs font-mono font-bold uppercase tracking-wider mb-4">
-                            <span x-show="lang === 'ua'">// МОЖЛИВОСТІ // 3D-ДРУК ТА МОДЕЛЮВАННЯ</span>
-                            <span x-show="lang === 'en'">// CAPABILITIES // 3D PRINTING &amp; CAD</span>
+                        <!-- Big Icon Container -->
+                        <div class="w-16 h-16 rounded-2xl bg-sky-50 border border-sky-200 text-sky-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-sky-500 group-hover:text-white group-hover:border-sky-500 transition-all duration-300 shadow-sm">
+                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                            </svg>
                         </div>
 
-                        <!-- Section Main Heading -->
-                        <h2 class="font-heading text-3xl sm:text-4xl lg:text-[44px] font-black text-slate-900 tracking-tight leading-[1.15]">
-                            <span x-show="lang === 'ua'">Повний Цикл Виготовлення<br class="hidden sm:inline"> Деталей.</span>
-                            <span x-show="lang === 'en'">Complete Parts Prototyping<br class="hidden sm:inline"> &amp; 3D Printing.</span>
-                        </h2>
+                        <!-- Card Title -->
+                        <h3 class="font-heading text-2xl lg:text-[26px] font-black text-slate-900 mt-6 leading-tight group-hover:text-sky-600 transition-colors">
+                            <span x-show="lang === 'ua'">3D Друк: PLA &amp; PETG</span>
+                            <span x-show="lang === 'en'">3D Printing: PLA &amp; PETG</span>
+                        </h3>
 
-                        <!-- Intro Paragraph -->
-                        <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed font-normal">
-                            <span x-show="lang === 'ua'">Від першої ідеї, фотографії зразка чи простого ескізу на папері — до точної 3D-моделі, підбору надійного пластику (PLA або PETG) та чистого друку готової деталі.</span>
-                            <span x-show="lang === 'en'">From an initial idea, reference photo, or paper sketch — to a precise 3D model, proper plastic selection (PLA or PETG), and clean manufacturing of the finished part.</span>
+                        <!-- Description (2-3 Clear Sentences) -->
+                        <p class="text-base text-slate-600 mt-4 leading-relaxed font-sans">
+                            <span x-show="lang === 'ua'">Швидкий та високоточний друк функціональних деталей, макетів та запчастин на каліброваних принтерах. Використовуємо якісний PLA для візуальних зразків та надміцний PETG для робочих механізмів під навантаження.</span>
+                            <span x-show="lang === 'en'">High-precision 3D printing of functional parts, prototypes, and replacement components on calibrated equipment. We use smooth PLA for mockups and durable PETG for mechanical load-bearing parts.</span>
                         </p>
                     </div>
 
-                    <!-- MODEX WORKSHOP DRAFTING SHEET TITLE BLOCK -->
-                    <div class="mt-8 lg:mt-12 border-2 border-slate-900 bg-white shadow-xs font-mono text-xs overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                        <!-- Dark Top Title Bar -->
-                        <div class="bg-slate-900 text-white px-3.5 py-2 flex items-center justify-between font-bold text-[11px] sm:text-xs tracking-wider">
-                            <span>MODEX WORKSHOP DRAFTING SHEET</span>
-                            <span class="text-sky-400">DWG: MDX-2026-FDM</span>
+                    <div class="mt-8 pt-6 border-t border-slate-100">
+                        <!-- Key Specs Pills -->
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 font-mono text-xs font-bold">±0.05 mm точність</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 font-mono text-xs font-bold">420×380×500 mm</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-sky-50 text-sky-700 font-mono text-xs font-bold">PLA / PETG</span>
                         </div>
 
-                        <!-- Row 1: Developer & Project Code (2 columns) -->
-                        <div class="grid grid-cols-2 divide-x divide-slate-900 border-b border-slate-900">
-                            <div class="p-2.5 sm:p-3">
-                                <div class="text-[9px] uppercase tracking-wider text-slate-500 font-semibold">
-                                    <span x-show="lang === 'ua'">МАЙСТЕРНЯ / ВИРОБНИЦТВО:</span>
-                                    <span x-show="lang === 'en'">WORKSHOP / PRODUCER:</span>
-                                </div>
-                                <div class="text-[11px] sm:text-xs font-bold text-slate-900 mt-0.5">MODEX 3D WORKSHOP</div>
-                            </div>
-                            <div class="p-2.5 sm:p-3">
-                                <div class="text-[9px] uppercase tracking-wider text-slate-500 font-semibold">
-                                    <span x-show="lang === 'ua'">НАПРЯМОК РОБІТ:</span>
-                                    <span x-show="lang === 'en'">PROJECT SCOPE:</span>
-                                </div>
-                                <div class="text-[11px] sm:text-xs font-bold text-slate-900 mt-0.5">CUSTOM 3D PRINTING</div>
-                            </div>
-                        </div>
-
-                        <!-- Row 2: Scale, Tolerance, Material (3 columns) -->
-                        <div class="grid grid-cols-3 divide-x divide-slate-900 border-b border-slate-900">
-                            <div class="p-2.5 sm:p-3">
-                                <div class="text-[9px] uppercase tracking-wider text-slate-500 font-semibold">
-                                    <span x-show="lang === 'ua'">МАСШТАБ:</span>
-                                    <span x-show="lang === 'en'">SCALE:</span>
-                                </div>
-                                <div class="text-[11px] sm:text-xs font-bold text-slate-900 mt-0.5">1:1 (EXACT FIT)</div>
-                            </div>
-                            <div class="p-2.5 sm:p-3">
-                                <div class="text-[9px] uppercase tracking-wider text-slate-500 font-semibold">
-                                    <span x-show="lang === 'ua'">ТОЧНІСТЬ:</span>
-                                    <span x-show="lang === 'en'">TOLERANCE:</span>
-                                </div>
-                                <div class="text-[11px] sm:text-xs font-bold text-sky-600 mt-0.5">&plusmn;0.05 mm</div>
-                            </div>
-                            <div class="p-2.5 sm:p-3">
-                                <div class="text-[9px] uppercase tracking-wider text-slate-500 font-semibold">
-                                    <span x-show="lang === 'ua'">ПЛАСТИК:</span>
-                                    <span x-show="lang === 'en'">MATERIAL:</span>
-                                </div>
-                                <div class="text-[11px] sm:text-xs font-bold text-slate-900 mt-0.5">PLA / PETG</div>
-                            </div>
-                        </div>
-
-                        <!-- Row 3: Status & Sheet Number (with dividing vertical line) -->
-                        <div class="grid grid-cols-12 divide-x divide-slate-900">
-                            <div class="col-span-8 p-2.5 sm:p-3 text-[10px] sm:text-[11px] font-bold text-emerald-700 tracking-wider">
-                                <span x-show="lang === 'ua'">СТАТУС: ГОТОВО ДО ДРУКУ</span>
-                                <span x-show="lang === 'en'">STATUS: VERIFIED FOR PRODUCTION</span>
-                            </div>
-                            <div class="col-span-4 p-2.5 sm:p-3 text-right text-[10px] sm:text-[11px] font-bold text-slate-600 tracking-wider">
-                                SHEET 1 OF 1
-                            </div>
-                        </div>
+                        <a href="#printing" class="inline-flex items-center gap-2 text-sm font-bold text-sky-600 group-hover:text-sky-700 transition-colors">
+                            <span x-show="lang === 'ua'">Детальніше про друк &rarr;</span>
+                            <span x-show="lang === 'en'">Learn about 3D printing &rarr;</span>
+                        </a>
                     </div>
                 </div>
 
-                <!-- RIGHT COLUMN: 3 STACKED ENGINEERING PILLAR CARDS -->
-                <div class="lg:col-span-7 flex flex-col gap-4 sm:gap-5 justify-between">
-                    
-                    <!-- PILLAR 01: ADDITIVE 3D PRINTING -->
-                    <a href="#printing" class="block group relative bg-white rounded-2xl border border-slate-300/80 shadow-xs pt-4 pb-4.5 px-5 sm:px-6 hover:border-sky-400 hover:shadow-md transition-all duration-200" data-aos="fade-left" data-aos-delay="100">
-                        <!-- Corner Crosses -->
-                        <span class="absolute top-2 left-2.5 text-sky-600 font-mono text-xs font-bold leading-none select-none pointer-events-none">+</span>
-                        <span class="absolute bottom-2 right-2.5 text-sky-600 font-mono text-xs font-bold leading-none select-none pointer-events-none">+</span>
-
-                        <!-- Header Row -->
-                        <div class="flex items-center justify-between font-mono text-xs mb-1.5 pl-2">
-                            <span class="text-sky-700 font-bold tracking-wider">PILLAR 01 // 3D PRINTING</span>
-                            <span class="text-slate-500 font-normal">PRECISION: &plusmn;0.05mm</span>
+                <!-- CARD 2: 3D CAD MODELING -->
+                <div class="bg-white rounded-3xl border-2 border-slate-900 p-8 sm:p-10 shadow-sm hover:shadow-2xl hover:border-blue-500 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <!-- Big Icon Container -->
+                        <div class="w-16 h-16 rounded-2xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all duration-300 shadow-sm">
+                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+                            </svg>
                         </div>
 
-                        <!-- Title -->
-                        <h3 class="font-heading font-black text-slate-900 text-lg sm:text-xl lg:text-[22px] leading-snug group-hover:text-sky-600 transition-colors">
-                            <span x-show="lang === 'ua'">3D Друк та Прототипування: PLA та PETG</span>
-                            <span x-show="lang === 'en'">3D Printing &amp; Prototyping: PLA &amp; PETG</span>
+                        <!-- Card Title -->
+                        <h3 class="font-heading text-2xl lg:text-[26px] font-black text-slate-900 mt-6 leading-tight group-hover:text-blue-600 transition-colors">
+                            <span x-show="lang === 'ua'">3D CAD Моделювання</span>
+                            <span x-show="lang === 'en'">3D CAD Modeling</span>
                         </h3>
 
-                        <!-- Description -->
-                        <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed font-normal">
-                            <span x-show="lang === 'ua'">Високоточний 3D-друк деталей, функціональних корпусів та механічних вузлів матеріалами PLA та міцним PETG. Точне калібрування принтерів, стабільна геометрія та чисті поверхні.</span>
-                            <span x-show="lang === 'en'">High-precision 3D printing of functional parts, enclosures, and mechanical components using PLA and sturdy PETG. Accurate printer calibration and clean surface finish.</span>
+                        <!-- Description (2-3 Clear Sentences) -->
+                        <p class="text-base text-slate-600 mt-4 leading-relaxed font-sans">
+                            <span x-show="lang === 'ua'">Побудова точних цифрових 3D-моделей за вашим зразком, фотографією з лінійкою чи простим ескізом. Оптимізуємо геометрію під навантаження, посилюємо ребрами жорсткості та готуємо файл до бездоганного виробництва.</span>
+                            <span x-show="lang === 'en'">Accurate 3D geometry engineering based on your physical sample, ruler photo, or sketch. We optimize parts for mechanical loads, add structural ribs, and prepare clean print-ready files.</span>
                         </p>
+                    </div>
 
-                        <!-- Dotted Divider -->
-                        <div class="border-t border-dotted border-slate-200 my-3.5"></div>
-
-                        <!-- Bottom Pills Row -->
-                        <div class="flex flex-wrap items-center gap-2">
-                            <span class="px-2.5 py-1 rounded bg-slate-100/80 border border-slate-200/80 text-slate-700 font-mono text-[10px] sm:text-[11px] font-semibold tracking-wide">MAX BUILD: 420x380x500 mm</span>
-                            <span class="px-2.5 py-1 rounded bg-slate-100/80 border border-slate-200/80 text-slate-700 font-mono text-[10px] sm:text-[11px] font-semibold tracking-wide">
-                                <span x-show="lang === 'ua'">ШАР: 0.08 - 0.32 mm</span>
-                                <span x-show="lang === 'en'">LAYER: 0.08 - 0.32 mm</span>
-                            </span>
-                            <span class="px-2.5 py-1 rounded bg-slate-100/80 border border-slate-200/80 text-slate-700 font-mono text-[10px] sm:text-[11px] font-semibold tracking-wide">
-                                <span x-show="lang === 'ua'">МАТЕРІАЛИ: PLA / PETG</span>
-                                <span x-show="lang === 'en'">MATERIALS: PLA / PETG</span>
-                            </span>
-                        </div>
-                    </a>
-
-                    <!-- PILLAR 02: 3D CAD MODELING FROM SCRATCH -->
-                    <a href="#engineering" class="block group relative bg-white rounded-2xl border border-slate-300/80 shadow-xs pt-4 pb-4.5 px-5 sm:px-6 hover:border-sky-400 hover:shadow-md transition-all duration-200" data-aos="fade-left" data-aos-delay="200">
-                        <!-- Corner Crosses -->
-                        <span class="absolute top-2 left-2.5 text-sky-600 font-mono text-xs font-bold leading-none select-none pointer-events-none">+</span>
-                        <span class="absolute bottom-2 right-2.5 text-sky-600 font-mono text-xs font-bold leading-none select-none pointer-events-none">+</span>
-
-                        <!-- Header Row -->
-                        <div class="flex items-center justify-between font-mono text-xs mb-1.5 pl-2">
-                            <span class="text-sky-700 font-bold tracking-wider">PILLAR 02 // 3D CAD MODELING</span>
-                            <span class="text-slate-500 font-normal">
-                                <span x-show="lang === 'ua'">ВІД ІДЕЇ ТА ЗРАЗКА</span>
-                                <span x-show="lang === 'en'">FROM IDEA &amp; SAMPLE</span>
-                            </span>
+                    <div class="mt-8 pt-6 border-t border-slate-100">
+                        <!-- Key Specs Pills -->
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 font-mono text-xs font-bold">За зразком чи фото</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 font-mono text-xs font-bold">Розрахунок міцності</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-blue-50 text-blue-700 font-mono text-xs font-bold">STEP / STL</span>
                         </div>
 
-                        <!-- Title -->
-                        <h3 class="font-heading font-black text-slate-900 text-lg sm:text-xl lg:text-[22px] leading-snug group-hover:text-sky-600 transition-colors">
-                            <span x-show="lang === 'ua'">3D-Моделювання Деталей та Розрахунок Міцності</span>
-                            <span x-show="lang === 'en'">3D CAD Modeling &amp; Strength Optimization</span>
+                        <a href="#engineering" class="inline-flex items-center gap-2 text-sm font-bold text-blue-600 group-hover:text-blue-700 transition-colors">
+                            <span x-show="lang === 'ua'">Як ми проектуємо &rarr;</span>
+                            <span x-show="lang === 'en'">How we engineer &rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD 3: ENCLOSURES & TURNKEY ASSEMBLY -->
+                <div class="bg-white rounded-3xl border-2 border-slate-900 p-8 sm:p-10 shadow-sm hover:shadow-2xl hover:border-emerald-500 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <div>
+                        <!-- Big Icon Container -->
+                        <div class="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-300 shadow-sm">
+                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                            </svg>
+                        </div>
+
+                        <!-- Card Title -->
+                        <h3 class="font-heading text-2xl lg:text-[26px] font-black text-slate-900 mt-6 leading-tight group-hover:text-emerald-600 transition-colors">
+                            <span x-show="lang === 'ua'">Корпуси &amp; Складання</span>
+                            <span x-show="lang === 'en'">Enclosures &amp; Assembly</span>
                         </h3>
 
-                        <!-- Description -->
-                        <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed font-normal">
-                            <span x-show="lang === 'ua'">Побудова точних 3D-моделей за вашим зразком, фотографією чи зламаною деталлю. Оптимізація форми під робочі навантаження, посилення вразливих місць ребрами жорсткості та підготовка до запуску на принтері.</span>
-                            <span x-show="lang === 'en'">Accurate 3D modeling from your physical sample, photo, or broken part. Geometry optimization under mechanical loads, structural rib reinforcement, and complete print-ready file preparation.</span>
+                        <!-- Description (2-3 Clear Sentences) -->
+                        <p class="text-base text-slate-600 mt-4 leading-relaxed font-sans">
+                            <span x-show="lang === 'ua'">Проектування та друк надійних корпусів для електроніки й датчиків. Виконуємо якісну термопосадку латунних різьбових втулок (M2–M8) для багаторазового закручування гвинтів та повністю збираємо готовий виріб.</span>
+                            <span x-show="lang === 'en'">Custom enclosure design and 3D printing tailored to your PCBs and sensors. We install durable brass threaded heat-set inserts (M2–M8) for repeated fastening and assemble ready-to-use units.</span>
                         </p>
+                    </div>
 
-                        <!-- Dotted Divider -->
-                        <div class="border-t border-dotted border-slate-200 my-3.5"></div>
-
-                        <!-- Bottom Pills Row -->
-                        <div class="flex flex-wrap items-center gap-2">
-                            <span class="px-2.5 py-1 rounded bg-slate-100/80 border border-slate-200/80 text-slate-700 font-mono text-[10px] sm:text-[11px] font-semibold tracking-wide">
-                                <span x-show="lang === 'ua'">ТОЧНІ РОЗМІРИ</span>
-                                <span x-show="lang === 'en'">ACCURATE DIMENSIONS</span>
-                            </span>
-                            <span class="px-2.5 py-1 rounded bg-slate-100/80 border border-slate-200/80 text-slate-700 font-mono text-[10px] sm:text-[11px] font-semibold tracking-wide">
-                                <span x-show="lang === 'ua'">ПОСИЛЕННЯ РЕБРАМИ ЖОРСТКОСТІ</span>
-                                <span x-show="lang === 'en'">STRUCTURAL REINFORCEMENT</span>
-                            </span>
-                            <span class="px-2.5 py-1 rounded bg-slate-100/80 border border-slate-200/80 text-slate-700 font-mono text-[10px] sm:text-[11px] font-semibold tracking-wide">
-                                <span x-show="lang === 'ua'">ПІДГОТОВКА ДО ДРУКУ</span>
-                                <span x-show="lang === 'en'">PRINT OPTIMIZATION</span>
-                            </span>
-                        </div>
-                    </a>
-
-                    <!-- PILLAR 03: ENCLOSURES & ASSEMBLY -->
-                    <a href="#projects" class="block group relative bg-white rounded-2xl border border-slate-300/80 shadow-xs pt-4 pb-4.5 px-5 sm:px-6 hover:border-sky-400 hover:shadow-md transition-all duration-200" data-aos="fade-left" data-aos-delay="300">
-                        <!-- Corner Crosses -->
-                        <span class="absolute top-2 left-2.5 text-sky-600 font-mono text-xs font-bold leading-none select-none pointer-events-none">+</span>
-                        <span class="absolute bottom-2 right-2.5 text-sky-600 font-mono text-xs font-bold leading-none select-none pointer-events-none">+</span>
-
-                        <!-- Header Row -->
-                        <div class="flex items-center justify-between font-mono text-xs mb-1.5 pl-2">
-                            <span class="text-sky-700 font-bold tracking-wider">PILLAR 03 // ENCLOSURES &amp; ASSEMBLY</span>
-                            <span class="text-slate-500 font-normal">
-                                <span x-show="lang === 'ua'">СКЛАДАННЯ «ПІД КЛЮЧ»</span>
-                                <span x-show="lang === 'en'">TURNKEY ASSEMBLY</span>
-                            </span>
+                    <div class="mt-8 pt-6 border-t border-slate-100">
+                        <!-- Key Specs Pills -->
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 font-mono text-xs font-bold">Втулки M2–M8</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 font-mono text-xs font-bold">Посадка плат</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-700 font-mono text-xs font-bold">Готовий вузол</span>
                         </div>
 
-                        <!-- Title -->
-                        <h3 class="font-heading font-black text-slate-900 text-lg sm:text-xl lg:text-[22px] leading-snug group-hover:text-sky-600 transition-colors">
-                            <span x-show="lang === 'ua'">Корпуси, Різьбові З'єднання та Складання Вузлів</span>
-                            <span x-show="lang === 'en'">Enclosures, Threaded Inserts &amp; Assembly</span>
-                        </h3>
-
-                        <!-- Description -->
-                        <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed font-normal">
-                            <span x-show="lang === 'ua'">Проектування та друк корпусів під розміри ваших плат чи електроніки, надійна термопосадка латунних різьбових втулок M2–M8 для багаторазового закручування, захист від пилу й вологи та фінальне складання готового вузла.</span>
-                            <span x-show="lang === 'en'">Precision enclosure 3D printing designed around your boards and electronic components, durable heat-set brass threaded inserts (M2–M8) for repeated bolting, dust/moisture protection, and complete assembly.</span>
-                        </p>
-
-                        <!-- Dotted Divider -->
-                        <div class="border-t border-dotted border-slate-200 my-3.5"></div>
-
-                        <!-- Bottom Pills Row -->
-                        <div class="flex flex-wrap items-center gap-2">
-                            <span class="px-2.5 py-1 rounded bg-slate-100/80 border border-slate-200/80 text-slate-700 font-mono text-[10px] sm:text-[11px] font-semibold tracking-wide">
-                                <span x-show="lang === 'ua'">РІЗЬБОВІ ВТУЛКИ M2-M8</span>
-                                <span x-show="lang === 'en'">BRASS INSERTS M2-M8</span>
-                            </span>
-                            <span class="px-2.5 py-1 rounded bg-slate-100/80 border border-slate-200/80 text-slate-700 font-mono text-[10px] sm:text-[11px] font-semibold tracking-wide">
-                                <span x-show="lang === 'ua'">ПІДГОНКА ПІД ЕЛЕКТРОНІКУ</span>
-                                <span x-show="lang === 'en'">PCB &amp; ELECTRONICS FIT</span>
-                            </span>
-                            <span class="px-2.5 py-1 rounded bg-slate-100/80 border border-slate-200/80 text-slate-700 font-mono text-[10px] sm:text-[11px] font-semibold tracking-wide">
-                                <span x-show="lang === 'ua'">СКЛАДАННЯ ГОТОВОГО ВИРОБУ</span>
-                                <span x-show="lang === 'en'">FINISHED ASSEMBLY</span>
-                            </span>
-                        </div>
-                    </a>
-
+                        <a href="#contacts" class="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 group-hover:text-emerald-700 transition-colors">
+                            <span x-show="lang === 'ua'">Замовити корпус &rarr;</span>
+                            <span x-show="lang === 'en'">Order enclosure &rarr;</span>
+                        </a>
+                    </div>
                 </div>
 
             </div>
+
+        </div>
+    </section>
 
         </div>
     </section>
