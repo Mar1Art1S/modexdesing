@@ -268,12 +268,6 @@
     <section id="projects" class="py-20 lg:py-28 bg-white" x-data="{ currentFilter: 'all' }">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- TECHNICAL DIMENSION SEPARATOR -->
-            <div class="cad-dimension-line mb-10 text-xs font-mono font-bold">
-                <span x-show="lang === 'ua'">&vert;&larr;&mdash;&mdash;&mdash;&mdash;&mdash; ПЕРЕВІРЕНІ ІНЖЕНЕРНІ КЕЙСИ ТА РОЗРОБКИ // ПЕРЕРІЗ C-C &mdash;&mdash;&mdash;&mdash;&mdash;&rarr;&vert;</span>
-                <span x-show="lang === 'en'">&vert;&larr;&mdash;&mdash;&mdash;&mdash;&mdash; VERIFIED HARDWARE CASE STUDIES // SECTION C-C &mdash;&mdash;&mdash;&mdash;&mdash;&rarr;&vert;</span>
-            </div>
-
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12" data-aos="fade-up" data-aos-duration="600">
                 <div>
                     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-sky-100 border border-sky-400 text-sky-900 text-xs sm:text-sm font-mono font-bold uppercase tracking-wider mb-3">
@@ -578,12 +572,6 @@
     <section id="printing" class="py-20 lg:py-28 cad-blueprint-substrate">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- TECHNICAL DIMENSION SEPARATOR -->
-            <div class="cad-dimension-line mb-10 text-xs font-mono font-bold">
-                <span x-show="lang === 'ua'">&vert;&larr;&mdash;&mdash;&mdash;&mdash;&mdash; ПРИКЛАД РОБОТИ // ФОТО ВІД ЗАМОВНИКА &rarr; РОЗРОБКА 3D-ПРОТОТИПУ &mdash;&mdash;&mdash;&mdash;&mdash;&rarr;&vert;</span>
-                <span x-show="lang === 'en'">&vert;&larr;&mdash;&mdash;&mdash;&mdash;&mdash; CLIENT CASE WORKFLOW // REFERENCE PHOTO &rarr; 3D PRINTED PROTOTYPE &mdash;&mdash;&mdash;&mdash;&mdash;&rarr;&vert;</span>
-            </div>
-
             <!-- SECTION HEADER -->
             <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16" data-aos="fade-up" data-aos-duration="600">
                 <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-sky-100 border border-sky-400 text-sky-900 text-xs sm:text-sm font-mono font-bold uppercase tracking-wider mb-4">
@@ -929,12 +917,6 @@
     <section id="engineering" class="py-20 lg:py-28 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- TECHNICAL DIMENSION SEPARATOR -->
-            <div class="cad-dimension-line mb-10 text-xs font-mono font-bold">
-                <span x-show="lang === 'ua'">&vert;&larr;&mdash;&mdash;&mdash;&mdash;&mdash; ПРОЦЕС ЗАМОВЛЕННЯ // 3D-ДРУК ДЕТАЛЕЙ ТА СПІВПРАЦЯ &mdash;&mdash;&mdash;&mdash;&mdash;&rarr;&vert;</span>
-                <span x-show="lang === 'en'">&vert;&larr;&mdash;&mdash;&mdash;&mdash;&mdash; ORDER WORKFLOW // 3D PRINTING &amp; CLIENT COLLABORATION &mdash;&mdash;&mdash;&mdash;&mdash;&rarr;&vert;</span>
-            </div>
-
             <!-- SECTION HEADER -->
             <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16" data-aos="fade-up" data-aos-duration="600">
                 <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-sky-100 border border-sky-400 text-sky-900 text-xs sm:text-sm font-mono font-bold uppercase tracking-wider mb-4">
@@ -1284,12 +1266,6 @@
              }">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- TECHNICAL DIMENSION SEPARATOR -->
-            <div class="cad-dimension-line mb-10 text-xs font-mono font-bold">
-                <span x-show="lang === 'ua'">&vert;&larr;&mdash;&mdash;&mdash;&mdash;&mdash; ОФОРМЛЕННЯ ЗАМОВЛЕННЯ // ВІД КРЕСЛЕННЯ ДО ГОТОВОЇ МОДЕЛІ &mdash;&mdash;&mdash;&mdash;&mdash;&rarr;&vert;</span>
-                <span x-show="lang === 'en'">&vert;&larr;&mdash;&mdash;&mdash;&mdash;&mdash; ORDER SPECIFICATION // FROM DRAWING TO FINISHED PART &mdash;&mdash;&mdash;&mdash;&mdash;&rarr;&vert;</span>
-            </div>
-
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
                 
                 <!-- Left: Interactive Order Intake Form -->
