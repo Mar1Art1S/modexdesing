@@ -117,6 +117,13 @@
                         <h3 class="font-heading text-base font-bold text-slate-900 mb-4">Direct Channels</h3>
                         <div class="space-y-4 text-xs font-mono text-slate-700">
                             <div class="flex items-start gap-3">
+                                <div class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center shrink-0">WA</div>
+                                <div>
+                                    <div class="font-bold text-slate-900">WHATSAPP</div>
+                                    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:underline">WhatsApp: Modex</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
                                 <div class="w-7 h-7 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center shrink-0">@</div>
                                 <div>
                                     <div class="font-bold text-slate-900">EMAIL</div>
