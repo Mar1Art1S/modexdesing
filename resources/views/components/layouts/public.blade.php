@@ -131,6 +131,39 @@
                 width: 100%;
                 height: 100%;
             }
+
+            /* Floating Quick Contact Widget (Facebook & Instagram) */
+            .floating-contact-btn {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                border-radius: 9999px !important;
+                color: #ffffff !important;
+                text-decoration: none !important;
+                transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease !important;
+                outline: none !important;
+            }
+            .floating-contact-btn:active {
+                transform: scale(0.92) !important;
+            }
+            .floating-btn-facebook {
+                background: #1877f2 !important;
+                box-shadow: 0 10px 25px -3px rgba(24, 119, 242, 0.55), 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+            }
+            .floating-btn-facebook:hover {
+                background: #166fe5 !important;
+                box-shadow: 0 16px 32px -2px rgba(24, 119, 242, 0.7), 0 6px 16px rgba(0, 0, 0, 0.25) !important;
+                transform: scale(1.08) !important;
+            }
+            .floating-btn-instagram {
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%),
+                            linear-gradient(45deg, #f09433 0%, #dc2743 50%, #bc1888 100%) !important;
+                box-shadow: 0 10px 25px -3px rgba(220, 39, 67, 0.55), 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+            }
+            .floating-btn-instagram:hover {
+                box-shadow: 0 16px 32px -2px rgba(220, 39, 67, 0.7), 0 6px 16px rgba(0, 0, 0, 0.25) !important;
+                transform: scale(1.08) !important;
+            }
         </style>
     </head>
     <body class="bg-blueprint-grid text-slate-800 font-body min-h-screen flex flex-col antialiased selection:bg-sky-500 selection:text-white"
@@ -582,18 +615,20 @@
         <!-- ============================================================ -->
         <!-- FLOATING QUICK CONTACT WIDGET (FACEBOOK & INSTAGRAM)        -->
         <!-- ============================================================ -->
-        <div class="fixed right-4 sm:right-6 bottom-5 sm:bottom-6 z-50 flex flex-col gap-3 items-end">
+        <div class="fixed right-4 sm:right-6 md:right-8 bottom-6 sm:bottom-8 z-[9999] flex flex-col gap-3.5 sm:gap-4 items-end pointer-events-auto"
+             style="bottom: max(1.5rem, env(safe-area-inset-bottom, 1.5rem));">
+            
             <!-- FACEBOOK -->
             <a href="https://facebook.com/modexdesign" 
                target="_blank" 
                rel="noopener noreferrer" 
                title="Facebook: modexdesign"
                aria-label="Facebook: modexdesign"
-               class="group relative w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#1877F2] hover:bg-[#166fe5] text-white flex items-center justify-center shadow-lg shadow-blue-600/30 hover:shadow-xl hover:scale-110 active:scale-95 transition-all duration-300">
-                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+               class="floating-contact-btn floating-btn-facebook group relative w-[52px] h-[52px] sm:w-16 sm:h-16">
+                <svg class="w-7 h-7 sm:w-8 sm:h-8 fill-current text-white" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                 </svg>
-                <span class="pointer-events-none absolute right-full mr-3 top-1/2 -translate-y-1/2 px-3 py-1.5 rounded-lg bg-slate-900 text-white text-xs font-mono font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-lg hidden sm:block">
+                <span class="pointer-events-none absolute right-full mr-3.5 top-1/2 -translate-y-1/2 px-3 py-1.5 rounded-xl bg-slate-900 text-white text-xs font-mono font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-xl hidden sm:block">
                     Facebook
                 </span>
             </a>
@@ -604,11 +639,11 @@
                rel="noopener noreferrer" 
                title="Instagram: @modexdesign"
                aria-label="Instagram: @modexdesign"
-               class="group relative w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex items-center justify-center shadow-lg shadow-pink-600/30 hover:shadow-xl hover:scale-110 active:scale-95 transition-all duration-300">
-                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+               class="floating-contact-btn floating-btn-instagram group relative w-[52px] h-[52px] sm:w-16 sm:h-16">
+                <svg class="w-7 h-7 sm:w-8 sm:h-8 fill-current text-white" viewBox="0 0 24 24">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                 </svg>
-                <span class="pointer-events-none absolute right-full mr-3 top-1/2 -translate-y-1/2 px-3 py-1.5 rounded-lg bg-slate-900 text-white text-xs font-mono font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-lg hidden sm:block">
+                <span class="pointer-events-none absolute right-full mr-3.5 top-1/2 -translate-y-1/2 px-3 py-1.5 rounded-xl bg-slate-900 text-white text-xs font-mono font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-xl hidden sm:block">
                     Instagram
                 </span>
             </a>
