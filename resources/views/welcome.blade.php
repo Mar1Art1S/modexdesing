@@ -569,16 +569,13 @@
                  data-aos="fade-up" data-aos-duration="700">
                 
                 <!-- TOP TECHNICAL BAR -->
-                <div class="px-6 py-2.5 bg-slate-900 text-slate-300 flex flex-wrap items-center justify-between text-xs font-mono border-b border-slate-800">
+                <div class="px-6 py-2.5 bg-slate-900 text-slate-300 flex items-center text-xs font-mono border-b border-slate-800">
                     <div class="flex items-center gap-3">
                         <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
                         <span class="font-bold text-white uppercase tracking-wider">
                             <span x-show="lang === 'ua'">СПЕЦІАЛЬНИЙ НАПРЯМОК // АРХІТЕКТУРНІ РІШЕННЯ НА ЗАМОВЛЕННЯ</span>
                             <span x-show="lang === 'en'">SPECIALIZED SECTOR // BESPOKE ARCHITECTURAL SOLUTIONS</span>
                         </span>
-                    </div>
-                    <div class="text-slate-400 text-[11px] font-mono hidden sm:block">
-                        <span>DWG: MDX-ARCH-BIM // SCALE: 1:1 &amp; 1:50</span>
                     </div>
                 </div>
 
@@ -615,12 +612,6 @@
                     <!-- Right (5 cols): Description, Capabilities & Call to Action -->
                     <div class="lg:col-span-5 p-7 sm:p-9 flex flex-col justify-between bg-white font-sans">
                         <div>
-                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-50 border border-emerald-300 text-emerald-800 font-mono text-xs font-bold uppercase tracking-wider mb-3">
-                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                                <span x-show="lang === 'ua'">ПОВНИЙ ЦИКЛ ПРОЕКТУВАННЯ</span>
-                                <span x-show="lang === 'en'">TURNKEY ARCHITECTURAL CAD</span>
-                            </div>
-
                             <h3 class="font-heading text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-snug">
                                 <span x-show="lang === 'ua'">Індивідуальні Архітектурні Рішення</span>
                                 <span x-show="lang === 'en'">Custom Architectural Solutions</span>
