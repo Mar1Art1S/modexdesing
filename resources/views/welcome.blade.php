@@ -1389,11 +1389,6 @@
             
             <!-- SECTION HEADER -->
             <div class="max-w-3xl">
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs sm:text-sm font-mono font-bold uppercase tracking-wider mb-4 shadow-xs">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    <span x-show="lang === 'ua'">СТУДІЯ В БРАТИСЛАВІ // СЛОВАЧЧИНА</span>
-                    <span x-show="lang === 'en'">STUDIO IN BRATISLAVA // SLOVAKIA</span>
-                </div>
                 <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
                     <span x-show="lang === 'ua'">Про Нашу Студію</span>
                     <span x-show="lang === 'en'">About Us</span>
@@ -1467,18 +1462,6 @@
                                 </span>
                             </p>
                         </div>
-                    </div>
-
-                    <!-- Location info footer -->
-                    <div class="mt-8 pt-5 border-t border-slate-800 flex items-center justify-between text-xs font-mono text-slate-400">
-                        <div class="flex items-center gap-2 text-slate-300">
-                            <svg class="w-4 h-4 text-sky-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                            </svg>
-                            <span class="font-bold text-white">Bratislava, Slovakia</span>
-                        </div>
-                        <span class="text-emerald-400 font-bold tracking-wider">EU &amp; Worldwide</span>
                     </div>
 
                 </div>
