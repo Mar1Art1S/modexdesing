@@ -1673,10 +1673,6 @@
                                         <span x-show="lang === 'ua'">Надіслати Замовлення на Розрахунок &rarr;</span>
                                         <span x-show="lang === 'en'">Submit Order for Estimation &rarr;</span>
                                     </button>
-                                    <div class="text-center text-slate-500 text-xs font-mono mt-2.5">
-                                        <span x-show="lang === 'ua'">⚡ Відповідаємо протягом 15–30 хвилин. Конфіденційність гарантовано.</span>
-                                        <span x-show="lang === 'en'">⚡ We reply within 15–30 minutes. Complete confidentiality guaranteed.</span>
-                                    </div>
                                 </div>
                             </form>
                         </template>
