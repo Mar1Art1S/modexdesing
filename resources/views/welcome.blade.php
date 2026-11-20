@@ -689,14 +689,27 @@
                 <!-- SLIDER CONTROLS: DOTS PAGINATION & ARROWS -->
                 <div class="flex items-center justify-between sm:justify-end gap-3 sm:gap-4 shrink-0">
                     <!-- Dots Pagination -->
-                    <div class="flex items-center gap-2 bg-white/90 backdrop-blur-xs px-3.5 py-2.5 rounded-2xl border-2 border-slate-900 shadow-xs">
-                        <template x-for="i in totalSlides" :key="i">
-                            <button type="button" 
-                                    @click="goTo(i - 1)" 
-                                    :aria-label="'Go to slide ' + i"
-                                    :class="activeSlide === (i - 1) ? 'w-6 bg-slate-900' : 'w-2.5 bg-slate-300 hover:bg-slate-500'"
-                                    class="h-2.5 rounded-full transition-all duration-300 cursor-pointer"></button>
-                        </template>
+                    <div class="flex items-center gap-2.5 bg-white px-4 py-2.5 rounded-full border-2 border-slate-900 shadow-xs">
+                        <button type="button" 
+                                @click="goTo(0)" 
+                                aria-label="Go to case 1"
+                                :class="activeSlide === 0 ? 'w-7 bg-slate-900' : 'w-2.5 bg-slate-400 hover:bg-slate-600'"
+                                class="h-2.5 rounded-full transition-all duration-300 cursor-pointer"></button>
+                        <button type="button" 
+                                @click="goTo(1)" 
+                                aria-label="Go to case 2"
+                                :class="activeSlide === 1 ? 'w-7 bg-slate-900' : 'w-2.5 bg-slate-400 hover:bg-slate-600'"
+                                class="h-2.5 rounded-full transition-all duration-300 cursor-pointer"></button>
+                        <button type="button" 
+                                @click="goTo(2)" 
+                                aria-label="Go to case 3"
+                                :class="activeSlide === 2 ? 'w-7 bg-slate-900' : 'w-2.5 bg-slate-400 hover:bg-slate-600'"
+                                class="h-2.5 rounded-full transition-all duration-300 cursor-pointer"></button>
+                        <button type="button" 
+                                @click="goTo(3)" 
+                                aria-label="Go to case 4"
+                                :class="activeSlide === 3 ? 'w-7 bg-slate-900' : 'w-2.5 bg-slate-400 hover:bg-slate-600'"
+                                class="h-2.5 rounded-full transition-all duration-300 cursor-pointer"></button>
                     </div>
 
                     <!-- Arrow Navigation Buttons -->
