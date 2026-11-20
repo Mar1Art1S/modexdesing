@@ -1037,24 +1037,38 @@
                     </p>
                 </div>
 
-                <!-- SLIDER ARROW CONTROLS (DESKTOP) -->
-                <div class="hidden sm:flex items-center gap-3 shrink-0">
-                    <button type="button" 
-                            @click="prev()" 
-                            aria-label="Previous Slide"
-                            class="w-13 h-13 rounded-2xl border-2 border-slate-900 bg-white hover:bg-slate-900 text-slate-900 hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:shadow-lg cursor-pointer">
-                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </button>
-                    <button type="button" 
-                            @click="next()" 
-                            aria-label="Next Slide"
-                            class="w-13 h-13 rounded-2xl border-2 border-slate-900 bg-white hover:bg-slate-900 text-slate-900 hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:shadow-lg cursor-pointer">
-                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
+                <!-- SLIDER CONTROLS: DOTS PAGINATION & ARROWS -->
+                <div class="flex items-center justify-between sm:justify-end gap-3 sm:gap-4 shrink-0">
+                    <!-- Dots Pagination -->
+                    <div class="flex items-center gap-2 bg-white/90 backdrop-blur-xs px-3.5 py-2.5 rounded-2xl border-2 border-slate-900 shadow-xs">
+                        <template x-for="i in totalSlides" :key="i">
+                            <button type="button" 
+                                    @click="goTo(i - 1)" 
+                                    :aria-label="'Go to slide ' + i"
+                                    :class="activeSlide === (i - 1) ? 'w-6 bg-slate-900' : 'w-2.5 bg-slate-300 hover:bg-slate-500'"
+                                    class="h-2.5 rounded-full transition-all duration-300 cursor-pointer"></button>
+                        </template>
+                    </div>
+
+                    <!-- Arrow Navigation Buttons -->
+                    <div class="flex items-center gap-2">
+                        <button type="button" 
+                                @click="prev()" 
+                                aria-label="Previous Slide"
+                                class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl border-2 border-slate-900 bg-white hover:bg-slate-900 text-slate-900 hover:text-white flex items-center justify-center transition-all duration-200 shadow-xs hover:shadow-md cursor-pointer">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button type="button" 
+                                @click="next()" 
+                                aria-label="Next Slide"
+                                class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl border-2 border-slate-900 bg-white hover:bg-slate-900 text-slate-900 hover:text-white flex items-center justify-center transition-all duration-200 shadow-xs hover:shadow-md cursor-pointer">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -1345,58 +1359,6 @@
                     </div>
                 </div>
 
-            </div>
-
-            <!-- SLIDER NAVIGATION TABS & MOBILE CONTROLS -->
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-14">
-                
-                <!-- 4 Interactive Tabs -->
-                <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-2 w-full sm:w-auto">
-                    <button type="button" 
-                            @click="goTo(0)" 
-                            :class="activeSlide === 0 ? 'bg-slate-900 text-white shadow-md' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'"
-                            class="px-4 py-2.5 rounded-xl font-mono text-xs font-bold transition-all cursor-pointer text-center">
-                        <span x-show="lang === 'ua'">01. Портальні Ферми</span>
-                        <span x-show="lang === 'en'">01. Portal Structures</span>
-                    </button>
-                    <button type="button" 
-                            @click="goTo(1)" 
-                            :class="activeSlide === 1 ? 'bg-slate-900 text-white shadow-md' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'"
-                            class="px-4 py-2.5 rounded-xl font-mono text-xs font-bold transition-all cursor-pointer text-center">
-                        <span x-show="lang === 'ua'">02. Роз'єднувач</span>
-                        <span x-show="lang === 'en'">02. Disconnect Switch</span>
-                    </button>
-                    <button type="button" 
-                            @click="goTo(2)" 
-                            :class="activeSlide === 2 ? 'bg-slate-900 text-white shadow-md' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'"
-                            class="px-4 py-2.5 rounded-xl font-mono text-xs font-bold transition-all cursor-pointer text-center">
-                        <span x-show="lang === 'ua'">03. Підстанція</span>
-                        <span x-show="lang === 'en'">03. Substation</span>
-                    </button>
-                    <button type="button" 
-                            @click="goTo(3)" 
-                            :class="activeSlide === 3 ? 'bg-slate-900 text-white shadow-md' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'"
-                            class="px-4 py-2.5 rounded-xl font-mono text-xs font-bold transition-all cursor-pointer text-center">
-                        <span x-show="lang === 'ua'">04. Ізолятори</span>
-                        <span x-show="lang === 'en'">04. Insulators</span>
-                    </button>
-                </div>
-
-                <!-- Mobile Prev/Next Buttons -->
-                <div class="flex sm:hidden items-center justify-between w-full gap-3">
-                    <button type="button" 
-                            @click="prev()" 
-                            class="flex-1 py-3 rounded-xl border-2 border-slate-900 bg-white font-bold text-sm text-slate-900 shadow-sm cursor-pointer">
-                        <span x-show="lang === 'ua'">&larr; Попередній</span>
-                        <span x-show="lang === 'en'">&larr; Previous</span>
-                    </button>
-                    <button type="button" 
-                            @click="next()" 
-                            class="flex-1 py-3 rounded-xl border-2 border-slate-900 bg-slate-900 font-bold text-sm text-white shadow-sm cursor-pointer">
-                        <span x-show="lang === 'ua'">Наступний &rarr;</span>
-                        <span x-show="lang === 'en'">Next &rarr;</span>
-                    </button>
-                </div>
             </div>
 
         </div>
