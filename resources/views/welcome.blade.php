@@ -185,10 +185,6 @@
                         <img src="{{ asset('images/zas.jpg') }}" 
                              alt="10kV Modular Substation Insulator" 
                              class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-                        <div class="absolute bottom-3 left-3 px-3 py-1 rounded bg-slate-900/90 backdrop-blur-xs text-xs font-mono text-white font-bold">
-                            <span x-show="lang === 'ua'">МОДЕЛЬ: DIE TRAN 10кВ</span>
-                            <span x-show="lang === 'en'">MODEL: DIE TRAN 10kV</span>
-                        </div>
                     </div>
 
                     <div class="p-5 sm:p-6 bg-slate-50">
@@ -220,10 +216,6 @@
                         <img src="{{ asset('images/zas2.jpg') }}" 
                              alt="Autonomous Tracked Rover with Robotic Manipulator" 
                              class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-                        <div class="absolute bottom-3 left-3 px-3 py-1 rounded bg-slate-900/90 backdrop-blur-xs text-xs font-mono text-white font-bold">
-                            <span x-show="lang === 'ua'">МОДЕЛЬ: TRACK-ROVER M-01</span>
-                            <span x-show="lang === 'en'">MODEL: TRACK-ROVER M-01</span>
-                        </div>
                     </div>
 
                     <div class="p-5 sm:p-6 bg-slate-50">
@@ -255,10 +247,6 @@
                         <img src="{{ asset('images/zas3.jpg') }}" 
                              alt="Full-Cycle Walking Robot Development: Drafting, CAD, 3D Printing, Assembly" 
                              class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
-                        <div class="absolute bottom-3 left-3 px-3 py-1 rounded bg-slate-900/90 backdrop-blur-xs text-xs font-mono text-white font-bold">
-                            <span x-show="lang === 'ua'">ЦИКЛ: ЕСКІЗ &rarr; CAD &rarr; ДРУК &rarr; СКЛАДАННЯ</span>
-                            <span x-show="lang === 'en'">CYCLE: DRAFT &rarr; CAD &rarr; PRINT &rarr; ASSEMBLY</span>
-                        </div>
                     </div>
 
                     <div class="p-5 sm:p-6 bg-slate-50">
@@ -347,13 +335,6 @@
                                 </svg>
                                 <span class="hidden sm:inline" x-show="lang === 'ua'">На весь екран</span>
                                 <span class="hidden sm:inline" x-show="lang === 'en'">Fullscreen</span>
-                            </div>
-
-                            <!-- Bottom overlay badge -->
-                            <div class="absolute bottom-3 left-3 z-20 bg-slate-900/85 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-slate-700/80 text-white font-mono text-xs flex items-center gap-2 shadow-md">
-                                <span class="w-2 h-2 rounded-full bg-sky-400"></span>
-                                <span x-show="lang === 'ua'">Подарунковий макет &bull; Пам'ятна табличка</span>
-                                <span x-show="lang === 'en'">Scale Gift Model &bull; Custom Engraved Plaque</span>
                             </div>
                         </div>
 
@@ -741,15 +722,6 @@
                         <img src="{{ asset('images/g1.jpg') }}" 
                              alt="Client reference photo: substation bay structure" 
                              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
-                        
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
-                        <div class="absolute top-4 left-4 px-3 py-1.5 rounded-xl bg-slate-900/90 backdrop-blur-md border border-sky-400 text-sky-300 font-mono text-xs font-bold shadow-lg">
-                            📸 <span x-show="lang === 'ua'">ФОТО ВІД ЗАМОВНИКА</span><span x-show="lang === 'en'">CLIENT REFERENCE PHOTO</span>
-                        </div>
-                        <div class="absolute bottom-4 left-4 right-4 text-white font-mono text-xs sm:text-sm font-bold bg-slate-900/80 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-slate-700 inline-block w-fit truncate">
-                            <span x-show="lang === 'ua'">[ВХІДНИЙ ОБ'ЄКТ: ПОРТАЛЬНІ ФЕРМИ 10кВ]</span>
-                            <span x-show="lang === 'en'">[INPUT: 10kV PORTAL STRUCTURES]</span>
-                        </div>
                     </div>
 
                     <!-- EQUALIZED CONTENT CONTAINER -->
@@ -821,15 +793,6 @@
                         <img src="{{ asset('images/g2.jpg') }}" 
                              alt="Client reference photo: disconnect switch" 
                              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
-                        
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
-                        <div class="absolute top-4 left-4 px-3 py-1.5 rounded-xl bg-slate-900/90 backdrop-blur-md border border-amber-400 text-amber-300 font-mono text-xs font-bold shadow-lg">
-                            📸 <span x-show="lang === 'ua'">ФОТО ВІД ЗАМОВНИКА</span><span x-show="lang === 'en'">CLIENT REFERENCE PHOTO</span>
-                        </div>
-                        <div class="absolute bottom-4 left-4 right-4 text-white font-mono text-xs sm:text-sm font-bold bg-slate-900/80 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-slate-700 inline-block w-fit truncate">
-                            <span x-show="lang === 'ua'">[ВХІДНИЙ ОБ'ЄКТ: СИЛОВИЙ РОЗ'ЄДНУВАЧ]</span>
-                            <span x-show="lang === 'en'">[INPUT: DISCONNECT SWITCH]</span>
-                        </div>
                     </div>
 
                     <!-- EQUALIZED CONTENT CONTAINER -->
@@ -901,15 +864,6 @@
                         <img src="{{ asset('images/g3.jpg') }}" 
                              alt="Client reference photo: heavy modular transport" 
                              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
-                        
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
-                        <div class="absolute top-4 left-4 px-3 py-1.5 rounded-xl bg-slate-900/90 backdrop-blur-md border border-sky-400 text-sky-300 font-mono text-xs font-bold shadow-lg">
-                            📸 <span x-show="lang === 'ua'">ФОТО ВІД ЗАМОВНИКА</span><span x-show="lang === 'en'">CLIENT REFERENCE PHOTO</span>
-                        </div>
-                        <div class="absolute bottom-4 left-4 right-4 text-white font-mono text-xs sm:text-sm font-bold bg-slate-900/80 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-slate-700 inline-block w-fit truncate">
-                            <span x-show="lang === 'ua'">[ВХІДНИЙ ОБ'ЄКТ: МОДУЛЬ ПІДСТАНЦІЇ НА ТРАЛІ]</span>
-                            <span x-show="lang === 'en'">[INPUT: SUBSTATION MODULE ON TRAILER]</span>
-                        </div>
                     </div>
 
                     <!-- EQUALIZED CONTENT CONTAINER -->
@@ -981,15 +935,6 @@
                         <img src="{{ asset('images/g4.jpg') }}" 
                              alt="Client reference photo: insulator stack" 
                              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
-                        
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
-                        <div class="absolute top-4 left-4 px-3 py-1.5 rounded-xl bg-slate-900/90 backdrop-blur-md border border-emerald-400 text-emerald-300 font-mono text-xs font-bold shadow-lg">
-                            📸 <span x-show="lang === 'ua'">ФОТО ВІД ЗАМОВНИКА</span><span x-show="lang === 'en'">CLIENT REFERENCE PHOTO</span>
-                        </div>
-                        <div class="absolute bottom-4 left-4 right-4 text-white font-mono text-xs sm:text-sm font-bold bg-slate-900/80 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-slate-700 inline-block w-fit truncate">
-                            <span x-show="lang === 'ua'">[ВХІДНИЙ ОБ'ЄКТ: ІЗОЛЯЦІЙНІ КОЛОНИ]</span>
-                            <span x-show="lang === 'en'">[INPUT: INSULATOR COLUMNS]</span>
-                        </div>
                     </div>
 
                     <!-- EQUALIZED CONTENT CONTAINER -->
@@ -1511,12 +1456,11 @@
                 <!-- Right (7 cols): What We Make (3 Categories) -->
                 <div class="lg:col-span-7 flex flex-col justify-between gap-5" data-aos="fade-left" data-aos-delay="200">
                     
-                    <div class="flex items-center justify-between pb-3 border-b-2 border-slate-900">
+                    <div class="pb-3 border-b-2 border-slate-900">
                         <h3 class="font-heading text-xl sm:text-2xl font-black text-slate-900 uppercase tracking-tight">
                             <span x-show="lang === 'ua'">Що ми виготовляємо</span>
                             <span x-show="lang === 'en'">What we make</span>
                         </h3>
-                        <span class="font-mono text-xs text-sky-700 font-bold uppercase tracking-wider">3 Core Specialties</span>
                     </div>
 
                     <div class="space-y-4">
@@ -1528,15 +1472,10 @@
                                     🏛️
                                 </div>
                                 <div class="flex-1">
-                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                                        <h4 class="font-heading text-lg sm:text-xl font-black text-slate-900 group-hover:text-sky-600 transition-colors">
-                                            <span x-show="lang === 'ua'">Архітектурні макети</span>
-                                            <span x-show="lang === 'en'">Architectural models</span>
-                                        </h4>
-                                        <span class="inline-block self-start font-mono text-[11px] font-bold text-sky-700 px-2.5 py-0.5 rounded-full bg-sky-50 border border-sky-200">
-                                            Scale 1:50 &bull; 1:100 &bull; 1:200
-                                        </span>
-                                    </div>
+                                    <h4 class="font-heading text-lg sm:text-xl font-black text-slate-900 group-hover:text-sky-600 transition-colors">
+                                        <span x-show="lang === 'ua'">Архітектурні макети</span>
+                                        <span x-show="lang === 'en'">Architectural models</span>
+                                    </h4>
                                     <p class="text-sm sm:text-base text-slate-600 mt-2 font-sans leading-relaxed">
                                         <span x-show="lang === 'ua'">
                                             Будівлі, житлові комплекси, генеральні плани ділянок та індивідуальні простори для девелоперів і архітектурних бюро.
@@ -1556,15 +1495,10 @@
                                     ⚙️
                                 </div>
                                 <div class="flex-1">
-                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                                        <h4 class="font-heading text-lg sm:text-xl font-black text-slate-900 group-hover:text-blue-600 transition-colors">
-                                            <span x-show="lang === 'ua'">Промислові та інфраструктурні макети</span>
-                                            <span x-show="lang === 'en'">Industrial and infrastructure models</span>
-                                        </h4>
-                                        <span class="inline-block self-start font-mono text-[11px] font-bold text-blue-700 px-2.5 py-0.5 rounded-full bg-blue-50 border border-blue-200">
-                                            Exhibitions &bull; Investors
-                                        </span>
-                                    </div>
+                                    <h4 class="font-heading text-lg sm:text-xl font-black text-slate-900 group-hover:text-blue-600 transition-colors">
+                                        <span x-show="lang === 'ua'">Промислові та інфраструктурні макети</span>
+                                        <span x-show="lang === 'en'">Industrial and infrastructure models</span>
+                                    </h4>
                                     <p class="text-sm sm:text-base text-slate-600 mt-2 font-sans leading-relaxed">
                                         <span x-show="lang === 'ua'">
                                             Підстанції, заводи, технологічні лінії та обладнання для міжнародних виставок і презентацій інвесторам.
@@ -1584,15 +1518,10 @@
                                     🎁
                                 </div>
                                 <div class="flex-1">
-                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                                        <h4 class="font-heading text-lg sm:text-xl font-black text-slate-900 group-hover:text-emerald-600 transition-colors">
-                                            <span x-show="lang === 'ua'">Корпоративні подарунки</span>
-                                            <span x-show="lang === 'en'">Corporate gifts</span>
-                                        </h4>
-                                        <span class="inline-block self-start font-mono text-[11px] font-bold text-emerald-700 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200">
-                                            Miniature Replicas
-                                        </span>
-                                    </div>
+                                    <h4 class="font-heading text-lg sm:text-xl font-black text-slate-900 group-hover:text-emerald-600 transition-colors">
+                                        <span x-show="lang === 'ua'">Корпоративні подарунки</span>
+                                        <span x-show="lang === 'en'">Corporate gifts</span>
+                                    </h4>
                                     <p class="text-sm sm:text-base text-slate-600 mt-2 font-sans leading-relaxed">
                                         <span x-show="lang === 'ua'">
                                             Мініатюрні точні копії вашого офісу, знакового об'єкта чи флагманського продукту бренду.
