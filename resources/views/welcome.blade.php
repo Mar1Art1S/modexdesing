@@ -292,12 +292,13 @@
 
             </div>
 
-            <!-- SPECIAL SHOWCASE: BESPOKE ARCHITECTURAL DESIGN & 3D SCALE MODELS -->
+            <!-- SPECIAL SHOWCASE: CORPORATE & CLIENT GIFTS // 3D SCALE MODELS -->
             <div x-show="currentFilter === 'all' || currentFilter === 'architecture'"
                  x-data="{ 
                      activeImg: '{{ asset('images/house/008.jpg') }}',
                      activeIdx: 0,
                      lightboxOpen: false,
+                     giftTab: 'who',
                      gallery: [
                          '{{ asset('images/house/008.jpg') }}',
                          '{{ asset('images/house/001.jpg') }}',
@@ -323,23 +324,23 @@
                     <div class="flex items-center gap-3">
                         <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
                         <span class="font-bold text-white uppercase tracking-wider">
-                            <span x-show="lang === 'ua'">СПЕЦІАЛЬНИЙ НАПРЯМОК // АРХІТЕКТУРНІ РІШЕННЯ НА ЗАМОВЛЕННЯ</span>
-                            <span x-show="lang === 'en'">SPECIALIZED SECTOR // BESPOKE ARCHITECTURAL SOLUTIONS</span>
+                            <span x-show="lang === 'ua'">СПЕЦІАЛЬНИЙ НАПРЯМОК // КОРПОРАТИВНІ ТА КЛІЄНТСЬКІ ПОДАРУНКИ</span>
+                            <span x-show="lang === 'en'">SPECIALIZED SECTOR // CORPORATE &amp; CLIENT GIFTS</span>
                         </span>
                     </div>
                     <div class="hidden sm:flex items-center gap-2 text-slate-400">
                         <span class="text-emerald-400">●</span>
-                        <span x-show="lang === 'ua'">3D-друк макетів &bull; Масштаб 1:50–1:200</span>
-                        <span x-show="lang === 'en'">3D mockups &bull; Scale 1:50–1:200</span>
+                        <span x-show="lang === 'ua'">Масштабні макети &bull; Пам'ятна табличка на підставці</span>
+                        <span x-show="lang === 'en'">Scale models &bull; Custom engraved base plate</span>
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
                     
-                    <!-- Left (8 cols): Interactive Expanded Architectural Gallery with Hero View & Thumbnails -->
-                    <div class="lg:col-span-8 bg-slate-950 p-4 sm:p-6 lg:p-7 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-slate-900">
+                    <!-- Left (7 cols): Interactive Expanded Architectural Gallery with Hero View & Thumbnails -->
+                    <div class="lg:col-span-7 bg-slate-950 p-4 sm:p-6 lg:p-7 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-slate-900">
                         <!-- Main Hero Photo Container with High Visual Clarity -->
-                        <div class="relative w-full h-80 sm:h-[480px] lg:h-[540px] rounded-xl overflow-hidden bg-slate-900/90 border border-slate-800 flex items-center justify-center group cursor-pointer"
+                        <div class="relative w-full h-80 sm:h-[460px] lg:h-[500px] rounded-xl overflow-hidden bg-slate-900/90 border border-slate-800 flex items-center justify-center group cursor-pointer"
                              @click="lightboxOpen = true">
                             
                             <!-- Ambient blur backdrop to enhance depth without letterbox feeling -->
@@ -350,7 +351,7 @@
                             
                             <!-- Sharp high-detail foreground image (object-contain ensures whole house & model is 100% visible) -->
                             <img :src="activeImg" 
-                                 alt="Bespoke Architectural Solutions by Modex" 
+                                 alt="Corporate & Client Gifts by Modex" 
                                  class="relative z-10 max-w-full max-h-full object-contain p-2 sm:p-4 transition-transform duration-500 group-hover:scale-[1.02] drop-shadow-2xl" />
                             
                             <!-- Prev / Next arrows directly on the photo for effortless browsing -->
@@ -392,13 +393,13 @@
                             <!-- Bottom overlay badge -->
                             <div class="absolute bottom-3 left-3 z-20 bg-slate-900/85 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-slate-700/80 text-white font-mono text-xs flex items-center gap-2 shadow-md">
                                 <span class="w-2 h-2 rounded-full bg-sky-400"></span>
-                                <span x-show="lang === 'ua'">3D Візуалізація &bull; Архітектурна Концепція</span>
-                                <span x-show="lang === 'en'">3D Visualization &bull; Architectural Concept</span>
+                                <span x-show="lang === 'ua'">Подарунковий макет &bull; Пам'ятна табличка</span>
+                                <span x-show="lang === 'en'">Scale Gift Model &bull; Custom Engraved Plaque</span>
                             </div>
                         </div>
 
                         <!-- Thumbnails Row (larger, comfortable, responsive) -->
-                        <div class="grid grid-cols-6 gap-2 sm:gap-3 mt-4">
+                        <div class="grid grid-cols-6 gap-2 sm:gap-2.5 mt-3 sm:mt-4">
                             <template x-for="(imgSrc, idx) in gallery" :key="idx">
                                 <button type="button" 
                                         @click="activeImg = imgSrc; activeIdx = idx"
@@ -410,60 +411,239 @@
                         </div>
                     </div>
 
-                    <!-- Right (4 cols): Description, Clean Highlights & Call to Action -->
-                    <div class="lg:col-span-4 p-7 sm:p-9 lg:p-8 flex flex-col justify-between bg-white font-sans">
+                    <!-- Right (5 cols): Description, Interactive Tabs & Call to Action -->
+                    <div class="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between bg-white font-sans">
                         <div>
-                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-sky-800 font-mono text-[11px] font-bold uppercase tracking-wider mb-4">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-sky-800 font-mono text-[11px] font-bold uppercase tracking-wider mb-3">
                                 <span class="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></span>
-                                <span x-show="lang === 'ua'">Архітектурне 3D-Макетування</span>
-                                <span x-show="lang === 'en'">Architectural 3D Mockups</span>
+                                <span x-show="lang === 'ua'">Корпоративні та Клієнтські Подарунки</span>
+                                <span x-show="lang === 'en'">Corporate &amp; Client Gifts</span>
                             </div>
 
                             <h3 class="font-heading text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-snug">
-                                <span x-show="lang === 'ua'">Індивідуальні Архітектурні Рішення</span>
-                                <span x-show="lang === 'en'">Custom Architectural Solutions</span>
+                                <span x-show="lang === 'ua'">Корпоративні та Клієнтські Подарунки</span>
+                                <span x-show="lang === 'en'">Corporate &amp; Client Gifts</span>
                             </h3>
 
-                            <p class="text-sm sm:text-[15px] text-slate-600 mt-4 leading-relaxed">
+                            <p class="text-sm font-semibold text-sky-700 mt-2 leading-snug">
+                                <span x-show="lang === 'ua'">Мініатюра будинку, офісу чи будівлі, яку ваш клієнт ніколи не забуде.</span>
+                                <span x-show="lang === 'en'">A miniature of the home, office or building your client will never forget.</span>
+                            </p>
+
+                            <p class="text-xs sm:text-[13px] text-slate-600 mt-2.5 leading-relaxed">
                                 <span x-show="lang === 'ua'">
-                                    Розробляємо ексклюзивні архітектурні концепції котеджів, резиденцій та просторів. Від перших ескізів, планувань та фотореалістичної візуалізації — до інженерних креслень і виготовлення точних фізичних 3D-макетів споруд.
+                                    Закриття угоди, вручення ключів чи святкування важливої дати? Індивідуальний масштабний макет перетворює реальну нерухомість на особистий пам'ятний подарунок, який роками залишається на столі чи полиці.
                                 </span>
                                 <span x-show="lang === 'en'">
-                                    We design custom architectural concepts for private residences, modern cottages, and spaces. From initial schematics and renders to engineering blueprints and physical 3D architectural scale models.
+                                    Closing a deal, handing over keys or celebrating a milestone? A custom scale model turns a real property into a personal keepsake that stays on a desk or shelf for years.
                                 </span>
                             </p>
 
-                            <!-- Clean Minimal Highlights (No bulky blocks) -->
-                            <div class="mt-6 pt-6 border-t border-slate-100 space-y-3 font-mono text-xs text-slate-700">
-                                <div class="flex items-center gap-2.5">
-                                    <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] shrink-0 font-bold">✓</div>
-                                    <span x-show="lang === 'ua'">Точні масштаби: 1:50, 1:100, 1:200 або за кресленням</span>
-                                    <span x-show="lang === 'en'">Precise scales: 1:50, 1:100, 1:200 or custom</span>
+                            <!-- Interactive 3-Tab Switcher -->
+                            <div class="mt-5 grid grid-cols-3 gap-1 p-1 bg-slate-100 rounded-xl font-mono text-xs">
+                                <button type="button" 
+                                        @click="giftTab = 'who'"
+                                        :class="giftTab === 'who' ? 'bg-white text-slate-900 font-bold shadow-xs border border-slate-300' : 'text-slate-600 hover:text-slate-900 border border-transparent'"
+                                        class="py-2 px-1 text-center rounded-lg transition-all cursor-pointer">
+                                    <span x-show="lang === 'ua'">Для кого</span>
+                                    <span x-show="lang === 'en'">Who it's for</span>
+                                </button>
+                                <button type="button" 
+                                        @click="giftTab = 'what'"
+                                        :class="giftTab === 'what' ? 'bg-white text-slate-900 font-bold shadow-xs border border-slate-300' : 'text-slate-600 hover:text-slate-900 border border-transparent'"
+                                        class="py-2 px-1 text-center rounded-lg transition-all cursor-pointer">
+                                    <span x-show="lang === 'ua'">Що входить</span>
+                                    <span x-show="lang === 'en'">What you get</span>
+                                </button>
+                                <button type="button" 
+                                        @click="giftTab = 'how'"
+                                        :class="giftTab === 'how' ? 'bg-white text-slate-900 font-bold shadow-xs border border-slate-300' : 'text-slate-600 hover:text-slate-900 border border-transparent'"
+                                        class="py-2 px-1 text-center rounded-lg transition-all cursor-pointer">
+                                    <span x-show="lang === 'ua'">Як замовити</span>
+                                    <span x-show="lang === 'en'">How it works</span>
+                                </button>
+                            </div>
+
+                            <!-- Tab 1: Who it's for -->
+                            <div x-show="giftTab === 'who'" class="mt-4 space-y-2.5 font-sans text-xs sm:text-[13px] text-slate-700">
+                                <div class="flex items-start gap-2.5 p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                                    <div class="w-5 h-5 rounded-md bg-sky-100 text-sky-800 flex items-center justify-center text-xs shrink-0 mt-0.5 font-bold">🏠</div>
+                                    <div>
+                                        <p class="font-bold text-slate-900">
+                                            <span x-show="lang === 'ua'">Рієлтори та агентства:</span>
+                                            <span x-show="lang === 'en'">Real estate agents and agencies:</span>
+                                        </p>
+                                        <p class="text-slate-600 text-xs">
+                                            <span x-show="lang === 'ua'">Подаруйте покупцям мініатюру їхнього нового будинку під час закриття угоди.</span>
+                                            <span x-show="lang === 'en'">Give buyers a miniature of their new home at closing.</span>
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="flex items-center gap-2.5">
-                                    <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] shrink-0 font-bold">✓</div>
-                                    <span x-show="lang === 'ua'">Знімні секції: дах, поверхи та планування кімнат</span>
-                                    <span x-show="lang === 'en'">Detachable sections: roof, floors & rooms</span>
+                                <div class="flex items-start gap-2.5 p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                                    <div class="w-5 h-5 rounded-md bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs shrink-0 mt-0.5 font-bold">🏗️</div>
+                                    <div>
+                                        <p class="font-bold text-slate-900">
+                                            <span x-show="lang === 'ua'">Девелопери та будівельники:</span>
+                                            <span x-show="lang === 'en'">Developers and builders:</span>
+                                        </p>
+                                        <p class="text-slate-600 text-xs">
+                                            <span x-show="lang === 'ua'">Макет готового будинку або апартаментів як подарунок при врученні ключів.</span>
+                                            <span x-show="lang === 'en'">A model of the finished house or apartment as a handover gift.</span>
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="flex items-center gap-2.5">
-                                    <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] shrink-0 font-bold">✓</div>
-                                    <span x-show="lang === 'ua'">Повний цикл: 3D CAD модель + фізичний 3D-друк</span>
-                                    <span x-show="lang === 'en'">Full cycle: 3D CAD model + physical 3D printing</span>
+                                <div class="flex items-start gap-2.5 p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                                    <div class="w-5 h-5 rounded-md bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0 mt-0.5 font-bold">🏛️</div>
+                                    <div>
+                                        <p class="font-bold text-slate-900">
+                                            <span x-show="lang === 'ua'">Банки, страхові та юрфірми:</span>
+                                            <span x-show="lang === 'en'">Banks, insurers and law firms:</span>
+                                        </p>
+                                        <p class="text-slate-600 text-xs">
+                                            <span x-show="lang === 'ua'">Незабутній знак вдячності для ключових та VIP-клієнтів.</span>
+                                            <span x-show="lang === 'en'">A memorable thank-you for key clients.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2.5 p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                                    <div class="w-5 h-5 rounded-md bg-indigo-100 text-indigo-800 flex items-center justify-center text-xs shrink-0 mt-0.5 font-bold">🏢</div>
+                                    <div>
+                                        <p class="font-bold text-slate-900">
+                                            <span x-show="lang === 'ua'">Компанії:</span>
+                                            <span x-show="lang === 'en'">Companies:</span>
+                                        </p>
+                                        <p class="text-slate-600 text-xs">
+                                            <span x-show="lang === 'ua'">Копія штаб-квартири, філії чи флагманської будівлі для партнерів, команди та ювілеїв.</span>
+                                            <span x-show="lang === 'en'">A replica of your headquarters, branch or flagship building for partners, employees and anniversaries.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tab 2: What you get -->
+                            <div x-show="giftTab === 'what'" class="mt-4 space-y-2.5 font-sans text-xs sm:text-[13px] text-slate-700" style="display: none;">
+                                <div class="flex items-start gap-2.5 p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                                    <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-bold">✓</div>
+                                    <div>
+                                        <p class="font-bold text-slate-900">
+                                            <span x-show="lang === 'ua'">Детальна мініатюра:</span>
+                                            <span x-show="lang === 'en'">Detailed miniature:</span>
+                                        </p>
+                                        <p class="text-slate-600 text-xs">
+                                            <span x-show="lang === 'ua'">Створена з високою точністю за фотографіями, кресленнями або реальною адресою.</span>
+                                            <span x-show="lang === 'en'">A detailed miniature built from photos, drawings or an address.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2.5 p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                                    <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-bold">✓</div>
+                                    <div>
+                                        <p class="font-bold text-slate-900">
+                                            <span x-show="lang === 'ua'">Індивідуальні опції:</span>
+                                            <span x-show="lang === 'en'">Custom options:</span>
+                                        </p>
+                                        <p class="text-slate-600 text-xs">
+                                            <span x-show="lang === 'ua'">Вибір кольорів, фактури, деталей даху, фасадів та ландшафтного оточення.</span>
+                                            <span x-show="lang === 'en'">Options for color, roof and façade details, and surroundings.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2.5 p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                                    <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-bold">✓</div>
+                                    <div>
+                                        <p class="font-bold text-slate-900">
+                                            <span x-show="lang === 'ua'">Пам'ятна підставка з табличкою:</span>
+                                            <span x-show="lang === 'en'">Base with custom plate:</span>
+                                        </p>
+                                        <p class="text-slate-600 text-xs">
+                                            <span x-show="lang === 'ua'">Дерев'яна чи акрилова підставка з табличкою: ім'я, пам'ятна дата або логотип компанії.</span>
+                                            <span x-show="lang === 'en'">A wooden or acrylic base with a custom plate: name, date or your logo.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2.5 p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                                    <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-bold">✓</div>
+                                    <div>
+                                        <p class="font-bold text-slate-900">
+                                            <span x-show="lang === 'ua'">Подарункове пакування:</span>
+                                            <span x-show="lang === 'en'">Gift-ready packaging:</span>
+                                        </p>
+                                        <p class="text-slate-600 text-xs">
+                                            <span x-show="lang === 'ua'">Готова презентабельна коробка, захищена доставка безпосередньо вам або клієнту.</span>
+                                            <span x-show="lang === 'en'">Gift-ready packaging, shipped directly to you or your client.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tab 3: How it works -->
+                            <div x-show="giftTab === 'how'" class="mt-4 space-y-2.5 font-sans text-xs sm:text-[13px] text-slate-700" style="display: none;">
+                                <div class="flex items-start gap-2.5 p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                                    <div class="w-5 h-5 rounded-md bg-slate-900 text-white flex items-center justify-center text-[11px] font-mono shrink-0 mt-0.5 font-bold">01</div>
+                                    <div>
+                                        <p class="font-bold text-slate-900">
+                                            <span x-show="lang === 'ua'">Надішліть об'єкт:</span>
+                                            <span x-show="lang === 'en'">Send us the property:</span>
+                                        </p>
+                                        <p class="text-slate-600 text-xs">
+                                            <span x-show="lang === 'ua'">Фотографії, планування поверхів, адреса чи онлайн-посилання.</span>
+                                            <span x-show="lang === 'en'">Photos, floor plans, an address or a link.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2.5 p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                                    <div class="w-5 h-5 rounded-md bg-slate-900 text-white flex items-center justify-center text-[11px] font-mono shrink-0 mt-0.5 font-bold">02</div>
+                                    <div>
+                                        <p class="font-bold text-slate-900">
+                                            <span x-show="lang === 'ua'">Погодьте дизайн:</span>
+                                            <span x-show="lang === 'en'">Confirm the design:</span>
+                                        </p>
+                                        <p class="text-slate-600 text-xs">
+                                            <span x-show="lang === 'ua'">Ми надсилаємо цифрове 3D-прев'ю та фіксовану вартість.</span>
+                                            <span x-show="lang === 'en'">We send a 3D preview and a fixed price.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2.5 p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                                    <div class="w-5 h-5 rounded-md bg-slate-900 text-white flex items-center justify-center text-[11px] font-mono shrink-0 mt-0.5 font-bold">03</div>
+                                    <div>
+                                        <p class="font-bold text-slate-900">
+                                            <span x-show="lang === 'ua'">Виготовлення:</span>
+                                            <span x-show="lang === 'en'">We build it:</span>
+                                        </p>
+                                        <p class="text-slate-600 text-xs">
+                                            <span x-show="lang === 'ua'">Друк на власних 3D-принтерах та ручна фінішна доводка майстром.</span>
+                                            <span x-show="lang === 'en'">Printed in-house and finished by hand.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2.5 p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                                    <div class="w-5 h-5 rounded-md bg-slate-900 text-white flex items-center justify-center text-[11px] font-mono shrink-0 mt-0.5 font-bold">04</div>
+                                    <div>
+                                        <p class="font-bold text-slate-900">
+                                            <span x-show="lang === 'ua'">Доставка у подарунковій коробці:</span>
+                                            <span x-show="lang === 'en'">Delivered in gift packaging:</span>
+                                        </p>
+                                        <p class="text-slate-600 text-xs">
+                                            <span x-show="lang === 'ua'">З детальним фотозвітом готового макета перед відправкою.</span>
+                                            <span x-show="lang === 'en'">With a photo of the finished model before it ships.</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- CTA Button & Trust Notice -->
-                        <div class="mt-8 pt-6 border-t border-slate-100">
+                        <div class="mt-6 pt-5 border-t border-slate-100">
                             <button type="button" 
-                                    @click="orderModalOpen = true; selectedService = (lang === 'ua' ? 'Архітектурне проектування та макетування' : 'Custom Architectural Design & Scale Modeling')"
+                                    @click="orderModalOpen = true; selectedService = (lang === 'ua' ? 'Подарунковий макет: Корпоративні та клієнтські подарунки' : 'Scale Model: Corporate & Client Gifts')"
                                     class="w-full btn-cyan-glow text-white font-bold py-3.5 px-6 rounded-xl cursor-pointer text-sm font-mono transition-all flex items-center justify-center gap-2">
-                                <span x-show="lang === 'ua'">Замовити Архітектурне Рішення &rarr;</span>
-                                <span x-show="lang === 'en'">Request Architectural Solution &rarr;</span>
+                                <span x-show="lang === 'ua'">Замовити Подарунковий Макет &rarr;</span>
+                                <span x-show="lang === 'en'">Order a Gift Model &rarr;</span>
                             </button>
                             <p class="text-[11px] text-slate-400 text-center font-mono mt-2.5">
-                                <span x-show="lang === 'ua'">Оцінка проєкту за 15 хв &bull; Консультація інженера</span>
-                                <span x-show="lang === 'en'">15-min estimate &bull; Engineer consultation</span>
+                                <span x-show="lang === 'ua'">Оцінка за 15 хв &bull; Подарункове пакування &bull; Доставка</span>
+                                <span x-show="lang === 'en'">15-min quote &bull; Gift packaging &bull; Worldwide shipping</span>
                             </p>
                         </div>
                     </div>
