@@ -148,7 +148,7 @@
                                 <div class="w-7 h-7 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center shrink-0">LOC</div>
                                 <div>
                                     <div class="font-bold text-slate-900">WORKSHOP FACILITY</div>
-                                    <span class="text-slate-600">Kyiv Engineering Hub, Ukraine<br>Worldwide Express Courier Delivery</span>
+                                    <span class="text-slate-600">Bratislava Studio, Slovakia<br>EU &amp; Worldwide Express Courier Delivery</span>
                                 </div>
                             </div>
                         </div>

@@ -198,7 +198,7 @@
                   }
               },
               init() {
-                  const sections = ['hero', 'projects', 'printing', 'engineering', 'contacts'];
+                  const sections = ['hero', 'projects', 'printing', 'engineering', 'about', 'contacts'];
                   const onScroll = () => {
                       const scrollPos = window.scrollY + 140;
                       for (const id of sections) {
@@ -256,6 +256,12 @@
                        class="py-1 transition-colors duration-200">
                         <span x-show="lang === 'en'">How it Works</span>
                         <span x-show="lang === 'ua'">Як ми працюємо</span>
+                    </a>
+                    <a href="#about" 
+                       :class="activeSection === 'about' ? 'nav-active-glow' : 'text-slate-600 hover:text-sky-600'" 
+                       class="py-1 transition-colors duration-200">
+                        <span x-show="lang === 'en'">About Us</span>
+                        <span x-show="lang === 'ua'">Про нас</span>
                     </a>
                     <a href="#contacts" 
                        :class="activeSection === 'contacts' ? 'nav-active-glow' : 'text-slate-600 hover:text-sky-600'" 
@@ -332,6 +338,9 @@
                 <a href="#engineering" @click="mobileMenuOpen = false" class="block text-slate-800 hover:text-sky-600 active:bg-sky-50 font-bold text-lg py-2.5 px-3 rounded-xl transition-colors">
                     <span x-show="lang === 'en'">How it Works</span><span x-show="lang === 'ua'">Як ми працюємо</span>
                 </a>
+                <a href="#about" @click="mobileMenuOpen = false" class="block text-slate-800 hover:text-sky-600 active:bg-sky-50 font-bold text-lg py-2.5 px-3 rounded-xl transition-colors">
+                    <span x-show="lang === 'en'">About Us</span><span x-show="lang === 'ua'">Про нас</span>
+                </a>
                 <a href="#contacts" @click="mobileMenuOpen = false" class="block text-slate-800 hover:text-sky-600 active:bg-sky-50 font-bold text-lg py-2.5 px-3 rounded-xl transition-colors">
                     <span x-show="lang === 'en'">Contacts</span><span x-show="lang === 'ua'">Контакти</span>
                 </a>
@@ -390,6 +399,12 @@
                                 <a href="#engineering" class="hover:text-sky-400 transition-colors">
                                     <span x-show="lang === 'ua'">Процес 3D-друку деталей</span>
                                     <span x-show="lang === 'en'">Parts 3D Printing Workflow</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#about" class="hover:text-sky-400 transition-colors">
+                                    <span x-show="lang === 'ua'">Про Студію (Братислава)</span>
+                                    <span x-show="lang === 'en'">About Us (Bratislava Studio)</span>
                                 </a>
                             </li>
                             <li>
