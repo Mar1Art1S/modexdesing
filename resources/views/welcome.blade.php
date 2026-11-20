@@ -319,21 +319,15 @@
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
                     
                     <!-- Left (7 cols): Interactive Expanded Architectural Gallery with Hero View & Thumbnails -->
-                    <div class="lg:col-span-7 bg-slate-950 p-4 sm:p-6 lg:p-7 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-slate-900">
-                        <!-- Main Hero Photo Container with High Visual Clarity -->
-                        <div class="relative w-full h-80 sm:h-[460px] lg:h-[500px] rounded-xl overflow-hidden bg-slate-900/90 border border-slate-800 flex items-center justify-center group cursor-pointer"
+                    <div class="lg:col-span-7 bg-slate-950 p-4 sm:p-6 lg:p-7 flex flex-col border-b lg:border-b-0 lg:border-r border-slate-900">
+                        <!-- Main Hero Photo Container with Full Bleed Square Coverage -->
+                        <div class="relative w-full flex-1 min-h-[380px] sm:min-h-[460px] lg:min-h-[500px] rounded-xl overflow-hidden bg-slate-900 border border-slate-800 flex items-center justify-center group cursor-pointer"
                              @click="lightboxOpen = true">
                             
-                            <!-- Ambient blur backdrop to enhance depth without letterbox feeling -->
-                            <img :src="activeImg" 
-                                 alt="" 
-                                 aria-hidden="true" 
-                                 class="absolute inset-0 w-full h-full object-cover filter blur-2xl opacity-35 scale-110 pointer-events-none transition-all duration-700" />
-                            
-                            <!-- Sharp high-detail foreground image (object-contain ensures whole house & model is 100% visible) -->
+                            <!-- Sharp high-detail foreground image covering entire square plane (object-cover) -->
                             <img :src="activeImg" 
                                  alt="Corporate & Client Gifts by Modex" 
-                                 class="relative z-10 max-w-full max-h-full object-contain p-2 sm:p-4 transition-transform duration-500 group-hover:scale-[1.02] drop-shadow-2xl" />
+                                 class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
                             
                             <!-- Prev / Next arrows directly on the photo for effortless browsing -->
                             <button type="button" 
@@ -380,7 +374,7 @@
                         </div>
 
                         <!-- Thumbnails Row (larger, comfortable, responsive) -->
-                        <div class="grid grid-cols-6 gap-2 sm:gap-2.5 mt-3 sm:mt-4">
+                        <div class="grid grid-cols-6 gap-2 sm:gap-2.5 mt-4 shrink-0">
                             <template x-for="(imgSrc, idx) in gallery" :key="idx">
                                 <button type="button" 
                                         @click="activeImg = imgSrc; activeIdx = idx"
