@@ -464,10 +464,6 @@
             
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12" data-aos="fade-up" data-aos-duration="600">
                 <div>
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-sky-100 border-2 border-sky-400 text-sky-950 text-xs sm:text-sm font-mono font-black uppercase tracking-wider mb-3 shadow-xs">
-                        <span x-show="lang === 'ua'">НАШЕ ПОРТФОЛІО</span>
-                        <span x-show="lang === 'en'">OUR PORTFOLIO</span>
-                    </div>
                     <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
                         <span x-show="lang === 'ua'">Реалізовані Інженерні Кейси</span>
                         <span x-show="lang === 'en'">Engineered Hardware Case Studies</span>
@@ -525,11 +521,6 @@
                 <div x-show="currentFilter === 'all' || currentFilter === 'industrial'"
                      class="card-tech-glow cad-corner-cross rounded-2xl bg-white border-2 border-slate-900 overflow-hidden flex flex-col justify-between group shadow-lg" data-aos="fade-up" data-aos-delay="100">
                     <div class="p-6 sm:p-7 border-b border-slate-200">
-                        <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-2">
-                            <span class="font-bold">PRJ // 01</span>
-                            <span class="px-2 py-0.5 rounded bg-sky-100 text-sky-900 font-bold" x-show="lang === 'ua'">ЕНЕРГЕТИКА 10 000В</span>
-                            <span class="px-2 py-0.5 rounded bg-sky-100 text-sky-900 font-bold" x-show="lang === 'en'">10,000V ENERGY</span>
-                        </div>
                         <h3 class="font-heading text-xl sm:text-2xl font-black text-slate-900 group-hover:text-sky-600 transition-colors leading-snug">
                             <span x-show="lang === 'ua'">Модульна Підстанція 10кВ та Шинопровід</span>
                             <span x-show="lang === 'en'">10kV Substation Busbar &amp; Modular Insulator</span>
@@ -565,11 +556,6 @@
                 <div x-show="currentFilter === 'all' || currentFilter === 'robotics'"
                      class="card-tech-glow cad-corner-cross rounded-2xl bg-white border-2 border-slate-900 overflow-hidden flex flex-col justify-between group shadow-lg" data-aos="fade-up" data-aos-delay="200">
                     <div class="p-6 sm:p-7 border-b border-slate-200">
-                        <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-2">
-                            <span class="font-bold">PRJ // 02</span>
-                            <span class="px-2 py-0.5 rounded bg-sky-100 text-sky-900 font-bold" x-show="lang === 'ua'">РОБОТОТЕХНІКА &amp; CAD</span>
-                            <span class="px-2 py-0.5 rounded bg-sky-100 text-sky-900 font-bold" x-show="lang === 'en'">ROBOTICS &amp; CAD</span>
-                        </div>
                         <h3 class="font-heading text-xl sm:text-2xl font-black text-slate-900 group-hover:text-sky-600 transition-colors leading-snug">
                             <span x-show="lang === 'ua'">Гусенична Робоплатформа з Маніпулятором</span>
                             <span x-show="lang === 'en'">Autonomous Tracked Rover with Robotic Manipulator</span>
@@ -605,11 +591,6 @@
                 <div x-show="currentFilter === 'all' || currentFilter === 'mechatronics' || currentFilter === 'iot'"
                      class="card-tech-glow cad-corner-cross rounded-2xl bg-white border-2 border-slate-900 overflow-hidden flex flex-col justify-between group shadow-lg">
                     <div class="p-6 sm:p-7 border-b border-slate-200">
-                        <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-2">
-                            <span class="font-bold">PRJ // 03</span>
-                            <span class="px-2 py-0.5 rounded bg-sky-100 text-sky-900 font-bold" x-show="lang === 'ua'">МЕХАТРОНІКА &amp; R&amp;D</span>
-                            <span class="px-2 py-0.5 rounded bg-sky-100 text-sky-900 font-bold" x-show="lang === 'en'">MECHATRONICS &amp; R&amp;D</span>
-                        </div>
                         <h3 class="font-heading text-xl sm:text-2xl font-black text-slate-900 group-hover:text-sky-600 transition-colors leading-snug">
                             <span x-show="lang === 'ua'">Крокуючий Робот: Повний Цикл від Ескізу до Складання</span>
                             <span x-show="lang === 'en'">Full-Cycle Walking Robot (Draft to Assembly)</span>
@@ -1700,12 +1681,6 @@
 
                 <!-- Left Column: Headline, Specs & Guarantees -->
                 <div class="relative z-10 max-w-2xl text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-sky-500/15 border border-sky-400/40 text-sky-300 font-mono text-xs font-bold uppercase tracking-wider mb-4 shadow-[0_0_15px_rgba(14,165,233,0.15)]">
-                        <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse shadow-[0_0_8px_#38bdf8]"></span>
-                        <span x-show="lang === 'ua'">ПРЯМИЙ ЗВ'ЯЗОК // ОЦІНКА ДРУКУ ЗА 15 ХВИЛИН</span>
-                        <span x-show="lang === 'en'">DIRECT CONTACT // 15-MIN QUOTE</span>
-                    </div>
-
                     <h3 class="font-heading text-2xl sm:text-3xl lg:text-[2.1rem] font-black text-white tracking-tight leading-tight">
                         <span x-show="lang === 'ua'">Потрібно надрукувати деталь або відновити зламану?</span>
                         <span x-show="lang === 'en'">Need to 3D print a part or replace a broken one?</span>
@@ -1869,12 +1844,6 @@
                     <div class="absolute -top-20 -right-20 w-64 h-64 bg-sky-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
                     <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/20 border border-sky-400/40 text-sky-300 font-mono text-xs font-bold uppercase tracking-wider mb-5">
-                            <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
-                            <span x-show="lang === 'ua'">БЕЗ ПОСЕРЕДНИКІВ // ВЛАСНЕ ВИРОБНИЦТВО</span>
-                            <span x-show="lang === 'en'">IN-HOUSE PRODUCTION // NO MIDDLEMEN</span>
-                        </div>
-
                         <h3 class="font-heading text-xl sm:text-2xl font-black text-white tracking-tight leading-snug">
                             <span x-show="lang === 'ua'">Від першого ескізу до готового макета — в одних руках</span>
                             <span x-show="lang === 'en'">From the first drawing to final delivery — in one pair of hands</span>
