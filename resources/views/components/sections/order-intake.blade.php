@@ -1,3 +1,7 @@
+@php
+    $settings = \App\Models\SiteSetting::current();
+@endphp
+
 <!-- ============================================================ -->
 <!-- SECTION 6: INTAKE ORDER FORM (WORKFLOW STAGES)               -->
 <!-- (КРЕСЛЕННЯ) — МОДЕЛЮВАННЯ — ПРОЦЕС ДРУКУ — ГОТОВА МОДЕЛЬ     -->
@@ -170,7 +174,7 @@
                     </h3>
                     <div class="grid grid-cols-4 gap-2 sm:gap-3.5">
                         <!-- 1. WHATSAPP -->
-                        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" 
+                        <a href="{{ $settings->whatsapp_url ?? 'https://wa.me/' }}" target="_blank" rel="noopener noreferrer" 
                            title="WhatsApp: Modex" aria-label="WhatsApp"
                            class="group aspect-square rounded-xl border-2 border-slate-200 hover:border-emerald-500 bg-slate-50 hover:bg-emerald-50/50 p-2 sm:p-2.5 flex items-center justify-center transition-all duration-200 shadow-xs hover:shadow-md">
                             <div class="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-md shadow-emerald-500/20 group-hover:scale-110 transition-transform">
@@ -180,7 +184,7 @@
                             </div>
                         </a>
                         <!-- 2. INSTAGRAM -->
-                        <a href="https://instagram.com/modexdesign" target="_blank" rel="noopener noreferrer" 
+                        <a href="{{ $settings->instagram_url ?? 'https://instagram.com/modexdesign' }}" target="_blank" rel="noopener noreferrer" 
                            title="Instagram: @modexdesign" aria-label="Instagram"
                            class="group aspect-square rounded-xl border-2 border-slate-200 hover:border-pink-500 bg-slate-50 hover:bg-pink-50/50 p-2 sm:p-2.5 flex items-center justify-center transition-all duration-200 shadow-xs hover:shadow-md">
                             <div class="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex items-center justify-center shadow-md shadow-pink-500/20 group-hover:scale-110 transition-transform">
@@ -190,7 +194,7 @@
                             </div>
                         </a>
                         <!-- 3. FACEBOOK -->
-                        <a href="https://facebook.com/modexdesign" target="_blank" rel="noopener noreferrer" 
+                        <a href="{{ $settings->facebook_url ?? 'https://facebook.com/modexdesign' }}" target="_blank" rel="noopener noreferrer" 
                            title="Facebook: modexdesign" aria-label="Facebook"
                            class="group aspect-square rounded-xl border-2 border-slate-200 hover:border-blue-600 bg-slate-50 hover:bg-blue-50/50 p-2 sm:p-2.5 flex items-center justify-center transition-all duration-200 shadow-xs hover:shadow-md">
                             <div class="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#1877F2] text-white flex items-center justify-center shadow-md shadow-blue-500/20 group-hover:scale-110 transition-transform">
@@ -200,8 +204,8 @@
                             </div>
                         </a>
                         <!-- 4. EMAIL -->
-                        <a href="mailto:orders@modexdesign.com" 
-                           title="Email: orders@modexdesign.com" aria-label="Email"
+                        <a href="mailto:{{ $settings->contact_email ?? 'orders@modexdesign.com' }}" 
+                           title="Email: {{ $settings->contact_email ?? 'orders@modexdesign.com' }}" aria-label="Email"
                            class="group aspect-square rounded-xl border-2 border-slate-200 hover:border-sky-500 bg-slate-50 hover:bg-sky-50/50 p-2 sm:p-2.5 flex items-center justify-center transition-all duration-200 shadow-xs hover:shadow-md">
                             <div class="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-sky-500 text-white flex items-center justify-center shadow-md shadow-sky-500/20 group-hover:scale-110 transition-transform">
                                 <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

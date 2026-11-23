@@ -1,11 +1,16 @@
+@php
+    $settings = \App\Models\SiteSetting::current();
+@endphp
+
 <!-- ============================================================ -->
-<!-- FLOATING QUICK CONTACT WIDGET (WHATSAPP, FACEBOOK, INSTAGRAM) -->
+<!-- FLOATING QUICK CONTACT WIDGET (WHATSAPP, TELEGRAM, FACEBOOK, INSTAGRAM) -->
 <!-- ============================================================ -->
 <div class="fixed right-4 sm:right-6 md:right-8 bottom-6 sm:bottom-8 z-[9999] flex flex-col gap-3.5 sm:gap-4 items-end pointer-events-auto"
      style="bottom: max(1.5rem, env(safe-area-inset-bottom, 1.5rem));">
     
     <!-- WHATSAPP -->
-    <a href="https://wa.me/" 
+    @if ($settings->whatsapp_url)
+    <a href="{{ $settings->whatsapp_url }}" 
        target="_blank" 
        rel="noopener noreferrer" 
        title="WhatsApp: Modex"
@@ -18,9 +23,28 @@
             WhatsApp
         </span>
     </a>
+    @endif
+
+    <!-- TELEGRAM -->
+    @if ($settings->telegram_url)
+    <a href="{{ $settings->telegram_url }}" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       title="Telegram: Modex"
+       aria-label="Telegram: Modex"
+       class="floating-contact-btn group relative w-[52px] h-[52px] sm:w-16 sm:h-16 bg-[#229ED9] shadow-[0_10px_25px_-3px_rgba(34,158,217,0.55),0_4px_10px_rgba(0,0,0,0.2)] hover:shadow-[0_16px_32px_-2px_rgba(34,158,217,0.7),0_6px_16px_rgba(0,0,0,0.25)] hover:scale-108">
+        <svg class="w-6 h-6 sm:w-7 sm:h-7 fill-current text-white -translate-x-0.5" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+        </svg>
+        <span class="pointer-events-none absolute right-full mr-3.5 top-1/2 -translate-y-1/2 px-3 py-1.5 rounded-xl bg-slate-900 text-white text-xs font-mono font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-xl hidden sm:block">
+            Telegram
+        </span>
+    </a>
+    @endif
 
     <!-- FACEBOOK -->
-    <a href="https://facebook.com/modexdesign" 
+    @if ($settings->facebook_url)
+    <a href="{{ $settings->facebook_url }}" 
        target="_blank" 
        rel="noopener noreferrer" 
        title="Facebook: modexdesign"
@@ -33,9 +57,11 @@
             Facebook
         </span>
     </a>
+    @endif
 
     <!-- INSTAGRAM -->
-    <a href="https://instagram.com/modexdesign" 
+    @if ($settings->instagram_url)
+    <a href="{{ $settings->instagram_url }}" 
        target="_blank" 
        rel="noopener noreferrer" 
        title="Instagram: @modexdesign"
@@ -48,4 +74,5 @@
             Instagram
         </span>
     </a>
+    @endif
 </div>

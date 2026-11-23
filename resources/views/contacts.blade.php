@@ -1,4 +1,7 @@
 <x-layouts.public title="Contact & Technical Consultation" description="Book a direct engineering consultation, submit CAD models under NDA, or visit our 3D hardware prototyping workshop.">
+    @php
+        $settings = \App\Models\SiteSetting::current();
+    @endphp
     
     <!-- PAGE HERO -->
     <section class="pt-12 pb-10 border-b border-slate-200/80 bg-gradient-to-b from-sky-50/40 to-transparent">
@@ -116,34 +119,60 @@
                     <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
                         <h3 class="font-heading text-base font-bold text-slate-900 mb-4">Direct Channels</h3>
                         <div class="space-y-4 text-xs font-mono text-slate-700">
+                            @if ($settings->whatsapp_url)
                             <div class="flex items-start gap-3">
                                 <div class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center shrink-0">WA</div>
                                 <div>
                                     <div class="font-bold text-slate-900">WHATSAPP</div>
-                                    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:underline">WhatsApp: Modex</a>
+                                    <a href="{{ $settings->whatsapp_url }}" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:underline">WhatsApp: Modex</a>
                                 </div>
                             </div>
+                            @endif
+                            @if ($settings->telegram_url)
+                            <div class="flex items-start gap-3">
+                                <div class="w-7 h-7 rounded-lg bg-sky-100 text-sky-700 font-bold flex items-center justify-center shrink-0">TG</div>
+                                <div>
+                                    <div class="font-bold text-slate-900">TELEGRAM</div>
+                                    <a href="{{ $settings->telegram_url }}" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:underline">Telegram: Modex</a>
+                                </div>
+                            </div>
+                            @endif
+                            @if ($settings->contact_email)
                             <div class="flex items-start gap-3">
                                 <div class="w-7 h-7 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center shrink-0">@</div>
                                 <div>
                                     <div class="font-bold text-slate-900">EMAIL</div>
-                                    <a href="mailto:orders@modexdesign.com" class="text-sky-600 hover:underline">orders@modexdesign.com</a>
+                                    <a href="mailto:{{ $settings->contact_email }}" class="text-sky-600 hover:underline">{{ $settings->contact_email }}</a>
                                 </div>
                             </div>
+                            @endif
+                            @if ($settings->contact_phone)
+                            <div class="flex items-start gap-3">
+                                <div class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center shrink-0">TEL</div>
+                                <div>
+                                    <div class="font-bold text-slate-900">PHONE</div>
+                                    <a href="tel:{{ preg_replace('/[^0-9+]/', '', $settings->contact_phone) }}" class="text-emerald-600 hover:underline">{{ $settings->contact_phone }}</a>
+                                </div>
+                            </div>
+                            @endif
+                            @if ($settings->instagram_url)
                             <div class="flex items-start gap-3">
                                 <div class="w-7 h-7 rounded-lg bg-pink-100 text-pink-700 font-bold flex items-center justify-center shrink-0">IG</div>
                                 <div>
                                     <div class="font-bold text-slate-900">INSTAGRAM</div>
-                                    <a href="https://instagram.com/modexdesign" target="_blank" rel="noopener noreferrer" class="text-pink-600 hover:underline">@modexdesign</a>
+                                    <a href="{{ $settings->instagram_url }}" target="_blank" rel="noopener noreferrer" class="text-pink-600 hover:underline">{{ str_replace('https://instagram.com/', '@', rtrim($settings->instagram_url, '/')) }}</a>
                                 </div>
                             </div>
+                            @endif
+                            @if ($settings->facebook_url)
                             <div class="flex items-start gap-3">
                                 <div class="w-7 h-7 rounded-lg bg-blue-100 text-blue-700 font-bold flex items-center justify-center shrink-0">FB</div>
                                 <div>
                                     <div class="font-bold text-slate-900">FACEBOOK</div>
-                                    <a href="https://facebook.com/modexdesign" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">facebook.com/modexdesign</a>
+                                    <a href="{{ $settings->facebook_url }}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">{{ str_replace('https://facebook.com/', '', rtrim($settings->facebook_url, '/')) }}</a>
                                 </div>
                             </div>
+                            @endif
                             <div class="flex items-start gap-3">
                                 <div class="w-7 h-7 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center shrink-0">LOC</div>
                                 <div>
