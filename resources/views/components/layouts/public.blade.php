@@ -3,13 +3,84 @@
     'description' => null,
 ])
 
+@php
+    $seo = \App\Models\SiteSetting::current();
+    $currentLocale = app()->getLocale();
+    $defaultTitle = ($currentLocale === 'uk' || $currentLocale === 'ua')
+        ? ($seo->meta_title_ua ?? 'Modex - Фулстек 3D Друк та Технічне Проектування')
+        : ($seo->meta_title_en ?? 'Modex - Full-Stack 3D Printing & Technical Hardware Engineering');
+    $pageTitle = filled($title) ? $title . ' | Modex' : $defaultTitle;
+    $defaultDesc = ($currentLocale === 'uk' || $currentLocale === 'ua')
+        ? ($seo->meta_description_ua ?? 'Фулстек інженерне проектування, параметричне 3D CAD моделювання та високоточний 3D-друк деталей.')
+        : ($seo->meta_description_en ?? 'From concept to physical reality: Full-Stack Hardware Engineering, 3D CAD Prototyping & Precision 3D Printing.');
+    $pageDesc = $description ?? $defaultDesc;
+    $ogImage = $seo->og_image ? (str_starts_with($seo->og_image, 'http') ? $seo->og_image : url($seo->og_image)) : url('/apple-touch-icon.png');
+    $canonicalUrl = $seo->canonical_url ?? url()->current();
+@endphp
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ filled($title) ? $title . ' | Modex - 3D Printing & Engineering / 3D Друк та Інженерія' : 'Modex - Full-Stack 3D Printing & Engineering / Фулстек 3D Друк та Технічне Проектування' }}</title>
-        <meta name="description" content="{{ $description ?? 'From concept to physical reality: Full-Stack Hardware Engineering, 3D CAD Prototyping & Precision 3D Printing / Фулстек інженерне проектування, параметричне 3D CAD моделювання та 3D-друк.' }}">
+        <title>{{ $pageTitle }}</title>
+        <meta name="description" content="{{ $pageDesc }}">
+        @if ($seo->meta_keywords)
+            <meta name="keywords" content="{{ $seo->meta_keywords }}">
+        @endif
+
+        @if ($seo->is_indexed)
+            <meta name="robots" content="index, follow">
+        @else
+            <meta name="robots" content="noindex, nofollow">
+        @endif
+
+        <link rel="canonical" href="{{ $canonicalUrl }}">
+
+        <!-- Google Site Verification (Google Search Console) -->
+        @if ($seo->google_site_verification)
+            <meta name="google-site-verification" content="{{ $seo->google_site_verification }}" />
+        @endif
+
+        <!-- Open Graph / Facebook / LinkedIn / Telegram -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ $canonicalUrl }}">
+        <meta property="og:title" content="{{ $pageTitle }}">
+        <meta property="og:description" content="{{ $pageDesc }}">
+        <meta property="og:image" content="{{ $ogImage }}">
+        <meta property="og:site_name" content="Modex">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:url" content="{{ $canonicalUrl }}">
+        <meta name="twitter:title" content="{{ $pageTitle }}">
+        <meta name="twitter:description" content="{{ $pageDesc }}">
+        <meta name="twitter:image" content="{{ $ogImage }}">
+
+        <!-- Google Analytics 4 (GA4 - gtag.js) -->
+        @if ($seo->google_analytics_id)
+            <script async src="https://www.googletagmanager.com/gtag/js?id={{ $seo->google_analytics_id }}"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '{{ $seo->google_analytics_id }}');
+            </script>
+        @endif
+
+        <!-- Google Tag Manager (GTM) -->
+        @if ($seo->google_tag_manager_id)
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','{{ $seo->google_tag_manager_id }}');</script>
+        @endif
+
+        <!-- Custom Head Scripts -->
+        @if ($seo->custom_head_scripts)
+            {!! $seo->custom_head_scripts !!}
+        @endif
 
         <link rel="icon" href="/favicon.ico" sizes="any">
         <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -242,5 +313,15 @@
         <!-- ============================================================ -->
         <x-navigation.floating-contacts />
 
+        <!-- Google Tag Manager (noscript) -->
+        @if ($seo->google_tag_manager_id)
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ $seo->google_tag_manager_id }}"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        @endif
+
+        <!-- Custom Body Scripts -->
+        @if ($seo->custom_body_scripts)
+            {!! $seo->custom_body_scripts !!}
+        @endif
     </body>
 </html>
