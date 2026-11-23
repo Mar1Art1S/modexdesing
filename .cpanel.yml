@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/u7317487/modex-design.com/
+    - /bin/cp -R * $DEPLOYPATH
+    - /bin/cp .htaccess.cpanel_root $DEPLOYPATH/.htaccess
