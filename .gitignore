@@ -3,7 +3,9 @@
 /dist/hot
 /dist/fonts-manifest.dev.json
 /public/fonts-manifest.dev.json
+/public/fonts/filament
 /public/hot
+/public/js/filament
 /public/storage
 /storage/*.key
 /storage/pail
@@ -41,3 +43,5 @@ yarn-error.log
 /opencode.jsonc
 
 /vendor_temp
+
+/public/css/filament
