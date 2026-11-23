@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # 1. Захист чутливих файлів від прямого перегляду у браузері
+    RewriteRule ^(\.env|\.git|artisan|composer\.(json|lock)|package(-lock)?\.json) - [F,L,NC]
+    RewriteRule ^(app|bootstrap|config|database|resources|routes|storage|tests)/ - [F,L,NC]
+
+    # 2. Перенаправлення всіх запитів у папку public/
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
