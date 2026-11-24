@@ -5,7 +5,7 @@
 <section id="printing" class="py-20 lg:py-28 cad-blueprint-substrate relative" 
          x-data="{
              activeSlide: 0,
-             totalSlides: 4,
+             totalSlides: 3,
              next() { this.activeSlide = (this.activeSlide + 1) % this.totalSlides; },
              prev() { this.activeSlide = (this.activeSlide - 1 + this.totalSlides) % this.totalSlides; },
              goTo(idx) { this.activeSlide = idx; }
@@ -44,11 +44,6 @@
                             aria-label="Go to case 3"
                             :class="activeSlide === 2 ? 'w-7 bg-slate-900' : 'w-2.5 bg-slate-400 hover:bg-slate-600'"
                             class="h-2.5 rounded-full transition-all duration-300 cursor-pointer"></button>
-                    <button type="button" 
-                            @click="goTo(3)" 
-                            aria-label="Go to case 4"
-                            :class="activeSlide === 3 ? 'w-7 bg-slate-900' : 'w-2.5 bg-slate-400 hover:bg-slate-600'"
-                            class="h-2.5 rounded-full transition-all duration-300 cursor-pointer"></button>
                 </div>
 
                 <!-- Arrow Navigation Buttons -->
@@ -76,7 +71,7 @@
         <!-- INTERACTIVE SLIDER CONTAINER (EQUAL FIXED HEIGHT ACROSS ALL SLIDES) -->
         <div class="relative mb-10 min-h-[620px] sm:min-h-[660px] lg:min-h-[540px]" data-aos="fade-up" data-aos-delay="100">
             
-            <!-- SLIDE 1: PORTAL STRUCTURES (g1.jpg) -->
+            <!-- SLIDE 1: PORTAL STRUCTURES (g1.png) -->
             <div x-show="activeSlide === 0" 
                  x-transition:enter="transition ease-out duration-250"
                  x-transition:enter-start="opacity-0 scale-[0.99]"
@@ -85,7 +80,7 @@
                 
                 <!-- LARGE PHOTO CONTAINER (IDENTICAL RATIO) -->
                 <div class="lg:col-span-7 relative h-64 sm:h-80 lg:h-full bg-slate-950 overflow-hidden group">
-                    <img src="{{ asset('images/g1.jpg') }}" 
+                    <img src="{{ asset('images/g1.png') }}" 
                          alt="Client reference photo: substation bay structure" 
                          class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
                 </div>
@@ -96,7 +91,7 @@
                         <div class="flex items-center justify-between font-mono text-xs text-sky-700 font-bold mb-2">
                             <span>
                                 
-                                CASE 01 // 04
+                                CASE 01 // 03
                             </span>
                             <span class="px-2.5 py-0.5 rounded bg-sky-50 text-sky-700 border border-sky-200">
                                 
@@ -147,7 +142,7 @@
                 </div>
             </div>
 
-            <!-- SLIDE 2: DISCONNECT SWITCH (g2.jpg) -->
+            <!-- SLIDE 2: DISCONNECT SWITCH (g2.png) -->
             <div x-show="activeSlide === 1" 
                  x-transition:enter="transition ease-out duration-250"
                  x-transition:enter-start="opacity-0 scale-[0.99]"
@@ -156,7 +151,7 @@
                 
                 <!-- LARGE PHOTO CONTAINER (IDENTICAL RATIO) -->
                 <div class="lg:col-span-7 relative h-64 sm:h-80 lg:h-full bg-slate-950 overflow-hidden group">
-                    <img src="{{ asset('images/g2.jpg') }}" 
+                    <img src="{{ asset('images/g2.png') }}" 
                          alt="Client reference photo: disconnect switch" 
                          class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
                 </div>
@@ -167,7 +162,7 @@
                         <div class="flex items-center justify-between font-mono text-xs text-amber-700 font-bold mb-2">
                             <span>
                                 
-                                CASE 02 // 04
+                                CASE 02 // 03
                             </span>
                             <span class="px-2.5 py-0.5 rounded bg-amber-50 text-amber-700 border border-amber-200">
                                 
@@ -218,7 +213,7 @@
                 </div>
             </div>
 
-            <!-- SLIDE 3: MODULAR SUBSTATION (g3.jpg) -->
+            <!-- SLIDE 3: MODULAR SUBSTATION (g3.png) -->
             <div x-show="activeSlide === 2" 
                  x-transition:enter="transition ease-out duration-250"
                  x-transition:enter-start="opacity-0 scale-[0.99]"
@@ -227,7 +222,7 @@
                 
                 <!-- LARGE PHOTO CONTAINER (IDENTICAL RATIO) -->
                 <div class="lg:col-span-7 relative h-64 sm:h-80 lg:h-full bg-slate-950 overflow-hidden group">
-                    <img src="{{ asset('images/g3.jpg') }}" 
+                    <img src="{{ asset('images/g3.png') }}" 
                          alt="Client reference photo: heavy modular transport" 
                          class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
                 </div>
@@ -238,7 +233,7 @@
                         <div class="flex items-center justify-between font-mono text-xs text-sky-700 font-bold mb-2">
                             <span>
                                 
-                                CASE 03 // 04
+                                CASE 03 // 03
                             </span>
                             <span class="px-2.5 py-0.5 rounded bg-sky-50 text-sky-700 border border-sky-200">
                                 
@@ -281,77 +276,6 @@
                     <div class="pt-4 border-t border-slate-100 mt-auto">
                         <button type="button" 
                                 @click="orderModalOpen = true; selectedService = 'Modular Substation Prototyping'" 
-                                class="w-full btn-cyan-glow text-white font-bold py-3 px-5 rounded-xl cursor-pointer text-sm sm:text-base flex items-center justify-center gap-2 shadow-md">
-                            
-                            Order Similar Prototype &rarr;
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SLIDE 4: INSULATOR STACKS (g4.jpg) -->
-            <div x-show="activeSlide === 3" 
-                 x-transition:enter="transition ease-out duration-250"
-                 x-transition:enter-start="opacity-0 scale-[0.99]"
-                 x-transition:enter-end="opacity-100 scale-100"
-                 class="bg-white rounded-3xl border-2 border-slate-900 overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12 h-[620px] sm:h-[660px] lg:h-[540px] w-full">
-                
-                <!-- LARGE PHOTO CONTAINER (IDENTICAL RATIO) -->
-                <div class="lg:col-span-7 relative h-64 sm:h-80 lg:h-full bg-slate-950 overflow-hidden group">
-                    <img src="{{ asset('images/g4.jpg') }}" 
-                         alt="Client reference photo: insulator stack" 
-                         class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
-                </div>
-
-                <!-- EQUALIZED CONTENT CONTAINER -->
-                <div class="lg:col-span-5 p-6 sm:p-8 lg:p-10 h-full flex flex-col justify-between overflow-hidden">
-                    <div>
-                        <div class="flex items-center justify-between font-mono text-xs text-emerald-700 font-bold mb-2">
-                            <span>
-                                
-                                CASE 04 // 04
-                            </span>
-                            <span class="px-2.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">
-                                
-                                PETG (Durable Adapter)
-                            </span>
-                        </div>
-
-                        <div class="h-16 lg:h-20 flex items-center">
-                            <h3 class="font-heading text-2xl sm:text-3xl lg:text-[28px] font-black text-slate-900 tracking-tight leading-tight line-clamp-2">
-                                
-                                Insulator Columns &amp; Brackets
-                            </h3>
-                        </div>
-
-                        <div class="h-20 sm:h-22 flex items-center">
-                            <p class="text-sm sm:text-base text-slate-600 leading-relaxed font-sans line-clamp-3">
-                                
-                                From client photos of high-voltage insulator stacks, we modeled custom transitional brackets and 3D printed PETG prototypes to test-fit dimensions before mass production.
-                            </p>
-                        </div>
-
-                        <!-- Deliverable Chips -->
-                        <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono font-bold">
-                            <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-800">
-                                
-                                ✓ Input: Insulators photo
-                            </span>
-                            <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-800">
-                                
-                                ✓ Output: Custom adapter
-                            </span>
-                            <span class="px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200">
-                                
-                                ✓ Load resistance
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Action Button -->
-                    <div class="pt-4 border-t border-slate-100 mt-auto">
-                        <button type="button" 
-                                @click="orderModalOpen = true; selectedService = 'Insulator Mounting Prototyping'" 
                                 class="w-full btn-cyan-glow text-white font-bold py-3 px-5 rounded-xl cursor-pointer text-sm sm:text-base flex items-center justify-center gap-2 shadow-md">
                             
                             Order Similar Prototype &rarr;

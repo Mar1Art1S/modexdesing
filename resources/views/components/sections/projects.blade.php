@@ -74,9 +74,9 @@
                     </p>
                 </div>
 
-                <!-- Project Image Visual (User's Zas.jpg Substation Model) - Large h-60 Viewport -->
+                <!-- Project Image Visual (User's Zas.png Substation Model) - Large h-60 Viewport -->
                 <div class="relative h-60 bg-slate-100 overflow-hidden border-b border-slate-200">
-                    <img src="{{ asset('images/zas.jpg') }}" 
+                    <img src="{{ asset('images/zas.png') }}" 
                          alt="10kV Modular Substation Insulator" 
                          class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
                 </div>
@@ -105,9 +105,9 @@
                     </p>
                 </div>
 
-                <!-- Project Image Visual (User's Zas2.jpg Robot Model) - Large h-60 Viewport -->
+                <!-- Project Image Visual (User's Zas2.png Robot Model) - Large h-60 Viewport -->
                 <div class="relative h-60 bg-slate-100 overflow-hidden border-b border-slate-200">
-                    <img src="{{ asset('images/zas2.jpg') }}" 
+                    <img src="{{ asset('images/zas2.png') }}" 
                          alt="Autonomous Tracked Rover with Robotic Manipulator" 
                          class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
                 </div>
@@ -136,9 +136,9 @@
                     </p>
                 </div>
 
-                <!-- Project Image Visual (User's Zas3.jpg Assembly Lifecycle) - Large h-60 Viewport -->
+                <!-- Project Image Visual (User's Zas3.png Assembly Lifecycle) - Large h-60 Viewport -->
                 <div class="relative h-60 bg-slate-100 overflow-hidden border-b border-slate-200">
-                    <img src="{{ asset('images/zas3.jpg') }}" 
+                    <img src="{{ asset('images/zas3.png') }}" 
                          alt="Full-Cycle Walking Robot Development: Drafting, CAD, 3D Printing, Assembly" 
                          class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
                 </div>

@@ -22,7 +22,7 @@ class ProjectFactory extends Factory
             'category' => fake()->randomElement(ProjectCategory::cases()),
             'description_ua' => fake()->paragraph(),
             'description_en' => fake()->paragraph(),
-            'image' => 'images/zas.jpg',
+            'image' => 'images/zas.png',
             'gallery' => [
                 'images/house/008.jpg',
                 'images/house/001.jpg',

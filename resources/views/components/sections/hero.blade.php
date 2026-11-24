@@ -1,12 +1,12 @@
 <!-- ============================================================ -->
-<!-- SECTION 1: FULL-SCREEN HERO WITH ZAS.JPG & CAD DRAWING FRAME -->
+<!-- SECTION 1: FULL-SCREEN HERO WITH ZAS.PNG & CAD DRAWING FRAME -->
 <!-- ============================================================ -->
 <section id="hero" class="relative min-h-[650px] lg:min-h-[calc(100vh-5.5rem)] py-10 sm:py-14 lg:py-16 flex flex-col justify-center overflow-hidden bg-[#e5e9ee]">
     
-    <!-- FULL-BLEED HERO BACKGROUND: ZAS.JPG SPREAD ACROSS ENTIRE SCREEN -->
+    <!-- FULL-BLEED HERO BACKGROUND: ZAS.PNG SPREAD ACROSS ENTIRE SCREEN -->
     <div class="absolute inset-0 w-full h-full pointer-events-none select-none z-0 overflow-hidden">
-        <!-- Full-screen original cover image (zas.jpg) -->
-        <img src="{{ asset('images/zas.jpg') }}" 
+        <!-- Full-screen original cover image (zas.png) -->
+        <img src="{{ asset('images/zas.png') }}" 
              alt="Modex Substation Engineering Cover" 
              class="w-full h-full object-cover object-right lg:object-[82%_center]" />
 
