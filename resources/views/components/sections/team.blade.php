@@ -3,14 +3,14 @@
         [
             'name' => 'Michal Hudák',
             'role' => 'CEO & FOUNDER',
-            'image' => 'images/photo1/photo1.jpg',
-            'alt_image' => 'images/photo1/photo1.png',
+            'image' => 'images/photo1/photo2.jpg',
+            'alt_image' => 'images/photo1/photo2.png',
         ],
         [
             'name' => 'Sam Goldthorpe',
             'role' => 'COO',
-            'image' => 'images/photo1/photo2.jpg',
-            'alt_image' => 'images/photo1/photo2.png',
+            'image' => 'images/photo1/photo1.jpg',
+            'alt_image' => 'images/photo1/photo1.png',
         ],
     ];
 
