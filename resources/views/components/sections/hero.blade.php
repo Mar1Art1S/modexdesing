@@ -29,37 +29,32 @@
 
             <!-- MAIN TITLE (BIGGER DISPLAY TYPOGRAPHY) -->
             <h1 class="font-heading text-3xl sm:text-5xl lg:text-[3.35rem] xl:text-[3.75rem] font-black tracking-tight text-slate-900 leading-[1.08]" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
-                <span x-show="lang === 'ua'">
-                    ВІД ЗАДУМУ ДО РЕАЛЬНОСТІ:<br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-sky-800 to-sky-600">3D ДРУК ТА ТЕХНІЧНЕ</span><br>
-                    ПРОЕКТУВАННЯ
-                </span>
-                <span x-show="lang === 'en'">
-                    FROM CONCEPT TO REALITY:<br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-sky-800 to-sky-600">3D PRINTING &amp; TECHNICAL</span><br>
+                
+                FROM CONCEPT TO REALITY:<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-sky-800 to-sky-600">3D PRINTING &amp; TECHNICAL<br>
                     ENGINEERING
                 </span>
             </h1>
 
             <!-- SUBTITLE (LARGER & MORE SPACIOUS) -->
             <p class="mt-6 text-base sm:text-lg lg:text-xl text-slate-700 max-w-2xl font-normal leading-relaxed" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
-                <span x-show="lang === 'ua'">Високоточне моделювання, прототипування та виготовлення складних технічних проектів з повним циклом інженерного контролю.</span>
-                <span x-show="lang === 'en'">High-precision 3D modeling, rapid prototyping, and turnkey manufacturing of complex hardware engineering projects.</span>
+                
+                High-precision 3D modeling, rapid prototyping, and turnkey manufacturing of complex hardware engineering projects.
             </p>
 
             <!-- ACTION BUTTONS (LARGER, IMPACTFUL BUTTONS) -->
             <div class="mt-8 flex flex-wrap items-center gap-4" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
                 <button type="button" 
-                        @click="orderModalOpen = true; selectedService = (lang === 'ua' ? '3D Друк та Прототипування' : '3D Printing & Prototyping')"
+                        @click="orderModalOpen = true; selectedService = '3D Printing & Prototyping'"
                         class="btn-cyan-glow text-white text-base sm:text-lg font-bold px-8 sm:px-10 py-4 rounded-xl cursor-pointer w-full sm:w-auto text-center">
-                    <span x-show="lang === 'ua'">Почати Проект</span>
-                    <span x-show="lang === 'en'">Start a Project</span>
+                    
+                    Start a Project
                 </button>
                 
                 <a href="#projects" 
                    class="inline-flex items-center justify-center px-8 sm:px-9 py-4 rounded-xl text-base sm:text-lg font-bold text-slate-900 bg-white hover:bg-slate-50 border-2 border-slate-900 shadow-sm hover:border-sky-500 hover:text-sky-600 hover:shadow-[0_0_20px_rgba(14,165,233,0.25)] transition-all duration-300 w-full sm:w-auto">
-                    <span x-show="lang === 'ua'">Переглянути Проекти &darr;</span>
-                    <span x-show="lang === 'en'">View Projects &darr;</span>
+                    
+                    View Projects &darr;
                 </a>
             </div>
 
@@ -71,8 +66,8 @@
                         <span class="text-sky-500 font-bold text-base sm:text-lg lg:text-xl">mm</span>
                     </div>
                     <div class="text-[11px] sm:text-xs font-mono font-bold tracking-wider text-slate-600 uppercase mt-1.5">
-                        <span x-show="lang === 'ua'">ТОЧНІСТЬ ДРУКУ</span>
-                        <span x-show="lang === 'en'">PRECISION ACCURACY</span>
+                        
+                        PRECISION ACCURACY
                     </div>
                 </div>
                 <div>
@@ -81,8 +76,8 @@
                         <span class="text-sky-500 font-bold text-base sm:text-lg lg:text-xl">hrs</span>
                     </div>
                     <div class="text-[11px] sm:text-xs font-mono font-bold tracking-wider text-slate-600 uppercase mt-1.5">
-                        <span x-show="lang === 'ua'">ШВИДКИЙ ДРУК</span>
-                        <span x-show="lang === 'en'">RAPID TURNAROUND</span>
+                        
+                        RAPID TURNAROUND
                     </div>
                 </div>
                 <div>
@@ -91,8 +86,8 @@
                         <span class="text-sky-500 font-bold text-base sm:text-lg lg:text-xl">CAD</span>
                     </div>
                     <div class="text-[11px] sm:text-xs font-mono font-bold tracking-wider text-slate-600 uppercase mt-1.5">
-                        <span x-show="lang === 'ua'">ПАРАМЕТРИЧНИЙ ДИЗАЙН</span>
-                        <span x-show="lang === 'en'">PARAMETRIC DESIGN</span>
+                        
+                        PARAMETRIC DESIGN
                     </div>
                 </div>
             </div>

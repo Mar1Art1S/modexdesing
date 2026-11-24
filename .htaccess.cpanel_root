@@ -1,11 +1,15 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # 1. Захист чутливих файлів від прямого перегляду у браузері
+    # 1. Захист системних файлів та каталогів Laravel
     RewriteRule ^(\.env|\.git|artisan|composer\.(json|lock)|package(-lock)?\.json) - [F,L,NC]
     RewriteRule ^(app|bootstrap|config|database|resources|routes|storage|tests)/ - [F,L,NC]
 
-    # 2. Перенаправлення всіх запитів у папку public/
-    RewriteCond %{REQUEST_URI} !^/public/
+    # 2. Якщо файл або папка існує у public/ — віддавати напряму (CSS, JS, зображення, шрифти)
+    RewriteCond %{DOCUMENT_ROOT}/public/$1 -f [OR]
+    RewriteCond %{DOCUMENT_ROOT}/public/$1 -d
     RewriteRule ^(.*)$ public/$1 [L]
+
+    # 3. Усі інші запити направляти у фронт-контролер public/index.php
+    RewriteRule ^(.*)$ public/index.php [L]
 </IfModule>

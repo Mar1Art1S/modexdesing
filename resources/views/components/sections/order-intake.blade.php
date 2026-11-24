@@ -4,7 +4,7 @@
 
 <!-- ============================================================ -->
 <!-- SECTION 6: INTAKE ORDER FORM (WORKFLOW STAGES)               -->
-<!-- (КРЕСЛЕННЯ) — МОДЕЛЮВАННЯ — ПРОЦЕС ДРУКУ — ГОТОВА МОДЕЛЬ     -->
+<!-- (BLUEPRINT) — 3D MODELING — 3D PRINTING — FINISHED PART     -->
 <!-- ============================================================ -->
 <section id="contacts" class="py-20 lg:py-28 cad-blueprint-substrate" 
          x-data="{ 
@@ -26,60 +26,60 @@
             <div class="lg:col-span-7 bg-white rounded-2xl border-2 border-slate-900 p-8 sm:p-10 shadow-xl cad-corner-cross flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
                 <div>
                     <h2 class="font-heading text-2xl sm:text-3xl font-black text-slate-900 mb-6">
-                        <span x-show="lang === 'ua'">Оформити Замовлення на Деталь</span>
-                        <span x-show="lang === 'en'">Place Your 3D Print Order</span>
+                        
+                        Place Your 3D Print Order
                     </h2>
 
                     <template x-if="!sent">
                         <form @submit.prevent="sent = true" class="space-y-5">
                             
-                            <!-- КОНТАКТНІ ДАНІ: ІМ'Я ТА EMAIL -->
+                            <!-- CONTACT INFO: NAME & EMAIL -->
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
-                                        <span x-show="lang === 'ua'">Ваше Ім'я:</span>
-                                        <span x-show="lang === 'en'">Your Name:</span>
+                                        
+                                        Your Name:
                                     </label>
-                                    <input type="text" required x-model="name" :placeholder="lang === 'ua' ? 'Олександр' : 'Alexander'" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 text-base text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans transition-colors" />
+                                    <input type="text" required x-model="name" :placeholder="'Alexander'" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 text-base text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans transition-colors" />
                                 </div>
                                 <div>
                                     <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
-                                        <span x-show="lang === 'ua'">Email (для розрахунку або файлів):</span>
-                                        <span x-show="lang === 'en'">Email Address (for quote or files):</span>
+                                        
+                                        Email Address (for quote or files):
                                     </label>
-                                    <input type="email" required x-model="email" :placeholder="lang === 'ua' ? 'alex@example.com' : 'alex@example.com'" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 text-base text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans transition-colors" />
+                                    <input type="email" required x-model="email" :placeholder="'alex@example.com'" class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 text-base text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans transition-colors" />
                                 </div>
                             </div>
 
-                            <!-- ЗАВАНТАЖЕННЯ ФАЙЛІВ (СМУЖКА З ВИПАДАЮЧИМ СПИСКОМ) -->
+                            <!-- FILE UPLOAD (ACCORDION / STRIP) -->
                             <div x-data="{ openUpload: false, selectedFiles: [] }">
                                 <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
-                                    <span x-show="lang === 'ua'">Завантажити файли, креслення або фото:</span>
-                                    <span x-show="lang === 'en'">Upload CAD Files, Drawings or Photos:</span>
+                                    
+                                    Upload CAD Files, Drawings or Photos:
                                 </label>
 
-                                <!-- Смужка у вигляді випадаючого списку -->
+                                <!-- Dropdown strip -->
                                 <div @click="openUpload = !openUpload" 
                                      class="w-full rounded-xl border-2 border-slate-300 px-4 py-3 bg-slate-50/70 hover:bg-slate-100/90 text-sm cursor-pointer transition-all flex items-center justify-between select-none">
                                     <div class="flex items-center gap-2.5 text-slate-700 truncate">
                                         <span class="text-base text-sky-600">📎</span>
                                         <template x-if="selectedFiles.length === 0">
                                             <span class="text-slate-500 font-sans text-xs sm:text-sm">
-                                                <span x-show="lang === 'ua'">Прикріпити файли (STL, STEP, PDF, фото або креслення)</span>
-                                                <span x-show="lang === 'en'">Attach files (STL, STEP, PDF, photos or drawings)</span>
+                                                
+                                                Attach files (STL, STEP, PDF, photos or drawings)
                                             </span>
                                         </template>
                                         <template x-if="selectedFiles.length > 0">
                                             <span class="font-bold text-sky-900 font-sans text-xs sm:text-sm">
-                                                <span x-show="lang === 'ua'">Обрано файлів: <span x-text="selectedFiles.length"></span></span>
-                                                <span x-show="lang === 'en'">Files attached: <span x-text="selectedFiles.length"></span></span>
+                                                
+                                                Files attached: <span x-text="selectedFiles.length"></span>
                                             </span>
                                         </template>
                                     </div>
                                     <div class="flex items-center gap-2">
                                         <span class="text-xs font-mono font-semibold text-slate-500 hidden sm:inline" x-show="selectedFiles.length === 0">
-                                            <span x-show="lang === 'ua'">до 100 МБ</span>
-                                            <span x-show="lang === 'en'">up to 100MB</span>
+                                            
+                                            up to 100MB
                                         </span>
                                         <svg class="w-4 h-4 text-slate-600 transition-transform duration-200" :class="openUpload ? 'rotate-180' : ''" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -87,7 +87,7 @@
                                     </div>
                                 </div>
 
-                                <!-- Випадаючий блок завантаження -->
+                                <!-- Upload dropzone -->
                                 <div x-show="openUpload" class="mt-2.5" style="display: none;">
                                     <div class="rounded-xl border-2 border-dashed border-sky-400 bg-sky-50/50 p-4 text-center hover:bg-sky-50/80 transition-colors">
                                         <input type="file" multiple 
@@ -99,16 +99,16 @@
                                                 <svg class="w-5 h-5 text-sky-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                                                 </svg>
-                                                <span x-show="lang === 'ua'">Натисніть для вибору файлів або перетягніть сюди</span>
-                                                <span x-show="lang === 'en'">Click to select files or drag and drop here</span>
+                                                
+                                                Click to select files or drag and drop here
                                             </div>
                                             <p class="text-[11px] text-slate-500 mt-1 font-sans">
-                                                <span x-show="lang === 'ua'">Формати: STL, STEP, STP, IGES, OBJ, DXF, DWG, PDF, JPG, PNG (до 100 МБ)</span>
-                                                <span x-show="lang === 'en'">Formats: STL, STEP, STP, IGES, OBJ, DXF, DWG, PDF, JPG, PNG (up to 100MB)</span>
+                                                
+                                                Formats: STL, STEP, STP, IGES, OBJ, DXF, DWG, PDF, JPG, PNG (up to 100MB)
                                             </p>
                                         </label>
 
-                                        <!-- Список обраних файлів -->
+                                        <!-- List of selected files -->
                                         <template x-if="selectedFiles.length > 0">
                                             <div class="mt-3 pt-3 border-t border-sky-200/80 text-left space-y-1.5 max-h-36 overflow-y-auto">
                                                 <template x-for="(file, index) in selectedFiles" :key="index">
@@ -123,19 +123,19 @@
                                 </div>
                             </div>
 
-                            <!-- ОПИС ТА ПОСИЛАННЯ НА ФАЙЛИ / ФОТО -->
+                            <!-- DESCRIPTION & LINKS TO FILES / PHOTOS -->
                             <div>
                                 <label class="block text-xs sm:text-sm font-mono font-bold text-slate-900 uppercase mb-2">
-                                    <span x-show="lang === 'ua'">Опис Завдання або Посилання на Фото / Креслення:</span>
-                                    <span x-show="lang === 'en'">Project Details &amp; Links to Photos / CAD Files:</span>
+                                    
+                                    Project Details &amp; Links to Photos / CAD Files:
                                 </label>
-                                <textarea rows="4" x-model="details" :placeholder="lang === 'ua' ? 'Опишіть призначення деталі, орієнтовні розміри або вставте посилання на фото чи 3D-файл (Google Drive, Instagram, Facebook, хмара)...' : 'Describe the part purpose, rough dimensions, or paste a link to photos/CAD files (Google Drive, Instagram, Facebook, cloud storage)...'" class="w-full rounded-xl border-2 border-slate-300 p-4 text-base text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans transition-colors"></textarea>
+                                <textarea rows="4" x-model="details" :placeholder="'Describe the part purpose, rough dimensions, or paste a link to photos/CAD files (Google Drive, Instagram, Facebook, cloud storage)...'" class="w-full rounded-xl border-2 border-slate-300 p-4 text-base text-slate-900 bg-slate-50/70 focus:outline-hidden focus:border-sky-500 font-sans transition-colors"></textarea>
                             </div>
 
                             <div class="pt-2">
                                 <button type="submit" class="w-full btn-cyan-glow text-white font-bold py-4 rounded-xl cursor-pointer text-base sm:text-lg shadow-lg hover:shadow-cyan-500/30 transition-all">
-                                    <span x-show="lang === 'ua'">Надіслати Замовлення на Розрахунок &rarr;</span>
-                                    <span x-show="lang === 'en'">Submit Order for Estimation &rarr;</span>
+                                    
+                                    Submit Order for Estimation &rarr;
                                 </button>
                             </div>
                         </form>
@@ -147,16 +147,16 @@
                                 <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                             </div>
                             <h3 class="font-heading text-xl font-bold text-slate-900">
-                                <span x-show="lang === 'ua'">ЗАМОВЛЕННЯ УСПІШНО ПРИЙНЯТО В РОБОТУ</span>
-                                <span x-show="lang === 'en'">ORDER RECEIVED SUCCESSFULLY</span>
+                                
+                                ORDER RECEIVED SUCCESSFULLY
                             </h3>
                             <p class="text-sm text-slate-600 mt-2 max-w-sm mx-auto font-sans">
-                                <span x-show="lang === 'ua'">Майстер зв'яжеться з вами найближчим часом (протягом 15–30 хвилин) для погодження вартості, матеріалу та термінів друку.</span>
-                                <span x-show="lang === 'en'">Our engineer will contact you shortly (within 15–30 minutes) to confirm the price, material, and printing schedule.</span>
+                                
+                                Our engineer will contact you shortly (within 15–30 minutes) to confirm the price, material, and printing schedule.
                             </p>
                             <button type="button" @click="sent = false" class="mt-6 text-sm text-sky-700 font-bold hover:underline">
-                                <span x-show="lang === 'ua'">Надіслати ще одну деталь</span>
-                                <span x-show="lang === 'en'">Send another part</span>
+                                
+                                Send another part
                             </button>
                         </div>
                     </template>
@@ -169,8 +169,8 @@
                 <!-- Direct Channels Card -->
                 <div class="bg-white rounded-2xl border-2 border-slate-900 p-6 sm:p-7 shadow-xl font-mono text-xs sm:text-sm cad-corner-cross" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="font-heading text-base font-black text-slate-900 mb-5 pb-3 border-b-2 border-slate-900 uppercase">
-                        <span x-show="lang === 'ua'">ПРЯМИЙ ЗВ'ЯЗОК</span>
-                        <span x-show="lang === 'en'">DIRECT CONTACT</span>
+                        
+                        DIRECT CONTACT
                     </h3>
                     <div class="grid grid-cols-4 gap-2 sm:gap-3.5">
                         <!-- 1. WHATSAPP -->
@@ -220,48 +220,48 @@
                 <div class="bg-white rounded-2xl border-2 border-slate-900 p-6 sm:p-7 shadow-xl font-mono text-sm sm:text-base cad-corner-cross flex-1 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
                     <div>
                         <h3 class="font-heading text-lg font-black text-slate-900 mb-5 pb-3 border-b-2 border-slate-900 uppercase">
-                            <span x-show="lang === 'ua'">ЧАСТІ ЗАПИТАННЯ ПО ЗАМОВЛЕННЮ</span>
-                            <span x-show="lang === 'en'">ORDERING FAQ</span>
+                            
+                            ORDERING FAQ
                         </h3>
                         <div class="space-y-3.5">
                             <div>
                                 <h4 class="font-bold text-slate-900 text-sm sm:text-base">
-                                    <span x-show="lang === 'ua'">Як передати креслення чи фото деталі?</span>
-                                    <span x-show="lang === 'en'">How to send photos or drawings?</span>
+                                    
+                                    How to send photos or drawings?
                                 </h4>
                                 <p class="text-slate-600 text-sm sm:text-base mt-1 font-sans leading-relaxed">
-                                    <span x-show="lang === 'ua'">Надішліть посилання у формі, напишіть у WhatsApp, Instagram @modexdesign, Facebook або на пошту.</span>
-                                    <span x-show="lang === 'en'">Paste a link in the form, message us on WhatsApp, Instagram @modexdesign, Facebook, or email us.</span>
+                                    
+                                    Paste a link in the form, message us on WhatsApp, Instagram @modexdesign, Facebook, or email us.
                                 </p>
                             </div>
                             <div>
                                 <h4 class="font-bold text-slate-900 text-sm sm:text-base">
-                                    <span x-show="lang === 'ua'">Якщо немає 3D-моделі, тільки зламана деталь?</span>
-                                    <span x-show="lang === 'en'">What if there is no 3D file, only a broken sample?</span>
+                                    
+                                    What if there is no 3D file, only a broken sample?
                                 </h4>
                                 <p class="text-slate-600 text-sm sm:text-base mt-1 font-sans leading-relaxed">
-                                    <span x-show="lang === 'ua'">Достатньо сфотографувати деталь поруч із лінійкою. Ми знімемо всі розміри та створимо точну 3D-модель.</span>
-                                    <span x-show="lang === 'en'">Take a photo of the part with a ruler next to it. We will engineer the 3D model accurately.</span>
+                                    
+                                    Take a photo of the part with a ruler next to it. We will engineer the 3D model accurately.
                                 </p>
                             </div>
                             <div>
                                 <h4 class="font-bold text-slate-900 text-sm sm:text-base">
-                                    <span x-show="lang === 'ua'">Який пластик обрати: PLA чи PETG?</span>
-                                    <span x-show="lang === 'en'">Which plastic to choose: PLA or PETG?</span>
+                                    
+                                    Which plastic to choose: PLA or PETG?
                                 </h4>
                                 <p class="text-slate-600 text-sm sm:text-base mt-1 font-sans leading-relaxed">
-                                    <span x-show="lang === 'ua'"><strong>PLA</strong> підходить для макетів та естетики. <strong>PETG</strong> — для міцних шестерень, кронштейнів та деталей авто.</span>
-                                    <span x-show="lang === 'en'"><strong>PLA</strong> for visual mockups. <strong>PETG</strong> for high-strength brackets, gears, and outdoor parts.</span>
+                                    
+                                    <strong>PLA</strong> for visual mockups. <strong>PETG</strong> for high-strength brackets, gears, and outdoor parts.
                                 </p>
                             </div>
                             <div>
                                 <h4 class="font-bold text-slate-900 text-sm sm:text-base">
-                                    <span x-show="lang === 'ua'">Скільки часу займає виготовлення?</span>
-                                    <span x-show="lang === 'en'">How long does printing take?</span>
+                                    
+                                    How long does printing take?
                                 </h4>
                                 <p class="text-slate-600 text-sm sm:text-base mt-1 font-sans leading-relaxed">
-                                    <span x-show="lang === 'ua'">Зазвичай тестовий прототип друкується протягом 24–48 годин. Можливий терміновий друк день-у-день.</span>
-                                    <span x-show="lang === 'en'">Typically 24–48 hours for prototype parts. Express same-day service is available on request.</span>
+                                    
+                                    Typically 24–48 hours for prototype parts. Express same-day service is available on request.
                                 </p>
                             </div>
                         </div>

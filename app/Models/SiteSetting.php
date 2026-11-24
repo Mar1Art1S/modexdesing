@@ -46,11 +46,11 @@ class SiteSetting extends Model
         return static::firstOrCreate(
             ['id' => 1],
             [
-                'meta_title_ua' => 'Modex - Фулстек 3D Друк та Технічне Проектування',
+                'meta_title_ua' => 'Modex - Full-Stack 3D Printing & Technical Hardware Engineering',
                 'meta_title_en' => 'Modex - Full-Stack 3D Printing & Technical Hardware Engineering',
-                'meta_description_ua' => 'Фулстек інженерне проектування, параметричне 3D CAD моделювання та високоточний 3D-друк деталей.',
+                'meta_description_ua' => 'From concept to physical reality: Full-Stack Hardware Engineering, 3D CAD Prototyping & Precision 3D Printing.',
                 'meta_description_en' => 'From concept to physical reality: Full-Stack Hardware Engineering, 3D CAD Prototyping & Precision 3D Printing.',
-                'meta_keywords' => '3d print, 3d друк, інженерне проектування, solidworks, fdm, sla, prototyping, швидке прототипування',
+                'meta_keywords' => '3d printing, 3d print, rapid prototyping, cad design, solidworks, fdm, petg, pla, custom engineering',
                 'instagram_url' => 'https://instagram.com/modexdesign',
                 'facebook_url' => 'https://facebook.com/modexdesign',
                 'whatsapp_url' => 'https://wa.me/',

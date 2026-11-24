@@ -70,8 +70,8 @@
                     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
                     </svg>
-                    <span class="hidden sm:inline" x-show="lang === 'ua'">На весь екран</span>
-                    <span class="hidden sm:inline" x-show="lang === 'en'">Fullscreen</span>
+                    
+                    <span class="hidden sm:inline">Fullscreen</span>
                 </div>
             </div>
 
@@ -92,22 +92,18 @@
         <div class="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between bg-white font-sans">
             <div>
                 <h3 class="font-heading text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-snug">
-                    <span x-show="lang === 'ua'">Корпоративні та Клієнтські Подарунки</span>
-                    <span x-show="lang === 'en'">Corporate &amp; Client Gifts</span>
+                    
+                    Corporate &amp; Client Gifts
                 </h3>
 
                 <p class="text-sm font-semibold text-sky-700 mt-2 leading-snug">
-                    <span x-show="lang === 'ua'">Мініатюра будинку, офісу чи будівлі, яку ваш клієнт ніколи не забуде.</span>
-                    <span x-show="lang === 'en'">A miniature of the home, office or building your client will never forget.</span>
+                    
+                    A miniature of the home, office or building your client will never forget.
                 </p>
 
                 <p class="text-xs sm:text-[13px] text-slate-600 mt-2.5 leading-relaxed">
-                    <span x-show="lang === 'ua'">
-                        Закриття угоди, вручення ключів чи святкування важливої дати? Індивідуальний масштабний макет перетворює реальну нерухомість на особистий пам'ятний подарунок, який роками залишається на столі чи полиці.
-                    </span>
-                    <span x-show="lang === 'en'">
-                        Closing a deal, handing over keys or celebrating a milestone? A custom scale model turns a real property into a personal keepsake that stays on a desk or shelf for years.
-                    </span>
+                    
+                    Closing a deal, handing over keys or celebrating a milestone? A custom scale model turns a real property into a personal keepsake that stays on a desk or shelf for years.
                 </p>
 
                 <!-- Interactive 3-Tab Switcher -->
@@ -116,22 +112,22 @@
                             @click="giftTab = 'who'"
                             :class="giftTab === 'who' ? 'bg-white text-slate-900 font-bold shadow-xs border border-slate-300' : 'text-slate-600 hover:text-slate-900 border border-transparent'"
                             class="py-2 px-1 text-center rounded-lg transition-all cursor-pointer">
-                        <span x-show="lang === 'ua'">Для кого</span>
-                        <span x-show="lang === 'en'">Who it's for</span>
+                        
+                        Who it's for
                     </button>
                     <button type="button" 
                             @click="giftTab = 'what'"
                             :class="giftTab === 'what' ? 'bg-white text-slate-900 font-bold shadow-xs border border-slate-300' : 'text-slate-600 hover:text-slate-900 border border-transparent'"
                             class="py-2 px-1 text-center rounded-lg transition-all cursor-pointer">
-                        <span x-show="lang === 'ua'">Що входить</span>
-                        <span x-show="lang === 'en'">What you get</span>
+                        
+                        What you get
                     </button>
                     <button type="button" 
                             @click="giftTab = 'how'"
                             :class="giftTab === 'how' ? 'bg-white text-slate-900 font-bold shadow-xs border border-slate-300' : 'text-slate-600 hover:text-slate-900 border border-transparent'"
                             class="py-2 px-1 text-center rounded-lg transition-all cursor-pointer">
-                        <span x-show="lang === 'ua'">Як замовити</span>
-                        <span x-show="lang === 'en'">How it works</span>
+                        
+                        How it works
                     </button>
                 </div>
 
@@ -141,12 +137,12 @@
                         <div class="w-5 h-5 rounded-md bg-sky-100 text-sky-800 flex items-center justify-center text-xs shrink-0 mt-0.5 font-bold">🏠</div>
                         <div>
                             <p class="font-bold text-slate-900">
-                                <span x-show="lang === 'ua'">Рієлтори та агентства:</span>
-                                <span x-show="lang === 'en'">Real estate agents and agencies:</span>
+                                
+                                Real estate agents and agencies:
                             </p>
                             <p class="text-slate-600 text-xs">
-                                <span x-show="lang === 'ua'">Подаруйте покупцям мініатюру їхнього нового будинку під час закриття угоди.</span>
-                                <span x-show="lang === 'en'">Give buyers a miniature of their new home at closing.</span>
+                                
+                                Give buyers a miniature of their new home at closing.
                             </p>
                         </div>
                     </div>
@@ -154,12 +150,12 @@
                         <div class="w-5 h-5 rounded-md bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs shrink-0 mt-0.5 font-bold">🏗️</div>
                         <div>
                             <p class="font-bold text-slate-900">
-                                <span x-show="lang === 'ua'">Девелопери та будівельники:</span>
-                                <span x-show="lang === 'en'">Developers and builders:</span>
+                                
+                                Developers and builders:
                             </p>
                             <p class="text-slate-600 text-xs">
-                                <span x-show="lang === 'ua'">Макет готового будинку або апартаментів як подарунок при врученні ключів.</span>
-                                <span x-show="lang === 'en'">A model of the finished house or apartment as a handover gift.</span>
+                                
+                                A model of the finished house or apartment as a handover gift.
                             </p>
                         </div>
                     </div>
@@ -167,12 +163,12 @@
                         <div class="w-5 h-5 rounded-md bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0 mt-0.5 font-bold">🏛️</div>
                         <div>
                             <p class="font-bold text-slate-900">
-                                <span x-show="lang === 'ua'">Банки, страхові та юрфірми:</span>
-                                <span x-show="lang === 'en'">Banks, insurers and law firms:</span>
+                                
+                                Banks, insurers and law firms:
                             </p>
                             <p class="text-slate-600 text-xs">
-                                <span x-show="lang === 'ua'">Незабутній знак вдячності для ключових та VIP-клієнтів.</span>
-                                <span x-show="lang === 'en'">A memorable thank-you for key clients.</span>
+                                
+                                A memorable thank-you for key clients.
                             </p>
                         </div>
                     </div>
@@ -180,12 +176,12 @@
                         <div class="w-5 h-5 rounded-md bg-indigo-100 text-indigo-800 flex items-center justify-center text-xs shrink-0 mt-0.5 font-bold">🏢</div>
                         <div>
                             <p class="font-bold text-slate-900">
-                                <span x-show="lang === 'ua'">Компанії:</span>
-                                <span x-show="lang === 'en'">Companies:</span>
+                                
+                                Companies:
                             </p>
                             <p class="text-slate-600 text-xs">
-                                <span x-show="lang === 'ua'">Копія штаб-квартири, філії чи флагманської будівлі для партнерів, команди та ювілеїв.</span>
-                                <span x-show="lang === 'en'">A replica of your headquarters, branch or flagship building for partners, employees and anniversaries.</span>
+                                
+                                A replica of your headquarters, branch or flagship building for partners, employees and anniversaries.
                             </p>
                         </div>
                     </div>
@@ -197,12 +193,12 @@
                         <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-bold">✓</div>
                         <div>
                             <p class="font-bold text-slate-900">
-                                <span x-show="lang === 'ua'">Детальна мініатюра:</span>
-                                <span x-show="lang === 'en'">Detailed miniature:</span>
+                                
+                                Detailed miniature:
                             </p>
                             <p class="text-slate-600 text-xs">
-                                <span x-show="lang === 'ua'">Створена з високою точністю за фотографіями, кресленнями або реальною адресою.</span>
-                                <span x-show="lang === 'en'">A detailed miniature built from photos, drawings or an address.</span>
+                                
+                                A detailed miniature built from photos, drawings or an address.
                             </p>
                         </div>
                     </div>
@@ -210,12 +206,12 @@
                         <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-bold">✓</div>
                         <div>
                             <p class="font-bold text-slate-900">
-                                <span x-show="lang === 'ua'">Індивідуальні опції:</span>
-                                <span x-show="lang === 'en'">Custom options:</span>
+                                
+                                Custom options:
                             </p>
                             <p class="text-slate-600 text-xs">
-                                <span x-show="lang === 'ua'">Вибір кольорів, фактури, деталей даху, фасадів та ландшафтного оточення.</span>
-                                <span x-show="lang === 'en'">Options for color, roof and façade details, and surroundings.</span>
+                                
+                                Options for color, roof and façade details, and surroundings.
                             </p>
                         </div>
                     </div>
@@ -223,12 +219,12 @@
                         <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-bold">✓</div>
                         <div>
                             <p class="font-bold text-slate-900">
-                                <span x-show="lang === 'ua'">Пам'ятна підставка з табличкою:</span>
-                                <span x-show="lang === 'en'">Base with custom plate:</span>
+                                
+                                Base with custom plate:
                             </p>
                             <p class="text-slate-600 text-xs">
-                                <span x-show="lang === 'ua'">Дерев'яна чи акрилова підставка з табличкою: ім'я, пам'ятна дата або логотип компанії.</span>
-                                <span x-show="lang === 'en'">A wooden or acrylic base with a custom plate: name, date or your logo.</span>
+                                
+                                A wooden or acrylic base with a custom plate: name, date or your logo.
                             </p>
                         </div>
                     </div>
@@ -236,12 +232,12 @@
                         <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-bold">✓</div>
                         <div>
                             <p class="font-bold text-slate-900">
-                                <span x-show="lang === 'ua'">Подарункове пакування:</span>
-                                <span x-show="lang === 'en'">Gift-ready packaging:</span>
+                                
+                                Gift-ready packaging:
                             </p>
                             <p class="text-slate-600 text-xs">
-                                <span x-show="lang === 'ua'">Готова презентабельна коробка, захищена доставка безпосередньо вам або клієнту.</span>
-                                <span x-show="lang === 'en'">Gift-ready packaging, shipped directly to you or your client.</span>
+                                
+                                Gift-ready packaging, shipped directly to you or your client.
                             </p>
                         </div>
                     </div>
@@ -253,12 +249,12 @@
                         <div class="w-5 h-5 rounded-md bg-slate-900 text-white flex items-center justify-center text-[11px] font-mono shrink-0 mt-0.5 font-bold">01</div>
                         <div>
                             <p class="font-bold text-slate-900">
-                                <span x-show="lang === 'ua'">Надішліть об'єкт:</span>
-                                <span x-show="lang === 'en'">Send us the property:</span>
+                                
+                                Send us the property:
                             </p>
                             <p class="text-slate-600 text-xs">
-                                <span x-show="lang === 'ua'">Фотографії, планування поверхів, адреса чи онлайн-посилання.</span>
-                                <span x-show="lang === 'en'">Photos, floor plans, an address or a link.</span>
+                                
+                                Photos, floor plans, an address or a link.
                             </p>
                         </div>
                     </div>
@@ -266,12 +262,12 @@
                         <div class="w-5 h-5 rounded-md bg-slate-900 text-white flex items-center justify-center text-[11px] font-mono shrink-0 mt-0.5 font-bold">02</div>
                         <div>
                             <p class="font-bold text-slate-900">
-                                <span x-show="lang === 'ua'">Погодьте дизайн:</span>
-                                <span x-show="lang === 'en'">Confirm the design:</span>
+                                
+                                Confirm the design:
                             </p>
                             <p class="text-slate-600 text-xs">
-                                <span x-show="lang === 'ua'">Ми надсилаємо цифрове 3D-прев'ю та фіксовану вартість.</span>
-                                <span x-show="lang === 'en'">We send a 3D preview and a fixed price.</span>
+                                
+                                We send a 3D preview and a fixed price.
                             </p>
                         </div>
                     </div>
@@ -279,12 +275,12 @@
                         <div class="w-5 h-5 rounded-md bg-slate-900 text-white flex items-center justify-center text-[11px] font-mono shrink-0 mt-0.5 font-bold">03</div>
                         <div>
                             <p class="font-bold text-slate-900">
-                                <span x-show="lang === 'ua'">Виготовлення:</span>
-                                <span x-show="lang === 'en'">We build it:</span>
+                                
+                                We build it:
                             </p>
                             <p class="text-slate-600 text-xs">
-                                <span x-show="lang === 'ua'">Друк на власних 3D-принтерах та ручна фінішна доводка майстром.</span>
-                                <span x-show="lang === 'en'">Printed in-house and finished by hand.</span>
+                                
+                                Printed in-house and finished by hand.
                             </p>
                         </div>
                     </div>
@@ -292,12 +288,12 @@
                         <div class="w-5 h-5 rounded-md bg-slate-900 text-white flex items-center justify-center text-[11px] font-mono shrink-0 mt-0.5 font-bold">04</div>
                         <div>
                             <p class="font-bold text-slate-900">
-                                <span x-show="lang === 'ua'">Доставка у подарунковій коробці:</span>
-                                <span x-show="lang === 'en'">Delivered in gift packaging:</span>
+                                
+                                Delivered in gift packaging:
                             </p>
                             <p class="text-slate-600 text-xs">
-                                <span x-show="lang === 'ua'">З детальним фотозвітом готового макета перед відправкою.</span>
-                                <span x-show="lang === 'en'">With a photo of the finished model before it ships.</span>
+                                
+                                With a photo of the finished model before it ships.
                             </p>
                         </div>
                     </div>
@@ -307,10 +303,10 @@
             <!-- CTA Button & Trust Notice -->
             <div class="mt-6 pt-5 border-t border-slate-100">
                 <button type="button" 
-                        @click="orderModalOpen = true; selectedService = (lang === 'ua' ? 'Подарунковий макет: Корпоративні та клієнтські подарунки' : 'Scale Model: Corporate & Client Gifts')"
+                        @click="orderModalOpen = true; selectedService = 'Scale Model: Corporate & Client Gifts'"
                         class="w-full btn-cyan-glow text-white font-bold py-3.5 px-6 rounded-xl cursor-pointer text-sm font-mono transition-all flex items-center justify-center gap-2">
-                    <span x-show="lang === 'ua'">Замовити Подарунковий Макет &rarr;</span>
-                    <span x-show="lang === 'en'">Order a Gift Model &rarr;</span>
+                    
+                    Order a Gift Model &rarr;
                 </button>
             </div>
         </div>
@@ -336,8 +332,8 @@
             <div class="flex items-center gap-3">
                 <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
                 <span class="font-bold">
-                    <span x-show="lang === 'ua'">Архітектурний огляд високої роздільності</span>
-                    <span x-show="lang === 'en'">High-Resolution Architectural View</span>
+                    
+                    High-Resolution Architectural View
                 </span>
                 <span class="text-slate-400">
                     (<span x-text="activeIdx + 1"></span> / <span x-text="gallery.length"></span>)

@@ -22,11 +22,11 @@ class OrderResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedShoppingBag;
 
-    protected static ?string $modelLabel = 'Замовлення';
+    protected static ?string $modelLabel = 'Order';
 
-    protected static ?string $pluralModelLabel = 'Замовлення';
+    protected static ?string $pluralModelLabel = 'Orders';
 
-    protected static ?string $navigationLabel = 'Замовлення';
+    protected static ?string $navigationLabel = 'Orders';
 
     public static function form(Schema $schema): Schema
     {

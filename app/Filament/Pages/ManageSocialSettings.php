@@ -20,9 +20,9 @@ class ManageSocialSettings extends Page
 {
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedChatBubbleLeftRight;
 
-    protected static ?string $navigationLabel = 'Соцмережі та Контакти';
+    protected static ?string $navigationLabel = 'Social & Contacts';
 
-    protected static ?string $title = 'Посилання на Соціальні мережі та Контакти';
+    protected static ?string $title = 'Social Media Links & Contacts';
 
     protected static ?int $navigationSort = 11;
 
@@ -48,56 +48,56 @@ class ManageSocialSettings extends Page
     {
         return $schema
             ->components([
-                Section::make('Месенджери та Соціальні мережі')
-                    ->description('Посилання на підключені канали зв\'язку. Вони відображаються у плаваючому віджеті швидкого зв\'язку, у підвалі (футері) сайту та у блоці прямого контакту.')
+                Section::make('Messengers & Social Media')
+                    ->description('Links to connected contact channels shown in floating contact widgets, footer, and direct contact sections.')
                     ->icon(Heroicon::OutlinedShare)
                     ->schema([
                         TextInput::make('instagram_url')
                             ->label('Instagram URL')
                             ->placeholder('https://instagram.com/modexdesign')
                             ->url()
-                            ->helperText('Посилання на профіль Instagram (плаваючий віджет, футер та блок контактів).'),
+                            ->helperText('Instagram profile link.'),
 
                         TextInput::make('facebook_url')
                             ->label('Facebook URL')
                             ->placeholder('https://facebook.com/modexdesign')
                             ->url()
-                            ->helperText('Посилання на сторінку Facebook (плаваючий віджет, футер та блок контактів).'),
+                            ->helperText('Facebook page link.'),
 
                         TextInput::make('whatsapp_url')
                             ->label('WhatsApp URL')
-                            ->placeholder('https://wa.me/380970000000')
+                            ->placeholder('https://wa.me/10000000000')
                             ->url()
-                            ->helperText('Пряме посилання на чат WhatsApp (наприклад: https://wa.me/380XXXXXXXXX).'),
+                            ->helperText('Direct WhatsApp chat link (e.g., https://wa.me/...).'),
 
                         TextInput::make('telegram_url')
                             ->label('Telegram URL')
                             ->placeholder('https://t.me/modexdesign')
                             ->url()
-                            ->helperText('Посилання на Telegram профіль або канал (наприклад: https://t.me/...).'),
+                            ->helperText('Telegram link.'),
 
                         TextInput::make('viber_url')
-                            ->label('Viber URL / номер')
-                            ->placeholder('viber://chat?number=%2B380970000000')
-                            ->helperText('Посилання на Viber або номер для прямого дзвінка/чату.'),
+                            ->label('Viber URL / Phone')
+                            ->placeholder('viber://chat?number=%2B10000000000')
+                            ->helperText('Viber link or number for direct messaging.'),
                     ])
                     ->columns(2),
 
-                Section::make('Прямі контакти майстерні')
-                    ->description('Email та номер телефону для прийому технічних запитів та файлів CAD моделей.')
+                Section::make('Workshop Direct Contacts')
+                    ->description('Email and telephone number for technical inquiries and 3D CAD models.')
                     ->icon(Heroicon::OutlinedEnvelope)
                     ->schema([
                         TextInput::make('contact_email')
-                            ->label('Контактний Email')
+                            ->label('Contact Email')
                             ->email()
                             ->placeholder('orders@modexdesign.com')
-                            ->helperText('Офіційний email для замовлень та консультацій.'),
+                            ->helperText('Official email for orders and consultations.'),
 
                         TextInput::make('contact_phone')
-                            ->label('Контактний телефон')
+                            ->label('Contact Phone')
                             ->tel()
-                            ->placeholder('+380 97 000 00 00')
-                            ->helperText('Номер телефону для швидкого зв\'язку з інженером.'),
+                            ->placeholder('+1 (555) 000-0000')
+                            ->helperText('Phone number for rapid communication with engineering.'),
                     ])
                     ->columns(2),
             ]);
@@ -125,7 +125,7 @@ class ManageSocialSettings extends Page
     {
         return [
             Action::make('save')
-                ->label('Зберегти посилання')
+                ->label('Save Links')
                 ->submit('save')
                 ->keyBindings(['mod+s']),
         ];
@@ -138,7 +138,7 @@ class ManageSocialSettings extends Page
         SiteSetting::current()->update($data);
 
         Notification::make()
-            ->title('Посилання на соцмережі та контакти успішно збережено!')
+            ->title('Social links and contact info saved successfully!')
             ->success()
             ->send();
     }

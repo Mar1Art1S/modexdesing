@@ -31,7 +31,7 @@ test('admin can view filament seo settings page', function () {
     $this->actingAs($admin)
         ->get('/admin/manage-seo-settings')
         ->assertSuccessful()
-        ->assertSee('SEO та Google');
+        ->assertSee('SEO & Google');
 });
 
 test('admin can update seo and google analytics settings via filament form', function () {
@@ -50,9 +50,7 @@ test('admin can update seo and google analytics settings via filament form', fun
             'google_analytics_id' => 'G-TEST123456',
             'google_tag_manager_id' => 'GTM-TEST999',
             'google_site_verification' => 'google-verify-code-xyz',
-            'meta_title_ua' => 'Новий кастомний тайтл UA',
             'meta_title_en' => 'New custom title EN',
-            'meta_description_ua' => 'Новий кастомний опис UA',
             'meta_description_en' => 'New custom description EN',
             'meta_keywords' => 'keyword1, keyword2',
             'og_image' => 'https://modexdesign.com/custom-og.jpg',
@@ -67,7 +65,7 @@ test('admin can update seo and google analytics settings via filament form', fun
     expect($setting->google_analytics_id)->toBe('G-TEST123456')
         ->and($setting->google_tag_manager_id)->toBe('GTM-TEST999')
         ->and($setting->google_site_verification)->toBe('google-verify-code-xyz')
-        ->and($setting->meta_title_ua)->toBe('Новий кастомний тайтл UA');
+        ->and($setting->meta_title_en)->toBe('New custom title EN');
 });
 
 test('homepage renders google analytics, search console verification, and meta tags from site settings', function () {

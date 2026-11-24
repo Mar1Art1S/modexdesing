@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="uk" data-theme="paper" data-layout="side" data-nav="bar" data-copy="where" data-reel="all" data-morph="fly" data-pencil="0" data-tempo="normal">
+<html lang="en" data-theme="paper" data-layout="side" data-nav="bar" data-copy="where" data-reel="all" data-morph="fly" data-pencil="0" data-tempo="normal">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>Тестова Анімація 3D Ліній (Xplore AI Engine) | Modex Design</title>
-    <meta name="description" content="Тестова сторінка з інтерактивною 3D-анімацією морфінгу складних інженерних машин у векторному стилі xplore.ai.">
+    <title>3D Vector Line Animation Reel | Modex Design</title>
+    <meta name="description" content="Interactive 3D vector animation and morphing of complex engineering assemblies using WebGL and Three.js.">
 
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -261,7 +261,7 @@
         <nav aria-label="Main" style="display:flex; align-items:center; gap:14px;">
             <span style="font-family:monospace; font-size:11px; opacity:0.6; display:none; @media(min-width:640px){display:inline;}">XPLORE 3D MORPH REEL</span>
             <a href="{{ route('home') }}" class="btn-back-home">
-                &larr; На головну Modex
+                &larr; Back to Modex Home
             </a>
         </nav>
     </header>
@@ -276,35 +276,35 @@
                 </div>
 
                 <h1 id="hl-title">
-                    Інженерна 3D Анімація.
+                    Hardware 3D Animation.
                     <span class="soft" style="display:block; opacity:0.65; font-size:0.85em; margin-top:8px;">
-                        Векторний морфінг механічних вузлів
+                        Vector Morphing of Engineering Assemblies
                     </span>
                 </h1>
 
                 <p class="sub" id="hl-sub" style="margin-top:16px; font-size:15px; line-height:1.6; max-width:480px;">
-                    Точні математичні розрахунки, параметричні лінії креслень та динамічний морфінг поверхонь у реальному часі за допомогою WebGL та Three.js.
+                    Precision CAD geometry, parametric drafting lines, and dynamic surface morphing in real-time WebGL via Three.js.
                 </p>
             </div>
 
             <div class="actions" style="margin-top:24px; display:flex; flex-wrap:wrap; gap:10px;">
                 <button type="button" onclick="switchOption('morph', 'fly')" class="dock-btn active" data-opt-key="morph" data-opt-val="fly">
-                    ✈️ Політ ребер (Fly)
+                    ✈️ Edge Flight (Fly)
                 </button>
                 <button type="button" onclick="switchOption('morph', 'draw')" class="dock-btn" data-opt-key="morph" data-opt-val="draw">
-                    ✏️ Креслення (Draw)
+                    ✏️ Blueprint Draw
                 </button>
                 <button type="button" onclick="switchOption('morph', 'fade')" class="dock-btn" data-opt-key="morph" data-opt-val="fade">
-                    🌫️ Плавне згасання (Fade)
+                    🌫️ Smooth Fade
                 </button>
             </div>
 
             <!-- Active Specs Card -->
             <div style="margin-top:28px; padding:16px; border-radius:14px; border:1px solid rgba(120,120,120,0.2); background:rgba(120,120,120,0.05); font-family:monospace; font-size:11px; line-height:1.8; max-width:440px;">
-                <div><strong style="color:#0284c7;">ТЕХНОЛОГІЯ:</strong> Procedural LineSegments2 (Three.js)</div>
-                <div><strong style="color:#0284c7;">МАТЕРІАЛ:</strong> Hidden-Line GPU Wireframe Shader</div>
-                <div><strong style="color:#0284c7;">ОБ'ЄКТИ:</strong> 7 машин (Турбіна, Міст, Двигун V12, Габбл, PCB, F-1, Обмінник)</div>
-                <div><strong style="color:#0284c7;">РЕНДЕР:</strong> 60 FPS чистий WebGL (без зовнішніх 3D файлів)</div>
+                <div><strong style="color:#0284c7;">TECH:</strong> Procedural LineSegments2 (Three.js)</div>
+                <div><strong style="color:#0284c7;">MATERIAL:</strong> Hidden-Line GPU Wireframe Shader</div>
+                <div><strong style="color:#0284c7;">ASSEMBLIES:</strong> 7 machines (Turbine, Bridge, V12 Engine, Hubble, PCB, F-1, Exchanger)</div>
+                <div><strong style="color:#0284c7;">RENDER:</strong> 60 FPS Native WebGL (Zero external 3D asset downloads)</div>
             </div>
         </div>
 
@@ -321,32 +321,32 @@
         
         <!-- Machines selector -->
         <div class="dock-group">
-            <span class="dock-label">Об'єкт:</span>
-            <button type="button" onclick="switchOption('reel', 'all')" class="dock-btn active" data-opt-key="reel" data-opt-val="all">Усі 7</button>
-            <button type="button" onclick="switchOption('reel', 'turbine')" class="dock-btn" data-opt-key="reel" data-opt-val="turbine">Турбіна</button>
-            <button type="button" onclick="switchOption('reel', 'bridge')" class="dock-btn" data-opt-key="reel" data-opt-val="bridge">Міст</button>
-            <button type="button" onclick="switchOption('reel', 'engine')" class="dock-btn" data-opt-key="reel" data-opt-val="engine">V12 Двигун</button>
-            <button type="button" onclick="switchOption('reel', 'pcb')" class="dock-btn" data-opt-key="reel" data-opt-val="pcb">Плата PCB</button>
-            <button type="button" onclick="switchOption('reel', 'rocket')" class="dock-btn" data-opt-key="reel" data-opt-val="rocket">Двигун F-1</button>
-            <button type="button" onclick="switchOption('reel', 'telescope')" class="dock-btn" data-opt-key="reel" data-opt-val="telescope">Габбл</button>
+            <span class="dock-label">Object:</span>
+            <button type="button" onclick="switchOption('reel', 'all')" class="dock-btn active" data-opt-key="reel" data-opt-val="all">All 7</button>
+            <button type="button" onclick="switchOption('reel', 'turbine')" class="dock-btn" data-opt-key="reel" data-opt-val="turbine">Turbine</button>
+            <button type="button" onclick="switchOption('reel', 'bridge')" class="dock-btn" data-opt-key="reel" data-opt-val="bridge">Bridge</button>
+            <button type="button" onclick="switchOption('reel', 'engine')" class="dock-btn" data-opt-key="reel" data-opt-val="engine">V12 Engine</button>
+            <button type="button" onclick="switchOption('reel', 'pcb')" class="dock-btn" data-opt-key="reel" data-opt-val="pcb">PCB Board</button>
+            <button type="button" onclick="switchOption('reel', 'rocket')" class="dock-btn" data-opt-key="reel" data-opt-val="rocket">F-1 Rocket</button>
+            <button type="button" onclick="switchOption('reel', 'telescope')" class="dock-btn" data-opt-key="reel" data-opt-val="telescope">Hubble</button>
         </div>
 
         <!-- Themes selector -->
         <div class="dock-group">
-            <span class="dock-label">Тема:</span>
-            <button type="button" onclick="switchOption('theme', 'paper')" class="dock-btn active" data-opt-key="theme" data-opt-val="paper">Папір</button>
+            <span class="dock-label">Theme:</span>
+            <button type="button" onclick="switchOption('theme', 'paper')" class="dock-btn active" data-opt-key="theme" data-opt-val="paper">Paper</button>
             <button type="button" onclick="switchOption('theme', 'blueprint')" class="dock-btn" data-opt-key="theme" data-opt-val="blueprint">Blueprint CAD</button>
-            <button type="button" onclick="switchOption('theme', 'noir')" class="dock-btn" data-opt-key="theme" data-opt-val="noir">Нуар</button>
-            <button type="button" onclick="switchOption('theme', 'graphite')" class="dock-btn" data-opt-key="theme" data-opt-val="graphite">Графіт</button>
-            <button type="button" onclick="switchOption('theme', 'sketch')" class="dock-btn" data-opt-key="theme" data-opt-val="sketch">Скетч</button>
+            <button type="button" onclick="switchOption('theme', 'noir')" class="dock-btn" data-opt-key="theme" data-opt-val="noir">Noir</button>
+            <button type="button" onclick="switchOption('theme', 'graphite')" class="dock-btn" data-opt-key="theme" data-opt-val="graphite">Graphite</button>
+            <button type="button" onclick="switchOption('theme', 'sketch')" class="dock-btn" data-opt-key="theme" data-opt-val="sketch">Sketch</button>
         </div>
 
         <!-- Speed selector -->
         <div class="dock-group">
-            <span class="dock-label">Темп:</span>
-            <button type="button" onclick="switchOption('tempo', 'calm')" class="dock-btn" data-opt-key="tempo" data-opt-val="calm">Спокійний</button>
-            <button type="button" onclick="switchOption('tempo', 'normal')" class="dock-btn active" data-opt-key="tempo" data-opt-val="normal">Нормальний</button>
-            <button type="button" onclick="switchOption('tempo', 'brisk')" class="dock-btn" data-opt-key="tempo" data-opt-val="brisk">Швидкий</button>
+            <span class="dock-label">Tempo:</span>
+            <button type="button" onclick="switchOption('tempo', 'calm')" class="dock-btn" data-opt-key="tempo" data-opt-val="calm">Calm</button>
+            <button type="button" onclick="switchOption('tempo', 'normal')" class="dock-btn active" data-opt-key="tempo" data-opt-val="normal">Normal</button>
+            <button type="button" onclick="switchOption('tempo', 'brisk')" class="dock-btn" data-opt-key="tempo" data-opt-val="brisk">Brisk</button>
         </div>
 
     </div>

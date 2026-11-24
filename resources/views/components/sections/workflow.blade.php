@@ -8,26 +8,26 @@
         <!-- SECTION HEADER -->
         <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16" data-aos="fade-up" data-aos-duration="600">
             <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
-                <span x-show="lang === 'ua'">Як Ми Працюємо: Від Вашої Задачі До Готової Деталі</span>
-                <span x-show="lang === 'en'">How We Work: From Your Request to 3D Printed Parts</span>
+                
+                How We Work: From Your Request to 3D Printed Parts
             </h2>
             <p class="text-base sm:text-lg text-slate-600 mt-3 leading-relaxed">
-                <span x-show="lang === 'ua'">Більшість наших замовлень — це якісний 3D-друк деталей. Ми ведемо прямий діалог на кожному кроці: допомагаємо з кресленнями, якщо немає моделі, підбираємо надійний пластик (PLA або PETG) та показуємо 3D-вигляд ще до друку.</span>
-                <span x-show="lang === 'en'">Most of our work is dedicated to precision 3D printing of parts. We stay in direct touch at every step: we help create drawings if you don't have a file, pick the right plastic (PLA or PETG), and confirm the 3D model with you before printing.</span>
+                
+                Most of our work is dedicated to precision 3D printing of parts. We stay in direct touch at every step: we help create drawings if you don't have a file, pick the right plastic (PLA or PETG), and confirm the 3D model with you before printing.
             </p>
         </div>
 
         <!-- THE 4 GRAND COLLABORATION CARDS -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            <!-- CARD 01: ЗАДАЧА ТА ОБГОВОРЕННЯ -->
+            <!-- CARD 01: REQUEST & CONSULTATION -->
             <div class="cad-corner-cross bg-white border-2 border-slate-900 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-sky-600 transition-all duration-300 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="100">
                 <div>
                     <!-- Header Row -->
                     <div class="flex items-center justify-between mb-5">
                         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-sky-600 text-white font-mono text-xs font-black tracking-wider uppercase">
-                            <span x-show="lang === 'ua'">КРОК // 01</span>
-                            <span x-show="lang === 'en'">STEP // 01</span>
+                            
+                            STEP // 01
                         </span>
                         <div class="w-11 h-11 rounded-xl bg-sky-50 border border-sky-200 text-sky-600 flex items-center justify-center group-hover:scale-110 transition-transform">
                             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -38,34 +38,32 @@
 
                     <!-- Card Title -->
                     <h3 class="font-heading text-xl sm:text-2xl font-black text-slate-900 leading-snug mb-4">
-                        <span x-show="lang === 'ua'">Запит та Обговорення</span>
-                        <span x-show="lang === 'en'">Request &amp; Consultation</span>
+                        
+                        Request &amp; Consultation
                     </h3>
 
                     <!-- 2-3 Sentences (Optimized for Larger Font) -->
-                    <p class="text-base sm:text-[17px] text-slate-700 leading-relaxed font-sans" x-show="lang === 'ua'">
-                        Надішліть фото деталі, ескіз або зламаний зразок. Ми швидко уточнимо умови роботи, навантаження та розрахуємо точну вартість друку протягом 15 хвилин.
-                    </p>
-                    <p class="text-base sm:text-[17px] text-slate-700 leading-relaxed font-sans" x-show="lang === 'en'">
+                    
+                    <p class="text-base sm:text-[17px] text-slate-700 leading-relaxed font-sans">
                         Send a photo of the part, a sketch, or a broken sample. We quickly clarify operating conditions and loads, and calculate the exact printing price within 15 minutes.
                     </p>
                 </div>
 
                 <div class="mt-8 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs sm:text-sm font-mono font-bold text-sky-700">
                     <span class="w-2 h-2 rounded-full bg-sky-500"></span>
-                    <span x-show="lang === 'ua'">Розрахунок за 15 хвилин</span>
-                    <span x-show="lang === 'en'">Calculation in 15 minutes</span>
+                    
+                    Calculation in 15 minutes
                 </div>
             </div>
 
-            <!-- CARD 02: КРЕСЛЕННЯ ТА 3D-РОЗРОБКА -->
+            <!-- CARD 02: DRAWINGS & 3D CAD MODEL -->
             <div class="cad-corner-cross bg-white border-2 border-slate-900 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-sky-600 transition-all duration-300 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="200">
                 <div>
                     <!-- Header Row -->
                     <div class="flex items-center justify-between mb-5">
                         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-sky-600 text-white font-mono text-xs font-black tracking-wider uppercase">
-                            <span x-show="lang === 'ua'">КРОК // 02</span>
-                            <span x-show="lang === 'en'">STEP // 02</span>
+                            
+                            STEP // 02
                         </span>
                         <div class="w-11 h-11 rounded-xl bg-sky-50 border border-sky-200 text-sky-600 flex items-center justify-center group-hover:scale-110 transition-transform">
                             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -76,34 +74,32 @@
 
                     <!-- Card Title -->
                     <h3 class="font-heading text-xl sm:text-2xl font-black text-slate-900 leading-snug mb-4">
-                        <span x-show="lang === 'ua'">Креслення &amp; 3D-Модель</span>
-                        <span x-show="lang === 'en'">Drawings &amp; 3D Model</span>
+                        
+                        Drawings &amp; 3D Model
                     </h3>
 
                     <!-- 2-3 Sentences (Optimized for Larger Font) -->
-                    <p class="text-base sm:text-[17px] text-slate-700 leading-relaxed font-sans" x-show="lang === 'ua'">
-                        Знімаємо точні розміри штангенциркулем та будуємо правильну 3D-модель з посиленням навантажених місць. Показуємо візуалізацію на екрані для вашого погодження до запуску друку.
-                    </p>
-                    <p class="text-base sm:text-[17px] text-slate-700 leading-relaxed font-sans" x-show="lang === 'en'">
+                    
+                    <p class="text-base sm:text-[17px] text-slate-700 leading-relaxed font-sans">
                         We take precise caliper measurements and build clean 3D CAD geometry with reinforced stress points. We show you the 3D model for your approval before printing starts.
                     </p>
                 </div>
 
                 <div class="mt-8 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs sm:text-sm font-mono font-bold text-sky-700">
                     <span class="w-2 h-2 rounded-full bg-sky-500"></span>
-                    <span x-show="lang === 'ua'">Погодження 3D перед друком</span>
-                    <span x-show="lang === 'en'">3D visual approval first</span>
+                    
+                    3D visual approval first
                 </div>
             </div>
 
-            <!-- CARD 03: МАСШТАБ ТА ПЛАСТИК PLA / PETG -->
+            <!-- CARD 03: SCALE & PLA / PETG -->
             <div class="cad-corner-cross bg-white border-2 border-slate-900 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-sky-600 transition-all duration-300 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="300">
                 <div>
                     <!-- Header Row -->
                     <div class="flex items-center justify-between mb-5">
                         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-sky-600 text-white font-mono text-xs font-black tracking-wider uppercase">
-                            <span x-show="lang === 'ua'">КРОК // 03</span>
-                            <span x-show="lang === 'en'">STEP // 03</span>
+                            
+                            STEP // 03
                         </span>
                         <div class="w-11 h-11 rounded-xl bg-sky-50 border border-sky-200 text-sky-600 flex items-center justify-center group-hover:scale-110 transition-transform">
                             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -114,34 +110,32 @@
 
                     <!-- Card Title -->
                     <h3 class="font-heading text-xl sm:text-2xl font-black text-slate-900 leading-snug mb-4">
-                        <span x-show="lang === 'ua'">Масштаб та Пластик</span>
-                        <span x-show="lang === 'en'">Scale &amp; PLA / PETG</span>
+                        
+                        Scale &amp; PLA / PETG
                     </h3>
 
                     <!-- 2-3 Sentences (Optimized for Larger Font) -->
-                    <p class="text-base sm:text-[17px] text-slate-700 leading-relaxed font-sans" x-show="lang === 'ua'">
-                        Підбираємо оптимальний матеріал: гладкий PLA для корпусів і макетів або міцний PETG для кронштейнів, шестерень та тепла. Визначаємо потрібну кількість від 1 штуки до партії без переплат.
-                    </p>
-                    <p class="text-base sm:text-[17px] text-slate-700 leading-relaxed font-sans" x-show="lang === 'en'">
+                    
+                    <p class="text-base sm:text-[17px] text-slate-700 leading-relaxed font-sans">
                         We select the optimal material: smooth PLA for enclosures and prototypes, or tough PETG for brackets, gears, and heat resistance. We produce any volume from 1 piece to a batch without extra costs.
                     </p>
                 </div>
 
                 <div class="mt-8 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs sm:text-sm font-mono font-bold text-sky-700">
                     <span class="w-2 h-2 rounded-full bg-sky-500"></span>
-                    <span x-show="lang === 'ua'">PLA або PETG від 1 шт</span>
-                    <span x-show="lang === 'en'">PLA or PETG from 1 piece</span>
+                    
+                    PLA or PETG from 1 piece
                 </div>
             </div>
 
-            <!-- CARD 04: 3D-ДРУК ТА ГОТОВА ДЕТАЛЬ -->
+            <!-- CARD 04: 3D PRINTING & READY PART -->
             <div class="cad-corner-cross bg-white border-2 border-slate-900 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-emerald-600 transition-all duration-300 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="400">
                 <div>
                     <!-- Header Row -->
                     <div class="flex items-center justify-between mb-5">
                         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-emerald-600 text-white font-mono text-xs font-black tracking-wider uppercase">
-                            <span x-show="lang === 'ua'">КРОК // 04</span>
-                            <span x-show="lang === 'en'">STEP // 04</span>
+                            
+                            STEP // 04
                         </span>
                         <div class="w-11 h-11 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center group-hover:scale-110 transition-transform">
                             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -152,23 +146,21 @@
 
                     <!-- Card Title -->
                     <h3 class="font-heading text-xl sm:text-2xl font-black text-slate-900 leading-snug mb-4">
-                        <span x-show="lang === 'ua'">3D-Друк &amp; Готова Деталь</span>
-                        <span x-show="lang === 'en'">3D Printing &amp; Ready Part</span>
+                        
+                        3D Printing &amp; Ready Part
                     </h3>
 
                     <!-- 2-3 Sentences (Optimized for Larger Font) -->
-                    <p class="text-base sm:text-[17px] text-slate-700 leading-relaxed font-sans" x-show="lang === 'ua'">
-                        Виготовляємо деталь на каліброваному 3D-принтері та надсилаємо фотозвіт. Контролюємо точність розмірів штангенциркулем, проводимо фінішну обробку та швидко відправляємо кур'єром або поштою.
-                    </p>
-                    <p class="text-base sm:text-[17px] text-slate-700 leading-relaxed font-sans" x-show="lang === 'en'">
+                    
+                    <p class="text-base sm:text-[17px] text-slate-700 leading-relaxed font-sans">
                         We manufacture the part on calibrated 3D printers and provide photo updates. We verify dimensions with digital calipers, perform post-processing, and promptly dispatch via courier.
                     </p>
                 </div>
 
                 <div class="mt-8 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs sm:text-sm font-mono font-bold text-emerald-700">
                     <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                    <span x-show="lang === 'ua'">Готова деталь з перевіркою</span>
-                    <span x-show="lang === 'en'">Ready part with quality check</span>
+                    
+                    Ready part with quality check
                 </div>
             </div>
 
@@ -191,13 +183,13 @@
             <!-- Left Column: Headline, Specs & Guarantees -->
             <div class="relative z-10 max-w-2xl text-center lg:text-left">
                 <h3 class="font-heading text-2xl sm:text-3xl lg:text-[2.1rem] font-black text-white tracking-tight leading-tight">
-                    <span x-show="lang === 'ua'">Потрібно надрукувати деталь або відновити зламану?</span>
-                    <span x-show="lang === 'en'">Need to 3D print a part or replace a broken one?</span>
+                    
+                    Need to 3D print a part or replace a broken one?
                 </h3>
 
                 <p class="text-slate-300 text-sm sm:text-base lg:text-[17px] mt-3 leading-relaxed font-sans">
-                    <span x-show="lang === 'ua'">Надішліть нам фото або креслення. Швидко розрахуємо вартість друку, підкажемо, який пластик обрати (PLA для макетів чи PETG для навантажень) та одразу запустимо у виробництво.</span>
-                    <span x-show="lang === 'en'">Send us a photo or sketch. We will quickly calculate the print cost, advise whether PLA or PETG fits best, and start printing right away.</span>
+                    
+                    Send us a photo or sketch. We will quickly calculate the print cost, advise whether PLA or PETG fits best, and start printing right away.
                 </p>
 
                 <!-- Fast Benefits Row -->
@@ -206,22 +198,22 @@
                         <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span x-show="lang === 'ua'">Швидка відповідь за 15 хв</span>
-                        <span x-show="lang === 'en'">Fast 15-min response</span>
+                        
+                        Fast 15-min response
                     </div>
                     <div class="flex items-center gap-2">
                         <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span x-show="lang === 'ua'">Від 1 шт до серії</span>
-                        <span x-show="lang === 'en'">From 1 piece to batch</span>
+                        
+                        From 1 piece to batch
                     </div>
                     <div class="flex items-center gap-2">
                         <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span x-show="lang === 'ua'">Контроль штангенциркулем</span>
-                        <span x-show="lang === 'en'">Digital caliper check</span>
+                        
+                        Digital caliper check
                     </div>
                 </div>
             </div>
@@ -247,8 +239,8 @@
                             Modex
                         </div>
                         <div class="text-xs text-slate-400 font-sans mt-0.5">
-                            <span x-show="lang === 'ua'">Швидкий розрахунок у WhatsApp →</span>
-                            <span x-show="lang === 'en'">Fast quote in WhatsApp →</span>
+                            
+                            Fast quote in WhatsApp →
                         </div>
                     </div>
                 </a>
@@ -265,15 +257,15 @@
                     </div>
                     <div class="text-left">
                         <div class="text-[11px] font-mono font-bold tracking-wider uppercase text-pink-400">
-                            <span x-show="lang === 'ua'">Instagram Direct</span>
-                            <span x-show="lang === 'en'">Instagram Direct</span>
+                            
+                            Instagram Direct
                         </div>
                         <div class="font-heading font-black text-white text-base group-hover:text-pink-300 transition-colors">
                             @modexdesign
                         </div>
                         <div class="text-xs text-slate-400 font-sans mt-0.5">
-                            <span x-show="lang === 'ua'">Надіслати фото або креслення →</span>
-                            <span x-show="lang === 'en'">Send photo or drawing →</span>
+                            
+                            Send photo or drawing →
                         </div>
                     </div>
                 </a>
@@ -290,15 +282,15 @@
                     </div>
                     <div class="text-left">
                         <div class="text-[11px] font-mono font-bold tracking-wider uppercase text-blue-400">
-                            <span x-show="lang === 'ua'">Facebook Messenger</span>
-                            <span x-show="lang === 'en'">Facebook Messenger</span>
+                            
+                            Facebook Messenger
                         </div>
                         <div class="font-heading font-black text-white text-base group-hover:text-blue-300 transition-colors">
                             modexdesign
                         </div>
                         <div class="text-xs text-slate-400 font-sans mt-0.5">
-                            <span x-show="lang === 'ua'">Написати нам у чат →</span>
-                            <span x-show="lang === 'en'">Message us in chat →</span>
+                            
+                            Message us in chat →
                         </div>
                     </div>
                 </a>

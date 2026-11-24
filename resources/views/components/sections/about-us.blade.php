@@ -19,16 +19,12 @@
         <!-- SECTION HEADER -->
         <div class="max-w-3xl">
             <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-                <span x-show="lang === 'ua'">Про Нашу Студію</span>
-                <span x-show="lang === 'en'">About Us</span>
+                
+                About Us
             </h2>
             <p class="text-base sm:text-lg lg:text-xl text-slate-600 mt-4 leading-relaxed font-sans">
-                <span x-show="lang === 'ua'">
-                    Ми — невелика студія в Братиславі (Словаччина), яка проектує та друкує на 3D-принтерах масштабні макети на замовлення для архітекторів, девелоперів, інженерних компаній та учасників міжнародних виставок.
-                </span>
-                <span x-show="lang === 'en'">
-                    We are a small studio in Bratislava, Slovakia, that designs and 3D prints custom scale models for architects, developers, engineering firms and exhibitors.
-                </span>
+                
+                We are a small studio in Bratislava, Slovakia, that designs and 3D prints custom scale models for architects, developers, engineering firms and exhibitors.
             </p>
         </div>
 
@@ -43,35 +39,31 @@
 
                 <div>
                     <h3 class="font-heading text-xl sm:text-2xl font-black text-white tracking-tight leading-snug">
-                        <span x-show="lang === 'ua'">Від першого ескізу до готового макета — в одних руках</span>
-                        <span x-show="lang === 'en'">From the first drawing to final delivery — in one pair of hands</span>
+                        
+                        From the first drawing to final delivery — in one pair of hands
                     </h3>
 
                     <p class="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed font-sans">
-                        <span x-show="lang === 'ua'">
-                            Кожен макет починається з ваших креслень, CAD-файлів або навіть простого ескізу. Ми самі будуємо 3D-модель, друкуємо її на власних принтерах і доводимо вручну — тож ви працюєте з однією людиною від першого запитання до фінальної доставки. Без посередників і без мінімального замовлення.
-                        </span>
-                        <span x-show="lang === 'en'">
-                            Every model starts with your drawings, CAD files or even a sketch. We build the 3D model ourselves, print it on our in-house printers and finish it by hand, so you work with one person from the first question to the final delivery. No middlemen, no minimum order.
-                        </span>
+                        
+                        Every model starts with your drawings, CAD files or even a sketch. We build the 3D model ourselves, print it on our in-house printers and finish it by hand, so you work with one person from the first question to the final delivery. No middlemen, no minimum order.
                     </p>
 
                     <!-- Key Principles Checklist -->
                     <div class="mt-6 space-y-2.5 font-mono text-xs sm:text-sm text-slate-200">
                         <div class="flex items-center gap-2.5">
                             <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                            <span x-show="lang === 'ua'">Будь-який формат: креслення, CAD або ескіз</span>
-                            <span x-show="lang === 'en'">Any input: drawings, CAD files, or sketches</span>
+                            
+                            Any input: drawings, CAD files, or sketches
                         </div>
                         <div class="flex items-center gap-2.5">
                             <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                            <span x-show="lang === 'ua'">Власні принтери та ручна фінішна обробка</span>
-                            <span x-show="lang === 'en'">In-house 3D printers &amp; precision hand finish</span>
+                            
+                            In-house 3D printers &amp; precision hand finish
                         </div>
                         <div class="flex items-center gap-2.5">
                             <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                            <span x-show="lang === 'ua'">Без посередників і без мінімального замовлення</span>
-                            <span x-show="lang === 'en'">No middlemen, no minimum order quantity</span>
+                            
+                            No middlemen, no minimum order quantity
                         </div>
                     </div>
 
@@ -80,8 +72,8 @@
                         <p class="text-xs sm:text-sm font-mono text-emerald-300 font-bold flex items-start gap-2.5">
                             <span class="w-2 h-2 rounded-full bg-emerald-400 shrink-0 mt-1"></span>
                             <span>
-                                <span x-show="lang === 'ua'">Ми — молода студія, і кожен проєкт отримує нашу повну увагу.</span>
-                                <span x-show="lang === 'en'">We’re a young studio, and each project gets our full attention.</span>
+                                
+                                We’re a young studio, and each project gets our full attention.
                             </span>
                         </p>
                     </div>
@@ -94,8 +86,8 @@
                 
                 <div class="pb-3 border-b-2 border-slate-900">
                     <h3 class="font-heading text-xl sm:text-2xl font-black text-slate-900 uppercase tracking-tight">
-                        <span x-show="lang === 'ua'">Що ми виготовляємо</span>
-                        <span x-show="lang === 'en'">What we make</span>
+                        
+                        What we make
                     </h3>
                 </div>
 
@@ -109,16 +101,12 @@
                             </div>
                             <div class="flex-1">
                                 <h4 class="font-heading text-lg sm:text-xl font-black text-slate-900 group-hover:text-sky-600 transition-colors">
-                                    <span x-show="lang === 'ua'">Архітектурні макети</span>
-                                    <span x-show="lang === 'en'">Architectural models</span>
+                                    
+                                    Architectural models
                                 </h4>
                                 <p class="text-sm sm:text-base text-slate-600 mt-2 font-sans leading-relaxed">
-                                    <span x-show="lang === 'ua'">
-                                        Будівлі, житлові комплекси, генеральні плани ділянок та індивідуальні простори для девелоперів і архітектурних бюро.
-                                    </span>
-                                    <span x-show="lang === 'en'">
-                                        Buildings, residential complexes, site plans, and spaces for architects, developers, and presentation boards.
-                                    </span>
+                                    
+                                    Buildings, residential complexes, site plans, and spaces for architects, developers, and presentation boards.
                                 </p>
                             </div>
                         </div>
@@ -132,16 +120,12 @@
                             </div>
                             <div class="flex-1">
                                 <h4 class="font-heading text-lg sm:text-xl font-black text-slate-900 group-hover:text-blue-600 transition-colors">
-                                    <span x-show="lang === 'ua'">Промислові та інфраструктурні макети</span>
-                                    <span x-show="lang === 'en'">Industrial and infrastructure models</span>
+                                    
+                                    Industrial and infrastructure models
                                 </h4>
                                 <p class="text-sm sm:text-base text-slate-600 mt-2 font-sans leading-relaxed">
-                                    <span x-show="lang === 'ua'">
-                                        Підстанції, заводи, технологічні лінії та обладнання для міжнародних виставок і презентацій інвесторам.
-                                    </span>
-                                    <span x-show="lang === 'en'">
-                                        Substations, plants, and equipment for engineering expos, trade fairs, and investor presentations.
-                                    </span>
+                                    
+                                    Substations, plants, and equipment for engineering expos, trade fairs, and investor presentations.
                                 </p>
                             </div>
                         </div>
@@ -155,16 +139,12 @@
                             </div>
                             <div class="flex-1">
                                 <h4 class="font-heading text-lg sm:text-xl font-black text-slate-900 group-hover:text-emerald-600 transition-colors">
-                                    <span x-show="lang === 'ua'">Корпоративні подарунки</span>
-                                    <span x-show="lang === 'en'">Corporate gifts</span>
+                                    
+                                    Corporate gifts
                                 </h4>
                                 <p class="text-sm sm:text-base text-slate-600 mt-2 font-sans leading-relaxed">
-                                    <span x-show="lang === 'ua'">
-                                        Мініатюрні точні копії вашого офісу, знакового об'єкта чи флагманського продукту бренду.
-                                    </span>
-                                    <span x-show="lang === 'en'">
-                                        Miniature replicas of your office, headquarters building, or flagship industrial product.
-                                    </span>
+                                    
+                                    Miniature replicas of your office, headquarters building, or flagship industrial product.
                                 </p>
                             </div>
                         </div>
@@ -177,18 +157,18 @@
                     <div class="flex items-center gap-3">
                         <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
                         <div class="text-xs sm:text-sm font-mono">
-                            <span class="font-bold text-white block" x-show="lang === 'ua'">Прямий зв'язок з майстром у Братиславі</span>
-                            <span class="font-bold text-white block" x-show="lang === 'en'">Direct contact with our Bratislava studio</span>
-                            <span class="text-slate-400 text-[11px]" x-show="lang === 'ua'">Швидкий розрахунок за 15 хвилин &bull; Без посередників</span>
-                            <span class="text-slate-400 text-[11px]" x-show="lang === 'en'">15-minute quote response &bull; No middlemen</span>
+                            
+                            <span class="font-bold text-white block">Direct contact with our Bratislava studio</span>
+                            
+                            <span class="text-slate-400 text-[11px]">15-minute quote response &bull; No middlemen</span>
                         </div>
                     </div>
 
                     <button type="button" 
-                            @click="orderModalOpen = true; selectedService = (lang === 'ua' ? 'Індивідуальний макет (Студія Братислава)' : 'Custom Scale Model (Bratislava Studio)')" 
+                            @click="orderModalOpen = true; selectedService = 'Custom Scale Model (Bratislava Studio)'" 
                             class="w-full sm:w-auto btn-cyan-glow text-white font-mono font-bold py-3 px-6 rounded-xl cursor-pointer text-xs sm:text-sm transition-all whitespace-nowrap shadow-md">
-                        <span x-show="lang === 'ua'">Замовити Макет &rarr;</span>
-                        <span x-show="lang === 'en'">Order a Model &rarr;</span>
+                        
+                        Order a Model &rarr;
                     </button>
                 </div>
 

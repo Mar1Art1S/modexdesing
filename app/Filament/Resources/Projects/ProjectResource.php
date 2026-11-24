@@ -20,11 +20,11 @@ class ProjectResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBriefcase;
 
-    protected static ?string $modelLabel = 'Проєкт';
+    protected static ?string $modelLabel = 'Project';
 
-    protected static ?string $pluralModelLabel = 'Проєкти';
+    protected static ?string $pluralModelLabel = 'Projects';
 
-    protected static ?string $navigationLabel = 'Портфоліо / Проєкти';
+    protected static ?string $navigationLabel = 'Portfolio / Projects';
 
     public static function form(Schema $schema): Schema
     {

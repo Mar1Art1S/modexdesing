@@ -12,10 +12,10 @@ enum ProjectCategory: string
     public function label(): string
     {
         return match ($this) {
-            self::Architecture => 'Архітектура',
-            self::Industrial => 'Підстанції 10кВ',
-            self::Robotics => 'Робототехніка',
-            self::Mechatronics => 'Мехатроніка',
+            self::Architecture => 'Architecture',
+            self::Industrial => '10kV Substations',
+            self::Robotics => 'Robotics',
+            self::Mechatronics => 'Mechatronics',
         };
     }
 }

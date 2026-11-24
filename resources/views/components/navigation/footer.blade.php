@@ -21,38 +21,38 @@
             <!-- Services -->
             <div data-aos="fade-up" data-aos-delay="200">
                 <h4 class="font-heading text-sm sm:text-base font-bold text-white uppercase tracking-wider mb-4">
-                    <span x-show="lang === 'ua'">Напрямки Діяльності</span>
-                    <span x-show="lang === 'en'">Core Competencies</span>
+                    
+                    Core Competencies
                 </h4>
                 <ul class="space-y-3 text-sm sm:text-base text-slate-300">
                     <li>
                         <a href="#engineering" class="hover:text-sky-400 transition-colors">
-                            <span x-show="lang === 'ua'">3D-Моделювання</span>
-                            <span x-show="lang === 'en'">3D Modeling</span>
+                            
+                            3D Modeling
                         </a>
                     </li>
                     <li>
                         <a href="#printing" class="hover:text-sky-400 transition-colors">
-                            <span x-show="lang === 'ua'">3D Друк та Прототипування</span>
-                            <span x-show="lang === 'en'">3D Printing &amp; Prototyping</span>
+                            
+                            3D Printing &amp; Prototyping
                         </a>
                     </li>
                     <li>
                         <a href="#engineering" class="hover:text-sky-400 transition-colors">
-                            <span x-show="lang === 'ua'">Процес 3D-друку деталей</span>
-                            <span x-show="lang === 'en'">Parts 3D Printing Workflow</span>
+                            
+                            Parts 3D Printing Workflow
                         </a>
                     </li>
                     <li>
                         <a href="#about" class="hover:text-sky-400 transition-colors">
-                            <span x-show="lang === 'ua'">Про Студію (Братислава)</span>
-                            <span x-show="lang === 'en'">About Us (Bratislava Studio)</span>
+                            
+                            About Us (Bratislava Studio)
                         </a>
                     </li>
                     <li>
                         <a href="#projects" class="hover:text-sky-400 transition-colors">
-                            <span x-show="lang === 'ua'">Портфоліо та Реалізовані Проекти</span>
-                            <span x-show="lang === 'en'">Case Studies &amp; Hardware Portfolio</span>
+                            
+                            Case Studies &amp; Hardware Portfolio
                         </a>
                     </li>
                 </ul>
@@ -61,8 +61,8 @@
             <!-- Contact -->
             <div data-aos="fade-up" data-aos-delay="300">
                 <h4 class="font-heading text-sm sm:text-base font-bold text-white uppercase tracking-wider mb-4">
-                    <span x-show="lang === 'ua'">Майстерня та Зв'язок</span>
-                    <span x-show="lang === 'en'">Workshop &amp; Direct Contact</span>
+                    
+                    Workshop &amp; Direct Contact
                 </h4>
                 <ul class="space-y-3 text-sm sm:text-base text-slate-300">
                     @if ($settings->whatsapp_url)
@@ -117,8 +117,8 @@
                         <button type="button" 
                                 @click="orderModalOpen = true" 
                                 class="text-sm font-semibold text-sky-400 hover:text-sky-300 underline underline-offset-4 cursor-pointer">
-                            <span x-show="lang === 'ua'">Замовити Консультацію Інженера &rarr;</span>
-                            <span x-show="lang === 'en'">Book Technical Consultation &rarr;</span>
+                            
+                            Book Technical Consultation &rarr;
                         </button>
                     </li>
                 </ul>
@@ -126,17 +126,17 @@
         </div>
 
         <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-            <p x-show="lang === 'ua'">&copy; {{ date('Y') }} Modex. Фулстек 3D Інженерія. Всі права захищено.</p>
-            <p x-show="lang === 'en'">&copy; {{ date('Y') }} Modex. Full-Stack 3D Engineering. All rights reserved.</p>
+            
+            <p>&copy; {{ date('Y') }} Modex. Full-Stack 3D Engineering. All rights reserved.</p>
             <div class="flex items-center gap-4">
                 <a href="{{ route('login') }}" class="hover:text-slate-400 transition-colors">
-                    <span x-show="lang === 'ua'">Портал Клієнта</span>
-                    <span x-show="lang === 'en'">Client Portal</span>
+                    
+                    Client Portal
                 </a>
                 @if (Route::has('register'))
                     <a href="{{ route('register') }}" class="hover:text-slate-400 transition-colors">
-                        <span x-show="lang === 'ua'">Реєстрація</span>
-                        <span x-show="lang === 'en'">Register</span>
+                        
+                        Register
                     </a>
                 @endif
             </div>

@@ -22,7 +22,7 @@ test('admin can view filament social settings page', function () {
     $this->actingAs($admin)
         ->get('/admin/manage-social-settings')
         ->assertSuccessful()
-        ->assertSee('Посилання на Соціальні мережі та Контакти');
+        ->assertSee('Social Media Links & Contacts');
 });
 
 test('admin can update social and contact links via filament form', function () {

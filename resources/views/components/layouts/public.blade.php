@@ -5,21 +5,16 @@
 
 @php
     $seo = \App\Models\SiteSetting::current();
-    $currentLocale = app()->getLocale();
-    $defaultTitle = ($currentLocale === 'uk' || $currentLocale === 'ua')
-        ? ($seo->meta_title_ua ?? 'Modex - Фулстек 3D Друк та Технічне Проектування')
-        : ($seo->meta_title_en ?? 'Modex - Full-Stack 3D Printing & Technical Hardware Engineering');
+    $defaultTitle = $seo->meta_title_en ?? 'Modex - Full-Stack 3D Printing & Technical Hardware Engineering';
     $pageTitle = filled($title) ? $title . ' | Modex' : $defaultTitle;
-    $defaultDesc = ($currentLocale === 'uk' || $currentLocale === 'ua')
-        ? ($seo->meta_description_ua ?? 'Фулстек інженерне проектування, параметричне 3D CAD моделювання та високоточний 3D-друк деталей.')
-        : ($seo->meta_description_en ?? 'From concept to physical reality: Full-Stack Hardware Engineering, 3D CAD Prototyping & Precision 3D Printing.');
+    $defaultDesc = $seo->meta_description_en ?? 'From concept to physical reality: Full-Stack Hardware Engineering, 3D CAD Prototyping & Precision 3D Printing.';
     $pageDesc = $description ?? $defaultDesc;
     $ogImage = $seo->og_image ? (str_starts_with($seo->og_image, 'http') ? $seo->og_image : url($seo->og_image)) : url('/apple-touch-icon.png');
     $canonicalUrl = $seo->canonical_url ?? url()->current();
 @endphp
 
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -248,11 +243,8 @@
     </head>
     <body class="bg-blueprint-grid text-slate-800 font-body min-h-screen flex flex-col antialiased selection:bg-sky-500 selection:text-white"
           x-data="{ 
-              lang: localStorage.getItem('modex_lang') || 'ua',
-              setLang(l) {
-                  this.lang = l;
-                  localStorage.setItem('modex_lang', l);
-              },
+              lang: 'en',
+              setLang(l) {},
               activeSection: 'hero',
               orderModalOpen: false, 
               selectedService: '3D Printing & Prototyping',

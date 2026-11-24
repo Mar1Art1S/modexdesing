@@ -22,9 +22,9 @@ class ManageSeoSettings extends Page
 {
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedGlobeAlt;
 
-    protected static ?string $navigationLabel = 'SEO та Google Аналітика';
+    protected static ?string $navigationLabel = 'SEO & Google Analytics';
 
-    protected static ?string $title = 'Налаштування SEO та Google Аналітики';
+    protected static ?string $title = 'SEO & Google Analytics Settings';
 
     protected static ?int $navigationSort = 10;
 
@@ -50,40 +50,30 @@ class ManageSeoSettings extends Page
     {
         return $schema
             ->components([
-                Section::make('Google Сервіси (Аналітика та Search Console)')
-                    ->description('Підключення Google Analytics 4 (GA4), Google Tag Manager (GTM) та верифікація сайту в Google Search Console.')
+                Section::make('Google Services (Analytics & Search Console)')
+                    ->description('Connect Google Analytics 4 (GA4), Google Tag Manager (GTM), and Google Search Console site verification.')
                     ->icon(Heroicon::OutlinedChartBar)
                     ->schema([
                         TextInput::make('google_analytics_id')
                             ->label('Google Analytics Measurement ID (GA4)')
                             ->placeholder('G-XXXXXXXXXX')
-                            ->helperText('Ідентифікатор потоку даних GA4 (наприклад: G-ABC1234567). Автоматично генерує gtag.js.'),
+                            ->helperText('GA4 stream measurement ID (e.g., G-ABC1234567). Automatically generates gtag.js.'),
                         TextInput::make('google_tag_manager_id')
                             ->label('Google Tag Manager ID (GTM)')
                             ->placeholder('GTM-XXXXXXX')
-                            ->helperText('Ідентифікатор контейнера GTM (наприклад: GTM-ABC1234). Підключає скрипт у head та noscript у body.'),
+                            ->helperText('GTM container ID (e.g., GTM-ABC1234). Adds head script and body noscript.'),
                         TextInput::make('google_site_verification')
                             ->label('Google Site Verification (Search Console)')
-                            ->placeholder('напр. abcdef1234567890...')
-                            ->helperText('Код верифікації для пошукового мета-тегу google-site-verification.')
+                            ->placeholder('e.g. abcdef1234567890...')
+                            ->helperText('Verification code for google-site-verification meta tag.')
                             ->columnSpanFull(),
                     ])
                     ->columns(2),
 
-                Section::make('Мета-теги пошукової оптимізації (SEO)')
-                    ->description('Заголовки, описи сторінки для пошукових систем (UA та EN версії) та ключові слова.')
+                Section::make('Search Engine Optimization Meta Tags (SEO)')
+                    ->description('Page titles, descriptions for search engines, and targeted keywords.')
                     ->icon(Heroicon::OutlinedDocumentMagnifyingGlass)
                     ->schema([
-                        TextInput::make('meta_title_ua')
-                            ->label('Meta Title (Українська)')
-                            ->placeholder('Modex - 3D Друк та Технічне Проектування')
-                            ->maxLength(255)
-                            ->columnSpanFull(),
-                        Textarea::make('meta_description_ua')
-                            ->label('Meta Description (Українська)')
-                            ->rows(3)
-                            ->placeholder('Фулстек інженерне проектування, параметричне 3D CAD моделювання...')
-                            ->columnSpanFull(),
                         TextInput::make('meta_title_en')
                             ->label('Meta Title (English)')
                             ->placeholder('Modex - Full-Stack 3D Printing & Technical Hardware Engineering')
@@ -95,43 +85,43 @@ class ManageSeoSettings extends Page
                             ->placeholder('From concept to physical reality: Full-Stack Hardware Engineering...')
                             ->columnSpanFull(),
                         TextInput::make('meta_keywords')
-                            ->label('Ключові слова (Keywords)')
-                            ->placeholder('3d print, 3d друк, інженерне проектування, solidworks, prototyping')
+                            ->label('Keywords')
+                            ->placeholder('3d print, 3d printing, mechanical engineering, solidworks, prototyping')
                             ->columnSpanFull(),
                     ]),
 
-                Section::make('Соціальні мережі (OpenGraph) та Індексація')
-                    ->description('Прев\'ю зображення для соцмереж (Facebook, Telegram, LinkedIn), канонічна адреса та robots meta.')
+                Section::make('Social Media (OpenGraph) & Indexing')
+                    ->description('Social media preview image (Facebook, Telegram, LinkedIn), canonical URL, and search bot directives.')
                     ->icon(Heroicon::OutlinedShare)
                     ->schema([
                         TextInput::make('og_image')
-                            ->label('OpenGraph Image URL або шлях')
+                            ->label('OpenGraph Image URL or Path')
                             ->placeholder('/images/og-preview.jpg')
-                            ->helperText('Зображення при публікації посилань у соцмережах та месенджерах.'),
+                            ->helperText('Image shown when sharing links on social media and messaging apps.'),
                         TextInput::make('canonical_url')
-                            ->label('Канонічний URL сайту')
+                            ->label('Canonical Site URL')
                             ->placeholder('https://modexdesign.com')
                             ->url()
-                            ->helperText('Базовий канонічний URL сайту для уникнення дублів сторінок.'),
+                            ->helperText('Base canonical URL to prevent duplicate content.'),
                         Toggle::make('is_indexed')
-                            ->label('Дозволити індексацію сайту пошуковими роботами Google (index, follow)')
-                            ->helperText('Вимкніть лише якщо сайт на технічній паузі або тестуванні (noindex, nofollow).')
+                            ->label('Allow indexing by search engines (index, follow)')
+                            ->helperText('Disable only during maintenance or testing (noindex, nofollow).')
                             ->default(true),
                     ])
                     ->columns(2),
 
-                Section::make('Користувацькі HTML / JS скрипти')
-                    ->description('Довільні сторонні скрипти для вставки в секції <head> та в кінці <body>.')
+                Section::make('Custom HTML / JS Scripts')
+                    ->description('Arbitrary scripts injected into the <head> section or at the end of <body>.')
                     ->icon(Heroicon::OutlinedCodeBracket)
                     ->schema([
                         Textarea::make('custom_head_scripts')
-                            ->label('Скрипти в <head>')
-                            ->placeholder('<!-- Додаткові коди ретаргетингу, пікселів Meta Facebook тощо -->')
+                            ->label('Scripts in <head>')
+                            ->placeholder('<!-- Additional retargeting codes, Meta Facebook pixel, etc. -->')
                             ->rows(3)
                             ->columnSpanFull(),
                         Textarea::make('custom_body_scripts')
-                            ->label('Скрипти перед закриттям </body>')
-                            ->placeholder('<!-- Онлайн чати, віджети тощо -->')
+                            ->label('Scripts before </body>')
+                            ->placeholder('<!-- Live chat widgets, tracking scripts, etc. -->')
                             ->rows(3)
                             ->columnSpanFull(),
                     ]),
@@ -160,7 +150,7 @@ class ManageSeoSettings extends Page
     {
         return [
             Action::make('save')
-                ->label('Зберегти налаштування')
+                ->label('Save Settings')
                 ->submit('save')
                 ->keyBindings(['mod+s']),
         ];
@@ -173,7 +163,7 @@ class ManageSeoSettings extends Page
         SiteSetting::current()->update($data);
 
         Notification::make()
-            ->title('Налаштування SEO та Google успішно збережено!')
+            ->title('SEO and Google settings saved successfully!')
             ->success()
             ->send();
     }
