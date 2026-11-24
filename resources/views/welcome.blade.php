@@ -15,6 +15,9 @@
     <!-- About Our Studio in Bratislava -->
     <x-sections.about-us />
 
+    <!-- Our Team Section (Bratislava Studio Engineering Team) -->
+    <x-sections.team />
+
     <!-- Intake Order Form, Direct Contacts & FAQ -->
     <x-sections.order-intake />
 
