@@ -81,6 +81,7 @@
                 <!-- LARGE PHOTO CONTAINER (IDENTICAL RATIO) -->
                 <div class="lg:col-span-7 relative h-64 sm:h-80 lg:h-full bg-slate-950 overflow-hidden group">
                     <img src="{{ asset('images/g1.png') }}" 
+                         onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = this.src.replace('.png', '.jpg'); }"
                          alt="Client reference photo: substation bay structure" 
                          class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
                 </div>
@@ -152,6 +153,7 @@
                 <!-- LARGE PHOTO CONTAINER (IDENTICAL RATIO) -->
                 <div class="lg:col-span-7 relative h-64 sm:h-80 lg:h-full bg-slate-950 overflow-hidden group">
                     <img src="{{ asset('images/g2.png') }}" 
+                         onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = this.src.replace('.png', '.jpg'); }"
                          alt="Client reference photo: disconnect switch" 
                          class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
                 </div>
@@ -223,6 +225,7 @@
                 <!-- LARGE PHOTO CONTAINER (IDENTICAL RATIO) -->
                 <div class="lg:col-span-7 relative h-64 sm:h-80 lg:h-full bg-slate-950 overflow-hidden group">
                     <img src="{{ asset('images/g3.png') }}" 
+                         onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = this.src.replace('.png', '.jpg'); }"
                          alt="Client reference photo: heavy modular transport" 
                          class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
                 </div>
