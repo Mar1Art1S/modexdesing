@@ -5,8 +5,9 @@
     
     <!-- FULL-BLEED HERO BACKGROUND: ZAS.PNG SPREAD ACROSS ENTIRE SCREEN -->
     <div class="absolute inset-0 w-full h-full pointer-events-none select-none z-0 overflow-hidden">
-        <!-- Full-screen original cover image (zas.png) -->
+        <!-- Full-screen original cover image (zas.png with jpg fallback) -->
         <img src="{{ asset('images/zas.png') }}" 
+             onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = '{{ asset('images/zas.jpg') }}'; }"
              alt="Modex Substation Engineering Cover" 
              class="w-full h-full object-cover object-right lg:object-[82%_center]" />
 

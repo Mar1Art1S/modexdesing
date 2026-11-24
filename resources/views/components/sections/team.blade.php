@@ -3,20 +3,23 @@
         [
             'name' => 'Michal Hudák',
             'role' => 'CEO & FOUNDER',
-            'image' => file_exists(public_path('images/photo1/photo1.png')) ? 'images/photo1/photo1.png' : 'images/photo1/photo1.jpg',
+            'image' => 'images/photo1/photo1.jpg',
+            'alt_image' => 'images/photo1/photo1.png',
         ],
         [
             'name' => 'Sam Goldthorpe',
             'role' => 'COO',
-            'image' => file_exists(public_path('images/photo1/photo2.png')) ? 'images/photo1/photo2.png' : 'images/photo1/photo2.jpg',
+            'image' => 'images/photo1/photo2.jpg',
+            'alt_image' => 'images/photo1/photo2.png',
         ],
     ];
 
-    if (file_exists(public_path('images/photo1/photo3.png')) || file_exists(public_path('images/photo1/photo3.jpg'))) {
+    if (file_exists(public_path('images/photo1/photo3.png')) || file_exists(public_path('images/photo1/photo3.jpg')) || file_exists(base_path('images/photo1/photo3.jpg'))) {
         $members[] = [
             'name' => 'Michal Gabanyi',
             'role' => 'SLA EXPERT',
-            'image' => file_exists(public_path('images/photo1/photo3.png')) ? 'images/photo1/photo3.png' : 'images/photo1/photo3.jpg',
+            'image' => 'images/photo1/photo3.jpg',
+            'alt_image' => 'images/photo1/photo3.png',
         ];
     }
 
@@ -67,6 +70,7 @@
                     <!-- Circular Portrait Image Container -->
                     <div class="w-48 h-48 sm:w-56 sm:h-56 lg:w-60 lg:h-60 rounded-full overflow-hidden border-4 border-slate-900 bg-slate-100 shadow-xl group-hover:scale-105 group-hover:border-sky-600 group-hover:shadow-2xl transition-all duration-300 relative">
                         <img src="{{ asset($member['image']) }}" 
+                             onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = '{{ asset($member['alt_image']) }}'; } else if (this.dataset.tried === '1') { this.dataset.tried = '2'; this.src = '/{{ $member['image'] }}'; }"
                              alt="{{ $member['name'] }} - {{ $member['role'] }}" 
                              class="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-500" />
                     </div>

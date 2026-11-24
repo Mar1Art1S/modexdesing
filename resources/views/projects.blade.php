@@ -78,7 +78,7 @@
                     <!-- Image Slot: Displays user's zas.png cover -->
                     <div class="mx-6 relative h-48 rounded-xl bg-slate-50 border border-slate-200 overflow-hidden flex items-center justify-center">
                         <img src="{{ asset('images/zas.png') }}" 
-                             onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = this.src.replace('.png', '.jpg'); }"
+                             onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = '{{ asset('images/zas.jpg') }}'; }"
                              alt="10kV Busbar Modular Insulator" 
                              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                     </div>
@@ -116,6 +116,7 @@
 
                     <div class="mx-6 relative h-48 rounded-xl bg-slate-50 border border-slate-200 overflow-hidden flex items-center justify-center">
                         <img src="{{ asset('images/zas2.jpg') }}" 
+                             onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = '{{ asset('images/zas2.png') }}'; }"
                              alt="Autonomous Tracked Rover with Robotic Manipulator" 
                              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                     </div>
@@ -153,6 +154,7 @@
 
                     <div class="mx-6 relative h-48 rounded-xl bg-slate-50 border border-slate-200 overflow-hidden flex items-center justify-center">
                         <img src="{{ asset('images/zas3.jpg') }}" 
+                             onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = '{{ asset('images/zas3.png') }}'; }"
                              alt="Full-Cycle Walking Robot Development: Drafting, CAD, 3D Printing, Assembly" 
                              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                     </div>
