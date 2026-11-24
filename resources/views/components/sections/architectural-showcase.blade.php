@@ -10,8 +10,8 @@
              '{{ asset('images/house/001.jpg') }}',
              '{{ asset('images/house/003.jpg') }}',
              '{{ asset('images/house/007.jpg') }}',
-             '{{ asset('images/house/002.png') }}',
-             '{{ asset('images/house/006.png') }}'
+             '{{ asset('images/house/002.jpg') }}',
+             '{{ asset('images/house/006.jpg') }}'
          ],
          nextImg() {
              this.activeIdx = (this.activeIdx + 1) % this.gallery.length;
@@ -35,6 +35,7 @@
                 
                 <!-- Sharp high-detail foreground image covering entire square plane (object-cover) -->
                 <img :src="activeImg" 
+                     onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = this.src.includes('.jpg') ? this.src.replace('.jpg', '.png') : this.src.replace('.png', '.jpg'); }"
                      alt="Corporate & Client Gifts by Modex" 
                      class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
                 
@@ -82,7 +83,7 @@
                             @click="activeImg = imgSrc; activeIdx = idx" 
                             :class="activeIdx === idx ? 'border-sky-400 ring-2 ring-sky-400/80 scale-102 opacity-100 shadow-md shadow-sky-500/30' : 'border-slate-800 opacity-60 hover:opacity-100'"
                             class="h-16 sm:h-20 rounded-xl overflow-hidden border-2 bg-slate-900 transition-all cursor-pointer relative group">
-                        <img :src="imgSrc" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                        <img :src="imgSrc" onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = this.src.includes('.jpg') ? this.src.replace('.jpg', '.png') : this.src.replace('.png', '.jpg'); }" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                     </button>
                 </template>
             </div>
@@ -352,6 +353,7 @@
         <!-- Main Image Area with Prev/Next -->
         <div class="relative w-full max-w-6xl flex-1 flex items-center justify-center my-2 overflow-hidden">
             <img :src="activeImg" 
+                 onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = this.src.includes('.jpg') ? this.src.replace('.jpg', '.png') : this.src.replace('.png', '.jpg'); }"
                  alt="Full size architectural view" 
                  class="max-h-[80vh] max-w-full object-contain rounded-xl shadow-2xl" />
             
@@ -382,7 +384,7 @@
                         @click="activeImg = imgSrc; activeIdx = idx" 
                         :class="activeIdx === idx ? 'border-sky-400 ring-2 ring-sky-400 scale-105' : 'border-slate-800 opacity-60 hover:opacity-100'"
                         class="w-14 h-14 sm:w-16 sm:h-16 rounded-lg overflow-hidden border-2 bg-slate-900 transition-all cursor-pointer shrink-0">
-                    <img :src="imgSrc" class="w-full h-full object-cover" />
+                    <img :src="imgSrc" onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = this.src.includes('.jpg') ? this.src.replace('.jpg', '.png') : this.src.replace('.png', '.jpg'); }" class="w-full h-full object-cover" />
                 </button>
             </template>
         </div>
