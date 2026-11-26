@@ -1,14 +1,14 @@
 @php
     $members = [
         [
-            'name' => 'Michal Hudák',
-            'role' => 'CEO & FOUNDER',
+            'name' => 'Dmytro Matiikiv',
+            'role' => 'FOUNDER',
             'image' => 'images/photo1/photo2.jpg',
             'alt_image' => 'images/photo1/photo2.png',
         ],
         [
-            'name' => 'Sam Goldthorpe',
-            'role' => 'COO',
+            'name' => 'Oleg Livinsky',
+            'role' => 'EXPERT',
             'image' => 'images/photo1/photo1.jpg',
             'alt_image' => 'images/photo1/photo1.png',
         ],
@@ -69,8 +69,8 @@
                     
                     <!-- Circular Portrait Image Container -->
                     <div class="w-48 h-48 sm:w-56 sm:h-56 lg:w-60 lg:h-60 rounded-full overflow-hidden border-4 border-slate-900 bg-slate-100 shadow-xl group-hover:scale-105 group-hover:border-sky-600 group-hover:shadow-2xl transition-all duration-300 relative">
-                        <img src="{{ asset($member['image']) }}" 
-                             onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = '{{ asset($member['alt_image']) }}'; } else if (this.dataset.tried === '1') { this.dataset.tried = '2'; this.src = '/{{ $member['image'] }}'; }"
+                        <img src="{{ asset($member['image']) }}?v=2" 
+                             onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = '{{ asset($member['alt_image']) }}?v=2'; } else if (this.dataset.tried === '1') { this.dataset.tried = '2'; this.src = '/{{ $member['image'] }}?v=2'; }"
                              alt="{{ $member['name'] }} - {{ $member['role'] }}" 
                              class="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-500" />
                     </div>
