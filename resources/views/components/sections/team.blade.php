@@ -8,7 +8,7 @@
         ],
         [
             'name' => 'Oleg Livinsky',
-            'role' => 'EXPERT',
+            'role' => 'CAD / FDM EXPERT',
             'image' => 'images/photo1/photo1.jpg',
             'alt_image' => 'images/photo1/photo1.png',
         ],
